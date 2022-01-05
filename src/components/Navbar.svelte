@@ -11,14 +11,14 @@
 					Home Page
 				</div>
 			</a>
-			<a href="/page2">
+			<a href="/products">
 				<div class="mr-5 hover:text-light-hover hover:cursor-pointer">
-					Second Page
+					Products
 				</div>
 			</a>
-			<a href="/page3">
+			<a href="/pricing">
 				<div class="mr-5 hover:text-light-hover hover:cursor-pointer">
-					Third Page
+					Pricing
 				</div>
 			</a>
 			<a href="/contact-us">

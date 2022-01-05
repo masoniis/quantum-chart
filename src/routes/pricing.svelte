@@ -1,7 +1,7 @@
 <main class="">
 
 <p>
-    I am page 2!
+    I am page the pricing page :)
 </p>
 
 </main>
