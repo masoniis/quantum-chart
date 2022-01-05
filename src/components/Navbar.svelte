@@ -5,24 +5,24 @@
 		<p>SVG logo goes here</p>
 
         <!--Flex Item 2-->
-		<nav class="md:ml-auto flex items-center justify-between">
+		<nav class="md:ml-auto flex items-center justify-between text-light-text">
 			<a href="/">
-				<div class="mr-5 hover:text-light-hover dark:hover:text-dark-hover hover:cursor-pointer">
+				<div class="mr-5 hover:text-light-hover hover:cursor-pointer">
 					Home Page
 				</div>
 			</a>
 			<a href="/page2">
-				<div class="mr-5 hover:text-light-hover dark:hover:text-dark-hover hover:cursor-pointer">
+				<div class="mr-5 hover:text-light-hover hover:cursor-pointer">
 					Second Page
 				</div>
 			</a>
 			<a href="/page3">
-				<div class="mr-5 hover:text-light-hover dark:hover:text-dark-hover hover:cursor-pointer">
+				<div class="mr-5 hover:text-light-hover hover:cursor-pointer">
 					Third Page
 				</div>
 			</a>
 			<a href="/contact-us">
-				<div class="mr-5 hover:text-light-hover dark:hover:text-dark-hover hover:cursor-pointer">
+				<div class="mr-5 hover:text-light-hover hover:cursor-pointer">
 					Contact Us
 				</div>
 			</a>
