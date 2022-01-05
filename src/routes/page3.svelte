@@ -1,4 +1,4 @@
-<main class="min-h-screen">
+<main class="">
 
 <p>
     I am page 3

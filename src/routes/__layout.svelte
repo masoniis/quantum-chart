@@ -8,7 +8,9 @@
 <main>
     <Navbar />
 
-    <slot />
+    <body class="container min-h-screen mx-auto px-5 bg-light-bg">
+        <slot />
+    </body>
 
     <Botbar />
 </main>
