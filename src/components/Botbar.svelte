@@ -1,4 +1,4 @@
-<footer class="bg-light-bg dark:bg-dark-bg text-light-text dark:text-gray-300 transition-colors duration-500 p-6">
+<footer class="bg-light-bg text-light-text transition-colors duration-500 p-6">
     <div class="container flex justify-between items-center border-t-2 border-stone-400 px-5 mx-auto transition-all ease-linear duration-1000">
 
         <!--Flex Item 1-->

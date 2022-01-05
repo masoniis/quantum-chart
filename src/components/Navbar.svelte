@@ -1,5 +1,5 @@
 <header
-	class="bg-light-bg text-light-text dark:bg-dark-bg dark:text-dark-text transition-colors duration-500 p-6"
+	class="bg-light-bg text-light-text transition-colors duration-500 p-6"
 >
 	<div class="container flex mx-auto flex-wrap items-center">
 
