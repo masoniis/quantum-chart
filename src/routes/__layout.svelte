@@ -1,14 +1,14 @@
 <script lang="ts">
     import '../app.css'
-    // import Header from '../components/header.svelte'
-    import Footer from '../components/footer.svelte'
+    import Navbar from '../components/Navbar.svelte'
+    import Botbar from '../components/Botbar.svelte'
 </script>
 
 
 <main>
-    <!-- <Header /> -->
+    <Navbar />
 
     <slot />
 
-    <Footer />
+    <Botbar />
 </main>
