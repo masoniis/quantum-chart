@@ -15,7 +15,7 @@
 
             <!-- First Name Box -->
 			<div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-				<label class="block " for="grid-first-name"> FIRST NAME </label>
+				<label class="block tracking-wide font-bold mb-2" for="grid-first-name"> FIRST NAME </label>
 				<input class="" id="grid-first-name" />
 			</div>
 
