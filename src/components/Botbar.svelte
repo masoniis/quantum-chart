@@ -1,3 +1,10 @@
+<script>
+	import { tweened } from 'svelte/motion' 
+
+	// Tweened Hover Animation
+	const value = tweened(0)
+</script>
+
 <footer class="bg-light-bg text-light-text transition-colors duration-500 p-6">
     <div class="container flex justify-between items-center border-t-2 border-stone-400 px-5 mx-auto transition-all ease-linear duration-1000">
 
@@ -5,7 +12,7 @@
         <div class="flex justify-items-start text-sm pt-3">
 
             <!--Mini-flex Item 1-->
-            <p class="pr-4 py-1 mt-0 mr-4 border-r border-stone-400">Copyright @ 2022 Mason Inc.</p>
+            <p class="pr-4 py-1 mt-0 mr-4 border-r border-stone-400">Copyright @ 2022 Landscape Inc.</p>
 
             <!--Mini-flex Item 2, underline from: https://tailwindcomponents.com/component/link-underline-animation -->
                 <a href="https://google.com/search?q=Trademark+Policy" class="py-1 mt-0 hover:text-light-hover link link-underline link-underline-black">
