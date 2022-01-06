@@ -3,9 +3,7 @@
 @tailwind utilities;
 
 
-* {
-    font-family: sans-serif;
-}
+html { font-family: 'Inter', sans-serif; }
 
 .link-underline {
     border-bottom-width: 0;

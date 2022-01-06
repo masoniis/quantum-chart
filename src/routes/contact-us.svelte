@@ -10,61 +10,46 @@
 		</p>
 	</div>
 
-	<form class="w-full mx-auto max-w-lg bg-gray-400 border-5 rounded-xl">
-		<!-- Form Element Container -->
-		<div class="flex flex-wrap mx-3 mb-6 mt-24 py-5">
-			<!-- First Name Box -->
-			<div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-				<label
-					class="block tracking-wide font-bold mb-2 text-xs text-slate-800"
-					for="form-first-name"
-				>
-					FIRST NAME
-				</label>
-				<input
-					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-					id="form-first-name"
-					placeholder="John"
-				/>
-			</div>
+	<br />
+	<form class="w-full max-w-lg mx-auto p-10 bg-violet-100 border-5 rounded-xl">
 
-			<!-- Last Name Box -->
-			<div class="w-full md:w-1/2 px-3">
-				<label
-					class="block tracking-wide font-bold mb-2 text-xs text-slate-800"
-					for="form-last-name"
-				>
-					LAST NAME
-				</label>
-				<input
-					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-					id="form-last-name"
-					placeholder="Smith"
-				/>
-			</div>
+		<!-- Form Element Container, GRID -->
+			<div class="grid grid-cols-2 gap-y-6 gap-x-4 sm:grid-cols-4">
+				<div class="sm:col-span-2">
+				  <label for="first-name" class="block text-sm font-medium text-gray-700">
+					First name
+				  </label>
+				  <div class="mt-1">
+					<input type="text" name="first-name" id="first-name" autocomplete="given-name" placeholder="John" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+				  </div>
+				</div>
+		
+				<div class="sm:col-span-2">
+				  <label for="last-name" class="block text-sm font-medium text-gray-700">
+					Last name
+				  </label>
+				  <div class="mt-1">
+					<input type="text" name="last-name" id="last-name" autocomplete="family-name" placeholder="Smith" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+				  </div>
+				</div>
+		
+				<div class="col-span-2 sm:col-span-4">
+				  <label for="email" class="block text-sm font-medium text-gray-700">
+					Email address
+				  </label>
+				  <div class="mt-1">
+					<input id="email" name="email" type="email" autocomplete="email" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+				  </div>
+				</div>
 
-			<!-- Email Box -->
-			<div class="w-full px-3">
-				<label class="block tracking-wide font-bold mb-2 text-xs text-slate-800" for="form-email">
-					EMAIL
-				</label>
-				<input
-					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-					id="form-email"
-				/>
-			</div>
-
-			<!-- Message Box -->
-			<div class="w-full px-3">
-				<label class="block tracking-wide font-bold mb-2 text-xs text-slate-800" for="form-message">
-					MESSAGE
-				</label>
-				<textarea
-					class="no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
-					id="form-message"
-				/>
-			</div>
-		</div>
+				<div class="col-span-2 sm:col-span-4">
+					<label for="message" class="block text-sm font-medium text-gray-700">
+						Message
+					</label>
+					<div class="mt-1">
+						<textarea id="message" name="message" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" />
+					</div>
+				</div>
 	</form>
 
 	<!-- Top Shape Divider -->
@@ -153,9 +138,7 @@
 				</div>
 
 				<div class="py-2 border-y-2 border-black">
-					<p class=" text-violet-500 text-lg font-medium">
-						Do something
-					</p>
+					<p class=" text-violet-500 text-lg font-medium">Do something</p>
 					<p>2</p>
 				</div>
 				<div>
