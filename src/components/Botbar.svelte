@@ -25,7 +25,7 @@
 		<!-- Flex Item 2-->
 		<span class="inline-flex mt-0 pt-1 xs:pt-3 pr-1 xs:pr-0">
 			<!--Start of new mini-flex: all the icons-->
-			<a href="https://facebook.com/" class="text-maintext hover:text-lighthover link">
+			<a href="https://facebook.com/" class="text-maintext hover:text-lighthover py-1 link link-underline link-underline-black">
 				<svg
 					fill="currentColor"
 					stroke-linecap="round"
@@ -38,7 +38,7 @@
 				</svg>
 			</a>
 
-			<a href="https://twitter.com class=" class="ml-3 text-maintext hover:text-lighthover">
+			<a href="https://twitter.com class=" class="ml-3 text-maintext hover:text-lighthover py-1 link link-underline link-underline-black">
 				<svg
 					fill="currentColor"
 					stroke-linecap="round"
@@ -53,7 +53,7 @@
 				</svg>
 			</a>
 
-			<a href="https://instagram.com" class="ml-3 text-maintext hover:text-lighthover link">
+			<a href="https://instagram.com" class="ml-3 text-maintext hover:text-lighthover py-1 link link-underline link-underline-black">
 				<svg
 					fill="none"
 					stroke="currentColor"
@@ -68,7 +68,7 @@
 				</svg>
 			</a>
 
-			<a href="https://linkedin.com" class="ml-3 text-maintext hover:text-lighthover link">
+			<a href="https://linkedin.com" class="ml-3 text-maintext hover:text-lighthover py-1 link link-underline link-underline-black">
 				<svg
 					fill="currentColor"
 					stroke="currentColor"
