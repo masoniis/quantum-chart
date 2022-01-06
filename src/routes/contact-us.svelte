@@ -68,7 +68,7 @@
 	</form>
 
 	<!-- Top Shape Divider -->
-	<div class="contact-section-top-wave">
+	<div class="contact-section-top-wave w-screen">
 		<svg
 			data-name="Layer 1"
 			xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +82,7 @@
 		</svg>
 	</div>
 
-	<div class="relative mx-0 px-0 min-w-full py-24 bg-lightbg">
+	<div class="relative mx-0 px-0 py-24 bg-lightbg w-screen">
 		<div class="container mx-auto flex justify-center">
 			<!-- Contact Info ICONS TAKEN FROM: https://iconmonstr.com PAY ATTENTION TO LICENSE-->
 			<div class="flex flex-col max-w-md shadow-lg bg-stone-50">
