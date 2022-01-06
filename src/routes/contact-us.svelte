@@ -128,7 +128,7 @@
 			</div>
 
 			<!-- How Can We Help? -->
-			<div class="flex flex-col max-w-sm md:pl-8 self-center">
+			<div class="flex flex-col max-w-sm px-2 md:pl-8 self-center">
 				<h1 class="text-2xl font-bold pt-10 pb-3">How Can We Help?</h1>
 				<p>
 					Please select a topic below related to your inquiry. If you don’t find what you need, fill
