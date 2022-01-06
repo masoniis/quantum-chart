@@ -8,33 +8,32 @@
 		</p>
 	</div>
 
-	<form class="w-full mx-auto max-w-lg bg-gray-500">
+	<form class="w-full mx-auto max-w-lg bg-gray-400 border-5 rounded-xl">
 
-        <!-- Form Element Container -->
-		<div class="flex flex-wrap mx-3 mb-6 mt-24">
-
-            <!-- First Name Box -->
+		<!-- Form Element Container -->
+		<div class="flex flex-wrap mx-3 mb-6 mt-24 py-5">
+			<!-- First Name Box -->
 			<div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-				<label class="block tracking-wide font-bold mb-2" for="grid-first-name"> FIRST NAME </label>
-				<input class="" id="grid-first-name" />
+				<label class="block tracking-wide font-bold mb-2 text-xs text-slate-800" for="form-first-name"> FIRST NAME </label>
+				<input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="form-first-name" placeholder="John" />
 			</div>
 
-            <!-- Last Name Box -->
+			<!-- Last Name Box -->
 			<div class="w-full md:w-1/2 px-3">
-				<label for="grid-first-name"> Last Name </label>
-				<input class="" id="grid-first-name" />
+				<label class="block tracking-wide font-bold mb-2 text-xs text-slate-800" for="form-last-name"> LAST NAME </label>
+				<input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="form-last-name" placeholder="Smith" />
 			</div>
 
-            <!-- Email Box -->
+			<!-- Email Box -->
 			<div class="w-full px-3">
-				<label for="grid-first-name"> Email </label>
-				<input class="" id="grid-first-name" />
+				<label class="block tracking-wide font-bold mb-2 text-xs text-slate-800" for="form-email"> EMAIL </label>
+				<input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="form-email" />
 			</div>
 
-            <!-- Message Box -->
-			<div class="w-full px-3 py-4">
-				<label for="grid-first-name"> Message </label>
-				<input class="" id="grid-first-name" />
+			<!-- Message Box -->
+			<div class="w-full px-3">
+				<label class="block tracking-wide font-bold mb-2 text-xs text-slate-800" for="form-message"> MESSAGE </label>
+				<textarea class="no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="form-message" />
 			</div>
 		</div>
 	</form>
