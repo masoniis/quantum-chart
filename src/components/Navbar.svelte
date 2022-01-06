@@ -1,4 +1,4 @@
-<header class="bg-light-bg text-light-text transition-colors duration-500 p-5">
+<header class="bg-mainbg text-maintext transition-colors duration-500 p-5">
 	<div class="container flex mx-auto flex-wrap items-center">
 		<!--Flex Item 1-->
 		<p>SVG logo goes here</p>

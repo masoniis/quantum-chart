@@ -8,8 +8,8 @@ module.exports = {
         'dark-hover': '#f4ebe5',
 
         'mainbg': '#ffffff',
+        'maintext': '#374151',
         'lightbg': '#f5f5f4',
-        'lighttext': '#374151',
         'lighthover': '#030304'
       },
     },

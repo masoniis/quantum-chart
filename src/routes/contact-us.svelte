@@ -1,4 +1,4 @@
-<main class="min-h-screen bg-mainbg overflow-visible">
+<main class="min-h-screen bg-mainbg text-maintext overflow-hidden">
 	<div class="text-center mx-auto">
 		<h4 class="pb-4">Have a question?</h4>
 		<h1 class="pb-4 text-4xl">Contact Us</h1>
