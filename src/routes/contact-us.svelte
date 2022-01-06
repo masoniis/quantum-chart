@@ -1,3 +1,5 @@
+<title>Contact Us</title>
+
 <main class="min-h-screen bg-mainbg text-maintext overflow-hidden">
 	<div class="text-center mx-auto">
 		<h4 class="pb-4">Have a question?</h4>
