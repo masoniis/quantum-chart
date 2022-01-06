@@ -70,10 +70,10 @@
 		</svg>
 	</div>
 
-	<div class="relative mx-0 px-0 min-w-full py-24 bg-lightbg">
-		<div class="container mx-auto flex justify-center">
+	<div class="relative mx-0 px-0 min-w-10/12 py-24 bg-lightbg">
+		<div class="containermx-auto flex flex-col md:flex-row justify-center">
 			<!-- Contact Info ICONS TAKEN FROM: https://iconmonstr.com PAY ATTENTION TO LICENSE-->
-			<div class="flex flex-col max-w-md shadow-lg bg-stone-50">
+			<div class="flex flex-col self-center max-w-md shadow-lg bg-stone-50">
 				<!-- Flex Item 1 -->
 				<h1 class="font-bold text-lg px-10 py-10 ">Contact Information</h1>
 
@@ -128,7 +128,7 @@
 			</div>
 
 			<!-- How Can We Help? -->
-			<div class="flex flex-col max-w-sm pl-8">
+			<div class="flex flex-col max-w-sm md:pl-8 self-center">
 				<h1 class="text-2xl font-bold pt-10 pb-3">How Can We Help?</h1>
 				<p>
 					Please select a topic below related to your inquiry. If you don’t find what you need, fill
