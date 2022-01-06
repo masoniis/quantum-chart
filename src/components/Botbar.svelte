@@ -18,12 +18,12 @@
 			<span
 				class="py-1 mt-0"
 			>
-				<a class="hover:text-lighthover link link-underline link-underline-black" href="https://google.com/search?q=Trademark+Policy"> Trademark Policy </a>
+				<a class="hover:text-mainlinkhover text-mainlink pb-1 link link-underline link-underline-black" href="https://google.com/search?q=Trademark+Policy"> Trademark Policy </a>
 		</span>
 		</div>
 
 		<!-- Flex Item 2-->
-		<span class="inline-flex mt-0 pt-3">
+		<span class="inline-flex mt-0 pt-1 xs:pt-3 pr-1 xs:pr-0">
 			<!--Start of new mini-flex: all the icons-->
 			<a href="https://facebook.com/" class="text-maintext hover:text-lighthover link">
 				<svg

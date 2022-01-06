@@ -9,6 +9,8 @@ module.exports = {
 
         'mainbg': '#ffffff',
         'maintext': '#374151',
+        'mainlink': '#6d28d9',
+        'mainlinkhover': '#4c1d95',
         'lightbg': '#f5f5f4',
         'lighthover': '#030304'
       },
