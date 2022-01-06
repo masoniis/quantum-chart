@@ -8,7 +8,7 @@ module.exports = {
         'dark-hover': '#f4ebe5',
 
         'mainbg': '#ffffff',
-        'lightbg': '#f7f8fc',
+        'lightbg': '#f5f5f4',
         'lighttext': '#374151',
         'lighthover': '#030304'
       },
