@@ -1,30 +1,21 @@
 <header class="bg-light-bg text-light-text transition-colors duration-500 p-5">
 	<div class="container flex mx-auto flex-wrap items-center">
-
-        <!--Flex Item 1-->
+		<!--Flex Item 1-->
 		<p>SVG logo goes here</p>
 
-        <!--Flex Item 2-->
+		<!--Flex Item 2-->
 		<nav class="md:ml-auto flex items-center justify-between text-light-text">
 			<a href="/">
-				<div class="mr-5 hover:text-light-hover hover:cursor-pointer">
-					Home Page
-				</div>
+				<div class="mr-5 hover:text-light-hover hover:cursor-pointer">Home Page</div>
 			</a>
 			<a href="/products">
-				<div class="mr-5 hover:text-light-hover hover:cursor-pointer">
-					Products
-				</div>
+				<div class="mr-5 hover:text-light-hover hover:cursor-pointer">Products</div>
 			</a>
 			<a href="/pricing">
-				<div class="mr-5 hover:text-light-hover hover:cursor-pointer">
-					Pricing
-				</div>
+				<div class="mr-5 hover:text-light-hover hover:cursor-pointer">Pricing</div>
 			</a>
 			<a href="/contact-us">
-				<div class="mr-5 hover:text-light-hover hover:cursor-pointer">
-					Contact Us
-				</div>
+				<div class="mr-5 hover:text-light-hover hover:cursor-pointer">Contact Us</div>
 			</a>
 
 			<!-- <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 50 50">

@@ -1,7 +1,3 @@
 <main class="min-h-screen bg-light-bg">
-
-<p>
-    I am page the pricing page :)
-</p>
-
+	<p>I am page the pricing page :)</p>
 </main>
