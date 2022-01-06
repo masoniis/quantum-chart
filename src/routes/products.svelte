@@ -1,4 +1,4 @@
-<main class="">
+<main class="min-h-screen bg-light-bg">
 
 <p>
     I am the products page

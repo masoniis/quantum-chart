@@ -1,5 +1,5 @@
 <main class="min-h-screen">
-	<div class="text-center">
+	<div class="text-center mx-auto">
 		<h4 class="pb-4">Have a question?</h4>
 		<h1 class="pb-4 text-4xl">Contact Us</h1>
 		<p>
@@ -37,4 +37,29 @@
 			</div>
 		</div>
 	</form>
+
+	<div class="mx-0 px-0 min-w-full py-6 bg-red-400">
+
+		<!-- Contact Info -->
+		<div class="flex flex-col shadow-lg ">
+			
+			<!-- Flex Item 1 -->
+			<div class="font-bold text-xl">
+				Contact Info
+			</div>
+			
+			<!-- Flex Item 2 -->
+			<div>
+				<div>
+					Location
+				</div>
+				<div>
+					Phone
+				</div>
+				<div>
+					Email
+				</div>
+			</div>
+		</div>
+	</div>
 </main>
