@@ -1,4 +1,4 @@
-<main class="min-h-screen bg-mainbg">
+<main class="min-h-screen bg-mainbg overflow-visible">
 	<div class="text-center mx-auto">
 		<h4 class="pb-4">Have a question?</h4>
 		<h1 class="pb-4 text-4xl">Contact Us</h1>
@@ -66,7 +66,7 @@
 	</form>
 
 	<!-- Top Shape Divider -->
-	<div class="contact-section-top-wave overflow-visible">
+	<div class="contact-section-top-wave">
 		<svg
 			data-name="Layer 1"
 			xmlns="http://www.w3.org/2000/svg"
