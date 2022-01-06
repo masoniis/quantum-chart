@@ -66,7 +66,7 @@
 	</form>
 
 	<!-- Top Shape Divider -->
-	<div class="contact-section-top-wave">
+	<div class="contact-section-top-wave overflow-visible">
 		<svg
 			data-name="Layer 1"
 			xmlns="http://www.w3.org/2000/svg"
