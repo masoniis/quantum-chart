@@ -11,8 +11,7 @@
 	</div>
 
 	<br />
-	<form class="w-full max-w-lg mx-auto p-10 bg-violet-100 border-5 rounded-xl">
-
+	<form class="w-full max-w-lg mx-auto my-10 p-10 bg-violet-100 border-5 rounded-xl">
 		<!-- Form Element Container, GRID -->
 			<div class="grid grid-cols-2 gap-y-6 gap-x-4 sm:grid-cols-4">
 				<div class="sm:col-span-2">
@@ -50,6 +49,10 @@
 						<textarea id="message" name="message" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" />
 					</div>
 				</div>
+
+				<button type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+					Send
+				  </button>
 	</form>
 
 	<!-- Top Shape Divider -->
