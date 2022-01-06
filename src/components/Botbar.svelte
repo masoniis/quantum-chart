@@ -7,7 +7,7 @@
 
 <footer class="bg-light-bg text-light-text transition-colors duration-500 p-6">
 	<div
-		class="container flex justify-between items-center border-t-2 border-stone-400 px-5 mx-auto transition-all ease-linear duration-1000"
+		class="container flex flex-col md:flex-row justify-between items-center border-t-2 border-stone-400 px-5 mx-auto transition-all ease-linear duration-1000"
 	>
 		<!--Flex Item 1-->
 		<div class="flex justify-items-start text-sm pt-3">
