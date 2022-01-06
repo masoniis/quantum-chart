@@ -12,6 +12,9 @@ module.exports = {
         'lightbg': '#f5f5f4',
         'lighthover': '#030304'
       },
+      screens: {
+          'xs': '450px'
+      }
     },
   },
   plugins: [],
