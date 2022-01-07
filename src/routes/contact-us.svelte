@@ -10,49 +10,80 @@
 		</p>
 	</div>
 
-	<br />
+	<!-- Form Section -->
 	<form class="w-10/12 max-w-lg mx-auto my-10 p-10 bg-violet-100 border-5 rounded-xl shadow-lg">
 		<!-- Form Element Container, GRID -->
-			<div class="grid grid-cols-2 gap-y-6 gap-x-4 sm:grid-cols-4">
-				<div class="sm:col-span-2">
-				  <label for="first-name" class="block text-sm font-medium text-gray-700">
-					First name
-				  </label>
-				  <div class="mt-1">
-					<input type="text" name="first-name" id="first-name" autocomplete="given-name" placeholder="John" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
-				  </div>
+		<div class="grid grid-cols-2 gap-y-6 gap-x-4 sm:grid-cols-4">
+			<div class="sm:col-span-2">
+				<label for="first-name" class="block text-sm font-medium text-gray-700"> First name </label>
+				<div class="mt-1">
+					<input
+						type="text"
+						name="first-name"
+						id="first-name"
+						autocomplete="given-name"
+						placeholder="John"
+						class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+					/>
 				</div>
-		
-				<div class="sm:col-span-2">
-				  <label for="last-name" class="block text-sm font-medium text-gray-700">
-					Last name
-				  </label>
-				  <div class="mt-1">
-					<input type="text" name="last-name" id="last-name" autocomplete="family-name" placeholder="Smith" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
-				  </div>
-				</div>
-		
-				<div class="col-span-2 sm:col-span-4">
-				  <label for="email" class="block text-sm font-medium text-gray-700">
-					Email address
-				  </label>
-				  <div class="mt-1">
-					<input id="email" name="email" type="email" autocomplete="email" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
-				  </div>
-				</div>
+			</div>
 
-				<div class="col-span-2 sm:col-span-4">
-					<label for="message" class="block text-sm font-medium text-gray-700">
-						Message
-					</label>
-					<div class="mt-1">
-						<textarea id="message" name="message" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" />
-					</div>
+			<div class="sm:col-span-2">
+				<label for="last-name" class="block text-sm font-medium text-gray-700"> Last name </label>
+				<div class="mt-1">
+					<input
+						type="text"
+						name="last-name"
+						id="last-name"
+						autocomplete="family-name"
+						placeholder="Smith"
+						class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+					/>
 				</div>
+			</div>
 
-				<button type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+			<div class="col-span-2 sm:col-span-4">
+				<label for="email" class="block text-sm font-medium text-gray-700"> Email address </label>
+				<div class="mt-1">
+					<input
+						id="email"
+						name="email"
+						type="email"
+						autocomplete="email"
+						class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+					/>
+				</div>
+			</div>
+
+			<div class="col-span-2 sm:col-span-4">
+				<label for="message" class="block text-sm font-medium text-gray-700"> Message </label>
+				<div class="mt-1">
+					<textarea
+						id="message"
+						name="message"
+						rows="3"
+						class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+					/>
+				</div>
+			</div>
+		</div>
+
+		<div class="pt-5">
+			<div class="flex justify-end">
+				<button
+					type="button"
+					class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+				>
+					Clear
+				</button>
+				<button
+					type="submit"
+					class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+				>
 					Send
-				  </button>
+				</button>
+			</div>
+		</div>
 	</form>
 
 	<!-- Top Shape Divider -->
@@ -70,10 +101,11 @@
 		</svg>
 	</div>
 
-	<div class="relative mx-0 px-0 min-w-10/12 py-24 bg-lightbg">
-		<div class="containermx-auto flex flex-col md:flex-row justify-center">
+	<!-- Contact Section -->
+	<div class="relative mx-0 px-2 min-w-10/12 py-14 md:py-24 bg-lightbg">
+		<div class="container mx-auto flex flex-col md:flex-row justify-center">
 			<!-- Contact Info ICONS TAKEN FROM: https://iconmonstr.com PAY ATTENTION TO LICENSE-->
-			<div class="flex flex-col self-center max-w-md shadow-lg bg-stone-50">
+			<div class="flex flex-col self-center md:self-start max-w-md shadow-lg bg-stone-50">
 				<!-- Flex Item 1 -->
 				<h1 class="font-bold text-lg px-10 py-10 ">Contact Information</h1>
 
@@ -128,25 +160,26 @@
 			</div>
 
 			<!-- How Can We Help? -->
-			<div class="flex flex-col max-w-sm px-2 md:pl-8 self-center">
-				<h1 class="text-2xl font-bold pt-10 pb-3">How Can We Help?</h1>
+			<div class="flex flex-col max-w-sm px-2 md:pl-8 self-center md:self-end border-t-2 md:border-0 mt-6 border-black">
+
+				<h1 class="text-2xl font-bold pb-3 pt-4">How Can We Help?</h1>
 				<p>
 					Please select a topic below related to your inquiry. If you don’t find what you need, fill
 					out our contact form.
 				</p>
 
 				<div>
-					<p class="text-violet-500 text-lg font-medium">Book a Demo</p>
-					<p class="">Request stuff hi hi</p>
+					<p class="text-violet-500 text-lg font-medium py-2">Book a Demo</p>
+					<p class="pb-4">Request a demo from one of our landscape masters.</p>
 				</div>
 
-				<div class="py-2 border-y-2 border-black">
-					<p class=" text-violet-500 text-lg font-medium">Do something</p>
-					<p>2</p>
+				<div class="py-2 border-y-[1px] border-black">
+					<p class=" text-violet-500 text-lg font-medium py-2">Do something</p>
+					<p class="pb-2">Hey we can do something.</p>
 				</div>
 				<div>
-					<p class="pt-4 text-violet-500 text-lg font-medium">Do another thing</p>
-					<p>2</p>
+					<p class="text-violet-500 text-lg font-medium pt-4 pb-2">Join the Team</p>
+					<p>Join our force and earn commission for every successful task.</p>
 				</div>
 			</div>
 		</div>
