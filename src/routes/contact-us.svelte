@@ -1,4 +1,4 @@
-<title>Contact Us</title>
+<title>BeyondGreen - Contact</title>
 
 <main class="min-h-screen bg-mainbg text-maintext overflow-hidden">
 	<div class="text-center mx-auto">
@@ -160,8 +160,9 @@
 			</div>
 
 			<!-- How Can We Help? -->
-			<div class="flex flex-col max-w-sm px-2 md:pl-8 self-center md:self-end border-t-2 md:border-0 mt-6 border-black">
-
+			<div
+				class="flex flex-col max-w-sm px-2 md:pl-8 self-center md:self-end border-t-2 md:border-0 mt-6 border-black"
+			>
 				<h1 class="text-2xl font-bold pb-3 pt-4">How Can We Help?</h1>
 				<p>
 					Please select a topic below related to your inquiry. If you don’t find what you need, fill
