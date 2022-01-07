@@ -1,6 +1,14 @@
 module.exports = {
   content: ['./src/**/*.{html,css,svelte}'],
   theme: {
+    screens: {
+      'xs': '450px',
+      'sm': '640px',
+      'md': '775px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     extend: {
       colors: {
         'dark-bg': '#0a1929',
@@ -14,13 +22,7 @@ module.exports = {
         'lightbg': '#f5f5f4',
         'lighthover': '#030304'
       },
-      screens: {
-          'xs': '450px'
-      }
     },
-    screens: {
-          'md': '775px'
-    }
   },
   plugins: [
     require('@tailwindcss/forms'),
