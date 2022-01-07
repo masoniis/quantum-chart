@@ -125,7 +125,7 @@
 							/></svg
 						>
 						<div class="pl-5 overflow-hidden">
-							<p>12345 Sesame Street Laneeeeee</p>
+							<p>12345 Sesame Street Lane</p>
 							<p>Parker, CO 80138</p>
 						</div>
 					</div>
