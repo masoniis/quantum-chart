@@ -142,7 +142,7 @@
 						<p class="pl-5">+1 (123) 456-7890</p>
 					</div>
 					<div class="flex flex-row pt-5">
-						<svg
+						<svg class="mr-5"
 							width="24"
 							height="24"
 							xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +152,7 @@
 								d="M24 21h-24v-18h24v18zm-23-16.477v15.477h22v-15.477l-10.999 10-11.001-10zm21.089-.523h-20.176l10.088 9.171 10.088-9.171z"
 							/></svg
 						>
-						<a class="pl-5 text-violet-500 hover:underline" href="mail@landscape.com"
+						<a class="text-mainlink hover:text-mainlinkhover link link-underline link-underline-black" href="mail@landscape.com"
 							>mail@landscape.com</a
 						>
 					</div>
@@ -164,22 +164,22 @@
 				class="flex flex-col max-w-sm px-2 md:pl-8 self-center md:self-end border-t-2 md:border-0 mt-6 border-black"
 			>
 				<h1 class="text-2xl font-bold pb-3 pt-4">How Can We Help?</h1>
-				<p>
+				<p class="pb-2">
 					Please select a topic below related to your inquiry. If you don’t find what you need, fill
 					out our contact form.
 				</p>
 
 				<div>
-					<p class="text-violet-500 text-lg font-medium py-2">Book a Demo</p>
+					<a href="https://www.google.com/search?q=Book+a+Demo" class="text-mainlink hover:text-mainlinkhover text-lg font-medium link link-underline link-underline-black">Book a Demo</a>
 					<p class="pb-4">Request a demo from one of our landscape masters.</p>
 				</div>
 
-				<div class="py-2 border-y-[1px] border-black">
-					<p class=" text-violet-500 text-lg font-medium py-2">Do something</p>
-					<p class="pb-2">Hey we can do something.</p>
+				<div class="py-4 mb-4 border-y-[1px] border-black">
+					<a href="https://www.google.com/search?q=Do+Something" class=" text-mainlink hover:text-mainlinkhover text-lg font-medium link link-underline link-underline-black">Do something</a>
+					<p>Hey we can do something.</p>
 				</div>
 				<div>
-					<p class="text-violet-500 text-lg font-medium pt-4 pb-2">Join the Team</p>
+					<a href="https://www.google.com/search?q=Join+the+Team" class="text-mainlink hover:text-mainlinkhover text-lg font-medium pt-4 link link-underline link-underline-black">Join the Team</a>
 					<p>Join our force and earn commission for every successful task.</p>
 				</div>
 			</div>
