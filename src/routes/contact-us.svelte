@@ -10,8 +10,8 @@
 	<!-- Intro area -->
 	<div class="text-center mx-auto">
 		<br />
-		<h4 class="pb-4">Have a question?</h4>
-		<h1 class="pb-4 text-4xl">Contact Us</h1>
+		<strong class="py-5 text-pink-500">Have a question?</strong>
+		<h1 class="pb-4 pt-2 text-4xl">Contact Us</h1>
 		<p class="max-w-lg mx-auto px-4">
 			We're here to help and ready to answer any questions that you have for us. We look forward to
 			hearing from you!
