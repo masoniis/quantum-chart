@@ -7,7 +7,7 @@
 
 <footer class="bg-mainbg text-maintext transition-colors duration-500 p-6">
 	<div
-		class="container flex flex-col sm:flex-row justify-between items-center border-t-2 border-stone-400 px-5 mx-auto transition-all ease-linear duration-1000"
+		class="max-w-screen-2xl mx-auto flex flex-col sm:flex-row justify-between items-center border-t-2 border-stone-400 px-5 transition-all ease-linear duration-1000"
 	>
 		<!--Flex Item 1-->
 		<div class="flex flex-col text-center xs:text-left xs:flex-row justify-items-start text-sm pt-3">
@@ -87,5 +87,4 @@
 			</a>
 		</span>
 	</div>
-
 </footer>

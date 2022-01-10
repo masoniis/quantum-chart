@@ -2,11 +2,11 @@ module.exports = {
   content: ['./src/**/*.{html,css,svelte}'],
   theme: {
     screens: {
-      'xs': '450px',
-      '0-xs': {'min': '0px', 'max': '449px'},
+      'xs': '460px',
+      '0-xs': {'min': '0px', 'max': '459px'},
 
       'sm': '640px',
-      'xs-sm': {'min': '450px', 'max': '639px'},
+      'xs-sm': {'min': '460px', 'max': '639px'},
 
       'md': '775px',
       'sm-md': {'min': '640px', 'max': '774px'},
