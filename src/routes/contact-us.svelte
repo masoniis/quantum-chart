@@ -115,7 +115,7 @@
 			<div class=" mx-auto flex flex-col md:flex-row justify-center">
 				<!-- Contact Info ICONS TAKEN FROM: https://iconmonstr.com PAY ATTENTION TO LICENSE-->
 				<Visibility steps={100} let:percent let:unobserve>
-				{#if percent > 10}
+				{#if percent > 1}
 					<div
 						class="flex flex-col mx-auto self-center max-w-fit md:max-w-full md:self-start shadow-lg bg-stone-50"
 						in:fly={{ duration: 1000, x: -500 }}
@@ -178,7 +178,7 @@
 				</Visibility>
 
 				<Visibility steps={100} let:percent let:unobserve>
-				{#if percent > 10}
+				{#if percent > 1}
 					<!-- How Can We Help? section -->
 					<div
 						class="flex flex-col mx-auto max-w-sm px-2 md:pl-8 self-center md:self-end border-t-2 md:border-0 mt-6 border-black"
