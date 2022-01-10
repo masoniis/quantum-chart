@@ -187,7 +187,7 @@
 					>
 						<h1 class="text-2xl font-bold pb-3 pt-4">How Can We Help?</h1>
 						<p class="pb-2">
-							Please select a topic below related to your inquiry. If you don’t find what you need,
+							Please select a topic below related to your inquiry. If you don't find what you need,
 							fill out our contact form.
 						</p>
 
