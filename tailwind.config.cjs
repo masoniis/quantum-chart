@@ -3,8 +3,14 @@ module.exports = {
   theme: {
     screens: {
       'xs': '450px',
+      '0-xs': {'min': '0px', 'max': '449px'},
+
       'sm': '640px',
+      'xs-sm': {'min': '450px', 'max': '639px'},
+
       'md': '775px',
+      'sm-md': {'min': '640px', 'max': '774px'},
+
       'lg': '1024px',
       'xl': '1280px',
       '2xl': '1536px',

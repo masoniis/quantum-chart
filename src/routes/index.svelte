@@ -1,36 +1,8 @@
 <title>BeyondGreen - Home</title>
 
-<style>
-	@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css");
-</style>
-<script>
-	import Dropdown from 'sv-bootstrap-dropdown';
-	let dropdownTrigger;
-</script>
+<h1 style="text-align: center; font-size: 4rem; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Beyond Green</h1>
+<p style="text-align: center; font-size: 1.3rem">We make your lawn our priority</p>
 
-<main class="min-h-screen bg-light-bg">
-	<h1 class="text-light-text text-center">Welcome to landscape inc duh</h1>
-	<div class="text-center">
-		<div class="dropdown">
-			<button class="dropbtn">Dropdown</button>
-			<div class="dropdown-content">
-			  <a href="https://youtube.com">Link 1</a>
-			  <a href="https://youtube.com">Link 2</a>
-			  <a href="https://youtube.com">Link 3</a>
-			</div>
-		  </div>
-	</div>
-	<div class="flex text-center">
-		<div class="flex-none w-60 h-20">
-		  Basic<br>$9.99
-		</div>
-		<div class="flex-initial w-60 ...">
-		  Improved<br>$19.99
-		</div>
-		<div class="flex-initial w-60 ...">
-		  Premium<br>$29.99
-		</div>
-	  </div>
 	  
 		<!-- <svg width="3e3pt" height="3e3pt" version="1.0" viewBox="0 0 3000.000000 3000.000000" xmlns="http://www.w3.org/2000/svg">
 			<g transform="translate(0 3e3) scale(.1 -.1)">
@@ -65,6 +37,3 @@
 			<path d="m4027 12562c-142-697-257-1273-257-1279 0-10 112-13 526-13 496 0 525 1 520 18-2 9-120 582-262 1272-141 690-260 1258-263 1262-4 4-123-563-264-1260z"/>
 			</g>
 			</svg> -->
-	
-
-</main>
