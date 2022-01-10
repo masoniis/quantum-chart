@@ -112,7 +112,7 @@
 	</div>
 
 	<!--     Contact Section     -->
-		<div class="relative mx-0 px-2 min-w-10/12 py-14 md:py-24 bg-lightbg min-height-1">
+		<div class="relative mx-0 px-2 min-w-10/12 py-14 md:py-24 bg-lightbg min-height-contact">
 			<div class="mx-auto flex flex-col md:flex-row justify-center">
 				<!-- Contact Info ICONS TAKEN FROM: https://iconmonstr.com PAY ATTENTION TO LICENSE-->
 				<Visibility steps={100} let:percent>
