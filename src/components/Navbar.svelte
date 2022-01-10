@@ -1,5 +1,5 @@
 <script>
-	import { page } from "$app/stores"
+	import { page } from '$app/stores';
 </script>
 
 <header class="bg-mainbg text-maintext shadow">
@@ -75,28 +75,28 @@
 			<div class="hidden md:ml-6 md:flex md:space-x-8">
 				<a
 					href="/"
-					class:active={$page.url.pathname === "/"}
-					class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+					class:active={$page.url.pathname === '/'}
+					class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 transition-all inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
 				>
 					Home
 				</a>
 				<a
 					href="/products"
-					class:active={$page.url.pathname === "/products"}
+					class:active={$page.url.pathname === '/products'}
 					class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
 				>
 					Products
 				</a>
 				<a
 					href="/pricing"
-					class:active={$page.url.pathname === "/pricing"}
+					class:active={$page.url.pathname === '/pricing'}
 					class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
 				>
 					Pricing
 				</a>
 				<a
 					href="/contact-us"
-					class:active={$page.url.pathname === "/contact-us"}
+					class:active={$page.url.pathname === '/contact-us'}
 					class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
 				>
 					Contact Us
@@ -109,6 +109,6 @@
 <style>
 	.active {
 		--tw-border-opacity: 1;
-    	border-color: rgb(99 102 241 / var(--tw-border-opacity));
+		border-color: rgb(99 102 241 / var(--tw-border-opacity));
 	}
 </style>

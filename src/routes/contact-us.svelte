@@ -1,10 +1,11 @@
 <title>BeyondGreen - Contact</title>
 
-<main class="min-h-screen bg-mainbg text-maintext overflow-hidden">
+<main class="min-h-screen text-maintext overflow-hidden">
 	<div class="text-center mx-auto">
+		<br />
 		<h4 class="pb-4">Have a question?</h4>
 		<h1 class="pb-4 text-4xl">Contact Us</h1>
-		<p>
+		<p class="max-w-lg mx-auto px-4">
 			We're here to help and ready to answer any questions that you have for us. We look forward to
 			hearing from you!
 		</p>
@@ -87,7 +88,7 @@
 		</div>
 	</form>
 
-	<!-- Top Shape Divider -->
+	<!--  ↓ Top Shape Divider ↓  -->
 	<div class="contact-section-top-wave">
 		<svg
 			data-name="Layer 1"
@@ -102,7 +103,7 @@
 		</svg>
 	</div>
 
-	<!-- Contact Section -->
+	<!--     Contact Section     -->
 	<div class="relative mx-0 px-2 min-w-10/12 py-14 md:py-24 bg-lightbg">
 		<div class="container mx-auto flex flex-col md:flex-row justify-center">
 			<!-- Contact Info ICONS TAKEN FROM: https://iconmonstr.com PAY ATTENTION TO LICENSE-->
@@ -143,7 +144,8 @@
 						<p class="pl-5">+1 (123) 456-7890</p>
 					</div>
 					<div class="flex flex-row pt-5">
-						<svg class="mr-5"
+						<svg
+							class="mr-5"
 							width="24"
 							height="24"
 							xmlns="http://www.w3.org/2000/svg"
@@ -153,8 +155,9 @@
 								d="M24 21h-24v-18h24v18zm-23-16.477v15.477h22v-15.477l-10.999 10-11.001-10zm21.089-.523h-20.176l10.088 9.171 10.088-9.171z"
 							/></svg
 						>
-						<a class="text-mainlink hover:text-mainlinkhover link link-underline link-underline-black" href="mail@landscape.com"
-							>mail@landscape.com</a
+						<a
+							class="text-mainlink hover:text-mainlinkhover link link-underline link-underline-black"
+							href="mail@landscape.com">mail@landscape.com</a
 						>
 					</div>
 				</div>
@@ -171,23 +174,35 @@
 				</p>
 
 				<div>
-					<a href="https://www.google.com/search?q=Book+a+Demo" class="text-mainlink hover:text-mainlinkhover text-lg font-medium link link-underline link-underline-black">Book a Demo</a>
+					<a
+						href="https://www.google.com/search?q=Book+a+Demo"
+						class="text-mainlink hover:text-mainlinkhover text-lg font-medium link link-underline link-underline-black"
+						>Book a Demo</a
+					>
 					<p class="pb-4">Request a demo from one of our landscape masters.</p>
 				</div>
 
 				<div class="py-4 mb-4 border-y-[1px] border-black">
-					<a href="https://www.google.com/search?q=Do+Something" class=" text-mainlink hover:text-mainlinkhover text-lg font-medium link link-underline link-underline-black">Do something</a>
+					<a
+						href="https://www.google.com/search?q=Do+Something"
+						class=" text-mainlink hover:text-mainlinkhover text-lg font-medium link link-underline link-underline-black"
+						>Do something</a
+					>
 					<p>Hey we can do something.</p>
 				</div>
 				<div>
-					<a href="https://www.google.com/search?q=Join+the+Team" class="text-mainlink hover:text-mainlinkhover text-lg font-medium pt-4 link link-underline link-underline-black">Join the Team</a>
+					<a
+						href="https://www.google.com/search?q=Join+the+Team"
+						class="text-mainlink hover:text-mainlinkhover text-lg font-medium pt-4 link link-underline link-underline-black"
+						>Join the Team</a
+					>
 					<p>Join our force and earn commission for every successful task.</p>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- Bottom Shape Divider -->
+	<!-- ↑ Bottom Shape Divider ↑  -->
 	<div class="contact-section-bottom-wave">
 		<svg
 			data-name="Layer 1"
