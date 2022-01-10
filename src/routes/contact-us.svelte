@@ -2,11 +2,6 @@
 	import { fade, fly } from 'svelte/transition';
 	import Visibility from '../components/Visibility.svelte';
 
-	function safariWorkaround(node) {
-    if(navigator.appVersion.includes('Safari')) {
-      node.style.overflow = 'hidden';
-    }
-}
 </script>
 
 <title>BeyondGreen - Contact</title>
@@ -124,8 +119,8 @@
 				{#if percent > 1}
 					<div
 						class="flex flex-col mx-auto self-center max-w-fit md:max-w-full md:self-start shadow-lg bg-stone-50"
-						in:fly={{ duration: 1000, x: -500 }} use:safariWorkaround>
-					>
+						in:fly={{ duration: 1000, x: -500 }}>
+			
 						<!-- Flex Item 1 -->
 						<h1 class="font-bold text-lg px-10 py-10 ">Contact Information</h1>
 
