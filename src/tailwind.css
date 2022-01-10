@@ -11,7 +11,7 @@ html { font-family: 'Inter', sans-serif; }
     background-size: 0 3px;
     background-position: 0 100%;
     background-repeat: no-repeat;
-    transition: background-size .5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 .link-underline-black {

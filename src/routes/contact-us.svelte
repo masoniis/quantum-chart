@@ -1,6 +1,7 @@
 <title>BeyondGreen - Contact</title>
 
 <main class="min-h-screen text-maintext overflow-hidden">
+	<!-- Intro area -->
 	<div class="text-center mx-auto">
 		<br />
 		<h4 class="pb-4">Have a question?</h4>

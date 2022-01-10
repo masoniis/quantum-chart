@@ -3,7 +3,7 @@
 </script>
 
 <header class="bg-mainbg text-maintext shadow">
-	<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+	<nav class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex justify-between h-16">
 			<!-- Logo -->
 			<div class="flex-shrink-0 flex items-center">
