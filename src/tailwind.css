@@ -23,6 +23,10 @@ html { font-family: 'Inter', sans-serif; }
     background-position: 0 100%
 }
 
+.min-height-1 {
+    min-height: 600px;
+}
+
 
 /* SHAPE DIVIDERS */
 
