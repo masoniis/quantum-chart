@@ -80,14 +80,14 @@
 		<div class="centerflex2 flex-none w-56 h-10 background-black">
 			<button
 				class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-				class:active={monthlyActive};
+				class:active={monthlyActive}
 				on:click={() => handleClick("monthly")}>Monthly
 			</button>
 		</div>
 		<div class="flex-initial w-55... background-red-50">
 			<button
 			class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-			class:active={!monthlyActive};
+			class:active={!monthlyActive}
 			on:click={() => handleClick("yearly")}>Yearly
 		</button>
 		</div>
