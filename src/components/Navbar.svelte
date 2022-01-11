@@ -1,5 +1,7 @@
 <script>
 	import { page } from '$app/stores';
+
+	console.log($page.url.pathname)
 </script>
 
 <header class="bg-mainbg text-maintext shadow">

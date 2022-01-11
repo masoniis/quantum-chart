@@ -24,10 +24,17 @@
     margin-left: 90vh;
 	}
 
-	.centerflex {
+	.centerflex1 {
 		margin-left: 42vh;
 	}
-
+	.centerflex2 {
+		margin-left: 70vh;
+	}
+	
+	.active {
+		--tw-border-opacity: 1;
+		border-color: rgb(99 102 241 / var(--tw-border-opacity));
+	}
 	</style>
 
 <script>
@@ -35,18 +42,21 @@
 	export var premium=19;
 	export var pro=29;
 	export var currentPlan="Monthly";
+	export var monthlyActive=true;
 	function handleClick(plan){
 		if (plan==="monthly") {
 			basic=9;
 			premium=19;
 			pro=29;
 			currentPlan="Monthly";
+			monthlyActive=true
 		}
 		else{
 			basic=99;
 			premium=199;
 			pro=299;
 			currentPlan="Yearly";
+			monthlyActive=false;
 		}
 	}
 </script>
@@ -55,7 +65,8 @@
 	<h1 class="text-light-text text-center">Our prices are always fair and affordable to give your lawn the best care possible</h1>
 	<br>
 	<br>
-	<div class="text-center">
+	<!--Dropdown Menu-->
+	<!-- <div class="text-center">
 		<div class="dropdown">
 			<button class="dropbtn" style="color: #ff0000">{currentPlan} Pricing</button>
 			<div class="dropdown-content">
@@ -63,10 +74,26 @@
 			  <button on:click={() => handleClick("yearly")}>Yearly</button>
 			</div>
 		  </div>
-	</div>
-	<br>
+	</div> -->
+	<p class="text-center" style="color: #af0000">{currentPlan} Pricing</p>
 	<div class="flex text-center">
-		<div class="centerflex flex-none w-60 h-15" style="background: yellow">
+		<div class="centerflex2 flex-none w-56 h-10 background-black">
+			<button
+				class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+				class:active={monthlyActive};
+				on:click={() => handleClick("monthly")}>Monthly
+			</button>
+		</div>
+		<div class="flex-initial w-55... background-red-50">
+			<button
+			class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+			class:active={!monthlyActive};
+			on:click={() => handleClick("yearly")}>Yearly
+		</button>
+		</div>
+	</div>
+	<div class="flex text-center">
+		<div class="centerflex1 flex-none w-60 h-15" style="background: yellow">
 		  Basic<br>${basic}.99
 		</div>
 		<div class="flex-initial w-60 ..." style="background: orange">
