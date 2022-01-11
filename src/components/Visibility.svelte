@@ -5,14 +5,19 @@
     export let bottom = 0;
     export let left = 0;
     export let right = 0;
-
     export let steps = 100;
+    export let threshold = undefined;
+    export let once = true;
 
     let element;
     let percent;
     let observer;
     let unobserve = () => {};
     let intersectionObserverSupport = false;
+        let visible = false;
+
+    $: visible = !intersectionObserverSupport || percent >= threshold;
+        $: if (intersectionObserverSupport && visible && once) unobserve();
 
     function intersectPercent(entries) {
         entries.forEach(entry => {
@@ -46,5 +51,5 @@
 </script>
 
 <div bind:this={element}>
-    <slot {percent} {unobserve}/>
+    <slot {visible} {percent} {unobserve} {intersectionObserverSupport}/>
 </div>
