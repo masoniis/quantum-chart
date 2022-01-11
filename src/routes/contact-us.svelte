@@ -2,6 +2,12 @@
 	import { fade, fly } from 'svelte/transition';
 	import Visibility from '../components/Visibility.svelte';
 
+	let show = true;
+
+	function reload() {
+		show = false;
+		setTimeout(() => (show = true), 100);
+	}
 </script>
 
 <title>BeyondGreen - Contact</title>
@@ -10,8 +16,8 @@
 	<!-- Intro area -->
 	<div class="text-center mx-auto">
 		<br />
-		<strong class="py-5 text-pink-500">Have a question?</strong>
-		<h1 class="pb-4 pt-2 text-4xl">Contact Us</h1>
+		<h4 class="pb-4">Have a question?</h4>
+		<h1 class="pb-4 text-4xl">Contact Us</h1>
 		<p class="max-w-lg mx-auto px-4">
 			We're here to help and ready to answer any questions that you have for us. We look forward to
 			hearing from you!
@@ -35,7 +41,6 @@
 					/>
 				</div>
 			</div>
-
 			<div class="sm:col-span-2">
 				<label for="last-name" class="block text-sm font-medium text-gray-700"> Last name </label>
 				<div class="mt-1">
@@ -49,7 +54,6 @@
 					/>
 				</div>
 			</div>
-
 			<div class="col-span-2 sm:col-span-4">
 				<label for="email" class="block text-sm font-medium text-gray-700"> Email address </label>
 				<div class="mt-1">
@@ -63,7 +67,6 @@
 					/>
 				</div>
 			</div>
-
 			<div class="col-span-2 sm:col-span-4">
 				<label for="message" class="block text-sm font-medium text-gray-700"> Message </label>
 				<div class="mt-1">
@@ -76,7 +79,6 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="pt-5">
 			<div class="flex justify-end">
 				<button
@@ -94,7 +96,7 @@
 			</div>
 		</div>
 	</form>
-	<br /><br /><br /><br /> <br /><br /><br /><br /> 
+	<br /><br /><br /><br /><br /><br /><br /><br />
 
 	<!--  ↓ Top Shape Divider ↓  -->
 	<div class="contact-section-top-wave">
@@ -112,15 +114,16 @@
 	</div>
 
 	<!--     Contact Section     -->
-		<div class="relative mx-0 px-2 min-w-10/12 py-14 md:py-24 bg-lightbg min-height-contact">
-			<div class="mx-auto flex flex-col md:flex-row justify-center">
+	<Visibility threshold="100" let:visible>
+	<div class="relative mx-0 px-2 min-w-10/12 py-14 md:py-24 bg-lightbg">
+		{#if visible}
+			<div class="container mx-auto flex flex-col md:flex-row justify-center">
 				<!-- Contact Info ICONS TAKEN FROM: https://iconmonstr.com PAY ATTENTION TO LICENSE-->
-				<Visibility steps={100} let:percent>
-				{#if percent > 1}
+				
 					<div
-						class="flex flex-col mx-auto self-center max-w-fit md:max-w-full md:self-start shadow-lg bg-stone-50"
-						in:fly={{ duration: 1000, x: -500 }}>
-			
+						class="flex flex-col self-center md:self-start max-w-md shadow-lg bg-stone-50"
+						in:fly={{ duration: 1400, x: -700 }}
+					>
 						<!-- Flex Item 1 -->
 						<h1 class="font-bold text-lg px-10 py-10 ">Contact Information</h1>
 
@@ -175,19 +178,15 @@
 							</div>
 						</div>
 					</div>
-				{/if}
-				</Visibility>
 
-				<Visibility steps={100} let:percent>
-				{#if percent > 1}
-					<!-- How Can We Help? section -->
+					<!-- How Can We Help? -->
 					<div
-						class="flex flex-col mx-auto max-w-sm px-2 md:pl-8 self-center md:self-end border-t-2 md:border-0 mt-6 border-black"
-						in:fly={{ duration: 1000, x: 500 }}
+						class="flex flex-col max-w-sm px-2 md:pl-8 self-center md:self-end border-t-2 md:border-0 mt-6 border-black"
+						in:fly={{ duration: 1400, x: 700 }}
 					>
 						<h1 class="text-2xl font-bold pb-3 pt-4">How Can We Help?</h1>
 						<p class="pb-2">
-							Please select a topic below related to your inquiry. If you don't find what you need,
+							Please select a topic below related to your inquiry. If you don’t find what you need,
 							fill out our contact form.
 						</p>
 
@@ -217,12 +216,10 @@
 							<p>Join our force and earn commission for every successful task.</p>
 						</div>
 					</div>
-				{/if}
-				</Visibility>
 			</div>
-		</div>
-
-
+			{/if}
+	</div>
+</Visibility>
 	<!-- ↑ Bottom Shape Divider ↑  -->
 	<div class="contact-section-bottom-wave">
 		<svg
