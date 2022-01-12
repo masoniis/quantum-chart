@@ -16,7 +16,7 @@
 	}
 </script>
 
-<header class="{background} {text} shadow">
+<header class="{background} {text} shadow fixed w-full z-10">
 	<nav class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex justify-between h-16">
 			<!-- Logo -->
