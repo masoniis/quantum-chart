@@ -20,18 +20,18 @@
 	<nav class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex justify-between h-16">
 			<!-- Logo -->
-			<div class="flex-shrink-0 flex items-center">
-				<h1 class="block md:hidden w-auto">
+			<div class="flex items-center">
+				<h1 class="block sm:hidden w-auto">
 					<p class="h-14 w-14">
 						<Logo />
 					</p>
 				</h1>
 
-				<h1 class="hidden md:flex flex-row">
+				<h1 class="hidden sm:flex flex-row">
 					<a href="/" class="h-14 w-14">
 						<Logo />
 					</a>
-					<h1 class="pl-5 self-center font-extrabold">Beyondgreen (pc)</h1>
+					<p class="pl-5 self-center font-extrabold">Beyondgreen</p>
 				</h1>
 			</div>
 
