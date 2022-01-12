@@ -3,17 +3,19 @@ module.exports = {
   theme: {
     screens: {
       'xs': '460px',
-      '0-xs': {'min': '0px', 'max': '459px'},
-
       'sm': '640px',
-      'xs-sm': {'min': '460px', 'max': '639px'},
-
       'md': '775px',
-      'sm-md': {'min': '640px', 'max': '774px'},
-
       'lg': '1024px',
       'xl': '1280px',
       '2xl': '1536px',
+
+      'to-xs': [{'max': '460px'}],
+      'to-sm': [{'max': '640px'}],
+      'to-md': [{'max': '775px'}],
+      'to-lg': [{'max': '1024px'}],
+      
+      
+
     },
     extend: {
       colors: {

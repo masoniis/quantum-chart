@@ -3,10 +3,11 @@
 <main class="min-h-screen bg-light-bg overflow-hidden">
 	<!-- Stop section -->
 	<div class="bg-topsection">
-		<div class="container mx-auto flex flex-col text-light-text py-32">
+		<div class="container mx-auto flex flex-col text-maintext py-32">
 			<strong class="text-7xl max-w-4xl">Peak performance, superb satisfaction</strong>
 
-			<p class="text-3xl py-5">We doo stuff</p>
+			<p class="text-3xl py-5">We <marK>doo</marK> stuff</p>
+			
 		</div>
 
 		<div class="topsection-wave bg-mainbg fill-topsection">
@@ -26,6 +27,10 @@
 </main>
 
 <style>
+	mark {
+		color: red;
+	}
+
 	.topsection-wave {
 		position: relative;
 		top: 0;

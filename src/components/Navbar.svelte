@@ -21,9 +21,7 @@
 		<div class="flex justify-between h-16">
 			<!-- Logo -->
 			<div class="flex-shrink-0 flex items-center">
-				<h1 class="block xs:hidden h-8 w-auto">Phone Logo Here</h1>
-
-				<h1 class="hidden xs-sm:block sm-md:block md:hidden h-8 w-auto">Tablet Logo Here</h1>
+				<h1 class="block md:hidden h-8 w-auto">Phone Logo Here</h1>
 
 				<h1 class="hidden md:block h-8 w-auto">Computer Logo Here</h1>
 			</div>

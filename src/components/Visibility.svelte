@@ -14,7 +14,7 @@
     let observer;
     let unobserve = () => {};
     let intersectionObserverSupport = false;
-        let visible = false;
+    let visible = false;
 
     $: visible = !intersectionObserverSupport || percent >= threshold;
         $: if (intersectionObserverSupport && visible && once) unobserve();
