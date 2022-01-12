@@ -6,7 +6,7 @@
 		<div class="container mx-auto flex flex-col text-maintext py-32">
 			<strong class="text-7xl max-w-4xl">Peak performance, superb satisfaction</strong>
 
-			<p class="text-3xl py-5">We <marK>doo</marK> stuff</p>
+			<p class="text-3xl py-5">We <mark>do</mark> stuff</p>
 			
 		</div>
 

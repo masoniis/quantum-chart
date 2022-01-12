@@ -21,7 +21,7 @@
 	</div>
 
 	<!-- Form Section -->
-	<form class="w-10/12 max-w-lg mx-auto my-10 p-10 bg-violet-100 border-5 rounded-xl shadow-lg">
+	<form class="w-10/12 max-w-lg mx-auto my-10 p-10 bg-violet-100 rounded-xl shadow-lg">
 		<!-- Form Element Container, GRID -->
 		<div class="grid grid-cols-2 gap-y-6 gap-x-4 sm:grid-cols-4">
 			<div class="sm:col-span-2">
