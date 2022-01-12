@@ -99,7 +99,7 @@
 	<br /><br /><br /><br /><br /><br /><br /><br />
 
 	<!--  ↓ Top Shape Divider ↓  -->
-	<div class="contact-section-top-wave">
+	<div class="top-wave fill-lightbg">
 		<svg
 			data-name="Layer 1"
 			xmlns="http://www.w3.org/2000/svg"
@@ -115,11 +115,11 @@
 
 	<!--     Contact Section     -->
 	<Visibility threshold="100" let:visible>
-	<div class="relative mx-0 px-2 min-w-10/12 py-14 md:py-24 bg-lightbg">
-		{#if visible}
-			<div class="container mx-auto flex flex-col md:flex-row justify-center">
-				<!-- Contact Info ICONS TAKEN FROM: https://iconmonstr.com PAY ATTENTION TO LICENSE-->
-				
+		<div class="relative mx-0 px-2 min-w-10/12 py-14 md:py-24 bg-lightbg">
+			{#if visible}
+				<div class="container mx-auto flex flex-col md:flex-row justify-center">
+					<!-- Contact Info ICONS TAKEN FROM: https://iconmonstr.com PAY ATTENTION TO LICENSE-->
+
 					<div
 						class="flex flex-col self-center md:self-start max-w-md shadow-lg bg-stone-50"
 						in:fly={{ duration: 1400, x: -700 }}
@@ -216,12 +216,12 @@
 							<p>Join our force and earn commission for every successful task.</p>
 						</div>
 					</div>
-			</div>
+				</div>
 			{/if}
-	</div>
-</Visibility>
+		</div>
+	</Visibility>
 	<!-- ↑ Bottom Shape Divider ↑  -->
-	<div class="contact-section-bottom-wave">
+	<div class="bottom-wave fill-lightbg">
 		<svg
 			data-name="Layer 1"
 			xmlns="http://www.w3.org/2000/svg"
@@ -235,3 +235,39 @@
 		</svg>
 	</div>
 </main>
+
+<style>
+	.top-wave {
+		position: relative;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+		transform: rotate(180deg);
+	}
+
+	.top-wave svg {
+		position: relative;
+		display: block;
+		width: calc(221% + 1.3px);
+		height: 61px;
+		transform: rotateY(180deg);
+	}
+
+	.bottom-wave {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+	}
+
+	.bottom-wave svg {
+		position: relative;
+		display: block;
+		width: calc(100% + 1.3px);
+		height: 66px;
+	}
+</style>

@@ -1,10 +1,22 @@
 <script>
 	import { page } from '$app/stores';
 
-	console.log($page.url.pathname)
+	let background;
+	let text;
+
+	$: {
+		if ($page.url.pathname === '/') {
+			background = 'bg-topsection';
+			text = 'text-black'
+		} else {
+			background = 'bg-mainbg';
+			text = 'text-maintext'
+		}
+
+	}
 </script>
 
-<header class="bg-mainbg text-maintext shadow">
+<header class="{background} {text} shadow">
 	<nav class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex justify-between h-16">
 			<!-- Logo -->
@@ -74,32 +86,32 @@
 			</div>
 
 			<!-- Desktop Menu -->
-			<div class="hidden md:ml-6 md:flex md:space-x-8">
+			<div class="hidden md:ml-6 md:flex md:space-x-8 {text}">
 				<a
 					href="/"
 					class:active={$page.url.pathname === '/'}
-					class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 transition-all inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+					class="border-transparent hover:border-gray-300 hover:text-gray-700 transition-all inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
 				>
 					Home
 				</a>
 				<a
 					href="/products"
 					class:active={$page.url.pathname === '/products'}
-					class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+					class="border-transparent hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
 				>
 					Products
 				</a>
 				<a
 					href="/pricing"
 					class:active={$page.url.pathname === '/pricing'}
-					class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+					class="border-transparent hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
 				>
 					Pricing
 				</a>
 				<a
 					href="/contact-us"
 					class:active={$page.url.pathname === '/contact-us'}
-					class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+					class="border-transparent hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
 				>
 					Contact Us
 				</a>

@@ -28,48 +28,4 @@ html { font-family: 'Inter', sans-serif; }
 }
 
 
-/* SHAPE DIVIDERS */
 
-/* CONTACT-US PAGE: */
-
-.contact-section-top-wave {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.contact-section-top-wave svg {
-    position: relative;
-    display: block;
-    width: calc(221% + 1.3px);
-    height: 61px;
-    transform: rotateY(180deg);
-}
-
-.contact-section-top-wave .shape-fill {
-    @apply fill-lightbg
-}
-
-.contact-section-bottom-wave {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.contact-section-bottom-wave svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 66px;
-}
-
-.contact-section-bottom-wave .shape-fill {
-    @apply fill-lightbg
-}

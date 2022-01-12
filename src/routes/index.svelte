@@ -1,13 +1,44 @@
 <title>BeyondGreen - Home</title>
 
-<main class="min-h-screen bg-light-bg">
-	<div class="container mx-auto py-10 text-light-text text-center">
-		<h1 class="text-6xl">BeyondGreen</h1>
-		<p class="text-3xl py-5"> We doo stuff </p>
+<main class="min-h-screen bg-light-bg overflow-hidden">
+	<!-- Stop section -->
+	<div class="bg-topsection">
+		<div class="container mx-auto flex flex-col text-light-text py-32">
+			<strong class="text-7xl max-w-4xl">Peak performance, superb satisfaction</strong>
 
+			<p class="text-3xl py-5">We doo stuff</p>
+		</div>
+
+		<div class="topsection-wave bg-mainbg fill-topsection">
+			<svg
+				data-name="Layer 1"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 1200 120"
+				preserveAspectRatio="none"
+			>
+				<path
+					d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+					class="shape-fill"
+				/>
+			</svg>
+		</div>
 	</div>
-
-
 </main>
 
+<style>
+	.topsection-wave {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+	}
 
+	.topsection-wave svg {
+		position: relative;
+		display: block;
+		width: calc(122% + 1.3px);
+		height: 103px;
+	}
+</style>
