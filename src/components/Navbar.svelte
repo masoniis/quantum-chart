@@ -17,7 +17,7 @@
 </script>
 
 <header class="{background} {text} shadow fixed w-full z-10 mb-10">
-	<nav class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+	<nav class="max-w-screen-2xl mx-auto px-8 sm:px-12 lg:px-16">
 		<div class="flex justify-between h-16">
 			<!-- Logo -->
 			<div class="flex items-center">
