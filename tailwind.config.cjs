@@ -25,7 +25,7 @@ module.exports = {
         'lighthover': '#030304',
 
         // ↓ Home Page ↓
-        'topsection' : '#a39d8b',
+        'topsection' : '#d2e683',
       },
     },
   },
