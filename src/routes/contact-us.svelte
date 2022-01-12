@@ -1,13 +1,9 @@
 <script>
 	import { fade, fly } from 'svelte/transition';
 	import Visibility from '../components/Visibility.svelte';
+	
 
 	let show = true;
-
-	function reload() {
-		show = false;
-		setTimeout(() => (show = true), 100);
-	}
 </script>
 
 <title>BeyondGreen - Contact</title>
@@ -114,8 +110,8 @@
 	</div>
 
 	<!--     Contact Section     -->
-	<Visibility threshold="100" let:visible>
-		<div class="relative mx-0 px-2 min-w-10/12 py-14 md:py-24 bg-lightbg">
+	<Visibility threshold="30" let:visible>
+		<div class="relative mx-0 px-2 min-w-10/12 py-14 md:py-24 bg-lightbg min-height-section">
 			{#if visible}
 				<div class="container mx-auto flex flex-col md:flex-row justify-center">
 					<!-- Contact Info ICONS TAKEN FROM: https://iconmonstr.com PAY ATTENTION TO LICENSE-->
@@ -237,6 +233,10 @@
 </main>
 
 <style>
+	.min-height-section {
+		min-height: 626px;
+	}
+
 	.top-wave {
 		position: relative;
 		bottom: 0;
