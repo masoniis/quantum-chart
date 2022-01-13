@@ -1,6 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 	import Logo from '../components/Logo.svelte';
+	import DropIcon from '../components/Icons/DropIcon.svelte'
 
 	let background;
 	let text;
