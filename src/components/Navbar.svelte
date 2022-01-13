@@ -11,10 +11,10 @@
 	$: {
 		// Track the page and change the background accordingly
 		if ($page.url.pathname === '/') {
-			background = 'bg-topsection';
+			background = 'bg-transparent';
 			text = 'text-black';
 		} else {
-			background = 'bg-mainbg';
+			background = 'bg-transparent';
 			text = 'text-maintext';
 		}
 
@@ -23,7 +23,7 @@
 			transition = 'transition-all duration-300';
 			shadow = 'shadow-lg';
 			background = 'bg-mainbg';
-		} else if (y < 60) {
+		} else {
 			shadow = '';
 		}
 		if (y === 0) {
