@@ -20,7 +20,7 @@
 
 		// Animate the sticky header to change color when scrolled into page
 		if (y > 60) {
-			transition = 'transition-all duration-500';
+			transition = 'transition-all duration-300';
 			shadow = 'shadow-lg';
 			background = 'bg-mainbg';
 		} else if (y < 60) {
