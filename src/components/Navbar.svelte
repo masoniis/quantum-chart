@@ -35,19 +35,19 @@
 
 <svelte:window bind:scrollY={y} />
 
-<header class="{background} {text} {shadow} {transition} fixed w-full z-10 mb-10 ease-in-out">
+<header class="{background} {text} {shadow} {transition} fixed w-full z-10 mb-10 ease-in-out py-2">
 	<nav class="max-w-screen-2xl mx-auto px-8">
 		<div class="flex justify-between h-16">
 			<!-- Logo -->
 			<div class="flex items-center">
 				<h1 class="block sm:hidden w-auto">
-					<p class="h-14 w-14">
+					<p class="h-12 w-12">
 						<Logo />
 					</p>
 				</h1>
 
 				<h1 class="hidden sm:flex flex-row">
-					<a href="/" class="h-14 w-14">
+					<a href="/" class="h-12 w-12">
 						<Logo />
 					</a>
 					<p class="pl-5 self-center font-extrabold">Beyondgreen</p>
