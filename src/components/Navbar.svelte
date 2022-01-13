@@ -4,8 +4,12 @@
 
 	let background;
 	let text;
+	let shadow;
+	let transition;
+	let y;
 
 	$: {
+		// Track the page and change the background accordingly
 		if ($page.url.pathname === '/') {
 			background = 'bg-topsection';
 			text = 'text-black';
@@ -13,11 +17,26 @@
 			background = 'bg-mainbg';
 			text = 'text-maintext';
 		}
+
+		// Animate the sticky header to change color when scrolled into page
+		if (y > 60) {
+			transition = 'transition-all duration-500';
+			shadow = 'shadow-lg';
+			background = 'bg-mainbg';
+		} else if (y < 60) {
+			shadow = '';
+		}
+		if (y === 0) {
+			transition = '';
+			shadow = '';
+		}
 	}
 </script>
 
-<header class="{background} {text} shadow fixed w-full z-10 mb-10">
-	<nav class="max-w-screen-2xl mx-auto px-8 sm:px-12 lg:px-16">
+<svelte:window bind:scrollY={y} />
+
+<header class="{background} {text} {shadow} {transition} fixed w-full z-10 mb-10 ease-in-out">
+	<nav class="max-w-screen-2xl mx-auto px-8">
 		<div class="flex justify-between h-16">
 			<!-- Logo -->
 			<div class="flex items-center">
