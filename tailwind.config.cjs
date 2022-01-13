@@ -13,9 +13,6 @@ module.exports = {
       'to-sm': [{'max': '640px'}],
       'to-md': [{'max': '775px'}],
       'to-lg': [{'max': '1024px'}],
-      
-      
-
     },
     extend: {
       colors: {

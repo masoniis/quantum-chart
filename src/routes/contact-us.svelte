@@ -8,7 +8,7 @@
 
 <title>BeyondGreen - Contact</title>
 
-<main class="min-h-screen text-maintext overflow-hidden pt-16">
+<main class="min-h-screen text-maintext overflow-hidden pt-20">
 	<!-- Intro area -->
 	<div class="text-center mx-auto">
 		<br />

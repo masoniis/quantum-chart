@@ -6,7 +6,7 @@
 	let text;
 	let shadow;
 	let transition;
-	let y;
+	let scrollDistance;
 
 	$: {
 		// Track the page and change the background accordingly
@@ -19,21 +19,21 @@
 		}
 
 		// Animate the sticky header to change color when scrolled into page
-		if (y > 60) {
+		if (scrollDistance > 50) {
 			transition = 'transition-all duration-300';
 			shadow = 'shadow-lg';
 			background = 'bg-mainbg';
 		} else {
 			shadow = '';
 		}
-		if (y === 0) {
+		if (scrollDistance === 0) {
 			transition = '';
 			shadow = '';
 		}
 	}
 </script>
 
-<svelte:window bind:scrollY={y} />
+<svelte:window bind:scrollY={scrollDistance} />
 
 <header class="{background} {text} {shadow} {transition} fixed w-full z-10 mb-10 ease-in-out py-2">
 	<nav class="max-w-screen-2xl mx-auto px-8">
