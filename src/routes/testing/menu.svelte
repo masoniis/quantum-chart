@@ -1,39 +1,57 @@
 <script>
 	import DropIcon from '../../components/Icons/DropIcon.svelte';
+	import { scale, fly } from 'svelte/transition';
 
 	let dropdown = false;
+	let inside;
 
-	function toggleDrop() {
-		dropdown = !dropdown;
+	function toggleEnter() {
+		if (inside === true) {
+
+		} else {
+			dropdown = !dropdown;
+		}
 	}
 
-    function dropTrue() {
-        dropdown = true;
-    }
+	function toggleLeave() {
+		if (inside === true) {
+			inside = false;
+			dropdown = !dropdown;
+		}
+	}
+
+	function dropTrue() {
+		dropdown = true;
+	}
 </script>
 
 <br /><br /><br /><br /><br />
 
 <main class="min-h-screen bg-mainbg">
-	<div class="z-0 relative text-center">
+	<div class="z-0 relative text-center text-gray-500 hover:text-black">
 		<div
-			class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-			on:mouseenter={toggleDrop}
-            
+			class="bg-white rounded-md inline-flex items-center text-base font-medium focus:outline-none"
+			on:mouseenter={toggleEnter}
+			
 		>
 			Dropdown <DropIcon />
 		</div>
 
 		{#if dropdown}
-			<div class="absolute z-10 inset-x-0 transform shadow-lg"
-            on:mouseenter={dropTrue}
-			on:mouseleave={toggleDrop}>
+			<div
+				class="absolute z-10 inset-x-0 transform shadow-lg"
+				in:scale={{ duration: 100, start: 0.95 }}
+				out:scale={{ duration: 100, start: 0.95 }}
+				on:mouseleave={toggleLeave}
+			>
 				<div class="bg-white">
 					<div
-						class="max-w-7xl mx-auto grid gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16"
+						
+					class="max-w-7xl mx-auto grid gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16"
 					>
 						<a
 							href="/"
+							in:fly={{ delay: 400, duration: 200, x:-500 }}
 							class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
 						>
 							<div class="flex md:h-full lg:flex-col">
@@ -75,6 +93,7 @@
 
 						<a
 							href="#"
+							in:fly={{ delay: 300, duration: 200, x:-500 }}
 							class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
 						>
 							<div class="flex md:h-full lg:flex-col">
@@ -116,6 +135,7 @@
 
 						<a
 							href="#"
+							in:fly={{ delay: 200, duration: 200, x:-500 }}
 							class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
 						>
 							<div class="flex md:h-full lg:flex-col">
@@ -157,6 +177,7 @@
 
 						<a
 							href="#"
+							in:fly={{ delay: 100, duration: 200, x:-500 }}
 							class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
 						>
 							<div class="flex md:h-full lg:flex-col">
