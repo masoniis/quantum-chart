@@ -23,5 +23,9 @@ html { font-family: 'Inter', sans-serif; }
     background-position: 0 100%
 }
 
-
+.unselectable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
 
