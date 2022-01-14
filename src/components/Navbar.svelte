@@ -16,6 +16,8 @@
 	let y;
 	let yStore;
 
+	let currentPage = $page.url.pathname;
+
 	$: {
 		// Animate the sticky header to change color when scrolled into page
 		if (y > 60) {
@@ -129,6 +131,7 @@
 			<div class="hidden md:ml-6 md:flex md:space-x-8 {text}">
 				<a
 					href="/"
+					on:click={() => dropdown = false}
 					class:active={$page.url.pathname === '/'}
 					class="border-transparent hover:border-gray-300 hover:text-gray-700 transition-all inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
 				>
@@ -136,6 +139,7 @@
 				</a>
 				<a
 					href="/products"
+					on:click={() => dropdown = false}
 					class:active={$page.url.pathname === '/products'}
 					class="border-transparent hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
 				>
@@ -143,17 +147,11 @@
 				</a>
 				<a
 					href="/pricing"
+					on:click={() => dropdown = false}
 					class:active={$page.url.pathname === '/pricing'}
 					class="border-transparent hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
 				>
 					Pricing
-				</a>
-				<a
-					href="/contact-us"
-					class:active={$page.url.pathname === '/contact-us'}
-					class="border-transparent hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-				>
-					Contact Us
 				</a>
 
 				<!-- Dropdown Menu -->
@@ -194,6 +192,7 @@
 								>
 									<a
 										href="/"
+										on:click={() => dropdown = false}
 										in:fly={{ delay: 400, duration: 200, x: -500 }}
 										class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
 									>
@@ -224,7 +223,7 @@
 												class="ml-4 md:flex-1 md:flex md:flex-col md:justify-between lg:ml-0 lg:mt-4"
 											>
 												<div>
-													<p class="text-base font-medium text-gray-900">About</p>
+													<p class="text-base font-medium text-gray-900">????</p>
 													<p class="mt-1 text-sm text-gray-500">
 														Get a better understanding of where your traffic is coming from.
 													</p>
@@ -238,6 +237,7 @@
 
 									<a
 										href="/"
+										on:click={() => dropdown = false}
 										in:fly={{ delay: 300, duration: 200, x: -500 }}
 										class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
 									>
@@ -268,7 +268,7 @@
 												class="ml-4 md:flex-1 md:flex md:flex-col md:justify-between lg:ml-0 lg:mt-4"
 											>
 												<div>
-													<p class="text-base font-medium text-gray-900">Contact</p>
+													<p class="text-base font-medium text-gray-900">Employment</p>
 													<p class="mt-1 text-sm text-gray-500">
 														Speak directly to your customers in a more meaningful way.
 													</p>
@@ -281,7 +281,8 @@
 									</a>
 
 									<a
-										href="/"
+										href="/contact-us"
+										on:click={() => dropdown = false}
 										in:fly={{ delay: 200, duration: 200, x: -500 }}
 										class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
 									>
@@ -312,7 +313,7 @@
 												class="ml-4 md:flex-1 md:flex md:flex-col md:justify-between lg:ml-0 lg:mt-4"
 											>
 												<div>
-													<p class="text-base font-medium text-gray-900">????</p>
+													<p class="text-base font-medium text-gray-900">Contact</p>
 													<p class="mt-1 text-sm text-gray-500">
 														Your customers&#039; data will be safe and secure.
 													</p>
@@ -325,7 +326,8 @@
 									</a>
 
 									<a
-										href="/"
+										href="/contact-us"
+										on:click={() => dropdown = false}
 										in:fly={{ delay: 100, duration: 200, x: -500 }}
 										class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
 									>
@@ -356,7 +358,7 @@
 												class="ml-4 md:flex-1 md:flex md:flex-col md:justify-between lg:ml-0 lg:mt-4"
 											>
 												<div>
-													<p class="text-base font-medium text-gray-900">?? hi</p>
+													<p class="text-base font-medium text-gray-900">About</p>
 													<p class="mt-1 text-sm text-gray-500">
 														Connect with third-party tools that you&#039;re already using.
 													</p>
