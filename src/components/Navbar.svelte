@@ -3,8 +3,11 @@
 	import Logo from '../components/Logo.svelte';
 	import DropIcon from '../components/Icons/DropIcon.svelte';
 	import { scale, slide, fly, fade } from 'svelte/transition';
+	import closable from 'svelte-closable';
 
 	let dropdown = false;
+	let dropButton;
+	let dropIcon;
 	let iconRotate;
 
 	let background;
@@ -35,7 +38,7 @@
 
 		if (dropdown === true) {
 			background = 'bg-dropdown1';
-			iconRotate = 'rotate-180 translate-x-2 transition-all';
+			iconRotate = 'rotate-180 transition-all';
 		} else {
 			if (y > 60) {
 				background = 'bg-mainbg';
@@ -161,18 +164,35 @@
 
 				<!-- Dropdown Menu -->
 				<div class="z-0 inline-flex text-center">
-					<div
+					<button
 						class="relative bg-transparent text-sm font-medium hover:border-gray-300 hover:text-gray-700 inline-flex items-center focus:outline-none hover:cursor-pointer unselectable"
 						on:click={() => (dropdown = !dropdown)}
+						bind:this={dropButton}
 					>
-						Company <span class={iconRotate}><DropIcon /></span>
-					</div>
+						Company
+						<!-- Dropdown Icon -->
+						<svg
+							class="ml-2 h-5 w-5 {iconRotate}"
+							bind:this={dropIcon}
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 20 20"
+							fill="currentColor"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+								clip-rule="evenodd"
+							/>
+						</svg>
+					</button>
 
 					{#if dropdown}
 						<div
 							class="fixed left-0 right-0 top-[4.9rem] z-10 transform shadow-lg w-screen border-t-2 border-gray-500"
 							in:fade={{ duration: 200 }}
 							out:fade={{ duration: 200 }}
+							use:closable={{ exclude: [dropButton, dropIcon] }}
+							on:outside-click={() => (dropdown = false)}
 						>
 							<div class="bg-dropdown1">
 								<div
