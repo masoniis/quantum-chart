@@ -3,18 +3,15 @@
 
 	let button;
 	let show = false;
+
+	  function onScroll(event) {
+		  console.log("scroplled!")
+	  }
+
 </script>
 
 <main class="min-h-screen pt-40 text-center">
-	<div on:click={() => (show = !show)} bind:this={button}> Show </div>
-
-	{#if show}
-		<div
-			class="bg-black text-center p-10"
-			use:closable={{ exclude: [button] }}
-			on:outside-click={() => (show = false)}
-		/>
-	{/if}
+	<div on:scroll={onScroll} />
 </main>
 
 <style>

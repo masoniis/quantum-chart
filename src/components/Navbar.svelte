@@ -14,6 +14,7 @@
 	let text;
 	let shadow;
 	let y;
+	let yStore;
 
 	$: {
 		// Track the page and change the background accordingly
@@ -48,6 +49,11 @@
 				iconRotate = 'rotate-0 transition-all';
 			}
 		}
+
+		if (yStore - y != 0) {
+			dropdown = false;
+		}
+
 	}
 </script>
 
@@ -166,7 +172,7 @@
 				<div class="z-0 inline-flex text-center">
 					<button
 						class="relative bg-transparent text-sm font-medium hover:border-gray-300 hover:text-gray-700 inline-flex items-center focus:outline-none hover:cursor-pointer unselectable"
-						on:click={() => (dropdown = !dropdown)}
+						on:click={() => (dropdown = !dropdown, yStore = y)}
 						bind:this={dropButton}
 					>
 						Company
