@@ -4,12 +4,32 @@
 	import DropIcon from '../components/Icons/DropIcon.svelte';
 	import { scale, slide, fly, fade } from 'svelte/transition';
 
-	let dropdown = false;
+	function scrollOutside(element, callbackFunction) {
+		function onScroll(event) {
+			if (!element.contains(event.target)) {
+				callbackFunction();
+			}
+		}
+		
+		document.body.addEventListener('scroll', onScroll);
+		
+		return {
+			update(newCallbackFunction) {
+				callbackFunction = newCallbackFunction;
+			},
+			destroy() {
+				document.body.removeEventListener('sceoll', onScroll);
+			}
+		}
+	}
+
+	export let dropdown = false;
 
 	let background;
 	let text;
 	let shadow;
 	let y;
+	let iconRotate;
 
 	$: {
 		// Track the page and change the background accordingly
@@ -34,17 +54,22 @@
 
 		if (dropdown === true) {
 			background = 'bg-dropdown1';
+			iconRotate = 'rotate-180 translate-x-2'
 		} else {
 			if (y > 60) {
 				background = 'bg-mainbg';
+				iconRotate = ''
 			} else if (y < 60) {
 				background = 'bg-transparent';
+				iconRotate = ''
 			}
 		}
 	}
 </script>
 
 <svelte:window bind:scrollY={y} />
+
+
 
 <header class="{background} {text} {shadow} transition-all duration-300 fixed w-full z-10 mb-10 ease-in-out py-2">
 	<nav class="max-w-screen-2xl mx-auto px-8">
@@ -159,7 +184,7 @@
 						class="relative bg-transparent text-sm font-medium hover:border-gray-300 hover:text-gray-700 inline-flex items-center focus:outline-none hover:cursor-pointer unselectable"
 						on:click={() => (dropdown = !dropdown)}
 					>
-						Dropdown <DropIcon />
+						Dropdown <p class="{iconRotate}"><DropIcon /></p>
 					</div>
 
 					{#if dropdown}
@@ -167,6 +192,8 @@
 							class="fixed left-0 right-0 top-[4.9rem] z-10 transform shadow-lg w-screen border-t-2 border-gray-500"
 							in:fade={{ duration: 200 }}
 							out:fade={{ duration: 200 }}
+							on:scroll={() => console.log("SCROLL")}
+								
 						>
 							<div class="bg-dropdown1">
 								<div

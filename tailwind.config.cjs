@@ -27,7 +27,7 @@ module.exports = {
         'topsection' : '#d2e683',
 
         // ↓ Navbar ↓
-        'dropdown1' : '#fce8d1',
+        'dropdown1' : '#f8e0ff',
       },
     },
   },
