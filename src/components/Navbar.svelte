@@ -5,6 +5,7 @@
 	import { scale, slide, fly, fade } from 'svelte/transition';
 
 	let dropdown = false;
+	let iconRotate;
 
 	let background;
 	let text;
@@ -34,11 +35,14 @@
 
 		if (dropdown === true) {
 			background = 'bg-dropdown1';
+			iconRotate = 'rotate-180 translate-x-2 transition-all'
 		} else {
 			if (y > 60) {
 				background = 'bg-mainbg';
+				iconRotate = 'rotate-0 transition-all'
 			} else if (y < 60) {
 				background = 'bg-transparent';
+				iconRotate = 'rotate-0 transition-all'
 			}
 		}
 	}
@@ -159,7 +163,7 @@
 						class="relative bg-transparent text-sm font-medium hover:border-gray-300 hover:text-gray-700 inline-flex items-center focus:outline-none hover:cursor-pointer unselectable"
 						on:click={() => (dropdown = !dropdown)}
 					>
-						Dropdown <DropIcon />
+						Dropdown <span class="{iconRotate}"><DropIcon /></span>
 					</div>
 
 					{#if dropdown}
