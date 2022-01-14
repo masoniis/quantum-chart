@@ -157,7 +157,7 @@
 
 					{#if dropdown}
 						<div
-							class="fixed left-0 right-0 top-20 z-10 transform shadow-lg w-screen"
+							class="fixed left-0 right-0 top-20 z-10 transform shadow-lg w-screen border-t-2 border-gray-500"
 							in:slide={{ duration: 200 }}
 							out:slide={{ duration: 200 }}
 						>
