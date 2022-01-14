@@ -17,23 +17,11 @@
 	let yStore;
 
 	$: {
-		// Track the page and change the background accordingly
-		if ($page.url.pathname === '/') {
-			background = 'bg-transparent';
-			text = 'text-black';
-		} else {
-			background = 'bg-transparent';
-			text = 'text-maintext';
-		}
-
 		// Animate the sticky header to change color when scrolled into page
 		if (y > 60) {
 			shadow = 'shadow-lg';
 			background = 'bg-mainbg';
 		} else if (y < 60) {
-			shadow = '';
-		}
-		if (y === 0) {
 			shadow = '';
 		}
 
@@ -43,13 +31,13 @@
 		} else {
 			if (y > 60) {
 				background = 'bg-mainbg';
-				iconRotate = 'rotate-0 transition-all';
 			} else if (y < 60) {
 				background = 'bg-transparent';
-				iconRotate = 'rotate-0 transition-all';
 			}
+			iconRotate = 'rotate-0 transition-all';
 		}
 
+		// Toggle dropdown when scrolling
 		if (yStore - y != 0) {
 			dropdown = false;
 		}
@@ -195,8 +183,8 @@
 					{#if dropdown}
 						<div
 							class="fixed left-0 right-0 top-[4.9rem] z-10 transform shadow-lg w-screen border-t-2 border-gray-500"
-							in:fade={{ duration: 200 }}
-							out:fade={{ duration: 200 }}
+							in:fade={{ duration: 300 }}
+							out:fade={{ duration: 300 }}
 							use:closable={{ exclude: [dropButton, dropIcon] }}
 							on:outside-click={() => (dropdown = false)}
 						>
