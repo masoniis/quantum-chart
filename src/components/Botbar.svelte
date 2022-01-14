@@ -12,7 +12,7 @@
 		<!--Flex Item 1-->
 		<div class="flex flex-col text-center xs:text-left xs:flex-row justify-items-start text-sm pt-3">
 			<!--Mini-flex Item 1-->
-			<p class="xs:pr-4 py-1 mt-0 xs:mr-4 xs:border-r border-stone-400">Copyright @ 2022 Landscape Inc.</p>
+			<p class="xs:pr-4 py-1 mt-0 xs:mr-4 xs:border-r border-stone-400">Copyright @ 2022 Beyondgreen</p>
 
 			<!--Mini-flex Item 2, underline from: https://tailwindcomponents.com/component/link-underline-animation -->
 			<span

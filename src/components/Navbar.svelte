@@ -50,6 +50,8 @@
 
 <svelte:window bind:scrollY={y} />
 
+
+
 <header class="{background} {text} {shadow} transition-all duration-300 fixed w-full z-10 mb-10 ease-in-out py-2">
 	<nav class="max-w-screen-2xl mx-auto px-8">
 		<div class="flex justify-between h-16">
@@ -171,6 +173,8 @@
 							class="fixed left-0 right-0 top-[4.9rem] z-10 transform shadow-lg w-screen border-t-2 border-gray-500"
 							in:fade={{ duration: 200 }}
 							out:fade={{ duration: 200 }}
+							on:scroll={() => console.log("SCROLL")}
+								
 						>
 							<div class="bg-dropdown1">
 								<div
