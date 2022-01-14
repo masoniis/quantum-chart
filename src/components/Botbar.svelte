@@ -10,22 +10,32 @@
 		class="max-w-screen-2xl mx-auto flex flex-col sm:flex-row justify-between items-center border-t-2 border-stone-400 px-5 transition-all ease-linear duration-1000"
 	>
 		<!--Flex Item 1-->
-		<div class="flex flex-col text-center xs:text-left xs:flex-row justify-items-start text-sm pt-3">
+		<div
+			class="flex flex-col text-center xs:text-left xs:flex-row justify-items-start text-sm pt-3"
+		>
 			<!--Mini-flex Item 1-->
-			<p class="xs:pr-4 py-1 mt-0 xs:mr-4 xs:border-r border-stone-400">Copyright @ 2022 Beyondgreen</p>
+			<p class="xs:pr-4 py-1 mt-0 xs:mr-4 xs:border-r border-stone-400">
+				Copyright @ 2022 Beyondgreen
+			</p>
 
 			<!--Mini-flex Item 2, underline from: https://tailwindcomponents.com/component/link-underline-animation -->
-			<span
-				class="py-1 mt-0"
-			>
-				<a class="hover:text-mainlinkhover text-mainlink pb-1 link link-underline link-underline-black" href="https://google.com/search?q=Trademark+Policy"> Trademark Policy </a>
-		</span>
+			<span class="py-1 mt-0">
+				<a
+					class="hover:text-mainlinkhover text-mainlink pb-1 link link-underline link-underline-black"
+					href="https://google.com/search?q=Trademark+Policy"
+				>
+					Trademark Policy
+				</a>
+			</span>
 		</div>
 
 		<!-- Flex Item 2-->
 		<span class="inline-flex mt-0 pt-1 xs:pt-3 pr-1 xs:pr-0">
 			<!--Start of new mini-flex: all the icons-->
-			<a href="https://facebook.com/" class="text-maintext hover:text-lighthover py-1 link link-underline link-underline-black">
+			<a
+				href="https://facebook.com/"
+				class="text-maintext hover:text-lighthover py-1 link link-underline link-underline-black"
+			>
 				<svg
 					fill="currentColor"
 					stroke-linecap="round"
@@ -38,7 +48,10 @@
 				</svg>
 			</a>
 
-			<a href="https://twitter.com class=" class="ml-3 text-maintext hover:text-lighthover py-1 link link-underline link-underline-black">
+			<a
+				href="https://twitter.com class="
+				class="ml-3 text-maintext hover:text-lighthover py-1 link link-underline link-underline-black"
+			>
 				<svg
 					fill="currentColor"
 					stroke-linecap="round"
@@ -53,7 +66,10 @@
 				</svg>
 			</a>
 
-			<a href="https://instagram.com" class="ml-3 text-maintext hover:text-lighthover py-1 link link-underline link-underline-black">
+			<a
+				href="https://instagram.com"
+				class="ml-3 text-maintext hover:text-lighthover py-1 link link-underline link-underline-black"
+			>
 				<svg
 					fill="none"
 					stroke="currentColor"
@@ -68,7 +84,10 @@
 				</svg>
 			</a>
 
-			<a href="https://linkedin.com" class="ml-3 text-maintext hover:text-lighthover py-1 link link-underline link-underline-black">
+			<a
+				href="https://linkedin.com"
+				class="ml-3 text-maintext hover:text-lighthover py-1 link link-underline link-underline-black"
+			>
 				<svg
 					fill="currentColor"
 					stroke="currentColor"

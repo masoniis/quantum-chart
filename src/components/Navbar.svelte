@@ -35,14 +35,14 @@
 
 		if (dropdown === true) {
 			background = 'bg-dropdown1';
-			iconRotate = 'rotate-180 translate-x-2 transition-all'
+			iconRotate = 'rotate-180 translate-x-2 transition-all';
 		} else {
 			if (y > 60) {
 				background = 'bg-mainbg';
-				iconRotate = 'rotate-0 transition-all'
+				iconRotate = 'rotate-0 transition-all';
 			} else if (y < 60) {
 				background = 'bg-transparent';
-				iconRotate = 'rotate-0 transition-all'
+				iconRotate = 'rotate-0 transition-all';
 			}
 		}
 	}
@@ -50,9 +50,9 @@
 
 <svelte:window bind:scrollY={y} />
 
-
-
-<header class="{background} {text} {shadow} transition-all duration-300 fixed w-full z-10 mb-10 ease-in-out py-2">
+<header
+	class="{background} {text} {shadow} transition-all duration-300 fixed w-full z-10 mb-10 ease-in-out py-2"
+>
 	<nav class="max-w-screen-2xl mx-auto px-8">
 		<div class="flex justify-between h-16">
 			<!-- Logo -->
@@ -165,7 +165,7 @@
 						class="relative bg-transparent text-sm font-medium hover:border-gray-300 hover:text-gray-700 inline-flex items-center focus:outline-none hover:cursor-pointer unselectable"
 						on:click={() => (dropdown = !dropdown)}
 					>
-						Dropdown <span class="{iconRotate}"><DropIcon /></span>
+						Company <span class={iconRotate}><DropIcon /></span>
 					</div>
 
 					{#if dropdown}
@@ -173,8 +173,6 @@
 							class="fixed left-0 right-0 top-[4.9rem] z-10 transform shadow-lg w-screen border-t-2 border-gray-500"
 							in:fade={{ duration: 200 }}
 							out:fade={{ duration: 200 }}
-							on:scroll={() => console.log("SCROLL")}
-								
 						>
 							<div class="bg-dropdown1">
 								<div
@@ -212,7 +210,7 @@
 												class="ml-4 md:flex-1 md:flex md:flex-col md:justify-between lg:ml-0 lg:mt-4"
 											>
 												<div>
-													<p class="text-base font-medium text-gray-900">Analytics</p>
+													<p class="text-base font-medium text-gray-900">About</p>
 													<p class="mt-1 text-sm text-gray-500">
 														Get a better understanding of where your traffic is coming from.
 													</p>
@@ -225,7 +223,7 @@
 									</a>
 
 									<a
-										href="#"
+										href="/"
 										in:fly={{ delay: 300, duration: 200, x: -500 }}
 										class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
 									>
@@ -256,7 +254,7 @@
 												class="ml-4 md:flex-1 md:flex md:flex-col md:justify-between lg:ml-0 lg:mt-4"
 											>
 												<div>
-													<p class="text-base font-medium text-gray-900">Engagement</p>
+													<p class="text-base font-medium text-gray-900">Contact</p>
 													<p class="mt-1 text-sm text-gray-500">
 														Speak directly to your customers in a more meaningful way.
 													</p>
@@ -269,7 +267,7 @@
 									</a>
 
 									<a
-										href="#"
+										href="/"
 										in:fly={{ delay: 200, duration: 200, x: -500 }}
 										class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
 									>
@@ -300,7 +298,7 @@
 												class="ml-4 md:flex-1 md:flex md:flex-col md:justify-between lg:ml-0 lg:mt-4"
 											>
 												<div>
-													<p class="text-base font-medium text-gray-900">Security</p>
+													<p class="text-base font-medium text-gray-900">????</p>
 													<p class="mt-1 text-sm text-gray-500">
 														Your customers&#039; data will be safe and secure.
 													</p>
@@ -313,7 +311,7 @@
 									</a>
 
 									<a
-										href="#"
+										href="/"
 										in:fly={{ delay: 100, duration: 200, x: -500 }}
 										class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
 									>
@@ -344,7 +342,7 @@
 												class="ml-4 md:flex-1 md:flex md:flex-col md:justify-between lg:ml-0 lg:mt-4"
 											>
 												<div>
-													<p class="text-base font-medium text-gray-900">Integrations</p>
+													<p class="text-base font-medium text-gray-900">?? hi</p>
 													<p class="mt-1 text-sm text-gray-500">
 														Connect with third-party tools that you&#039;re already using.
 													</p>
@@ -363,7 +361,7 @@
 								>
 									<div class="flow-root">
 										<a
-											href="#"
+											href="/"
 											class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100 transition ease-in-out duration-150"
 										>
 											<!-- Heroicon name: outline/play -->
@@ -394,7 +392,7 @@
 
 									<div class="flow-root">
 										<a
-											href="#"
+											href="/"
 											class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100 transition ease-in-out duration-150"
 										>
 											<!-- Heroicon name: outline/check-circle -->
@@ -419,7 +417,7 @@
 
 									<div class="flow-root">
 										<a
-											href="#"
+											href="/"
 											class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100 transition ease-in-out duration-150"
 										>
 											<!-- Heroicon name: outline/phone -->

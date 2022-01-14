@@ -1,7 +1,6 @@
 <script>
 	import { fade, fly } from 'svelte/transition';
 	import Visibility from '../components/Visibility.svelte';
-	
 
 	let show = true;
 </script>
@@ -216,7 +215,7 @@
 			{/if}
 		</div>
 	</Visibility>
-	
+
 	<!-- ↑ Bottom Shape Divider ↑  -->
 	<div class="bottom-wave fill-lightbg">
 		<svg

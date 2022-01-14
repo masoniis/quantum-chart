@@ -1,55 +1,55 @@
 <script>
-    import {onMount} from 'svelte';
+	import { onMount } from 'svelte';
 
-    export let top = 0;
-    export let bottom = 0;
-    export let left = 0;
-    export let right = 0;
-    export let steps = 100;
-    export let threshold = undefined;
-    export let once = true;
+	export let top = 0;
+	export let bottom = 0;
+	export let left = 0;
+	export let right = 0;
+	export let steps = 100;
+	export let threshold = undefined;
+	export let once = true;
 
-    let element;
-    let percent;
-    let observer;
-    let unobserve = () => {};
-    let intersectionObserverSupport = false;
-    let visible = false;
+	let element;
+	let percent;
+	let observer;
+	let unobserve = () => {};
+	let intersectionObserverSupport = false;
+	let visible = false;
 
-    $: visible = !intersectionObserverSupport || percent >= threshold;
-        $: if (intersectionObserverSupport && visible && once) unobserve();
+	$: visible = !intersectionObserverSupport || percent >= threshold;
+	$: if (intersectionObserverSupport && visible && once) unobserve();
 
-    function intersectPercent(entries) {
-        entries.forEach(entry => {
-            percent = Math.round(Math.ceil(entry.intersectionRatio * 100));
-        })
-    }
+	function intersectPercent(entries) {
+		entries.forEach((entry) => {
+			percent = Math.round(Math.ceil(entry.intersectionRatio * 100));
+		});
+	}
 
-    function stepsToThreshold(steps) {
-        return [...Array(steps).keys()].map(n => n / steps)
-    }
+	function stepsToThreshold(steps) {
+		return [...Array(steps).keys()].map((n) => n / steps);
+	}
 
-    onMount(() => {
-        intersectionObserverSupport =
-                'IntersectionObserver' in window &&
-                'IntersectionObserverEntry' in window &&
-                'intersectionRatio' in window.IntersectionObserverEntry.prototype;
+	onMount(() => {
+		intersectionObserverSupport =
+			'IntersectionObserver' in window &&
+			'IntersectionObserverEntry' in window &&
+			'intersectionRatio' in window.IntersectionObserverEntry.prototype;
 
-        const options = {
-            rootMargin: `${top}px ${right}px ${bottom}px ${left}px`,
-            threshold: stepsToThreshold(steps)
-        };
+		const options = {
+			rootMargin: `${top}px ${right}px ${bottom}px ${left}px`,
+			threshold: stepsToThreshold(steps)
+		};
 
-        if (intersectionObserverSupport) {
-            observer = new IntersectionObserver(intersectPercent, options);
-            observer.observe(element);
-            unobserve = () => observer.unobserve(element);
-        }
+		if (intersectionObserverSupport) {
+			observer = new IntersectionObserver(intersectPercent, options);
+			observer.observe(element);
+			unobserve = () => observer.unobserve(element);
+		}
 
-        return unobserve;
-    });
+		return unobserve;
+	});
 </script>
 
 <div bind:this={element}>
-    <slot {visible} {percent} {unobserve} {intersectionObserverSupport}/>
+	<slot {visible} {percent} {unobserve} {intersectionObserverSupport} />
 </div>
