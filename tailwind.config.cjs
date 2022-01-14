@@ -25,6 +25,9 @@ module.exports = {
 
         // ↓ Home Page ↓
         'topsection' : '#d2e683',
+
+        // ↓ Navbar ↓
+        'dropdown1' : '#fce8d1',
       },
     },
   },

@@ -2,44 +2,51 @@
 	import { page } from '$app/stores';
 	import Logo from '../components/Logo.svelte';
 	import DropIcon from '../components/Icons/DropIcon.svelte';
-	import { scale, slide, fly } from 'svelte/transition';
+	import { scale, slide, fly, fade } from 'svelte/transition';
 
 	let dropdown = false;
 
 	let background;
 	let text;
 	let shadow;
-	let transition;
 	let y;
 
 	$: {
 		// Track the page and change the background accordingly
 		if ($page.url.pathname === '/') {
-			background = 'bg-topsection';
+			background = 'bg-transparent';
 			text = 'text-black';
 		} else {
-			background = 'bg-mainbg';
+			background = 'bg-transparent';
 			text = 'text-maintext';
 		}
 
 		// Animate the sticky header to change color when scrolled into page
 		if (y > 60) {
-			transition = 'transition-all duration-300';
 			shadow = 'shadow-lg';
 			background = 'bg-mainbg';
 		} else if (y < 60) {
 			shadow = '';
 		}
 		if (y === 0) {
-			transition = '';
 			shadow = '';
+		}
+
+		if (dropdown === true) {
+			background = 'bg-dropdown1';
+		} else {
+			if (y > 60) {
+				background = 'bg-mainbg';
+			} else if (y < 60) {
+				background = 'bg-transparent';
+			}
 		}
 	}
 </script>
 
 <svelte:window bind:scrollY={y} />
 
-<header class="{background} {text} {shadow} {transition} fixed w-full z-10 mb-10 ease-in-out py-2">
+<header class="{background} {text} {shadow} transition-all duration-300 fixed w-full z-10 mb-10 ease-in-out py-2">
 	<nav class="max-w-screen-2xl mx-auto px-8">
 		<div class="flex justify-between h-16">
 			<!-- Logo -->
@@ -147,9 +154,9 @@
 				</a>
 
 				<!-- Dropdown Menu -->
-				<div class="z-0 inline-flex text-center text-gray-500 hover:text-black">
+				<div class="z-0 inline-flex text-center">
 					<div
-						class="relative bg-transparent inline-flex items-center text-base font-medium focus:outline-none hover:cursor-pointer unselectable"
+						class="relative bg-transparent text-sm font-medium hover:border-gray-300 hover:text-gray-700 inline-flex items-center focus:outline-none hover:cursor-pointer unselectable"
 						on:click={() => (dropdown = !dropdown)}
 					>
 						Dropdown <DropIcon />
@@ -157,11 +164,11 @@
 
 					{#if dropdown}
 						<div
-							class="fixed left-0 right-0 top-20 z-10 transform shadow-lg w-screen border-t-2 border-gray-500"
-							in:slide={{ duration: 200 }}
-							out:slide={{ duration: 200 }}
+							class="fixed left-0 right-0 top-[4.9rem] z-10 transform shadow-lg w-screen border-t-2 border-gray-500"
+							in:fade={{ duration: 200 }}
+							out:fade={{ duration: 200 }}
 						>
-							<div class="bg-mainbg">
+							<div class="bg-dropdown1">
 								<div
 									class="max-w-7xl mx-auto grid gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16"
 								>
