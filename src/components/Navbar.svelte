@@ -10,6 +10,9 @@
 	let dropIcon;
 	let iconRotate;
 
+	let mobileMenu = false;
+	let mobileButton;
+
 	let background;
 	let text;
 	let shadow;
@@ -27,8 +30,7 @@
 			shadow = '';
 		}
 
-		if ( y === 0) {
-			
+		if (y === 0) {
 		}
 
 		if (dropdown === true) {
@@ -47,9 +49,7 @@
 		if (yStore - y != 0) {
 			dropdown = false;
 		}
-
 	}
-
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -76,13 +76,14 @@
 			</div>
 
 			<!-- Mobile Menu -->
-			<div class="-ml-2 mr-2 flex items-center md:hidden">
+			<div class="-ml-2 mr-2 inline-flex items-center md:hidden"
+			>
 				<!-- Mobile menu button -->
 				<button
 					type="button"
-					class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-					aria-controls="mobile-menu"
-					aria-expanded="false"
+					class="relative inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+					on:click={() => (mobileMenu = !mobileMenu)}
+					bind:this={mobileButton}
 				>
 					<span class="sr-only">Open main menu</span>
 					<!--
@@ -130,6 +131,41 @@
 						/>
 					</svg>
 				</button>
+
+				{#if mobileMenu}
+					<div
+						class="md:hidden fixed right-0 left-0 w-full top-[4.5rem]"
+						id="mobile-menu"
+						in:slide={{ duration: 300 }}
+						out:slide={{ duration: 150 }}
+						use:closable={{ exclude: [mobileButton] }}
+						on:outside-click={() => (mobileMenu = false)}
+					>
+						<div class="pt-2 pb-3 space-y-1">
+							<!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
+							<a
+								href="/"
+								class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+								>Home</a
+							>
+							<a
+								href="/products"
+								class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+								>Products</a
+							>
+							<a
+								href="/pricing"
+								class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+								>Pricing</a
+							>
+							<a
+								href="/contact-us"
+								class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+								>Contact</a
+							>
+						</div>
+					</div>
+				{/if}
 			</div>
 
 			<!-- Desktop Menu -->
@@ -144,7 +180,7 @@
 				</a>
 				<a
 					href="/products"
-					on:click={() => dropdown = false}
+					on:click={() => (dropdown = false)}
 					class:active={$page.url.pathname === '/products'}
 					class="border-transparent hover:border-gray-300 hover:text-gray-700 transition-all inline-flex items-center px-1 pt-1 border-b-2 text-sm font-bold"
 				>
@@ -152,7 +188,7 @@
 				</a>
 				<a
 					href="/pricing"
-					on:click={() => dropdown = false}
+					on:click={() => (dropdown = false)}
 					class:active={$page.url.pathname === '/pricing'}
 					class="border-transparent hover:border-gray-300 hover:text-gray-700 transition-all inline-flex items-center px-1 pt-1 border-b-2 text-sm font-bold"
 				>
@@ -161,11 +197,12 @@
 
 				<!-- Dropdown Menu -->
 				<div class="z-0 inline-flex text-center">
-
 					<button
 						class="relative font-bold bg-transparent text-sm transition-all hover:border-gray-300 hover:text-gray-700 inline-flex items-center focus:outline-none hover:cursor-pointer unselectable"
-						class:active={$page.url.pathname === '/contact-us' || $page.url.pathname === '/about' || $page.url.pathname === '/employment'}
-						on:click={() => (dropdown = !dropdown, yStore = y)}
+						class:active={$page.url.pathname === '/contact-us' ||
+							$page.url.pathname === '/about' ||
+							$page.url.pathname === '/employment'}
+						on:click={() => ((dropdown = !dropdown), (yStore = y))}
 						bind:this={dropButton}
 					>
 						Company
@@ -189,7 +226,7 @@
 						<div
 							class="fixed left-0 right-0 top-[4.9rem] z-10 transform shadow-lg w-screen border-t-2 border-gray-500"
 							in:fade={{ duration: 300 }}
-							out:fade={{ duration: 100}}
+							out:fade={{ duration: 100 }}
 							use:closable={{ exclude: [dropButton, dropIcon] }}
 							on:outside-click={() => (dropdown = false)}
 						>
@@ -199,7 +236,7 @@
 								>
 									<a
 										href="/"
-										on:click={() => dropdown = false}
+										on:click={() => (dropdown = false)}
 										in:fly={{ delay: 225, duration: 150, x: -500 }}
 										class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
 									>
@@ -244,7 +281,7 @@
 
 									<a
 										href="/employment"
-										on:click={() => dropdown = false}
+										on:click={() => (dropdown = false)}
 										in:fly={{ delay: 150, duration: 150, x: -500 }}
 										class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
 									>
@@ -289,7 +326,7 @@
 
 									<a
 										href="/contact-us"
-										on:click={() => dropdown = false}
+										on:click={() => (dropdown = false)}
 										in:fly={{ delay: 75, duration: 150, x: -500 }}
 										class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
 									>
@@ -334,7 +371,7 @@
 
 									<a
 										href="/about"
-										on:click={() => dropdown = false}
+										on:click={() => (dropdown = false)}
 										in:fly={{ delay: 0, duration: 150, x: -500 }}
 										class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
 									>
@@ -367,7 +404,8 @@
 												<div>
 													<p class="text-base font-medium text-gray-900">About</p>
 													<p class="mt-1 text-sm text-gray-500">
-														Eager to learn about us? See who's behind the team and what we're all about
+														Eager to learn about us? See who's behind the team and what we're all
+														about
 													</p>
 												</div>
 												<p class="mt-2 text-sm font-medium text-indigo-600 lg:mt-4">
@@ -484,7 +522,7 @@
 	}
 
 	.menu:hover .menuitem {
-		opacity: .25;
+		opacity: 0.25;
 	}
 
 	.menu .menuitem:hover {
