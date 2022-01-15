@@ -277,7 +277,7 @@
 												<div>
 													<p class="text-base font-medium text-gray-900">Employment</p>
 													<p class="mt-1 text-sm text-gray-500">
-														Want to join the team? Learn how here!
+														Want to join the team? Find out what options you have
 													</p>
 												</div>
 												<p class="mt-2 text-sm font-medium text-indigo-600 lg:mt-4">
@@ -322,7 +322,7 @@
 												<div>
 													<p class="text-base font-medium text-gray-900">Contact</p>
 													<p class="mt-1 text-sm text-gray-500">
-														Have more questions? Feel free to contact us!
+														Have more questions? Get in touch with the individuals behind it all
 													</p>
 												</div>
 												<p class="mt-2 text-sm font-medium text-indigo-600 lg:mt-4">
@@ -367,7 +367,7 @@
 												<div>
 													<p class="text-base font-medium text-gray-900">About</p>
 													<p class="mt-1 text-sm text-gray-500">
-														Still eager to see what we're all about? Learn more here!
+														Eager to learn about us? See who's behind the team and what we're all about
 													</p>
 												</div>
 												<p class="mt-2 text-sm font-medium text-indigo-600 lg:mt-4">
@@ -474,8 +474,8 @@
 
 <style>
 	.active {
-		--tw-border-opacity: 1;
-		border-color: rgb(99 102 241 / var(--tw-border-opacity));
+		/* --tw-border-opacity: 1;
+		border-color: rgb(99 102 241 / var(--tw-border-opacity)); */
 		color: rgb(64, 112, 85);
 	}
 
