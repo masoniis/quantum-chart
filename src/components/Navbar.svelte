@@ -138,7 +138,7 @@
 					href="/"
 					on:click={() => {dropdown = false}}
 					class:active={$page.url.pathname === '/'}
-					class="border-transparent hover:border-gray-300 hover:text-gray-700 transition-all inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+					class="border-transparent hover:border-gray-300 hover:text-gray-700 transition-all inline-flex items-center px-1 pt-1 border-b-2 text-sm font-bold"
 				>
 					Home
 				</a>
@@ -146,7 +146,7 @@
 					href="/products"
 					on:click={() => dropdown = false}
 					class:active={$page.url.pathname === '/products'}
-					class="border-transparent hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+					class="border-transparent hover:border-gray-300 hover:text-gray-700 transition-all inline-flex items-center px-1 pt-1 border-b-2 text-sm font-bold"
 				>
 					Products
 				</a>
@@ -154,7 +154,7 @@
 					href="/pricing"
 					on:click={() => dropdown = false}
 					class:active={$page.url.pathname === '/pricing'}
-					class="border-transparent hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+					class="border-transparent hover:border-gray-300 hover:text-gray-700 transition-all inline-flex items-center px-1 pt-1 border-b-2 text-sm font-bold"
 				>
 					Pricing
 				</a>
@@ -163,7 +163,8 @@
 				<div class="z-0 inline-flex text-center">
 
 					<button
-						class="relative bg-transparent text-sm font-medium hover:border-gray-300 hover:text-gray-700 inline-flex items-center focus:outline-none hover:cursor-pointer unselectable"
+						class="relative font-bold bg-transparent text-sm transition-all hover:border-gray-300 hover:text-gray-700 inline-flex items-center focus:outline-none hover:cursor-pointer unselectable"
+						class:active={$page.url.pathname === '/contact-us' || $page.url.pathname === '/about' || $page.url.pathname === '/employment'}
 						on:click={() => (dropdown = !dropdown, yStore = y)}
 						bind:this={dropButton}
 					>
@@ -475,5 +476,18 @@
 	.active {
 		--tw-border-opacity: 1;
 		border-color: rgb(99 102 241 / var(--tw-border-opacity));
+		color: rgb(64, 112, 85);
+	}
+
+	.menu {
+		background-color: brown;
+	}
+
+	.menu:hover .menuitem {
+		opacity: .25;
+	}
+
+	.menu .menuitem:hover {
+		opacity: 1;
 	}
 </style>
