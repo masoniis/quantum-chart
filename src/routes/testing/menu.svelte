@@ -1,37 +1,37 @@
 <script>
-	import closable from 'svelte-closable';
+	import { onMount } from 'svelte';
+	import { slide } from 'svelte/transition';
 
-	let button;
-	let show = false;
+	let menuOpen = true;
+	let mounted = false;
+
+	onMount(() => {
+		menuOpen = false;
+		mounted = true;
+	});
 </script>
 
-<div class="parent pt-72 mx-auto container flex flex-row space-x-11">
-	<div class="child">y</div>
-	<div class="child">y</div>
-	<div class="child">y</div>
-	<div class="child">y</div>
-	<div class="child">y</div>
-	<div class="child">y</div>
-</div>
+<header>
+	<div class="pt-72 container mx-auto">
+		<h1>Navillus</h1>
+		<label for="toggle">&#9776;</label>
+	</div>
 
-<button class="container mx-auto bg-yellow-100" on:click={() => (show = !show)} bind:this={button}> Show </button>
+	<input id="toggle" type="checkbox" class="sr-only" class:js={mounted} bind:checked={menuOpen} />
 
-{#if show}
-	<div class="text-center" use:closable={{ exclude: [button] }} on:outside-click={() => (show = false)}>
-		Hey i am the stuff
-		</div>	
-{/if}
+	{#if menuOpen}
+		<nav>
+			<p>IM OPEN</p>>
+		</nav>
+	{/if}
+</header>
 
 <style>
-	.child {
-		background-color: yellow;
+	#toggle:not(.js) ~ nav {
+		display: none;
 	}
 
-	.parent:hover .child {
-		opacity: 0.25;
-	}
-
-	.parent .child:hover {
-		opacity: 1;
+	#toggle:not(.js):checked ~ nav {
+		display: block;
 	}
 </style>

@@ -12,6 +12,9 @@
 
 	let mobileMenu = false;
 	let mobileButton;
+	let mobileIcon;
+	let iconPath;
+	let iconPath2;
 
 	let background;
 	let text;
@@ -76,61 +79,42 @@
 			</div>
 
 			<!-- Mobile Menu -->
-			<div class="-ml-2 mr-2 inline-flex items-center md:hidden"
-			>
+			<div class="-ml-2 mr-2 inline-flex items-center md:hidden">
 				<!-- Mobile menu button -->
-				<button
-					type="button"
-					class="relative inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-					on:click={() => (mobileMenu = !mobileMenu)}
-					bind:this={mobileButton}
-				>
-					<span class="sr-only">Open main menu</span>
-					<!--
-				 			Icon when menu is closed.
-	
-				  			Heroicon name: outline/menu
-	
-				  			Menu open: "hidden", Menu closed: "block"
-						-->
+				<label for="mobile-button">
 					<svg
-						class="block h-6 w-6"
+						bind:this={mobileIcon}
+						class="block h-6 w-6 bg-gray-300"
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
 						viewBox="0 0 24 24"
 						stroke="currentColor"
 						aria-hidden="true"
 					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M4 6h16M4 12h16M4 18h16"
-						/>
+						{#if mobileMenu}
+							<path
+								bind:this={iconPath2}
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M6 18L18 6M6 6l12 12"
+							/>
+						{:else}
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M4 6h16M4 12h16M4 18h16"
+							/>
+						{/if}
 					</svg>
-					<!--
-				  			Icon when menu is open.
-	
-				  			Heroicon name: outline/x
-	
-				  			Menu open: "block", Menu closed: "hidden"
-						-->
-					<svg
-						class="hidden h-6 w-6"
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-						aria-hidden="true"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M6 18L18 6M6 6l12 12"
-						/>
-					</svg>
-				</button>
+				</label>
+				<input
+					type="checkbox"
+					id="mobile-button"
+					bind:checked={mobileMenu}
+					class="relative hidden sr-only items-center justify-center"
+				/>
 
 				{#if mobileMenu}
 					<div
@@ -138,8 +122,8 @@
 						id="mobile-menu"
 						in:slide={{ duration: 300 }}
 						out:slide={{ duration: 150 }}
-						use:closable={{ exclude: [mobileButton] }}
-						on:outside-click={() => (mobileMenu = false)}
+						use:closable={{ exclude: [mobileButton, mobileIcon, iconPath, iconPath2] }}
+						on:outside-click={() => (mobileMenu = !mobileMenu, console.log("OUTSIDE CLICK"))}
 					>
 						<div class="pt-2 pb-3 space-y-1">
 							<!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
@@ -172,7 +156,9 @@
 			<div class="hidden md:ml-6 md:flex md:space-x-8 {text}">
 				<a
 					href="/"
-					on:click={() => {dropdown = false}}
+					on:click={() => {
+						dropdown = false;
+					}}
 					class:active={$page.url.pathname === '/'}
 					class="border-transparent hover:border-gray-300 hover:text-gray-700 transition-all inline-flex items-center px-1 pt-1 border-b-2 text-sm font-bold"
 				>
