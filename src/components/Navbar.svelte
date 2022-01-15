@@ -242,7 +242,7 @@
 									</a>
 
 									<a
-										href="/"
+										href="/employment"
 										on:click={() => dropdown = false}
 										in:fly={{ delay: 300, duration: 200, x: -500 }}
 										class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
@@ -332,7 +332,7 @@
 									</a>
 
 									<a
-										href="/contact-us"
+										href="/about"
 										on:click={() => dropdown = false}
 										in:fly={{ delay: 100, duration: 200, x: -500 }}
 										class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
