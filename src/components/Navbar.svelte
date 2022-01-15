@@ -37,9 +37,6 @@
 			
 		} else if (y < 60) {
 			shadow = '';
-			if (open == true) {
-				console.log("OPEN IS TRUE INSIDE y < 60 LOOP")
-			}
 			background = 'bg-transparent';
 		}
 
@@ -98,12 +95,12 @@
 					<a href="/" class="h-12 w-12">
 						<Logo />
 					</a>
-					<p class="pl-5 self-center font-extrabold">Beyondgreen</p>
+					<p class="pl-5 self-center font-extrabold unselectable">Beyondgreen</p>
 				</h1>
 			</div>
 
 			<!-- Mobile Menu -->
-			<div class="-ml-2 mr-2 inline-flex items-center md:hidden">
+			<div class="-ml-2 mr-2 inline-flex items-center md:hidden unselectable">
 				<!-- Mobile menu button -->
 				<Hamburger bind:open --color={text} --padding={0} />
 
