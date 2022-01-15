@@ -200,7 +200,7 @@
 									<a
 										href="/"
 										on:click={() => dropdown = false}
-										in:fly={{ delay: 400, duration: 200, x: -500 }}
+										in:fly={{ delay: 225, duration: 150, x: -500 }}
 										class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
 									>
 										<div class="flex md:h-full lg:flex-col">
@@ -245,7 +245,7 @@
 									<a
 										href="/employment"
 										on:click={() => dropdown = false}
-										in:fly={{ delay: 300, duration: 200, x: -500 }}
+										in:fly={{ delay: 150, duration: 150, x: -500 }}
 										class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
 									>
 										<div class="flex md:h-full lg:flex-col">
@@ -290,7 +290,7 @@
 									<a
 										href="/contact-us"
 										on:click={() => dropdown = false}
-										in:fly={{ delay: 200, duration: 200, x: -500 }}
+										in:fly={{ delay: 75, duration: 150, x: -500 }}
 										class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
 									>
 										<div class="flex md:h-full lg:flex-col">
@@ -335,7 +335,7 @@
 									<a
 										href="/about"
 										on:click={() => dropdown = false}
-										in:fly={{ delay: 100, duration: 200, x: -500 }}
+										in:fly={{ delay: 0, duration: 150, x: -500 }}
 										class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
 									>
 										<div class="flex md:h-full lg:flex-col">
