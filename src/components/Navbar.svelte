@@ -4,6 +4,9 @@
 	import DropIcon from '../components/Icons/DropIcon.svelte';
 	import { scale, slide, fly, fade } from 'svelte/transition';
 	import closable from 'svelte-closable';
+	import Hamburger from 'svelte-hamburgers';
+	import Menu from './MobileMenu.svelte';
+	import Mobilemenu from './MobileMenu.svelte';
 
 	let dropdown = false;
 	let dropButton;
@@ -16,8 +19,10 @@
 	let iconPath;
 	let iconPath2;
 
+	let open = false;
+
 	let background;
-	let text;
+	let text = '#374151';
 	let shadow;
 	let y;
 	let yStore;
@@ -29,22 +34,27 @@
 		if (y > 60) {
 			shadow = 'shadow-lg';
 			background = 'bg-mainbg';
+			
 		} else if (y < 60) {
 			shadow = '';
+			if (open == true) {
+				console.log("OPEN IS TRUE INSIDE y < 60 LOOP")
+			}
+			background = 'bg-transparent';
 		}
 
 		if (y === 0) {
+
+		}
+
+		if (open === true) {
+			background = "bg-mainbg"
 		}
 
 		if (dropdown === true) {
 			background = 'bg-dropdown1';
 			iconRotate = 'rotate-180 transition-all';
 		} else {
-			if (y > 60) {
-				background = 'bg-mainbg';
-			} else if (y < 60) {
-				background = 'bg-transparent';
-			}
 			iconRotate = 'rotate-0 transition-all';
 		}
 
@@ -54,6 +64,20 @@
 		}
 	}
 </script>
+
+<svelte:head>
+	<!-- Import base css -->
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/svelte-hamburgers@3/dist/css/base.css"
+	/>
+
+	<!-- Import spin css (spin is default type) -->
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/svelte-hamburgers@3/dist/css/types/spin.css"
+	/>
+</svelte:head>
 
 <svelte:window bind:scrollY={y} />
 
@@ -81,75 +105,9 @@
 			<!-- Mobile Menu -->
 			<div class="-ml-2 mr-2 inline-flex items-center md:hidden">
 				<!-- Mobile menu button -->
-				<label for="mobile-button">
-					<svg
-						bind:this={mobileIcon}
-						class="block h-6 w-6 bg-gray-300"
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-						aria-hidden="true"
-					>
-						{#if mobileMenu}
-							<path
-								bind:this={iconPath2}
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M6 18L18 6M6 6l12 12"
-							/>
-						{:else}
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M4 6h16M4 12h16M4 18h16"
-							/>
-						{/if}
-					</svg>
-				</label>
-				<input
-					type="checkbox"
-					id="mobile-button"
-					bind:checked={mobileMenu}
-					class="relative hidden sr-only items-center justify-center"
-				/>
+				<Hamburger bind:open --color={text} --padding={0} />
 
-				{#if mobileMenu}
-					<div
-						class="md:hidden fixed right-0 left-0 w-full top-[4.5rem]"
-						id="mobile-menu"
-						in:slide={{ duration: 300 }}
-						out:slide={{ duration: 150 }}
-						use:closable={{ exclude: [mobileButton, mobileIcon, iconPath, iconPath2] }}
-						on:outside-click={() => (mobileMenu = !mobileMenu, console.log("OUTSIDE CLICK"))}
-					>
-						<div class="pt-2 pb-3 space-y-1">
-							<!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
-							<a
-								href="/"
-								class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-								>Home</a
-							>
-							<a
-								href="/products"
-								class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-								>Products</a
-							>
-							<a
-								href="/pricing"
-								class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-								>Pricing</a
-							>
-							<a
-								href="/contact-us"
-								class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-								>Contact</a
-							>
-						</div>
-					</div>
-				{/if}
+				<Menu bind:open />
 			</div>
 
 			<!-- Desktop Menu -->
