@@ -27,6 +27,10 @@
 			shadow = '';
 		}
 
+		if ( y === 0) {
+			
+		}
+
 		if (dropdown === true) {
 			background = 'bg-dropdown1';
 			iconRotate = 'rotate-180 transition-all';
@@ -50,7 +54,7 @@
 <svelte:window bind:scrollY={y} />
 
 <header
-	class="{background} {text} {shadow} transition-all duration-300 fixed w-full z-10 mb-10 ease-in-out py-2"
+	class="{background} {text} {shadow} transition-colors fixed w-full z-10 mb-10 ease-in-out py-2"
 >
 	<nav class="max-w-screen-2xl mx-auto px-8">
 		<div class="flex justify-between h-16">
@@ -156,6 +160,7 @@
 
 				<!-- Dropdown Menu -->
 				<div class="z-0 inline-flex text-center">
+
 					<button
 						class="relative bg-transparent text-sm font-medium hover:border-gray-300 hover:text-gray-700 inline-flex items-center focus:outline-none hover:cursor-pointer unselectable"
 						on:click={() => (dropdown = !dropdown, yStore = y)}
@@ -182,7 +187,7 @@
 						<div
 							class="fixed left-0 right-0 top-[4.9rem] z-10 transform shadow-lg w-screen border-t-2 border-gray-500"
 							in:fade={{ duration: 300 }}
-							out:fade={{ duration: 300 }}
+							out:fade={{ duration: 100}}
 							use:closable={{ exclude: [dropButton, dropIcon] }}
 							on:outside-click={() => (dropdown = false)}
 						>
