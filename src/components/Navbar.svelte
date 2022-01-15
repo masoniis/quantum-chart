@@ -277,7 +277,7 @@
 												<div>
 													<p class="text-base font-medium text-gray-900">Employment</p>
 													<p class="mt-1 text-sm text-gray-500">
-														Speak directly to your customers in a more meaningful way.
+														Want to join the team? Learn how here!
 													</p>
 												</div>
 												<p class="mt-2 text-sm font-medium text-indigo-600 lg:mt-4">
@@ -322,7 +322,7 @@
 												<div>
 													<p class="text-base font-medium text-gray-900">Contact</p>
 													<p class="mt-1 text-sm text-gray-500">
-														Your customers&#039; data will be safe and secure.
+														Have more questions? Feel free to contact us!
 													</p>
 												</div>
 												<p class="mt-2 text-sm font-medium text-indigo-600 lg:mt-4">
@@ -367,7 +367,7 @@
 												<div>
 													<p class="text-base font-medium text-gray-900">About</p>
 													<p class="mt-1 text-sm text-gray-500">
-														Connect with third-party tools that you&#039;re already using.
+														Still eager to see what we're all about? Learn more here!
 													</p>
 												</div>
 												<p class="mt-2 text-sm font-medium text-indigo-600 lg:mt-4">
