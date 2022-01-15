@@ -49,6 +49,7 @@
 		}
 
 	}
+
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -135,7 +136,7 @@
 			<div class="hidden md:ml-6 md:flex md:space-x-8 {text}">
 				<a
 					href="/"
-					on:click={() => dropdown = false}
+					on:click={() => {dropdown = false}}
 					class:active={$page.url.pathname === '/'}
 					class="border-transparent hover:border-gray-300 hover:text-gray-700 transition-all inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
 				>
