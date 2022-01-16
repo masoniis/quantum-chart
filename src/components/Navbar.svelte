@@ -1,8 +1,8 @@
 <script>
+	import { scale, slide, fly, fade } from 'svelte/transition';
 	import { page } from '$app/stores';
 	import Logo from '../components/Logo.svelte';
 	import DropIcon from '../components/Icons/DropIcon.svelte';
-	import { scale, slide, fly, fade } from 'svelte/transition';
 	import closable from 'svelte-closable';
 	import Hamburger from 'svelte-hamburgers';
 	import Menu from './Minimenu.svelte';
@@ -12,12 +12,6 @@
 	let dropIcon;
 	let iconRotate;
 
-	let mobileMenu = false;
-	let mobileButton;
-	let mobileIcon;
-	let iconPath;
-	let iconPath2;
-
 	let open = false;
 
 	let background;
@@ -26,7 +20,7 @@
 	let y;
 	let yStore;
 
-	let currentPage = $page.url.pathname;
+	export const currentPage = $page.url.pathname;
 
 	$: {
 		// Animate the sticky header to change color when scrolled into page
