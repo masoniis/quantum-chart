@@ -5,8 +5,7 @@
 	import { scale, slide, fly, fade } from 'svelte/transition';
 	import closable from 'svelte-closable';
 	import Hamburger from 'svelte-hamburgers';
-	import Menu from './MobileMenu.svelte';
-	import Mobilemenu from './MobileMenu.svelte';
+	import Menu from './Minimenu.svelte';
 
 	let dropdown = false;
 	let dropButton;
