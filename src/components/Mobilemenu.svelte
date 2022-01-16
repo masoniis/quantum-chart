@@ -1,6 +1,5 @@
 <script>
 	import { fade, scale, slide } from 'svelte/transition';
-	import { quadOut } from 'svelte/easing';
 
 	export let open;
 </script>
@@ -13,12 +12,10 @@
 		out:fade={{ duration: 100 }}
 	>
 		<div class="pt-2 pb-3 space-y-1 bg-mainbg">
-			<!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
 			<a
 				on:click={() => (open = false)}
 				href="/"
-				class=" border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-				>Home</a
+				class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Home</a
 			>
 			<a
 				on:click={() => (open = false)}
@@ -32,12 +29,51 @@
 				class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
 				>Pricing</a
 			>
-			<a
-				on:click={() => (open = false)}
-				href="/contact-us"
-				class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-				>Contact</a
-			>
+
+			<!-- Company Section -->
+			<div class="bg-lightbg">
+				<div class="text-gray-500 text-sm font-light border-b-[1px] border-gray-400 py-2 pl-3">
+					Company
+				</div>
+				<div class="flex flex-col sm:flex-row sm:container sm:mx-auto space-x-4 pl-4">
+
+					<!-- Flex item 1 -->
+					<div class="flex space-x-4 pl-4">
+						<p class="self-center">ICON 1</p>
+						<a
+							on:click={() => (open = false)}
+							href="/about"
+							class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+						>
+							About
+						</a>
+					</div>
+
+					<!-- Flex item 2 -->
+					<div class="flex space-x-4 sm:pl-4">
+						<p class="self-center">ICON 2</p>
+						<a
+							on:click={() => (open = false)}
+							href="/contact-us"
+							class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+						>
+							Contact
+						</a>
+					</div>
+
+					<!-- Flex item 3 -->
+					<div class="flex space-x-4 sm:pl-4">
+						<p class="self-center">ICON 3</p>
+						<a
+							on:click={() => (open = false)}
+							href="/employment"
+							class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+						>
+							Employment
+						</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 {/if}
