@@ -64,10 +64,11 @@
 		href="https://cdn.jsdelivr.net/npm/svelte-hamburgers@3/dist/css/types/spin.css"
 	/>
 
-	<link
-		rel="stylesheet"
-		href="https://cdn.jsdelivr.net/gh/masoniis/beyondgreen/README.md"
-	/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/gh/masoniis/beyondgreen/src/lockscroll.css"
+		/>
+
 </svelte:head>
 
 <svelte:window bind:scrollY={y} />
