@@ -12,7 +12,7 @@
 	let dropIcon;
 	let iconRotate;
 
-	let open = false;
+	let open;
 
 	let background;
 	let text = '#374151';
@@ -20,25 +20,21 @@
 	let y;
 	let yStore;
 
-	export const currentPage = $page.url.pathname;
-
 	$: {
 		// Animate the sticky header to change color when scrolled into page
 		if (y > 60) {
 			shadow = 'shadow-lg';
 			background = 'bg-mainbg';
-			
 		} else if (y < 60) {
 			shadow = '';
 			background = 'bg-transparent';
 		}
 
 		if (y === 0) {
-
 		}
 
 		if (open === true) {
-			background = "bg-mainbg"
+			background = 'bg-mainbg';
 		}
 
 		if (dropdown === true) {

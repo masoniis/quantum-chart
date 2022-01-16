@@ -1,6 +1,8 @@
 <script>
 	import { fade, fly } from 'svelte/transition';
 	import Visibility from '../components/Visibility.svelte';
+	import Menu from '../components/Minimenu.svelte';
+
 
 	let show = true;
 </script>
