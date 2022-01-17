@@ -2,9 +2,9 @@
 	import { fade, fly, scale, slide } from 'svelte/transition';
 	import { quadOut } from 'svelte/easing';
 	import { page } from '$app/stores';
-	import { onMount, onDestroy } from 'svelte'
+	import { onMount, onDestroy } from 'svelte';
 	import { writable, readable, get } from 'svelte/store';
-	import { menu } from '../stores'
+	import { menu } from '../stores';
 
 	export let open;
 
@@ -27,6 +27,11 @@
 		out:fade={{ duration: 150 }}
 	>
 		<div class="pt-2 space-y-1 bg-mobilemenu min-h-screen">
+			<hr
+				class="my-2"
+				style="height:2px;border-width:0;color:red;background-color:gray"
+				transition:scale={{ duration: 100, easing: quadOut, opacity: 1 }}
+			/>
 			<a
 				on:click={() => (open = false)}
 				transition:fly={{ duration: 150, x: -500 }}
@@ -53,10 +58,11 @@
 			>
 
 			<div class="bg-lightbg py-4 space-y-4">
-				<div class="text-gray-500 text-sm font-semibold py-2 pl-3">Company</div>
+				<div class="text-gray-500 text-sm font-semibold pt-2 pl-3">Company</div>
 				<hr
+					class="my-2"
 					style="height:2px;border-width:0;color:red;background-color:gray"
-					transition:scale={{ duration: 600, easing: quadOut, opacity: 1 }}
+					transition:scale={{ duration: 100, easing: quadOut, opacity: 1 }}
 				/>
 				<div
 					class="grid grid-cols-1 grid-rows-4 xs:grid-rows-2 xs:grid-cols-2 container mx-auto min-w-full"
@@ -172,12 +178,9 @@
 							Testimonials
 						</a>
 					</div>
-
-					<p class="pt-[38rem]"> TEST TEST TEST</p>
 				</div>
 			</div>
 		</div>
-
 	</div>
 {/if}
 
