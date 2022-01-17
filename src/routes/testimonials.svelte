@@ -11,8 +11,8 @@
 
 <main class="min-h-screen text-maintext overflow-hidden">
 	<!-- Section 1 -->
-	<section class="py-16 bg-gray-100 min-w-screen pt-40">
-		<div class="max-w-6xl px-12 mx-auto bg-gray-100 md:px-16 xl:px-10">
+	<section class="min-w-screen min-h-screen bg-gray-50 pt-40">
+		<div class="max-w-6xl px-12 mx-auto md:px-16 xl:px-10">
 			<div class="flex flex-col items-start justify-center w-full h-full mb-10">
 				<h2
 					class="text-4xl text-center font-extrabold tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl xl:text-6xl"
@@ -55,12 +55,12 @@
 								/>
 							</svg>
 							<p class="mt-2 text-sm text-gray-600 sm:text-base lg:text-sm xl:text-base">
-								Awesome product! And the customer service is exceptionally well.
+								Awesome service! And the customer service is exceptionally well.
 							</p>
 						</div>
 
 						<h3
-							class="pl-12 mt-3 text-sm font-medium leading-5 text-gray-800 truncate sm:text-base lg:text-sm lg:text-base"
+							class="pl-12 mt-3 text-sm font-medium leading-5 text-gray-800 truncate sm:text-base lg:text-base"
 						>
 							Jane Cooper
 							<span class="mt-1 text-sm leading-5 text-gray-500 truncate">- Happy neighbor</span>
@@ -95,7 +95,7 @@
 							</p>
 						</div>
 						<h3
-							class="pl-12 mt-3 text-sm font-medium leading-5 text-gray-800 truncate sm:text-base lg:text-sm lg:text-base"
+							class="pl-12 mt-3 text-sm font-medium leading-5 text-gray-800 truncate sm:text-base lg:text-base"
 						>
 							John Doe
 							<span class="mt-1 text-sm leading-5 text-gray-500 truncate">- Happy neighbor</span>
@@ -125,12 +125,12 @@
 								/>
 							</svg>
 							<p class="mt-2 text-sm text-gray-600 sm:text-base lg:text-sm xl:text-base">
-								I can't express enough, how amazing this service has been for my company.
+								I can't express enough, how amazing this service has been.
 							</p>
 						</div>
 
 						<h3
-							class="pl-12 mt-3 text-sm font-medium leading-5 text-gray-800 truncate sm:text-base lg:text-sm lg:text-base"
+							class="pl-12 mt-3 text-sm font-medium leading-5 text-gray-800 truncate sm:text-base lg:text-base"
 						>
 							John Smith
 							<span class="mt-1 text-sm leading-5 text-gray-500 truncate">- Happy neighbor</span>
