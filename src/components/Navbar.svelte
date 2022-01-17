@@ -6,6 +6,7 @@
 	import closable from 'svelte-closable';
 	import Hamburger from 'svelte-hamburgers';
 	import Menu from './Minimenu.svelte';
+	import { menu } from '../stores'
 
 	let dropdown = false;
 	let dropButton;
@@ -35,6 +36,10 @@
 
 		if (open === true) {
 			background = 'bg-mainbg';
+			console.log("I AM OPEN FROM NAVBAR")
+			$menu = true;
+		} else {
+			$menu = false;
 		}
 
 		if (dropdown === true) {
@@ -63,12 +68,6 @@
 		rel="stylesheet"
 		href="https://cdn.jsdelivr.net/npm/svelte-hamburgers@3/dist/css/types/spin.css"
 	/>
-
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/gh/masoniis/beyondgreen/src/lockscroll.css"
-		/>
-
 </svelte:head>
 
 <svelte:window bind:scrollY={y} />

@@ -2,13 +2,43 @@
 	import { fade, fly } from 'svelte/transition';
 	import Visibility from '../../components/Visibility.svelte';
 
+	// import Alert from '../../components/Alert.svelte'
+
+	import { menu } from '../../stores';
+
+	console.log('The menu store is ' + $menu);
+
 	let visible = true;
+
+	$: {
+		if ($menu === true) {
+			console.log("HOLY CRAP MENU IS TRUE")
+		}
+	}
 </script>
 
 <main class="min-h-screen bg-mainbg text-maintext overflow-hidden">
 	<div class="container mx-auto">
 		<p class="duration-1000 hover:text-white">I AM ANIMATIONS!</p>
 		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+		<button
+			on:click={() => {
+				($menu = false), console.log('The menu store is ' + $menu);
+			}}>HEY</button
+		>
+
+		<button
+		on:click={() => {
+			($menu = true), console.log('The menu store is ' + $menu);
+		}}>HEY true</button
+	>
+
+	<button
+	on:click={() =>  console.log($menu)}
+	>What am i?</button
+>
+		
 
 		<label>
 			<input type="checkbox" bind:checked={visible} />
@@ -19,9 +49,6 @@
 			<p transition:fly={{ y: 200, duration: 2000 }}>Flies in and out</p>
 		{/if}
 
-		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 		<main>
 			<h1>Scroll down</h1>
 
