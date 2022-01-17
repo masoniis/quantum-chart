@@ -21,7 +21,7 @@
 
 {#if open}
 	<div
-		class="md:hidden fixed right-0 left-0 w-full top-[4.5rem] bg-yell"
+		class="md:hidden fixed right-0 left-0 w-full top-[4.5rem] mobile_menu"
 		id="mobile-menu"
 		in:slide={{ duration: 300 }}
 		out:fade={{ duration: 150 }}
@@ -172,9 +172,12 @@
 							Testimonials
 						</a>
 					</div>
+
+					<p class="pt-[38rem]"> TEST TEST TEST</p>
 				</div>
 			</div>
 		</div>
+
 	</div>
 {/if}
 
@@ -184,6 +187,5 @@
 		max-height: calc(100vh - 70px);
 		width: 100%;
 		overflow-y: scroll;
-		-webkit-overflow-scrolling: touch;
 	}
 </style>
