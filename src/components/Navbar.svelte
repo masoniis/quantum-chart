@@ -35,8 +35,7 @@
 		}
 
 		if (open === true) {
-			background = 'bg-mainbg';
-			console.log("I AM OPEN FROM NAVBAR")
+			background = 'bg-mobilemenu';
 			$menu = true;
 		} else {
 			$menu = false;

@@ -5,19 +5,20 @@
 
 	import { menu } from '../stores';
 
-	let fixed;
+	let hide;
 
 	$: {
 		if ($menu === true) {
-			fixed = 'hidden';
+			hide = 'hidden';
+			console.log("set from layout")
 		} else {
-			fixed = '';
+			hide = '';
 		}
 	}
 </script>
 
 <Navbar />
-<main class={fixed}>
+<main class={hide}>
 	<slot />
-</main>
 <Botbar />
+</main>

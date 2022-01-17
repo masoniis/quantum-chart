@@ -28,6 +28,7 @@ module.exports = {
 
         // ↓ Navbar ↓
         'dropdown1' : '#f8e0ff',
+        'mobilemenu': '#f9e9d2',
       },
     },
   },

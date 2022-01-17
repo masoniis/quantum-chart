@@ -17,12 +17,12 @@
 
 {#if open}
 	<div
-		class="md:hidden fixed right-0 left-0 w-full top-[4.5rem] mobile_menu"
+		class="md:hidden fixed right-0 left-0 w-full top-[4.5rem] bg-yell"
 		id="mobile-menu"
 		in:slide={{ duration: 300 }}
-		out:fade={{ duration: 100 }}
+		out:fade={{ duration: 150 }}
 	>
-		<div class="pt-2 space-y-1 bg-mainbg min-h-screen">
+		<div class="pt-2 space-y-1 bg-mobilemenu min-h-screen">
 			<a
 				on:click={() => (open = false)}
 				transition:fly={{ duration: 150, x: -500 }}
