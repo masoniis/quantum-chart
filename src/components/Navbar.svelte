@@ -1,12 +1,13 @@
 <script>
-	import { scale, slide, fly, fade } from 'svelte/transition';
+	import { fly, fade } from 'svelte/transition';
+	import { onMount } from 'svelte'
 	import { page } from '$app/stores';
+	import { menu } from '../stores'
 	import Logo from '../components/Logo.svelte';
-	import DropIcon from '../components/Icons/DropIcon.svelte';
 	import closable from 'svelte-closable';
 	import Hamburger from 'svelte-hamburgers';
 	import Menu from './Minimenu.svelte';
-	import { menu } from '../stores'
+
 
 	let dropdown = false;
 	let dropButton;
@@ -20,6 +21,18 @@
 	let shadow;
 	let y;
 	let yStore;
+
+	onMount(() => {
+		function onResize() {
+			innerWidth = window.outerWidth;
+			if (innerWidth < 775) {
+				dropdown = false;
+			}
+		}
+
+		window.addEventListener('resize', onResize);
+		return () => window.removeEventListener('resize', onResize)
+	})
 
 	$: {
 		// Animate the sticky header to change color when scrolled into page
