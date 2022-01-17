@@ -9,7 +9,10 @@
 
 	$: {
 		if ($menu === true) {
-			hide = 'hidden';
+			setTimeout(() => {
+				console.log("DELAYED");
+				hide = 'hidden';
+			}, 350)	
 		} else {
 			hide = '';
 		}
@@ -17,6 +20,7 @@
 </script>
 
 <Navbar />
+
 <main class={hide}>
 	<slot />
 <Botbar />

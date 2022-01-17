@@ -1,6 +1,6 @@
 <script>
 	import { fade, fly, scale, slide } from 'svelte/transition';
-	import { quadOut } from 'svelte/easing';
+	import { quadIn } from 'svelte/easing';
 	import { page } from '$app/stores';
 	import { onMount, onDestroy } from 'svelte';
 	import { writable, readable, get } from 'svelte/store';
@@ -23,36 +23,36 @@
 	<div
 		class="md:hidden fixed right-0 left-0 w-full top-[4.5rem] mobile_menu"
 		id="mobile-menu"
-		in:slide={{ duration: 300 }}
+		in:fly={{ duration: 350, x: 500 }}
 		out:fade={{ duration: 150 }}
 	>
 		<div class="pt-2 space-y-1 bg-mobilemenu min-h-screen">
 			<hr
 				class="my-2"
 				style="height:2px;border-width:0;color:red;background-color:gray"
-				transition:scale={{ duration: 100, easing: quadOut, opacity: 1 }}
+				transition:scale={{ duration: 100, easing: quadIn, opacity: 1 }}
 			/>
 			<a
 				on:click={() => (open = false)}
-				transition:fly={{ duration: 150, x: -500 }}
+				transition:fly={{ duration: 150, x: 500 }}
 				href="/"
-				class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+				class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-right"
 			>
 				Home</a
 			>
 			<a
 				on:click={() => (open = false)}
-				transition:fly={{ duration: 300, x: -500 }}
+				transition:fly={{ duration: 300, x: 500 }}
 				href="/products"
-				class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+				class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-right"
 			>
 				Products</a
 			>
 			<a
 				on:click={() => (open = false)}
-				transition:fly={{ duration: 450, x: -500 }}
+				transition:fly={{ duration: 450, x: 500 }}
 				href="/pricing"
-				class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+				class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-right"
 			>
 				Pricing</a
 			>
@@ -62,7 +62,7 @@
 				<hr
 					class="my-2"
 					style="height:2px;border-width:0;color:red;background-color:gray"
-					transition:scale={{ duration: 100, easing: quadOut, opacity: 1 }}
+					transition:scale={{ duration: 100, easing: quadIn, opacity: 1 }}
 				/>
 				<div
 					class="grid grid-cols-1 grid-rows-4 xs:grid-rows-2 xs:grid-cols-2 container mx-auto min-w-full"
@@ -70,7 +70,7 @@
 					<!-- Grid Item 1 -->
 					<div
 						class="flex justify-start xs:justify-center xs:pl-0 pl-4 space-x-2"
-						transition:fly={{ duration: 750, x: -300 }}
+						transition:fly={{ duration: 750, x: 300 }}
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +98,7 @@
 					<!-- Grid Item 2 -->
 					<div
 						class="flex justify-start xs:justify-center xs:pl-0 pl-4 space-x-2"
-						transition:fly={{ duration: 900, x: -300 }}
+						transition:fly={{ duration: 900, x: 300 }}
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -126,7 +126,7 @@
 					<!-- Grid Item 3 -->
 					<div
 						class="flex justify-start xs:justify-center xs:pl-0 pl-4 space-x-2"
-						transition:fly={{ duration: 1050, x: -300 }}
+						transition:fly={{ duration: 1050, x: 300 }}
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -154,7 +154,7 @@
 					<!-- Grid Item 4 -->
 					<div
 						class="flex justify-start xs:justify-center xs:pl-0 pl-4 space-x-2"
-						transition:fly={{ duration: 1050, x: -300 }}
+						transition:fly={{ duration: 1050, x: 300 }}
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
