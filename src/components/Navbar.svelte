@@ -1,13 +1,12 @@
 <script>
 	import { fly, fade } from 'svelte/transition';
-	import { onMount } from 'svelte'
+	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
-	import { menu } from '../stores'
-	import Logo from '../components/Logo.svelte';
-	import closable from 'svelte-closable';
+	import { menu } from '../stores';
 	import Hamburger from 'svelte-hamburgers';
+	import closable from 'svelte-closable';
+	import Logo from '../components/Logo.svelte';
 	import Menu from './Minimenu.svelte';
-
 
 	let dropdown = false;
 	let dropButton;
@@ -19,6 +18,7 @@
 	let background;
 	let text = '#374151';
 	let shadow;
+
 	let y;
 	let yStore;
 
@@ -31,20 +31,17 @@
 		}
 
 		window.addEventListener('resize', onResize);
-		return () => window.removeEventListener('resize', onResize)
-	})
+		return () => window.removeEventListener('resize', onResize);
+	});
 
 	$: {
 		// Animate the sticky header to change color when scrolled into page
-		if (y > 60) {
+		if (y >= 60) {
 			shadow = 'shadow-lg';
 			background = 'bg-mainbg';
 		} else if (y < 60) {
 			shadow = '';
 			background = 'bg-transparent';
-		}
-
-		if (y === 0) {
 		}
 
 		if (open === true) {

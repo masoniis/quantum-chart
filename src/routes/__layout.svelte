@@ -10,7 +10,6 @@
 	$: {
 		if ($menu === true) {
 			setTimeout(() => {
-				console.log("DELAYED");
 				hide = 'hidden';
 			}, 350)	
 		} else {

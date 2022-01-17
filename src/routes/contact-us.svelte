@@ -1,11 +1,6 @@
 <script>
-	import { fade, fly } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 	import Visibility from '../components/Visibility.svelte';
-	import Menu from '../components/Minimenu.svelte';
-	import Hamburger from 'svelte-hamburgers';
-	import Navbar from '../components/Navbar.svelte'
-	import { writable, readable, get } from 'svelte/store';
-
 </script>
 
 <title>Beyondgreen - Contact</title>
@@ -21,8 +16,6 @@
 			hearing from you!
 		</p>
 	</div>
-
-	
 
 	<!-- Form Section -->
 	<form class="w-10/12 max-w-lg mx-auto my-10 p-10 bg-violet-100 rounded-xl shadow-lg">

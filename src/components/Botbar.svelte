@@ -1,10 +1,3 @@
-<script>
-	import { tweened } from 'svelte/motion';
-
-	// Tweened Hover Animation
-	const value = tweened(0);
-</script>
-
 <footer class="bg-mainbg text-maintext transition-colors duration-500 p-6">
 	<div
 		class="max-w-screen-2xl mx-auto flex flex-col sm:flex-row justify-between items-center border-t-2 border-stone-400 px-5 transition-all ease-linear duration-1000"

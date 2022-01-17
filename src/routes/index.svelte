@@ -10,9 +10,7 @@
 				>
 					Beyondgreen
 				</h2>
-				<p class="my-6 text-lg text-gray-600 pt-10 mx-auto text-center">
-					We do stuff
-				</p>
+				<p class="my-6 text-lg text-gray-600 pt-10 mx-auto text-center">We do stuff</p>
 			</div>
 		</div>
 
@@ -32,7 +30,7 @@
 	</section>
 
 	<section class="bg-pink-200">
-		<p> TEST </p>
+		<p>TEST</p>
 	</section>
 </main>
 
