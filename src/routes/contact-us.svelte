@@ -8,7 +8,7 @@
 
 </script>
 
-<title>BeyondGreen - Contact</title>
+<title>Beyondgreen - Contact</title>
 
 <main class="min-h-screen text-maintext overflow-hidden pt-20">
 	<!-- Intro area -->

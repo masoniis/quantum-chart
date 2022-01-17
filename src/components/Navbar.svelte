@@ -169,7 +169,7 @@
 									class="max-w-7xl mx-auto grid gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16"
 								>
 									<a
-										href="/"
+										href="/testimonials"
 										on:click={() => (dropdown = false)}
 										in:fly={{ delay: 225, duration: 150, x: -500 }}
 										class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
@@ -201,7 +201,7 @@
 												class="ml-4 md:flex-1 md:flex md:flex-col md:justify-between lg:ml-0 lg:mt-4"
 											>
 												<div>
-													<p class="text-base font-medium text-gray-900">????</p>
+													<p class="text-base font-medium text-gray-900">Testimonials</p>
 													<p class="mt-1 text-sm text-gray-500">
 														Get a better understanding of where your traffic is coming from.
 													</p>

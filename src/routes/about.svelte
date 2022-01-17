@@ -1,4 +1,4 @@
-<title>BeyondGreen - About</title>
+<title>Beyondgreen - About</title>
 
 <main class="min-h-screen text-maintext overflow-hidden">
 	<!-- Intro area -->
