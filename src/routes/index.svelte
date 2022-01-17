@@ -1,12 +1,19 @@
 <title>BeyondGreen - Home</title>
 
-<main class="min-h-screen bg-light-bg overflow-hidden">
-	<!-- Stop section -->
-	<div class="bg-topsection">
-		<div class="container mx-auto flex flex-col text-maintext py-32">
-			<strong class="text-7xl max-w-4xl">Peak performance, superb satisfaction</strong>
-
-			<p class="text-3xl py-5">We <mark>do</mark> stuff</p>
+<main class="min-h-screen text-maintext overflow-hidden bg-mainbg">
+	<!-- Section 1 -->
+	<section class="min-w-screen bg-topsection pt-40">
+		<div class="max-w-6xl px-12 mx-auto xl:px-10">
+			<div class="flex flex-col items-start justify-center w-full">
+				<h2
+					class="text-4xl text-center font-extrabold tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl xl:text-6xl"
+				>
+					Beyondgreen
+				</h2>
+				<p class="my-6 text-lg text-gray-600 pt-10 mx-auto text-center">
+					We do stuff
+				</p>
+			</div>
 		</div>
 
 		<div class="topsection-wave bg-mainbg fill-topsection">
@@ -22,7 +29,11 @@
 				/>
 			</svg>
 		</div>
-	</div>
+	</section>
+
+	<section class="bg-pink-200">
+		<p> TEST </p>
+	</section>
 </main>
 
 <style>
