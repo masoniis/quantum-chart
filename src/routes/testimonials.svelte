@@ -12,8 +12,8 @@
 <main class="min-h-screen text-maintext overflow-hidden">
 	<!-- Section 1 -->
 	<section class="min-w-screen min-h-screen bg-gray-50 pt-40">
-		<div class="max-w-6xl px-12 mx-auto md:px-16 xl:px-10">
-			<div class="flex flex-col items-start justify-center w-full h-full mb-10">
+		<div class="max-w-6xl px-12 mx-auto xl:px-10">
+			<div class="flex flex-col items-start justify-center w-full mb-10">
 				<h2
 					class="text-4xl text-center font-extrabold tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl xl:text-6xl"
 				>
@@ -37,8 +37,9 @@
 		class="flex items-center justify-center py-16 bg-gray-100 min-w-screen pt-28"
 	>
 		<div class="max-w-6xl px-12 mx-auto bg-gray-100 md:px-16 xl:px-10">
-			<div class="grid grid-cols-1 grid-rows-3 lg:grid-cols-4 lg:grid-rows-2 items-center gap-10 w-full">
-
+			<div
+				class="grid grid-cols-1 grid-rows-3 lg:grid-cols-4 lg:grid-rows-2 items-center gap-10 w-full"
+			>
 				<!-- Card #1 -->
 				<blockquote
 					class="flex items-center justify-between w-full col-span-2 p-6 bg-white rounded-lg shadow min-h-full"
