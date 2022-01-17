@@ -10,7 +10,6 @@
 	$: {
 		if ($menu === true) {
 			hide = 'hidden';
-			console.log("set from layout")
 		} else {
 			hide = '';
 		}
