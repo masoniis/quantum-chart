@@ -219,6 +219,7 @@
 		 main {
 			scrollbar-color: #555 transparent;
 			scrollbar-width: thin;
+			overflow-x: hidden;
 		}
 	}
 </style>
