@@ -43,6 +43,7 @@
     "@tailwindcss/forms": "^0.4.0",
     "pnpm": "^6.26.1",
     "svelte-closable": "^0.0.0",
+    "svelte-hamburger": "^1.0.0",
     "svelte-scrolling": "^1.1.1",
     "svelte-scrollto": "^0.2.0",
     "svrollbar": "^0.10.4"

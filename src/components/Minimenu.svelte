@@ -13,6 +13,7 @@
 	$: {
 		if (xWidth >= 775) {
 			open = false;
+			console.log("OPEN FALSE FROM MINIMEUN")
 		}
 	}
 </script>

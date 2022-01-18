@@ -50,6 +50,7 @@
 			console.log("navbar set menu to true")
 		} else {
 			$menu = false;
+			console.log("open is set to " + open)
 			console.log("navbar set menu to false")
 		}
 
@@ -106,10 +107,11 @@
 
 			<!-- Mobile Menu -->
 				<!-- Mobile menu button -->
+			<div class="block md:hidden self-center">
 				<Hamburger bind:open --color={text} --padding={0} />
 
 				<Menu bind:open />
-
+			</div>
 			<!-- Desktop Menu -->
 			<div class="hidden md:ml-6 md:flex md:space-x-8 {text}">
 				<a
