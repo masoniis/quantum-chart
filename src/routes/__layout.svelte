@@ -49,8 +49,10 @@
 	  background: #555; 
 	}
 
-	.firefox_scroller {
-		scrollbar-color: rebeccapurple green;
-  		scrollbar-width: thin;
+	 @supports (scrollbar-color: #555 transparent) {
+		 :root {
+			scrollbar-color: #555 transparent;
+			scrollbar-width: thin;
+		}
 	}
 </style>

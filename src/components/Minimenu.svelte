@@ -214,4 +214,11 @@
 	main::-webkit-scrollbar-thumb:hover {
 	  background: #555; 
 	}
+
+	@supports (scrollbar-color: #555 transparent) {
+		 main {
+			scrollbar-color: #555 transparent;
+			scrollbar-width: thin;
+		}
+	}
 </style>
