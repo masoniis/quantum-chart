@@ -9,9 +9,9 @@
 
 <svelte:window bind:scrollY={y} />
 
-<main class="min-h-screen text-maintext overflow-hidden">
+<main class="min-h-screen text-maintext overflow-hidden bg-gray-50">
 	<!-- Section 1 -->
-	<section class="min-w-screen min-h-screen bg-yellow-200 pt-40">
+	<section class="min-w-screen min-h-screen bg-gray-50 pt-40">
 		<div class="max-w-6xl px-12 mx-auto xl:px-10">
 			<div class="flex flex-col items-start justify-center w-full mb-10">
 				<h2
