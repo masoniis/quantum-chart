@@ -16,7 +16,7 @@
 	let open;
 
 	let background;
-	let text = '#374151';
+	let text = '';
 	let shadow;
 
 	let y;
@@ -47,8 +47,10 @@
 		if (open === true) {
 			background = 'bg-mobilemenu';
 			$menu = true;
+			console.log("navbar set menu to true")
 		} else {
 			$menu = false;
+			console.log("navbar set menu to false")
 		}
 
 		if (dropdown === true) {
@@ -103,12 +105,10 @@
 			</div>
 
 			<!-- Mobile Menu -->
-			<div class="-ml-2 mr-2 inline-flex items-center md:hidden unselectable">
 				<!-- Mobile menu button -->
 				<Hamburger bind:open --color={text} --padding={0} />
 
 				<Menu bind:open />
-			</div>
 
 			<!-- Desktop Menu -->
 			<div class="hidden md:ml-6 md:flex md:space-x-8 {text}">

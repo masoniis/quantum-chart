@@ -9,9 +9,7 @@
 
 	$: {
 		if ($menu === true) {
-			setTimeout(() => {
-				hide = 'fixed';
-			}, 0);
+			hide = 'fixed';
 		} else {
 			hide = '';
 		}
@@ -28,29 +26,29 @@
 <style>
 	/* width */
 	:root::-webkit-scrollbar {
-	  width: 7px;
-	}
-	
-	/* Track */
-	:root::-webkit-scrollbar-track {
-	  background: transparent; 
-	  border-radius: 100vw;
-	  margin-block: .25rem;
-	}
-	 
-	/* Handle */
-	:root::-webkit-scrollbar-thumb {
-	  background: #888;
-	  border-radius: 100vw;
-	}
-	
-	/* Handle on hover */
-	:root::-webkit-scrollbar-thumb:hover {
-	  background: #555; 
+		width: 7px;
 	}
 
-	 @supports (scrollbar-color: #555 transparent) {
-		 :root {
+	/* Track */
+	:root::-webkit-scrollbar-track {
+		background: transparent;
+		border-radius: 100vw;
+		margin-block: 0.25rem;
+	}
+
+	/* Handle */
+	:root::-webkit-scrollbar-thumb {
+		background: #888;
+		border-radius: 100vw;
+	}
+
+	/* Handle on hover */
+	:root::-webkit-scrollbar-thumb:hover {
+		background: #555;
+	}
+
+	@supports (scrollbar-color: #555 transparent) {
+		:root {
 			scrollbar-color: #555 transparent;
 			scrollbar-width: thin;
 		}
