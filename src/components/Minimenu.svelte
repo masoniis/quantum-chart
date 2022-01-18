@@ -20,7 +20,7 @@
 <svelte:window bind:innerWidth={xWidth} />
 
 {#if open}
-	<div
+	<main
 		class="md:hidden fixed right-0 left-0 w-full top-[4.5rem] mobile_menu"
 		id="mobile-menu"
 		in:fly={{ duration: 350, x: 500 }}
@@ -181,7 +181,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</main>
 {/if}
 
 <style>
@@ -190,5 +190,28 @@
 		max-height: calc(100vh - 70px);
 		width: 100%;
 		overflow-y: scroll;
+	}
+
+	/* width */
+	main::-webkit-scrollbar {
+	  width: 7px;
+	}
+	
+	/* Track */
+	main::-webkit-scrollbar-track {
+	  background: transparent; 
+	  border-radius: 100vw;
+	  margin-block: .25rem;
+	}
+	 
+	/* Handle */
+	main::-webkit-scrollbar-thumb {
+	  background: #888;
+	  border-radius: 100vw;
+	}
+	
+	/* Handle on hover */
+	main::-webkit-scrollbar-thumb:hover {
+	  background: #555; 
 	}
 </style>
