@@ -1,6 +1,6 @@
 <title>BeyondGreen - Home</title>
 
-<main class="min-h-screen text-maintext overflow-hidden bg-mainbg">
+<main class="min-h-screen text-maintext overflow-hidden">
 	<!-- Section 1 -->
 	<section class="min-w-screen bg-topsection pt-40">
 		<div class="max-w-6xl px-12 mx-auto xl:px-10">

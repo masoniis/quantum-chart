@@ -1,6 +1,6 @@
 <script>
 	import { scale, slide, fly, fade } from 'svelte/transition';
-	import { scrollTo, scrollRef, scrollTop } from 'svelte-scrolling';
+	import { scrollTo, scrollRef } from 'svelte-scrolling';
 
 	let y;
 </script>
