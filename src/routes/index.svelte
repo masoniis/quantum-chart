@@ -3,14 +3,16 @@
 <main class="min-h-screen text-maintext overflow-hidden">
 	<!-- Section 1 -->
 	<section class="min-w-screen bg-topsection pt-40">
-		<div class="max-w-6xl px-12 mx-auto xl:px-10">
+		<div class="max-w-6xl px-12 mx-auto xl:px-10 pt-8 pb-24">
 			<div class="flex flex-col items-start justify-center w-full">
-				<h2
-					class="text-4xl text-center font-extrabold tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl xl:text-6xl"
+				<h1
+					class="container mx-auto text-7xl max-w-4xl font-extrabold text-gray-900 sm:leading-none"
 				>
-					Beyondgreen
+					Not just your ordinary landscape service
+				</h1>
+				<h2 class="container mx-auto text-xl max-w-3xl py-8">
+					Mowing, shoveling, airation, leaf blowing, etc we are very cool basically please buy us
 				</h2>
-				<p class="my-6 text-lg text-gray-600 pt-10 mx-auto text-center">We do stuff</p>
 			</div>
 		</div>
 
