@@ -1,3 +1,8 @@
+<script>
+	import Socialgirl from "../components/Icons/Socialgirl.svelte"
+	import Logo from "../components/Logo.svelte"
+</script>
+
 <title>BeyondGreen - Home</title>
 
 <main class="min-h-screen text-maintext overflow-hidden">
@@ -38,26 +43,26 @@
 	</section>
 
 	<!-- Section 2 -->
-	<section class="container mx-auto grid grid-cols-3 grid-rows-2 pt-12">
+	<section class="container mx-auto grid grid-cols-3 grid-rows-2 p-12">
 		<h1 class="col-span-3 text-center text-6xl font-bold py-12">This is how it works</h1>
 		<div class="text-center">
-			<icon class="h-24 w-24">
-				ICON HERE
-			</icon>
+			<p class="h-30 w-24 mx-auto">
+				<Logo />
+			</p>
 			<h2 class="text-5xl py-4">Subscribe</h2>
 			<p>with a simple process</p>
 		</div>
 		<div class="text-center">
-			<icon class="h-24 w-24">
-				ICON HERE
-			</icon>
+			<p class="h-24 w-24 mx-auto">
+				<Logo />
+			</p>
 			<h2 class="text-5xl py-4">Convey</h2>
 			<p>to us your needs and wants</p>
 		</div>
 		<div class="text-center">
-			<icon class="h-24 w-24">
-				ICON HERE
-			</icon>
+			<p class="h-24 w-24 mx-auto">
+				<Logo />
+			</p>
 			<h2 class="text-5xl py-4">Relax</h2>
 			<p>While your lawn is epic</p>
 		</div>
