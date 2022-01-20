@@ -4,7 +4,7 @@
 
 	<!-- Section 1 -->
 	<section class="min-w-screen bg-topsection pt-40">
-		<div class="max-w-6xl px-12 mx-auto xl:px-10 pt-8 pb-24">
+		<div class="max-w-6xl px-12 mx-auto xl:px-10 pt-8 pb-32">
 			<grid class="grid grid-cols-3 grid-rows-3 items-start justify-center w-full">
 				<h1
 					class="col-span-3 text-7xl max-w-4xl font-extrabold text-gray-900 sm:leading-none"
@@ -16,7 +16,7 @@
 				</h2>
 
 				<form class="flex flex-row space-x-4 pb-12 h-24 w-[28rem]">
-					<input type="email" id="demo" placeholder="Enter Email*" class="shadow-lg w-2/3 focus:ring-emerald-400 focus:border-emerald-500 block sm:text-sm border-gray-300 rounded-full" />
+					<input type="email" id="demo" placeholder="Enter Email*" class="shadow-lg w-2/3 pl-[1.5rem] focus:ring-emerald-400 focus:border-emerald-500 block sm:text-sm border-gray-300 rounded-full" />
 					<button type="submit" class="p-2 w-1/3 border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400">Request a demo</button>
 				</form>
 			</grid>
@@ -38,18 +38,27 @@
 	</section>
 
 	<!-- Section 2 -->
-	<section class="container mx-auto grid grid-cols-3 grid-rows-2">
+	<section class="container mx-auto grid grid-cols-3 grid-rows-2 pt-12">
 		<h1 class="col-span-3 text-center text-6xl font-bold py-12">This is how it works</h1>
 		<div class="text-center">
-			<h2 class="text-5xl">Subscribe</h2>
+			<icon class="h-24 w-24">
+				ICON HERE
+			</icon>
+			<h2 class="text-5xl py-4">Subscribe</h2>
 			<p>with a simple process</p>
 		</div>
 		<div class="text-center">
-			<h2 class="text-5xl">Convey</h2>
+			<icon class="h-24 w-24">
+				ICON HERE
+			</icon>
+			<h2 class="text-5xl py-4">Convey</h2>
 			<p>to us your needs and wants</p>
 		</div>
 		<div class="text-center">
-			<h2 class="text-5xl">Relax</h2>
+			<icon class="h-24 w-24">
+				ICON HERE
+			</icon>
+			<h2 class="text-5xl py-4">Relax</h2>
 			<p>While your lawn is epic</p>
 		</div>
 	</section>
