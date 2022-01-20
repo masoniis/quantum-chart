@@ -1,19 +1,25 @@
 <title>BeyondGreen - Home</title>
 
 <main class="min-h-screen text-maintext overflow-hidden">
+
 	<!-- Section 1 -->
 	<section class="min-w-screen bg-topsection pt-40">
 		<div class="max-w-6xl px-12 mx-auto xl:px-10 pt-8 pb-24">
-			<div class="flex flex-col items-start justify-center w-full">
+			<grid class="grid grid-cols-3 grid-rows-3 items-start justify-center w-full">
 				<h1
-					class="container mx-auto text-7xl max-w-4xl font-extrabold text-gray-900 sm:leading-none"
+					class="col-span-3 text-7xl max-w-4xl font-extrabold text-gray-900 sm:leading-none"
 				>
 					Not just your ordinary landscape service
 				</h1>
-				<h2 class="container mx-auto text-xl max-w-3xl py-8">
-					Mowing, shoveling, airation, leaf blowing, etc we are very cool basically please buy us
+				<h2 class="col-span-3 text-xl max-w-2xl pt-8">
+					Mowing, shoveling, airation, leaf blowing, etc we are very cool basically please buy us please please we need u i swear it will be worth
 				</h2>
-			</div>
+
+				<form class="flex flex-row space-x-4 pb-12 h-24 w-[28rem]">
+					<input type="email" id="demo" placeholder="Enter Email*" class="shadow-lg w-2/3 focus:ring-emerald-400 focus:border-emerald-500 block sm:text-sm border-gray-300 rounded-full" />
+					<button type="submit" class="p-2 w-1/3 border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400">Request a demo</button>
+				</form>
+			</grid>
 		</div>
 
 		<div class="topsection-wave bg-mainbg fill-topsection">
@@ -31,8 +37,21 @@
 		</div>
 	</section>
 
-	<section class="bg-pink-200">
-		<p>TEST</p>
+	<!-- Section 2 -->
+	<section class="container mx-auto grid grid-cols-3 grid-rows-2">
+		<h1 class="col-span-3 text-center text-6xl font-bold py-12">This is how it works</h1>
+		<div class="text-center">
+			<h2 class="text-5xl">Subscribe</h2>
+			<p>with a simple process</p>
+		</div>
+		<div class="text-center">
+			<h2 class="text-5xl">Convey</h2>
+			<p>to us your needs and wants</p>
+		</div>
+		<div class="text-center">
+			<h2 class="text-5xl">Relax</h2>
+			<p>While your lawn is epic</p>
+		</div>
 	</section>
 </main>
 

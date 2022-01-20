@@ -24,7 +24,7 @@ module.exports = {
         'lighthover': '#030304',
 
         // ↓ Home Page ↓
-        'topsection' : '#d2e683',
+        'topsection' : '#e0cf9b',
 
         // ↓ Navbar ↓
         'dropdown1' : '#f8e0ff',
