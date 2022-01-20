@@ -97,12 +97,12 @@
 					</p>
 				</h1>
 
-				<h1 class="hidden xs:flex flex-row">
-					<a href="/" class="h-12 w-12">
+				<a href="/" class="hidden xs:flex flex-row">
+					<div class="h-12 w-12">
 						<Logo />
-					</a>
+					</div>
 					<p class="pl-5 self-center font-extrabold unselectable">Beyondgreen</p>
-				</h1>
+				</a>
 			</div>
 
 			<!-- Mobile Menu -->
@@ -114,16 +114,6 @@
 			</div>
 			<!-- Desktop Menu -->
 			<div class="hidden md:ml-6 md:flex md:space-x-8 {text}">
-				<a
-					href="/"
-					on:click={() => {
-						dropdown = false;
-					}}
-					class:active={$page.url.pathname === '/'}
-					class="border-transparent hover:border-gray-300 hover:text-gray-700 transition-all inline-flex items-center px-1 pt-1 border-b-2 text-sm font-bold"
-				>
-					Home
-				</a>
 				<a
 					href="/products"
 					on:click={() => (dropdown = false)}
