@@ -47,11 +47,9 @@
 		if (open === true) {
 			background = 'bg-mobilemenu';
 			$menu = true;
-			console.log("navbar set menu to true")
 		} else {
 			$menu = false;
 			console.log("open is set to " + open)
-			console.log("navbar set menu to false")
 		}
 
 		if (dropdown === true) {
