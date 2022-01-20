@@ -25,14 +25,27 @@
 			buttonBackground2 = "bg-gray-300";
 		}
 	}
+	let squareFootage=100;
 </script>
 
 <title>BeyondGreen - Pricing</title>
 
-<main class="min-h-screen bg-light-bg">
+<main class="min-h-screen bg-light-bg pt-20">
 	<h1 class="text-light-text text-center">
 		Our prices are always fair and affordable to give your lawn the best care possible
 	</h1>
+	<div class="sm:text-sm">
+		Enter your estimated square footage here
+	</div>
+	  <input
+	  type="number"
+	  bind:value={squareFootage}
+	  name="square-footage"
+	  id="square-footage"
+	  autocomplete="given-name"
+	  placeholder="1000"
+	  class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+  />
 	<br />
 	<br />
 	<!--Dropdown Menu-->
@@ -66,7 +79,7 @@
 	</div>
 	<div class="flex text-center">
 		<div class="centerflex1 flex-none w-60 h-15" style="background: yellow">
-			Basic<br />${basic}.99
+			Basic<br />${basic*squareFootage}.99
 		</div>
 		<div class="flex-initial w-60 ..." style="background: orange">
 			Premium<br />${premium}.99
@@ -107,7 +120,6 @@
 	.centerflex2 {
 		margin-left: 88.5vh;
 	}
-
 	/* .active {
 		--tw-border-opacity: 1;
 		border-color: rgb(99 102 241 / var(--tw-border-opacity));
