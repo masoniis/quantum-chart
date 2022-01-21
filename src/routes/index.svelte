@@ -12,15 +12,15 @@
 		<div class="max-w-6xl px-12 mx-auto xl:px-10 pt-8 pb-32">
 			<grid class="grid grid-cols-3 grid-rows-3 items-start justify-center w-full">
 				<h1
-					class="col-span-3 text-7xl max-w-4xl font-extrabold text-gray-900 sm:leading-none"
+					class="col-span-3 max-w-4xl font-extrabold text-gray-900 sm:leading-none mx-auto text-center text-6xl lg:text-7xl lg:mx-0 lg:text-left"
 				>
 					Not just your ordinary landscape service
 				</h1>
-				<h2 class="col-span-3 text-xl max-w-2xl pt-8">
+				<h2 class="col-span-3 text-md  py-8 mx-auto text-center max-w-xl lg:text-xl lg:max-w-2xl lg:mx-0 lg:text-left">
 					Mowing, shoveling, airation, leaf blowing, etc we are very cool basically please buy us please please we need u i swear it will be worth
 				</h2>
 
-				<form class="flex flex-row space-x-4 pb-12 h-24 w-[28rem]">
+				<form class="col-span-3 flex flex-row space-x-4 pb-12 h-24 w-[28rem] mx-auto lg:mx-0">
 					<input type="email" id="demo" placeholder="Enter Email*" class="shadow-lg w-2/3 pl-[1.5rem] focus:ring-emerald-400 focus:border-emerald-500 block sm:text-sm border-gray-300 rounded-full" />
 					<button type="submit" class="p-2 w-1/3 border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400">Request a demo</button>
 				</form>

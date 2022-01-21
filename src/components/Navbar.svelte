@@ -49,7 +49,6 @@
 			$menu = true;
 		} else {
 			$menu = false;
-			console.log("open is set to " + open)
 		}
 
 		if (dropdown === true) {
@@ -104,7 +103,7 @@
 			</div>
 
 			<!-- Mobile Menu -->
-				<!-- Mobile menu button -->
+			<!-- Mobile menu button -->
 			<div class="block md:hidden self-center">
 				<Hamburger bind:open --color={text} --padding={0} />
 
@@ -206,9 +205,6 @@
 														Get a better understanding of where your traffic is coming from.
 													</p>
 												</div>
-												<p class="mt-2 text-sm font-medium text-indigo-600 lg:mt-4">
-													Learn more <span aria-hidden="true">&rarr;</span>
-												</p>
 											</div>
 										</div>
 									</a>
@@ -251,9 +247,6 @@
 														Want to join the team? Find out what options you have
 													</p>
 												</div>
-												<p class="mt-2 text-sm font-medium text-indigo-600 lg:mt-4">
-													Learn more <span aria-hidden="true">&rarr;</span>
-												</p>
 											</div>
 										</div>
 									</a>
@@ -296,9 +289,6 @@
 														Have more questions? Get in touch with the individuals behind it all
 													</p>
 												</div>
-												<p class="mt-2 text-sm font-medium text-indigo-600 lg:mt-4">
-													Learn more <span aria-hidden="true">&rarr;</span>
-												</p>
 											</div>
 										</div>
 									</a>
@@ -342,98 +332,9 @@
 														about
 													</p>
 												</div>
-												<p class="mt-2 text-sm font-medium text-indigo-600 lg:mt-4">
-													Learn more <span aria-hidden="true">&rarr;</span>
-												</p>
 											</div>
 										</div>
 									</a>
-								</div>
-							</div>
-							<div class="bg-gray-50">
-								<div
-									class="max-w-7xl mx-auto space-y-6 px-4 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-6 lg:px-8"
-								>
-									<div class="flow-root">
-										<a
-											href="/"
-											class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100 transition ease-in-out duration-150"
-										>
-											<!-- Heroicon name: outline/play -->
-											<svg
-												class="flex-shrink-0 h-6 w-6 text-gray-400"
-												xmlns="http://www.w3.org/2000/svg"
-												fill="none"
-												viewBox="0 0 24 24"
-												stroke="currentColor"
-												aria-hidden="true"
-											>
-												<path
-													stroke-linecap="round"
-													stroke-linejoin="round"
-													stroke-width="2"
-													d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-												/>
-												<path
-													stroke-linecap="round"
-													stroke-linejoin="round"
-													stroke-width="2"
-													d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-												/>
-											</svg>
-											<span class="ml-3">Watch Demo</span>
-										</a>
-									</div>
-
-									<div class="flow-root">
-										<a
-											href="/"
-											class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100 transition ease-in-out duration-150"
-										>
-											<!-- Heroicon name: outline/check-circle -->
-											<svg
-												class="flex-shrink-0 h-6 w-6 text-gray-400"
-												xmlns="http://www.w3.org/2000/svg"
-												fill="none"
-												viewBox="0 0 24 24"
-												stroke="currentColor"
-												aria-hidden="true"
-											>
-												<path
-													stroke-linecap="round"
-													stroke-linejoin="round"
-													stroke-width="2"
-													d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-												/>
-											</svg>
-											<span class="ml-3">View All Products</span>
-										</a>
-									</div>
-
-									<div class="flow-root">
-										<a
-											href="/"
-											class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100 transition ease-in-out duration-150"
-										>
-											<!-- Heroicon name: outline/phone -->
-											<svg
-												class="flex-shrink-0 h-6 w-6 text-gray-400"
-												xmlns="http://www.w3.org/2000/svg"
-												fill="none"
-												viewBox="0 0 24 24"
-												stroke="currentColor"
-												aria-hidden="true"
-											>
-												<path
-													stroke-linecap="round"
-													stroke-linejoin="round"
-													stroke-width="2"
-													d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-												/>
-											</svg>
-											<span class="ml-3">Contact Sales</span>
-										</a>
-									</div>
 								</div>
 							</div>
 						</div>
