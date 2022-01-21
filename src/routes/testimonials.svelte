@@ -75,7 +75,7 @@
 						</h3>
 					</div>
 					<img
-						class="hidden sm:block w-24 h-24 bg-gray-300 rounded-full"
+						class="hidden sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
 						src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
 						alt=""
 					/>
@@ -116,7 +116,7 @@
 						</h3>
 					</div>
 					<img
-						class="hidden sm:block w-24 h-24 bg-gray-300 rounded-full"
+						class="hidden sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
 						src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
 						alt=""
 					/>
@@ -157,7 +157,7 @@
 						</h3>
 					</div>
 					<img
-						class="hidden sm:block w-24 h-24 bg-gray-300 rounded-full"
+						class="hidden sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
 						src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
 						alt=""
 					/>
@@ -198,7 +198,7 @@
 						</h3>
 					</div>
 					<img
-						class="hidden sm:block w-24 h-24 bg-gray-300 rounded-full"
+						class="hidden sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
 						src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
 						alt=""
 					/>
@@ -239,7 +239,7 @@
 						</h3>
 					</div>
 					<img
-						class="hidden sm:block w-24 h-24 bg-gray-300 rounded-full"
+						class="hidden sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
 						src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
 						alt=""
 					/>
@@ -280,7 +280,7 @@
 						</h3>
 					</div>
 					<img
-						class="hidden sm:block w-24 h-24 bg-gray-300 rounded-full"
+						class="hidden sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
 						src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
 						alt=""
 					/>

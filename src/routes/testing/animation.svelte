@@ -1,89 +1,27 @@
 <script>
-	import { fade, fly } from 'svelte/transition';
+	import { fade, fly, draw } from 'svelte/transition';
 	import Visibility from '../../components/Visibility.svelte';
-
-	// import Alert from '../../components/Alert.svelte'
-
-	import { menu } from '../../stores';
-
-	console.log('The menu store is ' + $menu);
-
-	let visible = true;
-
-	$: {
-		if ($menu === true) {
-			console.log("HOLY CRAP MENU IS TRUE")
-		}
-	}
 </script>
 
-<main class="min-h-screen bg-mainbg text-maintext overflow-hidden">
-	<div class="container mx-auto">
-		<p class="duration-1000 hover:text-white">I AM ANIMATIONS!</p>
-		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<main class="min-h-screen text-maintext overflow-hidden bg-gray-500">
+	<p class="pt-72 text-center">Hey</p>
 
-		<button
-			on:click={() => {
-				($menu = false), console.log('The menu store is ' + $menu);
-			}}>HEY</button
-		>
-
-		<button
-		on:click={() => {
-			($menu = true), console.log('The menu store is ' + $menu);
-		}}>HEY true</button
+	<svg
+		class="w-screen h-[25rem]"
+		xmlns="http://www.w3.org/2000/svg"
+		style="vector-effect: non-scaling-stroke;"
 	>
-
-	<button
-	on:click={() =>  console.log($menu)}
-	>What am i?</button
->
-		
-
-		<label>
-			<input type="checkbox" bind:checked={visible} />
-			visible
-		</label>
-
-		{#if visible}
-			<p transition:fly={{ y: 200, duration: 2000 }}>Flies in and out</p>
-		{/if}
-
-		<main>
-			<h1>Scroll down</h1>
-
-			<Visibility steps={100} let:percent let:unobserve>
-				<section>
-					<span class="top-left">{percent}%</span>
-					<span class="top-right">{percent}%</span>
-					<span class="bottom-left">{percent}%</span>
-					<span class="bottom-right">{percent}%</span>
-
-					{#if percent > 70}
-						<p
-							class="container max-w-lg mx-auto"
-							in:fly={{ duration: 1000, x: -500 }}
-							out:fly={{ duration: 500, y: -500 }}
-						>
-							I AM FLYING IN LETS GO
-						</p>
-					{/if}
-				</section>
-			</Visibility>
-
-			<div class=".topsection-divider bg-mainbg fill-topsection">
-				<svg
-					data-name="Layer 1"
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 1200 120"
-					preserveAspectRatio="none"
-				>
-					<path
-						d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-						class="shape-fill"
-					/>
-				</svg>
-			</div>
-		</main>
-	</div>
+		<path
+			class="path scale-125"
+			id="swirl"
+			stroke-width="5"
+			d="m-54.92784,-29.99948c-3.60888,-1.24717 50.52427,465.19319 422.23852,304.30868c371.71426,-160.88451 1107.92502,-265.64651 1107.92502,-265.64651c0,0 66.76421,-6.23583 66.76421,-6.23583"
+			stroke="#000"
+			fill="transparent"
+		/>
+	</svg>
 </main>
+
+<style>
+
+</style>

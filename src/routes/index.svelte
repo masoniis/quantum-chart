@@ -7,6 +7,20 @@
 
 <main class="min-h-screen text-maintext overflow-hidden">
 	<!-- Section 1 -->
+	<svg
+		class="w-screen h-[25rem] bg-transparent fixed mt-[20rem]"
+		xmlns="http://www.w3.org/2000/svg"
+		style="vector-effect: non-scaling-stroke;"
+	>
+		<path
+			class="path scale-125"
+			id="swirl"
+			stroke-width="5"
+			d="m-54.92784,-29.99948c-3.60888,-1.24717 50.52427,465.19319 422.23852,304.30868c371.71426,-160.88451 1107.92502,-265.64651 1107.92502,-265.64651c0,0 66.76421,-6.23583 66.76421,-6.23583"
+			stroke="#000"
+			fill="transparent"
+		/>
+	</svg>
 	<section class="min-w-screen bg-topsection pt-40">
 		<div class="max-w-6xl px-12 mx-auto xl:px-10 pt-8 pb-32">
 			<grid class="grid grid-cols-3 grid-rows-3 items-start justify-center w-full">
@@ -69,8 +83,12 @@
 	</section>
 
 	<!-- Section 2 -->
-	<section class="container mx-auto grid grid-cols-1 grid-rows-5 md:grid-cols-3 md:grid-rows-2 p-12">
-		<h1 class="md:col-span-3 rows-span-2 text-center text-6xl font-bold py-12">This is how it works</h1>
+	<section
+		class="container mx-auto grid grid-cols-1 grid-rows-5 md:grid-cols-3 md:grid-rows-2 p-12"
+	>
+		<h1 class="md:col-span-3 rows-span-2 text-center text-6xl font-bold py-12">
+			This is how it works
+		</h1>
 		<div class="text-center">
 			<p class="h-24 w-24 mx-auto">
 				<Logo />
@@ -115,5 +133,23 @@
 		display: block;
 		width: calc(122% + 1.3px);
 		height: 103px;
+	}
+
+	#swirl {
+		stroke-dasharray: 2000;
+		stroke-dashoffset: 0;
+		animation: dash 7s ease-in-out alternate infinite;
+	}
+
+	@keyframes dash {
+		from {
+			stroke-dashoffset: 2000;
+		}
+		50% {
+			stroke-dashoffset: 0;
+		}
+		to {
+			stroke-dashoffset: 2000;
+		}
 	}
 </style>
