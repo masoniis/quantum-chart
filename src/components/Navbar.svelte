@@ -61,7 +61,6 @@
 		if ($yStore - y != 0) {
 			dropdown = false;
 			$contactModal = false;
-			console.log("CONTAT MODAL LKEAJDSLKJAd")
 		}
 	}
 </script>

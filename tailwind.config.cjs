@@ -2,6 +2,7 @@ module.exports = {
   content: ['./src/**/*.{html,css,svelte}'],
   theme: {
     screens: {
+      '2xs': '320px',
       'xs': '460px',
       'sm': '640px',
       'md': '775px',
