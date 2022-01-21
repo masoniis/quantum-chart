@@ -49,7 +49,7 @@
 
 	@supports (scrollbar-color: #555 transparent) {
 		:root {
-			scrollbar-color: #555 transparent;
+			scrollbar-color: #999 #555;
 			scrollbar-width: thin;
 		}
 	}

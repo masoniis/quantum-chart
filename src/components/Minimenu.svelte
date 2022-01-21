@@ -218,7 +218,7 @@
 
 	@supports (scrollbar-color: #555 transparent) {
 		 main {
-			scrollbar-color: #555 transparent;
+			scrollbar-color: #999 #555;
 			scrollbar-width: thin;
 			overflow-x: hidden;
 		}
