@@ -8,7 +8,7 @@
 <main class="min-h-screen text-maintext overflow-hidden">
 	<!-- Section 1 -->
 	<svg
-		class="w-screen h-[25rem] bg-transparent fixed mt-[20rem]"
+		class="w-screen h-[25rem] bg-transparent absolute mt-[20rem] overflow-visible z-20"
 		xmlns="http://www.w3.org/2000/svg"
 		style="vector-effect: non-scaling-stroke;"
 	>
