@@ -2,7 +2,7 @@
 	import { fly, fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
-	import { menu } from '../stores';
+	import { menu, contactModal, yStore } from '../stores';
 	import Hamburger from 'svelte-hamburgers';
 	import closable from 'svelte-closable';
 	import Logo from '../components/Logo.svelte';
@@ -20,7 +20,6 @@
 	let shadow;
 
 	let y;
-	let yStore;
 
 	onMount(() => {
 		function onResize() {
@@ -59,8 +58,10 @@
 		}
 
 		// Toggle dropdown when scrolling
-		if (yStore - y != 0) {
+		if ($yStore - y != 0) {
 			dropdown = false;
+			$contactModal = false;
+			console.log("CONTAT MODAL LKEAJDSLKJAd")
 		}
 	}
 </script>
@@ -135,7 +136,7 @@
 						class:active={$page.url.pathname === '/contact-us' ||
 							$page.url.pathname === '/about' ||
 							$page.url.pathname === '/employment'}
-						on:click={() => ((dropdown = !dropdown), (yStore = y))}
+						on:click={() => ((dropdown = !dropdown), ($yStore = y))}
 						bind:this={dropButton}
 					>
 						Company
