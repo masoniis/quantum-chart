@@ -88,11 +88,11 @@
 		<div class="flex justify-between h-16">
 			<!-- Logo -->
 			<div class="flex items-center">
-				<h1 class="block xs:hidden w-auto">
+				<a href="/" class="block xs:hidden w-auto">
 					<p class="h-12 w-12">
 						<Logo />
 					</p>
-				</h1>
+				</a>
 
 				<a href="/" class="hidden xs:flex flex-row">
 					<div class="h-12 w-12">
