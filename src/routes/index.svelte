@@ -1,28 +1,54 @@
 <script>
-	import Socialgirl from "../components/Icons/Socialgirl.svelte"
-	import Logo from "../components/Logo.svelte"
+	import Socialgirl from '../components/Icons/Socialgirl.svelte';
+	import Logo from '../components/Logo.svelte';
 </script>
 
 <title>BeyondGreen - Home</title>
 
 <main class="min-h-screen text-maintext overflow-hidden">
-
 	<!-- Section 1 -->
 	<section class="min-w-screen bg-topsection pt-40">
 		<div class="max-w-6xl px-12 mx-auto xl:px-10 pt-8 pb-32">
 			<grid class="grid grid-cols-3 grid-rows-3 items-start justify-center w-full">
 				<h1
-					class="col-span-3 max-w-4xl font-extrabold text-gray-900 sm:leading-none mx-auto text-center text-6xl lg:text-7xl lg:mx-0 lg:text-left"
+					class="col-span-3 max-w-4xl font-extrabold text-gray-900 sm:leading-none mx-auto text-center text-4xl 
+					sm:text-5xl 
+					md:text-6xl 
+					lg:text-7xl lg:mx-0 lg:text-left"
 				>
 					Not just your ordinary landscape service
 				</h1>
-				<h2 class="col-span-3 text-md  py-8 mx-auto text-center max-w-xl lg:text-xl lg:max-w-2xl lg:mx-0 lg:text-left">
-					Mowing, shoveling, airation, leaf blowing, etc we are very cool basically please buy us please please we need u i swear it will be worth
+				<h2
+					class="col-span-3 pt-6 pb-12 mx-auto text-center max-w-xl
+					sm:pt-6 
+					md:pt-8
+					lg:text-xl lg:max-w-2xl lg:mx-0 lg:text-left"
+				>
+					Mowing, shoveling, airation, leaf blowing, etc we are very cool basically please buy us
+					please please we need u i swear it will be worth
 				</h2>
 
-				<form class="col-span-3 flex flex-row space-x-4 pb-12 h-24 w-[28rem] mx-auto lg:mx-0">
-					<input type="email" id="demo" placeholder="Enter Email*" class="shadow-lg w-2/3 pl-[1.5rem] focus:ring-emerald-400 focus:border-emerald-500 block sm:text-sm border-gray-300 rounded-full" />
-					<button type="submit" class="p-2 w-1/3 border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400">Request a demo</button>
+				<form
+					class="col-span-3 flex flex-col sm:space-x-4 pb-12 h-24 items-center container mx-auto
+					sm:flex-row
+					md:max-w-md
+					lg:mx-0"
+				>
+					<input
+						type="email"
+						id="demo"
+						placeholder="Enter Email*"
+						class="shadow-lg w-2/3 my-2 text-center focus:ring-emerald-400 focus:border-emerald-500 block border-gray-300 rounded-full
+						sm:text-sm sm:text-left sm:my-0 sm:pl-[1.5rem]
+						md:self-start"
+					/>
+					<button
+						type="submit"
+						class="py-2 w-1/3 min-w-[144px] border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400
+						md:px-2 md:self-start"
+					>
+						Request a demo
+					</button>
 				</form>
 			</grid>
 		</div>
@@ -43,10 +69,10 @@
 	</section>
 
 	<!-- Section 2 -->
-	<section class="container mx-auto grid grid-cols-3 grid-rows-2 p-12">
-		<h1 class="col-span-3 text-center text-6xl font-bold py-12">This is how it works</h1>
+	<section class="container mx-auto grid grid-cols-1 grid-rows-5 md:grid-cols-3 md:grid-rows-2 p-12">
+		<h1 class="md:col-span-3 rows-span-2 text-center text-6xl font-bold py-12">This is how it works</h1>
 		<div class="text-center">
-			<p class="h-30 w-24 mx-auto">
+			<p class="h-24 w-24 mx-auto">
 				<Logo />
 			</p>
 			<h2 class="text-5xl py-4">Subscribe</h2>
