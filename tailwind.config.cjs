@@ -9,6 +9,7 @@ module.exports = {
       'lg': '1024px',
       'xl': '1280px',
       '2xl': '1536px',
+      '3xl': '1920px',
 
       'to-xs': [{'max': '460px'}],
       'to-sm': [{'max': '640px'}],
