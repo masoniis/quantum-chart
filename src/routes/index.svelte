@@ -3,6 +3,16 @@
 	import Logo from '../components/Logo.svelte';
 
 	let width;
+
+	let squiggle;
+
+	$: {
+		if (width < 640) {
+			squiggle = true;
+		} else {
+			squiggle = false;
+		}
+	}
 </script>
 
 <title>BeyondGreen - Home</title>
@@ -11,19 +21,37 @@
 
 <main class="min-h-screen text-maintext overflow-hidden">
 	<!-- Section 1 -->
-	<section class="relative min-w-screen bg-topsection pt-40">
+	<section class="relative min-w-screen bg-topsection pt-24 sm:pt-40">
 		<div class="max-w-6xl px-12 mx-auto xl:px-10 pt-8 pb-32">
-			<grid class="grid grid-cols-3 grid-rows-3 items-start justify-center w-full">
+			<grid class="grid grid-cols-3 grid-rows-4 items-start justify-center w-full">
 				<h1
 					class="col-span-3 max-w-4xl font-extrabold text-gray-900 sm:leading-none mx-auto text-center text-4xl 
-					sm:text-5xl 
-					md:text-6xl 
+					sm:text-5xl pb-12
+					md:text-6xl md:pb-0
 					lg:text-7xl lg:mx-0 lg:text-left"
 				>
 					Not just your ordinary landscape service
 				</h1>
+				{#if squiggle}
+					<div class="col-span-3 flex justify-center -my-[4rem]">
+						<svg
+							class="absolute"
+							viewBox="200 0 1200 400"
+							xmlns="http://www.w3.org/2000/svg"
+							style="vector-effect: non-scaling-stroke;"
+						>
+							<path
+								d="m-2.99994,3c463.50597,367 708.06434,182 752.36473,255c44.30039,73 -176.98353,39 5.41698,-54c182.40051,-93 543.35036,13 746.51432,37"
+								opacity="NaN"
+								stroke-width="12"
+								stroke="#000"
+								fill="transparent"
+							/>
+						</svg>
+					</div>
+				{/if}
 				<h2
-					class="col-span-3 pt-6 pb-12 mx-auto text-center max-w-xl
+					class="col-span-3 pb-12 mx-auto text-center max-w-xl -mt-[8rem] xs:mt-0
 					sm:pt-6 
 					md:pt-8
 					lg:text-xl lg:max-w-2xl lg:mx-0 lg:text-left"
@@ -58,9 +86,9 @@
 		</div>
 
 		<!-- Animated Squiggle -->
-		<div class="flex justify-center mt-20 pb-20">
+		<div class="sm:flex justify-center hidden mt-20 pb:12 md:pb-20">
 			<svg
-				class="h-auto w-auto absolute -mt-[12rem] md:-mt-[20rem]"
+				class="h-auto w-auto absolute -mt-[36rem] sm:-mt-[16rem]  md:-mt-[20rem]"
 				viewBox="0 0 1480 400"
 				xmlns="http://www.w3.org/2000/svg"
 				style="vector-effect: non-scaling-stroke;"
