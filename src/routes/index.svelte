@@ -63,7 +63,7 @@
 				</h2>
 
 				<form
-					class="col-span-3 flex flex-col sm:space-x-4 pb-12 h-24 items-center container mx-auto
+					class="col-span-3 flex flex-col sm:space-x-4 pb-12 h-24 items-center container mx-auto z-20
 					sm:flex-row
 					md:max-w-md
 					lg:mx-0"
@@ -88,7 +88,7 @@
 		</div>
 
 		<!-- Animated Squiggle -->
-		<div class="sm:flex justify-center hidden pb:12 md:pb-20 4xl:hidden">
+		<div class="sm:flex justify-center hidden pb:12 md:pb-20 4xl:hidden z-10">
 			<svg
 				class="h-auto w-auto absolute sm:-mt-[16rem] md:-mt-[25rem]"
 				viewBox="0 0 1480 400"
