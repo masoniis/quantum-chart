@@ -25,15 +25,16 @@
 		<div class="max-w-6xl px-12 mx-auto xl:px-10 pt-8 pb-32">
 			<grid class="grid grid-cols-3 grid-rows-4 items-start justify-center w-full">
 				<h1
-					class="col-span-3 max-w-4xl font-extrabold text-gray-900 sm:leading-none mx-auto text-center text-4xl 
-					sm:text-5xl pb-12
+					class="col-span-3 max-w-4xl font-extrabold text-gray-900 sm:leading-none mx-auto text-center text-3xl 
+					xs:text-4xl
+					sm:text-5xl
 					md:text-6xl md:pb-0
 					lg:text-7xl lg:mx-0 lg:text-left"
 				>
 					Not just your ordinary landscape service
 				</h1>
 				{#if squiggle}
-					<div class="col-span-3 flex justify-center -my-[4rem]">
+					<div class="col-span-3 row-span-1 flex justify-center -mt-[2rem] my-12">
 						<svg
 							class="absolute"
 							viewBox="200 0 1200 400"
@@ -43,7 +44,7 @@
 							<path
 								d="m-2.99994,3c463.50597,367 708.06434,182 752.36473,255c44.30039,73 -176.98353,39 5.41698,-54c182.40051,-93 543.35036,13 746.51432,37"
 								opacity="NaN"
-								stroke-width="12"
+								stroke-width="13"
 								stroke="#000"
 								fill="transparent"
 							/>
@@ -51,9 +52,10 @@
 					</div>
 				{/if}
 				<h2
-					class="col-span-3 pb-12 mx-auto text-center max-w-xl -mt-[8rem] xs:mt-0
+					class="col-span-3 mx-auto text-center max-w-xl text-sm 
+					xs:pt-6
 					sm:pt-6 
-					md:pt-8
+					md:pt-8 md:text-md
 					lg:text-xl lg:max-w-2xl lg:mx-0 lg:text-left"
 				>
 					Mowing, shoveling, airation, leaf blowing, etc we are very cool basically please buy us
