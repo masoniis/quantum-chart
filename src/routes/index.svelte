@@ -31,7 +31,7 @@
 					md:text-6xl md:pb-0
 					lg:text-7xl lg:mx-0 lg:text-left"
 				>
-					Not just your ordinary landscape service
+					Not just your ordinary outdoor service
 				</h1>
 				{#if squiggle}
 					<div class="col-span-3 row-span-1 flex justify-center -mt-[2rem] my-12">
@@ -140,14 +140,14 @@
 			<p class="h-24 w-24 mx-auto">
 				<Logo />
 			</p>
-			<h2 class="text-5xl py-4">Convey</h2>
-			<p>to us your needs and wants</p>
+			<h2 class="text-5xl py-4">Describe</h2>
+			<p>exactly how you want the job done</p>
 		</div>
 		<div class="text-center">
 			<p class="h-24 w-24 mx-auto">
 				<Logo />
 			</p>
-			<h2 class="text-5xl py-4">Relax</h2>
+			<h2 class="text-5xl py-4">Vibe</h2>
 			<p>While your lawn is epic</p>
 		</div>
 	</section>
@@ -174,7 +174,6 @@
 		stroke-dasharray: 2000;
 		stroke-dashoffset: 4000;
 		animation: dash 10s ease-in-out alternate infinite;
-		animation-delay: 1s;
 		opacity: 0;
 	}
 

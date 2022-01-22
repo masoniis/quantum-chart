@@ -21,4 +21,22 @@
 			</p>
 		</div>
 	</section>
+
+	<!-- Our Mission -->
+	<section class="min-w-screen min-h-screen pt-40">
+		<div class="flex flex-row container max-w-6xl px-12 mx-auto xl:px-10 space-x-6">
+			<h2 class="text-6xl text-left font-bold tracking-tight text-gray-900 sm:leading-none">
+				Our mission
+			</h2>
+		</div>
+	</section>
+
+	<!-- Our Story -->
+	<section class="min-w-screen min-h-screen pt-40">
+		<div class="flex flex-row container max-w-6xl px-12 mx-auto xl:px-10 space-x-6">
+			<h2 class="text-6xl text-left font-bold tracking-tight text-gray-900 sm:leading-none">
+				Our story
+			</h2>
+		</div>
+	</section>
 </main>
