@@ -179,7 +179,8 @@
 		stroke-dasharray: 2000;
 		stroke-dashoffset: 0;
 		animation: dash 10s ease-in-out alternate infinite;
-		animation-delay: 10s;
+		animation-delay: 1s;
+		opacity: 0;
 	}
 
 	@keyframes dash {
