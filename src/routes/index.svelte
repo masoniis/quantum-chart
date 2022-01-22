@@ -88,7 +88,7 @@
 		</div>
 
 		<!-- Animated Squiggle -->
-		<div class="sm:flex justify-center hidden pb:12 md:pb-20 3xl:hidden">
+		<div class="sm:flex justify-center hidden pb:12 md:pb-20 4xl:hidden">
 			<svg
 				class="h-auto w-auto absolute sm:-mt-[16rem] md:-mt-[25rem]"
 				viewBox="0 0 1480 400"
