@@ -177,7 +177,7 @@
 
 	#swirl {
 		stroke-dasharray: 2000;
-		stroke-dashoffset: 0;
+		stroke-dashoffset: 4000;
 		animation: dash 10s ease-in-out alternate infinite;
 		animation-delay: 1s;
 		opacity: 0;
@@ -194,15 +194,15 @@
 
 		25% {
 			opacity: 1;
-			stroke-dashoffset: 2000;
+			stroke-dashoffset: 6000;
 		}
 
 		50% {
-			stroke-dashoffset: 0;
+			stroke-dashoffset: 4000;
 		}
 
 		75% {
-			stroke-dashoffset: -2000;
+			stroke-dashoffset: 2000;
 			opacity: 1;
 		}
 
