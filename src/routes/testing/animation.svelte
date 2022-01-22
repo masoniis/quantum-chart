@@ -6,22 +6,38 @@
 <main class="min-h-screen text-maintext overflow-hidden bg-gray-500">
 	<p class="pt-72 text-center">Hey</p>
 
-	<svg
-		class="w-screen h-[25rem]"
-		xmlns="http://www.w3.org/2000/svg"
-		style="vector-effect: non-scaling-stroke;"
-	>
-		<path
-			class="path scale-125"
-			id="swirl"
-			stroke-width="5"
-			d="m-54.92784,-29.99948c-3.60888,-1.24717 50.52427,465.19319 422.23852,304.30868c371.71426,-160.88451 1107.92502,-265.64651 1107.92502,-265.64651c0,0 66.76421,-6.23583 66.76421,-6.23583"
-			stroke="#000"
-			fill="transparent"
-		/>
-	</svg>
+	<div class="flex justify-center">
+		<svg class="h-72 w-auto" viewBox="0 0 1480 400" xmlns="http://www.w3.org/2000/svg" style="vector-effect: non-scaling-stroke;">
+			<path
+				id="swirl"
+				d="m-2.99994,3c463.50597,367 708.06434,182 752.36473,255c44.30039,73 -176.98353,39 5.41698,-54c182.40051,-93 543.35036,13 746.51432,37"
+				opacity="NaN"
+				stroke-width="3"
+				stroke="#000"
+				fill="transparent"
+			/>
+		</svg>
+	</div>
+
+	<div class="relative contianer mx-auto pb-32 pt-80">
+		<svg
+			class="h-[25rem] bg-transparent overflow-visible z-20 origin-right
+					-mt-[12rem]
+					xl:-mt-[18rem]"
+			xmlns="http://www.w3.org/2000/svg"
+			style="vector-effect: non-scaling-stroke;"
+		>
+			<path
+				id="swirl"
+				d="m-2.99994,3c463.50597,367 708.06434,182 752.36473,255c44.30039,73 -176.98353,39 5.41698,-54c182.40051,-93 543.35036,13 746.51432,37"
+				opacity="NaN"
+				stroke-width="3"
+				stroke="#000"
+				fill="transparent"
+			/>
+		</svg>
+	</div>
 </main>
 
 <style>
-
 </style>

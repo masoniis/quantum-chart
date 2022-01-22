@@ -1,27 +1,17 @@
 <script>
 	import Socialgirl from '../components/Icons/Socialgirl.svelte';
 	import Logo from '../components/Logo.svelte';
+
+	let width;
 </script>
 
 <title>BeyondGreen - Home</title>
 
+<svelte:window bind:innerWidth={width} />
+
 <main class="min-h-screen text-maintext overflow-hidden">
 	<!-- Section 1 -->
-	<svg
-		class="w-screen h-[25rem] bg-transparent absolute mt-[20rem] overflow-visible z-20"
-		xmlns="http://www.w3.org/2000/svg"
-		style="vector-effect: non-scaling-stroke;"
-	>
-		<path
-			class="path scale-125"
-			id="swirl"
-			stroke-width="5"
-			d="m-54.92784,-29.99948c-3.60888,-1.24717 50.52427,465.19319 422.23852,304.30868c371.71426,-160.88451 1107.92502,-265.64651 1107.92502,-265.64651c0,0 66.76421,-6.23583 66.76421,-6.23583"
-			stroke="#000"
-			fill="transparent"
-		/>
-	</svg>
-	<section class="min-w-screen bg-topsection pt-40">
+	<section class="relative min-w-screen bg-topsection pt-40">
 		<div class="max-w-6xl px-12 mx-auto xl:px-10 pt-8 pb-32">
 			<grid class="grid grid-cols-3 grid-rows-3 items-start justify-center w-full">
 				<h1
@@ -67,6 +57,26 @@
 			</grid>
 		</div>
 
+		<!-- Animated Squiggle -->
+		<div class="flex justify-center mt-20 pb-20">
+			<svg
+				class="h-auto w-auto absolute -mt-[12rem] md:-mt-[20rem]"
+				viewBox="0 0 1480 400"
+				xmlns="http://www.w3.org/2000/svg"
+				style="vector-effect: non-scaling-stroke;"
+			>
+				<path
+					id="swirl"
+					d="m-2.99994,3c463.50597,367 708.06434,182 752.36473,255c44.30039,73 -176.98353,39 5.41698,-54c182.40051,-93 543.35036,13 746.51432,37"
+					opacity="NaN"
+					stroke-width="4"
+					stroke="#000"
+					fill="transparent"
+				/>
+			</svg>
+		</div>
+
+		<!-- Wave Divider -->
 		<div class="topsection-wave bg-mainbg fill-topsection">
 			<svg
 				data-name="Layer 1"
@@ -138,18 +148,39 @@
 	#swirl {
 		stroke-dasharray: 2000;
 		stroke-dashoffset: 0;
-		animation: dash 7s ease-in-out alternate infinite;
+		animation: dash 10s ease-in-out alternate infinite;
+		animation-delay: 10s;
 	}
 
 	@keyframes dash {
 		from {
+			opacity: 0;
+		}
+
+		24.9% {
+			opacity: 0;
+		}
+
+		25% {
+			opacity: 1;
 			stroke-dashoffset: 2000;
 		}
+
 		50% {
 			stroke-dashoffset: 0;
 		}
+
+		75% {
+			stroke-dashoffset: -2000;
+			opacity: 1;
+		}
+
+		75.1% {
+			opacity: 0;
+		}
+
 		to {
-			stroke-dashoffset: 2000;
+			opacity: 0;
 		}
 	}
 </style>
