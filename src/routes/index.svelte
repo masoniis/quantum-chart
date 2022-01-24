@@ -21,7 +21,7 @@
 
 <main class="min-h-screen text-maintext overflow-hidden">
 	<!-- Section 1 -->
-	<section class="relative min-h-screen min-w-screen bg-topsection pt-24 sm:pt-40">
+	<section class="relative min-h-screen min-w-screen bg-topsection pt-24 sm:pt-40" style="-webkit-transform:translateZ(0)">
 		<div class="max-w-6xl mx-auto xl:px-10 pt-8">
 			<grid class="grid grid-cols-3 auto-rows-min items-start justify-center w-full sm:px-8">
 				<h1
@@ -52,8 +52,9 @@
 					TEST
 				{/if} -->
 				{#if squiggle}
-					<div class="col-span-3 self-center flex justify-center justify-self-start pt-2 pb-6 z-20" style="-webkit-transform:translateZ(0)">
+					<div class="col-span-3 self-center flex justify-center justify-self-start pt-2 pb-6 z-20">
 						<svg
+							class="relative"
 							viewBox="200 0 1200 400"
 							xmlns="http://www.w3.org/2000/svg"
 							style="vector-effect: non-scaling-stroke;"
