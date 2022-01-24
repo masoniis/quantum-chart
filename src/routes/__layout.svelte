@@ -3,7 +3,7 @@
 	import { menu } from '../stores';
 	import Navbar from '../components/Navbar.svelte';
 	import Botbar from '../components/Botbar.svelte';
-	import { Svrollbar } from 'svrollbar';
+	import Menubackground from '../components/Menubackground.svelte'
 
 	let hide;
 
@@ -17,6 +17,10 @@
 </script>
 
 <Navbar />
+
+{#if $menu}
+<Menubackground />
+{/if}
 
 <main class="{hide} firefox_scroller">
 	<slot />
