@@ -22,8 +22,7 @@
 {#if squiggle}
 <div class="col-span-3 row-span-1 flex justify-center -mt-[2rem] my-12">
 	<svg
-		class=""
-		viewBox="200 0 1200 400"
+		viewBox="0 0 1400 600"
 		xmlns="http://www.w3.org/2000/svg"
 		style="vector-effect: non-scaling-stroke;"
 	>
