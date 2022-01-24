@@ -20,7 +20,7 @@
 <svelte:window bind:innerWidth={width} />
 
 
-<div class="col-span-3 row-span-1 flex justify-center -mt-[2rem] my-12" style="-webkit-transform:translateZ(1px); clear:both;">
+<div class="col-span-3 row-span-1 flex justify-center -mt-[2rem] my-12 object" style="-webkit-transform:translateZ(1px); clear:both;">
 	<svg
 		class="relative"
 		viewBox="200 0 1200 400"
@@ -249,4 +249,21 @@
 			opacity: 0;
 		}
 	}
+
+	.object {
+	width: 100%;
+	display: block;
+	height: auto;
+	position: relative;
+	padding-top:100%;
+	}
+
+	svg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 </style>
