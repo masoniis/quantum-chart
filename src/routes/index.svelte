@@ -53,7 +53,7 @@
 				{/if} -->
 				{#if squiggle}
 					<div
-						class="col-span-3 row-span-1 flex justify-center -mt-[2rem] my-12 object"
+						class="col-span-3 row-span-1 flex justify-center mb-4 py-8 object"
 						style="-webkit-transform:translateZ(1px); clear:both;"
 					>
 						<svg
