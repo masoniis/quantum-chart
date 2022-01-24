@@ -33,24 +33,6 @@
 				>
 					Not just your ordinary outdoor service
 				</h1>
-				<!-- {#if squiggle}
-					<div class="col-span-3 self-center flex justify-center justify-self-start pt-2 pb-6 z-20">
-						<svg
-							viewBox="0 0 1480 310"
-							xmlns="http://www.w3.org/2000/svg"
-							style="vector-effect: non-scaling-stroke;"
-						>
-							<path
-								d="m-2.99994,3c463.50597,367 708.06434,182 752.36473,255c44.30039,73 -176.98353,39 5.41698,-54c182.40051,-93 543.35036,13 746.51432,37"
-								opacity="NaN"
-								stroke-width="13"
-								stroke="#000"
-								fill="transparent"
-							/>
-						</svg>
-					</div>
-					TEST
-				{/if} -->
 				{#if squiggle}
 					<div
 						class="col-span-1 row-span-1 flex justify-center mb-0 2xs:mb-4 xs:mb-10 py-8 object"
@@ -93,15 +75,15 @@
 						type="email"
 						id="demo"
 						placeholder="Enter Email*"
-						class="shadow-lg contianer mx-auto w-3/4 my-2 text-center focus:ring-emerald-400 focus:border-emerald-500 block border-gray-300 rounded-full scale-75
-						2xs:text-sm 2xs:text-left 2xs:my-0 2xs:pl-[1.3rem] 2xs:scale-100
+						class="shadow-lg contianer min-w-full mx-auto my-2 text-center focus:ring-emerald-400 focus:border-emerald-500 block border-gray-300 rounded-full scale-75
+						2xs:text-sm 2xs:text-left 2xs:my-0 2xs:pl-[1.3rem] 2xs:scale-100 2xs:w-3/4
 						sm:mr-0
 						md:self-start"
 					/>
 					<button
 						type="submit"
-						class="py-2 w-1/4 contianer mx-auto min-w-[144px] border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400 scale-75
-						xs:scale-100
+						class="py-2 contianer mx-auto min-w-[144px] border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400 scale-75
+						2xs:w-1/4 2xs:scale-100
 						md:px-2 md:self-start"
 					>
 						Request a demo
