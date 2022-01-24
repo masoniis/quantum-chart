@@ -54,7 +54,6 @@
 				{#if squiggle}
 					<div class="col-span-3 self-center flex justify-center justify-self-start pt-2 pb-6 z-20">
 						<svg
-							class="absolute"
 							viewBox="200 0 1200 400"
 							xmlns="http://www.w3.org/2000/svg"
 							style="vector-effect: non-scaling-stroke;"
