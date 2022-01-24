@@ -20,7 +20,7 @@
 <svelte:window bind:innerWidth={width} />
 
 {#if squiggle}
-<div class="col-span-3 row-span-1 flex justify-center -mt-[2rem] my-12 absolute">
+<div class="col-span-3 row-span-1 flex justify-center -mt-[2rem] my-12">
 	<svg
 		class=""
 		viewBox="200 0 1200 400"
