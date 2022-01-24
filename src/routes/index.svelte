@@ -66,7 +66,7 @@
 				</h2>
 
 				<form
-					class="col-span-1 justify-self-center flex flex-col gap-2 sm:space-x-4 py-6 z-[2]
+					class="col-span-1 justify-self-center flex flex-row gap-2 sm:space-x-4 py-6 z-[2]
 					xs:flex-row
 					md:max-w-md
 					lg:mx-0"
@@ -75,7 +75,7 @@
 						type="email"
 						id="demo"
 						placeholder="Enter Email*"
-						class="shadow-lg contianer min-w-full mx-auto my-2 text-center focus:ring-emerald-400 focus:border-emerald-500 block border-gray-300 rounded-full scale-75
+						class="shadow-lg contianer mx-auto my-2 text-center focus:ring-emerald-400 focus:border-emerald-500 block border-gray-300 rounded-full scale-75
 						2xs:text-sm 2xs:text-left 2xs:my-0 2xs:pl-[1.3rem] 2xs:scale-100 2xs:w-3/4
 						sm:mr-0
 						md:self-start"
