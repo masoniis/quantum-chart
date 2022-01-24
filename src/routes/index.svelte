@@ -69,7 +69,7 @@
 					class="col-span-1 justify-self-center flex flex-row gap-2 sm:space-x-4 py-6 z-[2]
 					xs:flex-row
 					md:max-w-md
-					lg:mx-0"
+					lg:mx-0 lg:justify-self-start"
 				>
 					<input
 						type="email"
@@ -94,7 +94,7 @@
 
 		<!-- Animated Squiggle -->
 		<div
-			class="sm:flex hidden 4xl:hidden z-[1000] w-screen -mt-16 lg:mt-0"
+			class="sm:flex hidden 4xl:hidden z-[1000] w-screen -mt-16 lg:-mt-8"
 		>
 			<svg
 				viewBox="0 0 1480 310"
