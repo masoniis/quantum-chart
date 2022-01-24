@@ -58,7 +58,7 @@
 					>
 						<svg
 							class="relative child"
-							viewBox="200 0 1200 400"
+							viewBox="200 110 1200 200"
 							xmlns="http://www.w3.org/2000/svg"
 							style="vector-effect: non-scaling-stroke; -webkit-transform:translateZ(1px); clear:both;"
 						>
@@ -232,12 +232,10 @@
 		display: block;
 		height: auto;
 		position: relative;
-		padding-top: 40%;
 	}
 
 	.child {
 		width: 100%;
-		height: 100%;
 		position: absolute;
 		top: 0;
 		left: 0;
