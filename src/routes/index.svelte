@@ -52,23 +52,26 @@
 					TEST
 				{/if} -->
 				{#if squiggle}
-				<div class="col-span-3 row-span-1 flex justify-center -mt-[2rem] my-12 object" style="-webkit-transform:translateZ(1px); clear:both;">
-					<svg
-						class="relative"
-						viewBox="200 0 1200 400"
-						xmlns="http://www.w3.org/2000/svg"
-						style="vector-effect: non-scaling-stroke; -webkit-transform:translateZ(1px); clear:both;"
+					<div
+						class="col-span-3 row-span-1 flex justify-center -mt-[2rem] my-12 object"
+						style="-webkit-transform:translateZ(1px); clear:both;"
 					>
-						<path
-							d="m-2.99994,3c463.50597,367 708.06434,182 752.36473,255c44.30039,73 -176.98353,39 5.41698,-54c182.40051,-93 543.35036,13 746.51432,37"
-							opacity="NaN"
-							stroke-width="13"
-							stroke="#000"
-							fill="transparent"
-						/>
-					</svg>
-				</div>
-{/if}
+						<svg
+							class="relative"
+							viewBox="200 0 1200 400"
+							xmlns="http://www.w3.org/2000/svg"
+							style="vector-effect: non-scaling-stroke; -webkit-transform:translateZ(1px); clear:both;"
+						>
+							<path
+								d="m-2.99994,3c463.50597,367 708.06434,182 752.36473,255c44.30039,73 -176.98353,39 5.41698,-54c182.40051,-93 543.35036,13 746.51432,37"
+								opacity="NaN"
+								stroke-width="13"
+								stroke="#000"
+								fill="transparent"
+							/>
+						</svg>
+					</div>
+				{/if}
 				<h2
 					class="col-span-3 mx-auto text-center max-w-xl text-sm px-2
 					xs:py-2
@@ -107,11 +110,13 @@
 		</div>
 
 		<!-- Animated Squiggle -->
-		<div class="sm:flex hidden pb:12 md:pb-20 4xl:hidden z-[1]
+		<div
+			class="sm:flex hidden pb:12 md:pb-20 4xl:hidden z-[1]
 				sm:-mt-8
 				md:-mt-20
 				lg:mt-0
-				xl:-mt-24">
+				xl:-mt-24"
+		>
 			<svg
 				class="h-auto w-auto absolute"
 				viewBox="0 0 1480 310"
@@ -132,11 +137,7 @@
 
 	<!-- Wave Divider -->
 	<div class="topsection-wave bg-mainbg fill-topsection z-[-1]">
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			viewBox="0 0 1200 120"
-			preserveAspectRatio="none"
-		>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
 			<path
 				d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
 				class="shape-fill"
@@ -232,19 +233,18 @@
 	}
 
 	.object {
-	width: 100%;
-	display: block;
-	height: auto;
-	position: relative;
-	padding-top:100%;
+		width: 100%;
+		display: block;
+		height: auto;
+		position: relative;
+		padding-top: 100%;
 	}
 
 	svg {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 </style>
