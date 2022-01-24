@@ -21,12 +21,12 @@
 
 {#if open}
 	<main
-		class="md:hidden fixed right-0 left-0 w-full top-[4.5rem] mobile_menu overscroll-contain"
+		class="md:hidden fixed right-0 left-0 w-full top-[4.5rem] mobile_menu overscroll-y-none"
 		id="mobile-menu"
 		in:fly={{ duration: 350, x: 500 }}
 		out:fade={{ duration: 150 }}
 	>
-		<div class="pt-2 space-y-1 bg-mobilemenu min-h-screen">
+		<div class="pt-2 space-y-1 bg-mobilemenu min-h-full">
 			<hr
 				class="my-2"
 				style="height:2px;border-width:0;color:red;background-color:gray"
