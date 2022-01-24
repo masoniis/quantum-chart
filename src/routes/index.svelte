@@ -34,7 +34,7 @@
 					Not just your ordinary outdoor service
 				</h1>
 				{#if squiggle}
-					<div class="col-span-3 self-center flex justify-center justify-self-start pt-2 pb-6">
+					<div class="col-span-3 self-center flex justify-center justify-self-start pt-2 pb-6 z-20">
 						<svg
 							viewBox="200 130 1200 180"
 							xmlns="http://www.w3.org/2000/svg"
@@ -49,6 +49,7 @@
 							/>
 						</svg>
 					</div>
+					TEST
 				{/if}
 				<h2
 					class="col-span-3 mx-auto text-center max-w-xl text-sm px-2
