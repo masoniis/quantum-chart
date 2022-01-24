@@ -22,22 +22,21 @@
 <main class="min-h-screen text-maintext overflow-hidden">
 	<!-- Section 1 -->
 	<section class="relative min-h-screen min-w-screen bg-topsection pt-24 sm:pt-40">
-		<div class="max-w-6xl px-12 mx-auto xl:px-10 pt-8 pb-32">
-			<grid class="grid grid-cols-3 grid-rows-4 items-start justify-center w-full">
+		<div class="max-w-6xl mx-auto xl:px-10 pt-8">
+			<grid class="grid grid-cols-3 auto-rows-min items-start justify-center w-full sm:px-8">
 				<h1
-					class="col-span-3 max-w-4xl font-extrabold text-gray-900 sm:leading-none mx-auto text-center text-3xl 
+					class="col-span-3 max-w-xl font-extrabold text-gray-900 sm:leading-none mx-auto text-center text-3xl
 					xs:text-4xl
 					sm:text-5xl
-					md:text-6xl md:pb-0
+					md:text-6xl sm:max-w-3xl
 					lg:text-7xl lg:mx-0 lg:text-left"
 				>
 					Not just your ordinary outdoor service
 				</h1>
 				{#if squiggle}
-					<div class="col-span-3 row-span-1 flex justify-center -mt-[2rem] my-12">
+					<div class="col-span-3 self-center flex justify-center justify-self-start">
 						<svg
-							class="absolute"
-							viewBox="200 0 1200 400"
+							viewBox="200 130 1200 180"
 							xmlns="http://www.w3.org/2000/svg"
 							style="vector-effect: non-scaling-stroke;"
 						>
@@ -53,9 +52,9 @@
 				{/if}
 				<h2
 					class="col-span-3 mx-auto text-center max-w-xl text-sm 
-					xs:pt-6
-					sm:pt-6 
-					md:pt-8 md:text-md
+					xs:py-2
+					sm:py-2 
+					md:py-4 md:text-md
 					lg:text-xl lg:max-w-2xl lg:mx-0 lg:text-left"
 				>
 					Mowing, shoveling, airation, leaf blowing, etc we are very cool basically please buy us
@@ -63,7 +62,7 @@
 				</h2>
 
 				<form
-					class="col-span-3 flex flex-col sm:space-x-4 pb-12 h-24 items-center container mx-auto z-[2]
+					class="col-span-3 flex flex-col sm:space-x-4 py-6 items-center container mx-auto z-[2]
 					sm:flex-row
 					md:max-w-md
 					lg:mx-0"
@@ -72,13 +71,14 @@
 						type="email"
 						id="demo"
 						placeholder="Enter Email*"
-						class="shadow-lg w-2/3 my-2 text-center focus:ring-emerald-400 focus:border-emerald-500 block border-gray-300 rounded-full
-						sm:text-sm sm:text-left sm:my-0 sm:pl-[1.5rem]
+						class="shadow-lg w-2/3 my-2 text-center focus:ring-emerald-400 focus:border-emerald-500 block border-gray-300 rounded-full scale-75
+						sm:text-sm sm:text-left sm:my-0 sm:pl-[1.5rem] sm:scale-100
 						md:self-start"
 					/>
 					<button
 						type="submit"
-						class="py-2 w-1/3 min-w-[144px] border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400
+						class="py-2 w-1/3 min-w-[144px] border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400 scale-75
+						sm:scale-100
 						md:px-2 md:self-start"
 					>
 						Request a demo
@@ -88,10 +88,14 @@
 		</div>
 
 		<!-- Animated Squiggle -->
-		<div class="sm:flex justify-center hidden pb:12 md:pb-20 4xl:hidden z-[1]">
+		<div class="sm:flex hidden pb:12 md:pb-20 4xl:hidden z-[1]
+				sm:-mt-8
+				md:-mt-20
+				lg:mt-0
+				xl:-mt-24">
 			<svg
-				class="h-auto w-auto absolute sm:-mt-[16rem] md:-mt-[25rem]"
-				viewBox="0 0 1480 400"
+				class="h-auto w-auto absolute"
+				viewBox="0 0 1480 310"
 				xmlns="http://www.w3.org/2000/svg"
 				style="vector-effect: non-scaling-stroke;"
 			>
@@ -108,9 +112,8 @@
 	</section>
 
 	<!-- Wave Divider -->
-	<div class="topsection-wave bg-mainbg fill-topsection">
+	<div class="topsection-wave bg-mainbg fill-topsection z-[-1]">
 		<svg
-			data-name="Layer 1"
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 1200 120"
 			preserveAspectRatio="none"
