@@ -14,6 +14,10 @@
 		if (xWidth >= 775) {
 			open = false;
 		}
+
+		if ($menu === false) {
+			open = false;
+		}
 	}
 </script>
 

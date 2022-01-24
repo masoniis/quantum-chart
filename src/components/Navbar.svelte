@@ -88,7 +88,7 @@
 		<div class="flex justify-between h-16">
 			<!-- Logo -->
 			<div class="flex items-center">
-				<a href="/" class="block xs:hidden w-auto">
+				<a on:click={() => $menu = false} href="/" class="block xs:hidden w-auto">
 					<p class="h-12 w-12">
 						<Logo />
 					</p>
