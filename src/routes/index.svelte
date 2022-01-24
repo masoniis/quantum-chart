@@ -19,25 +19,6 @@
 
 <svelte:window bind:innerWidth={width} />
 
-
-<div class="col-span-3 row-span-1 flex justify-center -mt-[2rem] my-12 object" style="-webkit-transform:translateZ(1px); clear:both;">
-	<svg
-		class="relative"
-		viewBox="200 0 1200 400"
-		xmlns="http://www.w3.org/2000/svg"
-		style="vector-effect: non-scaling-stroke; -webkit-transform:translateZ(1px); clear:both;"
-	>
-		<path
-			d="m-2.99994,3c463.50597,367 708.06434,182 752.36473,255c44.30039,73 -176.98353,39 5.41698,-54c182.40051,-93 543.35036,13 746.51432,37"
-			opacity="NaN"
-			stroke-width="13"
-			stroke="#000"
-			fill="transparent"
-		/>
-	</svg>
-</div>
-
-
 <main class="min-h-screen text-maintext overflow-hidden">
 	<!-- Section 1 -->
 	<section class="min-h-screen min-w-screen bg-topsection pt-24 sm:pt-40">
@@ -71,22 +52,22 @@
 					TEST
 				{/if} -->
 				{#if squiggle}
-					<div class="col-span-3 row-span-1 flex justify-center -mt-[2rem] my-12">
-						<svg
-							class="absolute"
-							viewBox="200 0 1200 400"
-							xmlns="http://www.w3.org/2000/svg"
-							style="vector-effect: non-scaling-stroke;"
-						>
-							<path
-								d="m-2.99994,3c463.50597,367 708.06434,182 752.36473,255c44.30039,73 -176.98353,39 5.41698,-54c182.40051,-93 543.35036,13 746.51432,37"
-								opacity="NaN"
-								stroke-width="13"
-								stroke="#000"
-								fill="transparent"
-							/>
-						</svg>
-					</div>
+				<div class="col-span-3 row-span-1 flex justify-center -mt-[2rem] my-12 object" style="-webkit-transform:translateZ(1px); clear:both;">
+					<svg
+						class="relative"
+						viewBox="200 0 1200 400"
+						xmlns="http://www.w3.org/2000/svg"
+						style="vector-effect: non-scaling-stroke; -webkit-transform:translateZ(1px); clear:both;"
+					>
+						<path
+							d="m-2.99994,3c463.50597,367 708.06434,182 752.36473,255c44.30039,73 -176.98353,39 5.41698,-54c182.40051,-93 543.35036,13 746.51432,37"
+							opacity="NaN"
+							stroke-width="13"
+							stroke="#000"
+							fill="transparent"
+						/>
+					</svg>
+				</div>
 {/if}
 				<h2
 					class="col-span-3 mx-auto text-center max-w-xl text-sm px-2
