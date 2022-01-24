@@ -1,31 +1,31 @@
 <script>
-	var basic = 9;
-	var premium = 19;
-	var pro = 29;
+	var basic = 0.9;
+	var premium = 1.9;
+	var pro = 2.9;
 	var currentPlan = 'Monthly';
 	var monthlyActive = true;
 	var buttonBackground1 = "bg-gray-300";
 	var buttonBackground2 = null;
 	function handleClick(plan) {
 		if (plan === 'monthly') {
-			basic = 9;
-			premium = 19;
-			pro = 29;
+			basic = 0.9;
+			premium = 1.9;
+			pro = 2.9;
 			currentPlan = 'Monthly';
 			monthlyActive = true;
 			buttonBackground1 = "bg-gray-300";
 			buttonBackground2 = null;
 		} else {
-			basic = 99;
-			premium = 199;
-			pro = 299;
+			basic = 9.9;
+			premium = 19.9;
+			pro = 29.9;
 			currentPlan = 'Yearly';
 			monthlyActive = false;
 			buttonBackground1 = null;
 			buttonBackground2 = "bg-gray-300";
 		}
 	}
-	let squareFootage=100;
+	let squareFootage;
 </script>
 
 <title>BeyondGreen - Pricing</title>
@@ -34,60 +34,62 @@
 	<h1 class="text-light-text text-center">
 		Our prices are always fair and affordable to give your lawn the best care possible
 	</h1>
-	<div class="sm:text-sm">
-		Enter your estimated square footage here
-	</div>
-	  <input
-	  type="number"
-	  bind:value={squareFootage}
-	  name="square-footage"
-	  id="square-footage"
-	  autocomplete="given-name"
-	  placeholder="1000"
-	  class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-  />
 	<br />
 	<br />
-	<!--Dropdown Menu-->
-	<!-- <div class="text-center">
-		<div class="dropdown">
-			<button class="dropbtn" style="color: #ff0000">{currentPlan} Pricing</button>
-			<div class="dropdown-content">
-			  <button on:click={() => handleClick("monthly")}>Monthly</button><br>
-			  <button on:click={() => handleClick("yearly")}>Yearly</button>
-			</div>
-		  </div>
-	</div> -->
 	<p class="text-center text-orange-700">{currentPlan} Pricing</p>
-	<div class="flex text-center">
-		<div class="centerflex2 h-10">
-			<button
-				class="{buttonBackground1} border-transparent text-gray-500 hover:text-gray-700 hover:bg-gray-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-				class:active={monthlyActive}
-				on:click={() => handleClick('monthly')}
-				>Monthly
-			</button>
-		</div>
-		<div class="background-red-50">
-			<button
-				class="{buttonBackground2} border-transparent text-gray-500 hover:text-gray-700 hover:bg-gray-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-				class:active={!monthlyActive}
-				on:click={() => handleClick('yearly')}
-				>Yearly
-			</button>
-		</div>
+	<div class="flex justify-center">
+		<button
+			class="{buttonBackground1} border-transparent text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+			class:active={monthlyActive}
+			on:click={() => handleClick('monthly')}
+			>Monthly
+		</button>
+		<button
+			class="{buttonBackground2} border-transparent text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+			class:active={!monthlyActive}
+			on:click={() => handleClick('yearly')}
+			>Yearly
+		</button>
 	</div>
-	<div class="flex text-center">
-		<div class="centerflex1 flex-none w-60 h-15" style="background: yellow">
-			Basic<br />${basic*squareFootage}.99
-		</div>
-		<div class="flex-initial w-60 ..." style="background: orange">
-			Premium<br />${premium}.99
-		</div>
-		<div class="flex-initial w-60 ..." style="background: red">
-			Pro<br />${pro}.99
-		</div>
+	<div class="flex text-center justify-center">
+		<input style="width:200px" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block sm:text-sm border-gray-300 rounded-md"
+		type="text"
+	  id="square-footage"
+	  bind:value={squareFootage}
+	  maxlength="7"
+	  placeholder="Estimated Square Footage"
+  		/>
 	</div>
+	<div class="flex justify-center text-center">
+		{#if squareFootage > 0}
+		<div class="bg-yellow-500 w-60 h-15">
+			Basic<br />
+			${Math.round(basic*squareFootage)}.99
+		</div>
+		<div class="bg-orange-600 w-60 ...">
+			Premium<br />
+			${Math.round(premium*squareFootage)}.99
+		</div>
+		<div class="bg-red-700 w-60 ...">
+			Pro<br />
+			${Math.round(pro*squareFootage)}.99
+		</div>
+		{:else}
+			<div class="w-60 h-30 bg-yellow-500">
+				Basic<br />
+			</div>
+			<div class="bg-orange-600 w-60 ...">
+				Premium<br />
+			</div>
+			<div class="bg-red-700 w-60 ...">
+				Pro<br />
+			</div>
+		{/if}
+	</div>
+	<!-- Form Section -->
+	<button class="mx-auto bg-violet-100 rounded-xl shadow-lg">
+		Test
+	</button>
 </main>
 
 <style>
@@ -104,10 +106,6 @@
 		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 		padding: 12px 16px;
 		z-index: 1;
-	}
-
-	.dropdown:hover .dropdown-content {
-		display: block;
 	}
 
 	.centerme {
