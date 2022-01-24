@@ -22,7 +22,7 @@
 <main class="min-h-screen text-maintext overflow-hidden">
 	<!-- Section 1 -->
 	<section class="min-h-screen min-w-screen bg-topsection pt-24 sm:pt-40">
-		<div class="max-w-6xl mx-auto xl:px-10 pt-8">
+		<div class="max-w-6xl mx-auto xl:px-10 pt-8 relative">
 			<grid class="grid grid-cols-3 auto-rows-min items-start justify-center w-full sm:px-8">
 				<h1
 					class="col-span-3 max-w-xl font-extrabold text-gray-900 sm:leading-none mx-auto text-center text-3xl
@@ -57,7 +57,7 @@
 						style="-webkit-transform:translateZ(1px); clear:both;"
 					>
 						<svg
-							class="relative"
+							class="relative child"
 							viewBox="200 0 1200 400"
 							xmlns="http://www.w3.org/2000/svg"
 							style="vector-effect: non-scaling-stroke; -webkit-transform:translateZ(1px); clear:both;"
@@ -111,14 +111,10 @@
 
 		<!-- Animated Squiggle -->
 		<div
-			class="sm:flex hidden pb:12 md:pb-20 4xl:hidden z-[1]
-				sm:-mt-8
-				md:-mt-20
-				lg:mt-0
-				xl:-mt-24"
+			class="sm:flex hidden 4xl:hidden z-[1000] h-atuo w-screen"
 		>
 			<svg
-				class="h-auto w-auto absolute"
+
 				viewBox="0 0 1480 310"
 				xmlns="http://www.w3.org/2000/svg"
 				style="vector-effect: non-scaling-stroke;"
@@ -240,7 +236,7 @@
 		padding-top: 100%;
 	}
 
-	svg {
+	.child {
 		width: 100%;
 		height: 100%;
 		position: absolute;
