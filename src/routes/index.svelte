@@ -23,12 +23,12 @@
 	<!-- Section 1 -->
 	<section class="min-h-screen min-w-screen bg-topsection pt-24 sm:pt-32">
 		<div class="max-w-6xl mx-auto xl:px-10 pt-8 relative">
-			<grid class="grid grid-cols-3 auto-rows-min items-start justify-center w-full sm:px-8">
+			<grid class="grid grid-cols-1 auto-rows-min w-full sm:px-8">
 				<h1
-					class="col-span-3 max-w-xl font-extrabold text-gray-900 sm:leading-none mx-auto text-center text-3xl
+					class="col-span-1 max-w-xl font-extrabold text-gray-900 sm:leading-none mx-auto text-center text-3xl
 					xs:text-4xl
 					sm:text-5xl sm:max-w-3xl
-					md:text-6xl md:max-w-4xl
+					md:text-6xl md:max-w-5xl
 					lg:text-7xl lg:mx-0 lg:text-left"
 				>
 					Not just your ordinary outdoor service
@@ -53,7 +53,7 @@
 				{/if} -->
 				{#if squiggle}
 					<div
-						class="col-span-3 row-span-1 flex justify-center mb-4 py-8 object"
+						class="col-span-1 row-span-1 flex justify-center mb-0 2xs:mb-4 xs:mb-10 py-8 object"
 						style="-webkit-transform:translateZ(1px); clear:both;"
 					>
 						<svg
@@ -73,7 +73,7 @@
 					</div>
 				{/if}
 				<h2
-					class="col-span-3 mx-auto text-center max-w-xl text-sm px-2
+					class="col-span-1 mx-auto text-center max-w-xl text-sm px-2
 					xs:py-2
 					sm:py-2 
 					md:py-4 md:text-md
@@ -84,8 +84,8 @@
 				</h2>
 
 				<form
-					class="col-span-3 flex flex-col sm:space-x-4 py-6 items-center container mx-auto z-[2]
-					sm:flex-row
+					class="col-span-1 justify-self-center flex flex-col gap-2 sm:space-x-4 py-6 z-[2]
+					xs:flex-row
 					md:max-w-md
 					lg:mx-0"
 				>
@@ -93,14 +93,15 @@
 						type="email"
 						id="demo"
 						placeholder="Enter Email*"
-						class="shadow-lg w-2/3 my-2 text-center focus:ring-emerald-400 focus:border-emerald-500 block border-gray-300 rounded-full scale-75
-						sm:text-sm sm:text-left sm:my-0 sm:pl-[1.5rem] sm:scale-100
+						class="shadow-lg contianer mx-auto w-3/4 my-2 text-center focus:ring-emerald-400 focus:border-emerald-500 block border-gray-300 rounded-full scale-75
+						2xs:text-sm 2xs:text-left 2xs:my-0 2xs:pl-[1.3rem] 2xs:scale-100
+						sm:mr-0
 						md:self-start"
 					/>
 					<button
 						type="submit"
-						class="py-2 w-1/3 min-w-[144px] border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400 scale-75
-						sm:scale-100
+						class="py-2 w-1/4 contianer mx-auto min-w-[144px] border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400 scale-75
+						xs:scale-100
 						md:px-2 md:self-start"
 					>
 						Request a demo
@@ -111,7 +112,7 @@
 
 		<!-- Animated Squiggle -->
 		<div
-			class="sm:flex hidden 4xl:hidden z-[1000] w-screen"
+			class="sm:flex hidden 4xl:hidden z-[1000] w-screen -mt-16 lg:mt-0"
 		>
 			<svg
 				viewBox="0 0 1480 310"
