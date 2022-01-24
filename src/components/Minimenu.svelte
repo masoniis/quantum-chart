@@ -21,7 +21,7 @@
 
 {#if open}
 	<main
-		class="md:hidden fixed right-0 left-0 w-full top-[4.5rem] mobile_menu"
+		class="md:hidden fixed right-0 left-0 w-full top-[4.5rem] mobile_menu overscroll-contain"
 		id="mobile-menu"
 		in:fly={{ duration: 350, x: 500 }}
 		out:fade={{ duration: 150 }}
@@ -199,14 +199,14 @@
 	
 	/* Track */
 	main::-webkit-scrollbar-track {
-	  background: transparent; 
+	  background: #9fa6af; 
 	  border-radius: 100vw;
 	  margin-block: .25rem;
 	}
 	 
 	/* Handle */
 	main::-webkit-scrollbar-thumb {
-	  background: #888;
+	  background: rgb(105, 102, 102);
 	  border-radius: 100vw;
 	}
 	
