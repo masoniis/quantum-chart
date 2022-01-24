@@ -3,7 +3,7 @@
 	import { menu } from '../stores';
 	import Navbar from '../components/Navbar.svelte';
 	import Botbar from '../components/Botbar.svelte';
-	import Menubackground from '../components/Menubackground.svelte'
+	import Menubackground from '../components/Menubackground.svelte';
 
 	let hide;
 
@@ -18,11 +18,10 @@
 
 <Navbar />
 
-{#if $menu}
-<Menubackground />
-{/if}
-
 <main class="{hide} firefox_scroller">
+	{#if $menu}
+		<Menubackground />
+	{/if}
 	<slot />
 	<Botbar />
 </main>
