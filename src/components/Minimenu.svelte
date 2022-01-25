@@ -13,7 +13,10 @@
 	$: {
 		if (xWidth >= 775) {
 			open = false;
-			console.log("OPEN FALSE FROM MINIMEUN")
+		}
+
+		if ($menu === false) {
+			open = false;
 		}
 	}
 </script>
@@ -22,12 +25,12 @@
 
 {#if open}
 	<main
-		class="md:hidden fixed right-0 left-0 w-full top-[4.5rem] mobile_menu"
+		class="md:hidden fixed right-0 left-0 w-full top-[4.5rem] mobile_menu overscroll-y-none"
 		id="mobile-menu"
 		in:fly={{ duration: 350, x: 500 }}
 		out:fade={{ duration: 150 }}
 	>
-		<div class="pt-2 space-y-1 bg-mobilemenu min-h-screen">
+		<div class="pt-2 space-y-1 bg-mobilemenu min-h-full">
 			<hr
 				class="my-2"
 				style="height:2px;border-width:0;color:red;background-color:gray"
@@ -200,14 +203,14 @@
 	
 	/* Track */
 	main::-webkit-scrollbar-track {
-	  background: transparent; 
+	  background: #9fa6af; 
 	  border-radius: 100vw;
 	  margin-block: .25rem;
 	}
 	 
 	/* Handle */
 	main::-webkit-scrollbar-thumb {
-	  background: #888;
+	  background: rgb(105, 102, 102);
 	  border-radius: 100vw;
 	}
 	
@@ -218,7 +221,7 @@
 
 	@supports (scrollbar-color: #555 transparent) {
 		 main {
-			scrollbar-color: #555 transparent;
+			scrollbar-color: #999 #555;
 			scrollbar-width: thin;
 			overflow-x: hidden;
 		}

@@ -1,89 +1,43 @@
 <script>
-	import { fade, fly } from 'svelte/transition';
+	import { fade, fly, draw } from 'svelte/transition';
 	import Visibility from '../../components/Visibility.svelte';
-
-	// import Alert from '../../components/Alert.svelte'
-
-	import { menu } from '../../stores';
-
-	console.log('The menu store is ' + $menu);
-
-	let visible = true;
-
-	$: {
-		if ($menu === true) {
-			console.log("HOLY CRAP MENU IS TRUE")
-		}
-	}
 </script>
 
-<main class="min-h-screen bg-mainbg text-maintext overflow-hidden">
-	<div class="container mx-auto">
-		<p class="duration-1000 hover:text-white">I AM ANIMATIONS!</p>
-		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<main class="min-h-screen text-maintext overflow-hidden bg-gray-500">
+	<p class="pt-72 text-center">Hey</p>
 
-		<button
-			on:click={() => {
-				($menu = false), console.log('The menu store is ' + $menu);
-			}}>HEY</button
+	<div class="flex justify-center">
+		<svg class="h-72 w-auto" viewBox="0 0 1480 400" xmlns="http://www.w3.org/2000/svg" style="vector-effect: non-scaling-stroke;">
+			<path
+				id="swirl"
+				d="m-2.99994,3c463.50597,367 708.06434,182 752.36473,255c44.30039,73 -176.98353,39 5.41698,-54c182.40051,-93 543.35036,13 746.51432,37"
+				opacity="NaN"
+				stroke-width="3"
+				stroke="#000"
+				fill="transparent"
+			/>
+		</svg>
+	</div>
+
+	<div class="relative contianer mx-auto pb-32 pt-80">
+		<svg
+			class="h-[25rem] bg-transparent overflow-visible z-20 origin-right
+					-mt-[12rem]
+					xl:-mt-[18rem]"
+			xmlns="http://www.w3.org/2000/svg"
+			style="vector-effect: non-scaling-stroke;"
 		>
-
-		<button
-		on:click={() => {
-			($menu = true), console.log('The menu store is ' + $menu);
-		}}>HEY true</button
-	>
-
-	<button
-	on:click={() =>  console.log($menu)}
-	>What am i?</button
->
-		
-
-		<label>
-			<input type="checkbox" bind:checked={visible} />
-			visible
-		</label>
-
-		{#if visible}
-			<p transition:fly={{ y: 200, duration: 2000 }}>Flies in and out</p>
-		{/if}
-
-		<main>
-			<h1>Scroll down</h1>
-
-			<Visibility steps={100} let:percent let:unobserve>
-				<section>
-					<span class="top-left">{percent}%</span>
-					<span class="top-right">{percent}%</span>
-					<span class="bottom-left">{percent}%</span>
-					<span class="bottom-right">{percent}%</span>
-
-					{#if percent > 70}
-						<p
-							class="container max-w-lg mx-auto"
-							in:fly={{ duration: 1000, x: -500 }}
-							out:fly={{ duration: 500, y: -500 }}
-						>
-							I AM FLYING IN LETS GO
-						</p>
-					{/if}
-				</section>
-			</Visibility>
-
-			<div class=".topsection-divider bg-mainbg fill-topsection">
-				<svg
-					data-name="Layer 1"
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 1200 120"
-					preserveAspectRatio="none"
-				>
-					<path
-						d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-						class="shape-fill"
-					/>
-				</svg>
-			</div>
-		</main>
+			<path
+				id="swirl"
+				d="m-2.99994,3c463.50597,367 708.06434,182 752.36473,255c44.30039,73 -176.98353,39 5.41698,-54c182.40051,-93 543.35036,13 746.51432,37"
+				opacity="NaN"
+				stroke-width="3"
+				stroke="#000"
+				fill="transparent"
+			/>
+		</svg>
 	</div>
 </main>
+
+<style>
+</style>

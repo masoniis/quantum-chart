@@ -2,12 +2,15 @@ module.exports = {
   content: ['./src/**/*.{html,css,svelte}'],
   theme: {
     screens: {
+      '2xs': '320px',
       'xs': '460px',
       'sm': '640px',
       'md': '775px',
       'lg': '1024px',
       'xl': '1280px',
       '2xl': '1536px',
+      '3xl': '1920px',
+      '4xl': '2450px',
 
       'to-xs': [{'max': '460px'}],
       'to-sm': [{'max': '640px'}],
@@ -24,10 +27,10 @@ module.exports = {
         'lighthover': '#030304',
 
         // ↓ Home Page ↓
-        'topsection' : '#d2e683',
+        'topsection' : '#e0cf9b',
 
         // ↓ Navbar ↓
-        'dropdown1' : '#f8e0ff',
+        'dropdown1' : '#eae9f2',
         'mobilemenu': '#f9e9d2',
       },
     },

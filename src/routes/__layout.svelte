@@ -3,7 +3,7 @@
 	import { menu } from '../stores';
 	import Navbar from '../components/Navbar.svelte';
 	import Botbar from '../components/Botbar.svelte';
-	import { Svrollbar } from 'svrollbar';
+	import Menubackground from '../components/Menubackground.svelte';
 
 	let hide;
 
@@ -19,6 +19,9 @@
 <Navbar />
 
 <main class="{hide} firefox_scroller">
+	{#if $menu}
+		<Menubackground />
+	{/if}
 	<slot />
 	<Botbar />
 </main>
@@ -49,7 +52,7 @@
 
 	@supports (scrollbar-color: #555 transparent) {
 		:root {
-			scrollbar-color: #555 transparent;
+			scrollbar-color: #999 #555;
 			scrollbar-width: thin;
 		}
 	}
