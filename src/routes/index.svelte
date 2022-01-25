@@ -22,7 +22,7 @@
 <main class="min-h-screen text-maintext overflow-hidden">
 	<!-- Section 1 -->
 	<section class="min-h-screen min-w-screen bg-topsection pt-24 sm:pt-32">
-		<div class="max-w-6xl mx-auto xl:px-10 pt-8 relative">
+		<div class="max-w-6xl mx-auto xl:px-10 pt-4 relative">
 			<grid class="grid grid-cols-1 auto-rows-min w-full sm:px-8">
 				<h1
 					class="col-span-1 max-w-xl font-extrabold text-gray-900 sm:leading-none mx-auto text-center text-3xl
@@ -94,7 +94,7 @@
 
 		<!-- Animated Squiggle -->
 		<div
-			class="sm:flex hidden 4xl:hidden z-[1000] w-screen -mt-16 lg:-mt-8"
+			class="sm:flex hidden 4xl:hidden z-[1000] w-screen lg:scale-y-[-1] -mt-16 lg:-mt-8 lg:scale-x-100 lg:rotate-6"
 		>
 			<svg
 				viewBox="0 0 1480 310"
