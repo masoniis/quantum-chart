@@ -97,6 +97,7 @@
 			class="sm:flex hidden 4xl:hidden z-[1000] w-screen lg:scale-y-[-1] -mt-16 lg:-mt-8 lg:scale-x-100 lg:rotate-6"
 		>
 			<svg
+				class="absolute"
 				viewBox="0 0 1480 310"
 				xmlns="http://www.w3.org/2000/svg"
 				style="vector-effect: non-scaling-stroke;"
@@ -135,21 +136,21 @@
 				<Logo />
 			</p>
 			<h2 class="text-5xl py-4">Subscribe</h2>
-			<p>with a simple process</p>
+			<p>with a simple 16 step process</p>
 		</div>
 		<div class="text-center">
 			<p class="h-24 w-24 mx-auto">
 				<Logo />
 			</p>
 			<h2 class="text-5xl py-4">Describe</h2>
-			<p>exactly how you want the job done</p>
+			<p>exactly how you want the job done, and we will guartntee your satisfaction</p>
 		</div>
 		<div class="text-center">
 			<p class="h-24 w-24 mx-auto">
 				<Logo />
 			</p>
 			<h2 class="text-5xl py-4">Vibe</h2>
-			<p>While your lawn is epic</p>
+			<p>inside while all the work is done by us on the outside</p>
 		</div>
 	</section>
 </main>
