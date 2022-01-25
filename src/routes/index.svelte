@@ -94,10 +94,10 @@
 
 		<!-- Animated Squiggle -->
 		<div
-			class="sm:flex hidden 4xl:hidden z-[1000] w-screen lg:scale-y-[-1] -mt-16 lg:-mt-8 lg:scale-x-100 lg:rotate-6"
+			class="sm:flex hidden 4xl:hidden z-[1000] w-screen lg:scale-y-[-1] -mt-16 lg:-mt-8 lg:scale-x-100 lg:rotate-6 object"
 		>
 			<svg
-				class="absolute"
+				class=""
 				viewBox="0 0 1480 310"
 				xmlns="http://www.w3.org/2000/svg"
 				style="vector-effect: non-scaling-stroke;"
