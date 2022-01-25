@@ -94,7 +94,7 @@
 
 		<!-- Animated Squiggle -->
 		<div
-			class="sm:flex hidden 4xl:hidden z-[1000] w-screen lg:scale-y-[-1] -mt-16 lg:-mt-8 lg:scale-x-100 lg:rotate-6 object"
+			class="md:block hidden 4xl:hidden z-[1000] w-screen lg:scale-y-[-1] -mt-16 lg:-mt-8 lg:scale-x-100 lg:rotate-6"
 		>
 			<svg
 				class=""
