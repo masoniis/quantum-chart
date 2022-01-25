@@ -39,13 +39,13 @@
 	<p class="text-center text-orange-700">{currentPlan} Pricing</p>
 	<div class="flex justify-center">
 		<button
-			class="{buttonBackground1} border-transparent text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+			class="{buttonBackground1} rounded-md border-transparent text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
 			class:active={monthlyActive}
 			on:click={() => handleClick('monthly')}
 			>Monthly
 		</button>
 		<button
-			class="{buttonBackground2} border-transparent text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+			class="{buttonBackground2} rounded-md border-transparent text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
 			class:active={!monthlyActive}
 			on:click={() => handleClick('yearly')}
 			>Yearly
@@ -60,36 +60,33 @@
 	  placeholder="Estimated Square Footage"
   		/>
 	</div>
-	<div class="flex justify-center text-center">
+	<div class="flex mx-auto justify-center text-center">
 		{#if squareFootage > 0}
-		<div class="bg-yellow-500 w-60 h-15">
+		<div style="margin:5px" class="bg-yellow-500 rounded-xl w-60 h-15">
 			Basic<br />
 			${Math.round(basic*squareFootage)}.99
 		</div>
-		<div class="bg-orange-600 w-60 ...">
+		<div style="margin:5px" class="bg-orange-600 rounded-xl w-60">
 			Premium<br />
 			${Math.round(premium*squareFootage)}.99
 		</div>
-		<div class="bg-red-700 w-60 ...">
+		<div style="margin:5px" class="bg-red-700 rounded-xl w-60">
 			Pro<br />
 			${Math.round(pro*squareFootage)}.99
 		</div>
 		{:else}
-			<div class="w-60 h-30 bg-yellow-500">
+			<div style="margin:5px" class="w-60 h-30 rounded-xl bg-yellow-500">
 				Basic<br />
 			</div>
-			<div class="bg-orange-600 w-60 ...">
+			<div style="margin:5px" class="bg-orange-600 rounded-xl w-60">
 				Premium<br />
 			</div>
-			<div class="bg-red-700 w-60 ...">
+			<div style="margin:5px" class="bg-red-700 rounded-xl w-60">
 				Pro<br />
 			</div>
 		{/if}
 	</div>
 	<!-- Form Section -->
-	<button class="mx-auto bg-violet-100 rounded-xl shadow-lg">
-		Test
-	</button>
 </main>
 
 <style>
