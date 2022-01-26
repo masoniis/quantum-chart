@@ -137,41 +137,41 @@
 				</p>
 			</div>
 			<grid
-				class="grid grid-cols-2 grid-rows-2 feature-grid w-[40rem] mr-12 space-x-2 space-y-4 flex-shrink-0"
+				class="grid grid-cols-4 grid-rows-5 feature-grid w-[40rem] mr-12 space-x-4 space-y-4"
 			>
 				<button
 					use:scrollTo={'easy-section'}
-					class="bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
+					class="row-span-2 bg-gray-200 border mt-4 ml-4 rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
 				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="h-24 w-24 mx-auto"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M5 13l4 4L19 7"
-						/>
-					</svg>
+					<p class="text-center">Low Cost</p>
+				</button>
+				<button
+					use:scrollTo={'easy-section'}
+					class="row-span-3 col-span-2 bg-gray-200 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
+				>
 					<div class="text-center">Easy</div>
 				</button>
 				<button
+					use:scrollTo={'easy-section'}
+					class="row-span-2 bg-gray-200 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
+				>
+					<div class="text-center">
+						Satisfaction Guarenteed
+					</div>
+				</button>
+				<button
 					use:scrollTo={'reputation-section'}
-					class="bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
+					class="row-span-3 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
 					>Reputable</button
 				>
 				<button
 					use:scrollTo={'professional-section'}
-					class="bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
+					class="row-span-3 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
 					>Professional</button
 				>
 				<button
 					use:scrollTo={'responsive-section'}
-					class="bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
+					class="col-span-2 row-span-2 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
 					>Responsive</button
 				>
 			</grid>
@@ -238,6 +238,7 @@
 
 	.feature-grid {
 		position: relative;
+		min-height: 20rem;
 
 		transform-style: preserve-3d;
 		transform-origin: right;
