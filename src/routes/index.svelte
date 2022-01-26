@@ -21,6 +21,8 @@
 		"amazing",
 		"awesome",
 		"mason",
+		"efficient",
+		"nathan",
 	];
 
 	const colors = [
@@ -28,6 +30,10 @@
 		"#d2a3d9",
 		"#6c626e",
 		"#d19fac",
+		"#a2d19f",
+		"#dbd39e",
+		"#b3e6db",
+		"#deaca6",
 	]
 
 	// Returns random number for next index.
@@ -36,7 +42,7 @@
 	};
 
 	const randomColor = () => {
-		return Math.round(Math.random() * (words.length-1)); 
+		return Math.round(Math.random() * (colors.length-1)); 
 	};
 
 	let randIndex = randomWord();
@@ -47,7 +53,7 @@
 			// Set `randIndex` to a new value each interval.
 			randIndex = randIndex + 1;
 			randColor = randomColor();
-			if (randIndex > 3) {
+			if (randIndex > 5) {
 				randIndex = 0;
 			}
 		}, 2400);
@@ -170,16 +176,16 @@
 	{#key randIndex}
 	<section class="container mx-auto my-24 pt-12">
 		<flex class="hero__flex perspective xl:justify-center mx-8 border-t-2 pt-16 border-black">
-			<div class="max-w-xl z-[3] feature-grid-text" style="border: 3px solid yellow;">
-				<h2 class="text-6xl font-extrabold tracking-tight" style="min-width: 38rem; max-width: 38rem;">
+			<div class="max-w-xl z-[3] feature-grid-text">
+				<h2 class="text-6xl font-extrabold tracking-tight py-8" style="min-width: 38rem; max-width: 38rem;">
 					With Beyondgreen, life has never been so [<p class="inline" style="color: {colors[randColor]}" in:fade >{words[randIndex]}</p>].
 				</h2>
-				<p class="pt-8">
-					The more you read the better it gets. 
+				<p class="text-xl">
+					With incredible prices, great customer support, and perfect prices, Beyondgreen is a service like no other. 
 				</p>
 			</div>
 			<grid
-				class="grid grid-cols-4 grid-rows-5 feature-grid w-[40rem] mr-12 space-x-4 space-y-4"
+				class="hidden md:grid grid-cols-4 grid-rows-5 feature-grid w-[40rem] mr-12 space-x-4 space-y-4"
 			>
 				<button
 					use:scrollTo={'easy-section'}
@@ -292,8 +298,6 @@
 		min-height: 15rem;
 		min-width: 40rem;
 		z-index: 1;
-
-		border: 3px solid hotpink;
 
 		transform-style: preserve-3d;
 		transform-origin: left;
