@@ -127,12 +127,21 @@
 
 	<!-- Section 2 -->
 	<section class="container mx-auto my-24 border-t-4 border-gray-900 pt-12">
-		<grid class="grid grid-cols-2 perspective">
-			<h2 class="text-8xl tracking-tight leading-[.9]">Blah blah blah blah blah</h2>
-			<grid class="grid grid-cols-3 grid-rows-2 p-12 feature-grid">
+		<flex class="hero__flex perspective">
+			<div class="max-w-xl">
+				<h2 class="text-6xl font-extrabold tracking-tight" style="min-width: 36rem;">
+					With Beyondgreen, life has never been so [rotating word].
+				</h2>
+				<p>
+					The more you know the better. Allow Beyondgreen to make your life simple.
+				</p>
+			</div>
+			<grid
+				class="grid grid-cols-2 grid-rows-2 feature-grid w-[40rem] mr-12 space-x-2 space-y-4 flex-shrink-0"
+			>
 				<button
 					use:scrollTo={'easy-section'}
-					class="bg-gray-300 border rounded-2xl hover:bg-lightbg flex-col"
+					class="bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -150,11 +159,23 @@
 					</svg>
 					<div class="text-center">Easy</div>
 				</button>
-				<button use:scrollTo={'reputation-section'} class="bg-gray-300 p-12 m-4 border rounded-2xl hover:bg-white">Reputable</button>
-				<button use:scrollTo={'professional-section'} class="bg-gray-300 p-12 m-4 border rounded-2xl hover:bg-white">Professional</button>
-				<button use:scrollTo={'responsive-section'} class="bg-gray-300 p-12 m-4 border rounded-2xl hover:bg-white">Responsive</button>
+				<button
+					use:scrollTo={'reputation-section'}
+					class="bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
+					>Reputable</button
+				>
+				<button
+					use:scrollTo={'professional-section'}
+					class="bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
+					>Professional</button
+				>
+				<button
+					use:scrollTo={'responsive-section'}
+					class="bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
+					>Responsive</button
+				>
 			</grid>
-		</grid>
+		</flex>
 	</section>
 
 	<!-- Section 3 -->
@@ -190,7 +211,7 @@
 
 	<!-- Section 4 -->
 	<section use:scrollRef={'reputation-section'} class="m-72">
-		<p class="text-center">REP SECITON</p>
+		<p class="text-center">Trusted by people and stuff</p>
 	</section>
 
 	<!-- Section 4 -->
@@ -205,17 +226,24 @@
 </main>
 
 <style>
+	.hero__flex {
+		height: 60vh;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+	}
+
 	.feature-grid {
 		position: relative;
 
 		transform-style: preserve-3d;
 		transform-origin: right;
 
-		transform: rotateY(-30deg);
-	}
-
-	.perspective {
-		perspective: 50rem;
+		transform: perspective(500px) rotateY(-12deg) rotateX(0deg) rotateZ(0deg) translateZ(0)
+			translateX(-40px);
 	}
 
 	.topsection-wave {
