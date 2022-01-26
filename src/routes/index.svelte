@@ -1,6 +1,7 @@
 <script>
 	import Socialgirl from '../components/Icons/Socialgirl.svelte';
 	import Logo from '../components/Logo.svelte';
+	import { scrollTo, scrollRef } from 'svelte-scrolling';
 
 	let width;
 
@@ -125,7 +126,40 @@
 	</div>
 
 	<!-- Section 2 -->
+	<section class="container mx-auto my-24 border-t-4 border-gray-900 pt-12">
+		<grid class="grid grid-cols-2 perspective">
+			<h2 class="text-8xl tracking-tight leading-[.9]">Blah blah blah blah blah</h2>
+			<grid class="grid grid-cols-3 grid-rows-2 p-12 feature-grid">
+				<button
+					use:scrollTo={'easy-section'}
+					class="bg-gray-300 border rounded-2xl hover:bg-lightbg flex-col"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="h-24 w-24 mx-auto"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M5 13l4 4L19 7"
+						/>
+					</svg>
+					<div class="text-center">Easy</div>
+				</button>
+				<button use:scrollTo={'reputation-section'} class="bg-gray-300 p-12 m-4 border rounded-2xl hover:bg-white">Reputable</button>
+				<button use:scrollTo={'professional-section'} class="bg-gray-300 p-12 m-4 border rounded-2xl hover:bg-white">Professional</button>
+				<button use:scrollTo={'responsive-section'} class="bg-gray-300 p-12 m-4 border rounded-2xl hover:bg-white">Responsive</button>
+			</grid>
+		</grid>
+	</section>
+
+	<!-- Section 3 -->
 	<section
+		use:scrollRef={'easy-section'}
 		class="container mx-auto grid grid-cols-1 grid-rows-5 md:grid-cols-3 md:grid-rows-2 p-12"
 	>
 		<h1 class="md:col-span-3 rows-span-2 text-center text-6xl font-bold py-12">
@@ -153,9 +187,37 @@
 			<p>inside while all the work is done by us on the outside</p>
 		</div>
 	</section>
+
+	<!-- Section 4 -->
+	<section use:scrollRef={'reputation-section'} class="m-72">
+		<p class="text-center">REP SECITON</p>
+	</section>
+
+	<!-- Section 4 -->
+	<section use:scrollRef={'professional-section'} class="m-72">
+		<p class="text-center">PROFESSION SECITON</p>
+	</section>
+
+	<!-- Section 4 -->
+	<section use:scrollRef={'responsive-section'} class="m-72">
+		<p class="text-center">RESPONSVIE SECITON</p>
+	</section>
 </main>
 
 <style>
+	.feature-grid {
+		position: relative;
+
+		transform-style: preserve-3d;
+		transform-origin: right;
+
+		transform: rotateY(-30deg);
+	}
+
+	.perspective {
+		perspective: 50rem;
+	}
+
 	.topsection-wave {
 		position: relative;
 		top: 0;
