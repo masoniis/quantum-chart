@@ -23,17 +23,30 @@
 		"mason",
 	];
 
+	const colors = [
+		"#90afe0",
+		"#d2a3d9",
+		"#6c626e",
+		"#d19fac",
+	]
+
 	// Returns random number for next index.
-	const randomSelection = () => {
+	const randomWord = () => {
 		return Math.round(Math.random() * (words.length-1)); 
 	};
 
-	let randIndex = randomSelection();
+	const randomColor = () => {
+		return Math.round(Math.random() * (words.length-1)); 
+	};
+
+	let randIndex = randomWord();
+	let randColor = randomColor();
 
 	onMount(() => {
 		const interval = setInterval(() => {
 			// Set `randIndex` to a new value each interval.
 			randIndex = randIndex + 1;
+			randColor = randomColor();
 			if (randIndex > 3) {
 				randIndex = 0;
 			}
@@ -159,7 +172,7 @@
 		<flex class="hero__flex perspective xl:justify-center mx-8 border-t-2 pt-16 border-black">
 			<div class="max-w-xl z-[3] feature-grid-text" style="border: 3px solid yellow;">
 				<h2 class="text-6xl font-extrabold tracking-tight" style="min-width: 38rem; max-width: 38rem;">
-					With Beyondgreen, life has never been so [<p class="inline" in:fade >{words[randIndex]}</p>].
+					With Beyondgreen, life has never been so [<p class="inline" style="color: {colors[randColor]}" in:fade >{words[randIndex]}</p>].
 				</h2>
 				<p class="pt-8">
 					The more you read the better it gets. 
