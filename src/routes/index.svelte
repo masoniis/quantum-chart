@@ -1,7 +1,8 @@
 <script>
-	import Socialgirl from '../components/Icons/Socialgirl.svelte';
 	import Logo from '../components/Logo.svelte';
 	import { scrollTo, scrollRef } from 'svelte-scrolling';
+	import { onMount } from "svelte";
+	import { slide, fade} from 'svelte/transition'
 
 	let width;
 
@@ -14,6 +15,33 @@
 			squiggle = false;
 		}
 	}
+
+	const words = [
+		"simple",
+		"amazing",
+		"awesome",
+		"mason",
+	];
+
+	// Returns random number for next index.
+	const randomSelection = () => {
+		return Math.round(Math.random() * (words.length-1)); 
+	};
+
+	let randIndex = randomSelection();
+
+	onMount(() => {
+		const interval = setInterval(() => {
+			// Set `randIndex` to a new value each interval.
+			randIndex = randIndex + 1;
+			if (randIndex > 3) {
+				randIndex = 0;
+			}
+		}, 2400);
+		return () => {
+			clearInterval(interval);
+		};		
+	});
 </script>
 
 <title>Beyondgreen - Home</title>
@@ -126,14 +154,15 @@
 	</div>
 
 	<!-- Section 2 -->
-	<section class="container mx-auto my-24 border-t-4 border-gray-900 pt-12">
-		<flex class="hero__flex perspective">
-			<div class="max-w-xl">
-				<h2 class="text-6xl font-extrabold tracking-tight" style="min-width: 36rem;">
-					With Beyondgreen, life has never been so [rotating word].
+	{#key randIndex}
+	<section class="container mx-auto my-24 pt-12">
+		<flex class="hero__flex perspective xl:justify-center mx-8 border-t-2 pt-16 border-black">
+			<div class="max-w-xl z-[3] feature-grid-text" style="border: 3px solid yellow;">
+				<h2 class="text-6xl font-extrabold tracking-tight" style="min-width: 38rem; max-width: 38rem;">
+					With Beyondgreen, life has never been so [<p class="inline" in:fade >{words[randIndex]}</p>].
 				</h2>
-				<p>
-					The more you know the better. Allow Beyondgreen to make your life simple.
+				<p class="pt-8">
+					The more you read the better it gets. 
 				</p>
 			</div>
 			<grid
@@ -177,6 +206,7 @@
 			</grid>
 		</flex>
 	</section>
+	{/key}
 
 	<!-- Section 3 -->
 	<section
@@ -236,15 +266,28 @@
 		align-items: flex-start;
 	}
 
+	.feature-grid-text {
+		background: linear-gradient(
+			90deg,
+			rgb(255, 255, 255) 75%,
+			rgba(255, 255, 255, 0)
+		)
+	}
+
 	.feature-grid {
 		position: relative;
-		min-height: 20rem;
+		min-height: 15rem;
+		min-width: 40rem;
+		z-index: 1;
+
+		border: 3px solid hotpink;
 
 		transform-style: preserve-3d;
-		transform-origin: right;
+		transform-origin: left;
 
-		transform: perspective(500px) rotateY(-12deg) rotateX(0deg) rotateZ(0deg) translateZ(0)
-			translateX(-40px);
+		transform: perspective(100rem) rotateY(-50deg) rotateX(0deg) rotateZ(0deg) translateZ(0) translateX(70px);
+
+		left: min(calc(1200px - 100vw) * -1, 0px)
 	}
 
 	.topsection-wave {
