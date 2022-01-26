@@ -1,6 +1,8 @@
 <script>
-	import Socialgirl from '../components/Icons/Socialgirl.svelte';
 	import Logo from '../components/Logo.svelte';
+	import { scrollTo, scrollRef } from 'svelte-scrolling';
+	import { onMount } from "svelte";
+	import { slide, fade} from 'svelte/transition'
 
 	let width;
 
@@ -13,6 +15,52 @@
 			squiggle = false;
 		}
 	}
+
+	const words = [
+		"simple",
+		"amazing",
+		"awesome",
+		"mason",
+		"efficient",
+		"nathan",
+	];
+
+	const colors = [
+		"#90afe0",
+		"#d2a3d9",
+		"#6c626e",
+		"#d19fac",
+		"#a2d19f",
+		"#dbd39e",
+		"#b3e6db",
+		"#deaca6",
+	]
+
+	// Returns random number for next index.
+	const randomWord = () => {
+		return Math.round(Math.random() * (words.length-1)); 
+	};
+
+	const randomColor = () => {
+		return Math.round(Math.random() * (colors.length-1)); 
+	};
+
+	let randIndex = randomWord();
+	let randColor = randomColor();
+
+	onMount(() => {
+		const interval = setInterval(() => {
+			// Set `randIndex` to a new value each interval.
+			randIndex = randIndex + 1;
+			randColor = randomColor();
+			if (randIndex > 5) {
+				randIndex = 0;
+			}
+		}, 2400);
+		return () => {
+			clearInterval(interval);
+		};		
+	});
 </script>
 
 <title>Beyondgreen - Home</title>
@@ -125,7 +173,63 @@
 	</div>
 
 	<!-- Section 2 -->
+	{#key randIndex}
+	<section class="container mx-auto my-24 pt-12">
+		<flex class="hero__flex perspective xl:justify-center mx-8 border-t-2 pt-16 border-black">
+			<div class="max-w-xl z-[3] feature-grid-text">
+				<h2 class="text-6xl font-extrabold tracking-tight py-8" style="min-width: 38rem; max-width: 38rem;">
+					With Beyondgreen, life has never been so [<p class="inline" style="color: {colors[randColor]}" in:fade >{words[randIndex]}</p>].
+				</h2>
+				<p class="text-xl">
+					With incredible prices, great customer support, and perfect prices, Beyondgreen is a service like no other. 
+				</p>
+			</div>
+			<grid
+				class="hidden md:grid grid-cols-4 grid-rows-5 feature-grid w-[40rem] mr-12 space-x-4 space-y-4"
+			>
+				<button
+					use:scrollTo={'easy-section'}
+					class="row-span-2 bg-gray-200 border mt-4 ml-4 rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
+				>
+					<p class="text-center">Low Cost</p>
+				</button>
+				<button
+					use:scrollTo={'easy-section'}
+					class="row-span-3 col-span-2 bg-gray-200 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
+				>
+					<div class="text-center">Easy</div>
+				</button>
+				<button
+					use:scrollTo={'easy-section'}
+					class="row-span-2 bg-gray-200 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
+				>
+					<div class="text-center">
+						Satisfaction Guarenteed
+					</div>
+				</button>
+				<button
+					use:scrollTo={'reputation-section'}
+					class="row-span-3 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
+					>Reputable</button
+				>
+				<button
+					use:scrollTo={'professional-section'}
+					class="row-span-3 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
+					>Professional</button
+				>
+				<button
+					use:scrollTo={'responsive-section'}
+					class="col-span-2 row-span-2 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
+					>Responsive</button
+				>
+			</grid>
+		</flex>
+	</section>
+	{/key}
+
+	<!-- Section 3 -->
 	<section
+		use:scrollRef={'easy-section'}
 		class="container mx-auto grid grid-cols-1 grid-rows-5 md:grid-cols-3 md:grid-rows-2 p-12"
 	>
 		<h1 class="md:col-span-3 rows-span-2 text-center text-6xl font-bold py-12">
@@ -153,9 +257,56 @@
 			<p>inside while all the work is done by us on the outside</p>
 		</div>
 	</section>
+
+	<!-- Section 4 -->
+	<section use:scrollRef={'reputation-section'} class="m-72">
+		<p class="text-center">Trusted by people and stuff</p>
+	</section>
+
+	<!-- Section 4 -->
+	<section use:scrollRef={'professional-section'} class="m-72">
+		<p class="text-center">PROFESSION SECITON</p>
+	</section>
+
+	<!-- Section 4 -->
+	<section use:scrollRef={'responsive-section'} class="m-72">
+		<p class="text-center">RESPONSVIE SECITON</p>
+	</section>
 </main>
 
 <style>
+	.hero__flex {
+		height: 60vh;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+	}
+
+	.feature-grid-text {
+		background: linear-gradient(
+			90deg,
+			rgb(255, 255, 255) 75%,
+			rgba(255, 255, 255, 0)
+		)
+	}
+
+	.feature-grid {
+		position: relative;
+		min-height: 15rem;
+		min-width: 40rem;
+		z-index: 1;
+
+		transform-style: preserve-3d;
+		transform-origin: left;
+
+		transform: perspective(100rem) rotateY(-50deg) rotateX(0deg) rotateZ(0deg) translateZ(0) translateX(70px);
+
+		left: min(calc(1200px - 100vw) * -1, 0px)
+	}
+
 	.topsection-wave {
 		position: relative;
 		top: 0;

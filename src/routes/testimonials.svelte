@@ -153,7 +153,7 @@
 						<h3
 							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
 						>
-							Jane Cooper <span class="hidden xs:inline text-gray-500"> - Happy Neighbor</span>
+							Cane Jooper <span class="hidden xs:inline text-gray-500"> - Happy Neighbor</span>
 						</h3>
 					</div>
 					<img
