@@ -1,9 +1,10 @@
 <script>
 	import Logo from '../components/Logo.svelte';
-	import { companyName } from '../stores'
+	import { companyName } from '../stores';
 	import { scrollTo, scrollRef } from 'svelte-scrolling';
 	import { onMount } from 'svelte';
 	import { slide, fade } from 'svelte/transition';
+	import tilt from '../components/tilt';
 
 	let width;
 
@@ -25,14 +26,14 @@
 		'#ed8798', //Light Red
 		'#a2d19f', //Seafoam Green
 		'#dbd39e', //Tan or Light Yellow
-		'#b3e6db', //Light Cyan
+		'#b3e6db' //Light Cyan
 	];
 
 	const randomColor = () => {
 		return Math.round(Math.random() * (colors.length - 1));
 	};
 
-	let index = 0
+	let index = 0;
 	let randColor = randomColor();
 
 	onMount(() => {
@@ -40,7 +41,7 @@
 			// Set `randIndex` to a new value each interval.
 			index = index + 1;
 			randColor = randomColor();
-			if (index > words.length-1) {
+			if (index > words.length - 1) {
 				index = 0;
 			}
 		}, 2400);
@@ -160,10 +161,10 @@
 	</div>
 
 	<!-- Section 2 -->
-	{#key index}
-		<section class="container mx-auto my-24 pt-12">
-			<flex class="hero__flex perspective xl:justify-center mx-8 border-t-2 pt-16 border-black">
-				<div class="max-w-xl z-[3] feature-grid-text">
+	<section class="container mx-auto my-24 pt-12">
+		<flex class="hero__flex perspective xl:justify-center mx-8 border-t-2 pt-16 border-black">
+			<div class="max-w-xl z-[3] feature-grid-text">
+				{#key index}
 					<h2
 						class="text-6xl font-extrabold tracking-tight py-8"
 						style="min-width: 38rem; max-width: 38rem;"
@@ -181,47 +182,47 @@
 						<button> Button 1 </button>
 						<button> Button 1 </button>
 					</div>
-				</div>
-				<grid
-					class="hidden md:grid grid-cols-4 grid-rows-5 feature-grid w-[40rem] mr-12 mt-20 space-x-4 space-y-4"
+				{/key}
+			</div>
+			<grid
+				class="hidden md:grid grid-cols-4 grid-rows-5 origin-center feature-grid w-[40rem] mr-12 mt-20 space-x-4 space-y-4"
+			>
+				<button
+					use:scrollTo={'easy-section'}
+					class="row-span-2 bg-gray-200 border mt-4 ml-4 rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
 				>
-					<button
-						use:scrollTo={'easy-section'}
-						class="row-span-2 bg-gray-200 border mt-4 ml-4 rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
-					>
-						<p class="text-center">Low Cost</p>
-					</button>
-					<button
-						use:scrollTo={'easy-section'}
-						class="row-span-3 col-span-2 bg-gray-200 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
-					>
-						<div class="text-center">Easy</div>
-					</button>
-					<button
-						use:scrollTo={'easy-section'}
-						class="row-span-2 bg-gray-200 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
-					>
-						<div class="text-center">Satisfaction Guarenteed</div>
-					</button>
-					<button
-						use:scrollTo={'reputation-section'}
-						class="row-span-3 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
-						>Reputable</button
-					>
-					<button
-						use:scrollTo={'professional-section'}
-						class="row-span-3 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
-						>Professional</button
-					>
-					<button
-						use:scrollTo={'responsive-section'}
-						class="col-span-2 row-span-2 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
-						>Responsive</button
-					>
-				</grid>
-			</flex>
-		</section>
-	{/key}
+					<p class="text-center">Low Cost</p>
+				</button>
+				<button
+					use:scrollTo={'easy-section'}
+					class="row-span-3 col-span-2 bg-gray-200 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
+				>
+					<div class="text-center">Easy</div>
+				</button>
+				<button
+					use:scrollTo={'easy-section'}
+					class="row-span-2 bg-gray-200 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
+				>
+					<div class="text-center">Satisfaction Guarenteed</div>
+				</button>
+				<button
+					use:scrollTo={'reputation-section'}
+					class="row-span-3 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
+					>Reputable</button
+				>
+				<button
+					use:scrollTo={'professional-section'}
+					class="row-span-3 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
+					>Professional</button
+				>
+				<button
+					use:scrollTo={'responsive-section'}
+					class="col-span-2 row-span-2 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
+					>Responsive</button
+				>
+			</grid>
+		</flex>
+	</section>
 
 	<!-- Section 3 -->
 	<section
