@@ -2,7 +2,7 @@
 	import { fly, fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
-	import { menu, contactModal, yStore } from '../stores';
+	import { menu, contactModal, yStore, companyName } from '../stores';
 	import Hamburger from 'svelte-hamburgers';
 	import closable from 'svelte-closable';
 	import Logo from '../components/Logo.svelte';
@@ -98,7 +98,7 @@
 					<div class="h-12 w-12">
 						<Logo />
 					</div>
-					<p class="pl-5 self-center font-extrabold unselectable">Beyondgreen</p>
+					<p class="pl-5 self-center font-extrabold unselectable">{$companyName}</p>
 				</a>
 			</div>
 

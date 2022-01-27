@@ -1,5 +1,6 @@
 <script>
 	import Logo from '../components/Logo.svelte';
+	import { companyName } from '../stores'
 	import { scrollTo, scrollRef } from 'svelte-scrolling';
 	import { onMount } from 'svelte';
 	import { slide, fade } from 'svelte/transition';
@@ -16,37 +17,31 @@
 		}
 	}
 
-	const words = ['simple', 'amazing', 'awesome', 'mason', 'efficient', 'DUCK'];
+	const words = ['simple', 'amazing', 'awesome', 'mason', 'efficient'];
 
 	const colors = [
-		'#90afe0',
-		'#d2a3d9',
-		'#d19fac',
-		'#a2d19f',
-		'#dbd39e',
-		'#b3e6db',
-		'#deaca6'
+		'#90afe0', //Light Blue
+		'#d2a3d9', //Light Purple
+		'#ed8798', //Light Red
+		'#a2d19f', //Seafoam Green
+		'#dbd39e', //Tan or Light Yellow
+		'#b3e6db', //Light Cyan
 	];
-
-	// Returns random number for next index.
-	const randomWord = () => {
-		return Math.round(Math.random() * (words.length - 1));
-	};
 
 	const randomColor = () => {
 		return Math.round(Math.random() * (colors.length - 1));
 	};
 
-	let randIndex = randomWord();
+	let index = 0
 	let randColor = randomColor();
 
 	onMount(() => {
 		const interval = setInterval(() => {
 			// Set `randIndex` to a new value each interval.
-			randIndex = randIndex + 1;
+			index = index + 1;
 			randColor = randomColor();
-			if (randIndex > 5) {
-				randIndex = 0;
+			if (index > words.length-1) {
+				index = 0;
 			}
 		}, 2400);
 		return () => {
@@ -165,7 +160,7 @@
 	</div>
 
 	<!-- Section 2 -->
-	{#key randIndex}
+	{#key index}
 		<section class="container mx-auto my-24 pt-12">
 			<flex class="hero__flex perspective xl:justify-center mx-8 border-t-2 pt-16 border-black">
 				<div class="max-w-xl z-[3] feature-grid-text">
@@ -173,12 +168,12 @@
 						class="text-6xl font-extrabold tracking-tight py-8"
 						style="min-width: 38rem; max-width: 38rem;"
 					>
-						With Beyondgreen, life has never been so [
-						<p class="inline" style="color: {colors[randColor]}" in:fade>{words[randIndex]}</p>
+						With {$companyName}, life has never been so [
+						<p class="inline" style="color: {colors[randColor]}" in:fade>{words[index]}</p>
 						].
 					</h2>
 					<p class="text-xl">
-						With incredible prices, great customer support, and perfect prices, Beyondgreen is a
+						With incredible prices, great prices, low prices, and perfect prices, {$companyName} is a
 						service like no other.
 					</p>
 
