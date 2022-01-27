@@ -3,7 +3,7 @@
 	import { companyName } from '../stores';
 	import { scrollTo, scrollRef } from 'svelte-scrolling';
 	import { onMount } from 'svelte';
-	import { slide, fade } from 'svelte/transition';
+	import { slide, fade, fly } from 'svelte/transition';
 	import tilt from '../components/tilt';
 
 	let width;
@@ -61,13 +61,13 @@
 		<div class="max-w-6xl mx-auto xl:px-10 pt-4 relative">
 			<grid class="grid grid-cols-1 auto-rows-min w-full sm:px-8">
 				<h1
-					class="col-span-1 max-w-xl font-extrabold text-gray-900 sm:leading-none mx-auto text-center text-3xl
+					class="col-span-1 max-w-lg font-extrabold text-gray-900 sm:leading-none mx-auto text-center text-3xl
 					xs:text-4xl
 					sm:text-5xl sm:max-w-3xl
-					md:text-6xl md:max-w-5xl
+					md:text-6xl md:max-w-4xl
 					lg:text-7xl lg:mx-0 lg:text-left"
 				>
-					Not just your ordinary outdoor service
+					Not just your ordinary chart software
 				</h1>
 				{#if squiggle}
 					<div
@@ -164,17 +164,20 @@
 	<section class="container mx-auto my-24 pt-12">
 		<flex class="hero__flex perspective xl:justify-center mx-8 border-t-2 pt-16 border-black">
 			<div class="max-w-xl z-[3] feature-grid-text">
-				{#key index}
+
 					<h2
 						class="text-6xl font-extrabold tracking-tight py-8"
 						style="min-width: 38rem; max-width: 38rem;"
 					>
 						With {$companyName}, life has never been so [
-						<p class="inline" style="color: {colors[randColor]}" in:fade>{words[index]}</p>
+						{#key index}
+						<p in:fade={{duration: 400}} class="inline" style="color: {colors[randColor]}">{words[index]}</p>
+						{/key}
 						].
+					
 					</h2>
 					<p class="text-xl">
-						With incredible prices, great prices, low prices, and perfect prices, {$companyName} is a
+						incredible prices, great prices, low prices, and perfect prices, {$companyName} is a
 						service like no other.
 					</p>
 
@@ -182,7 +185,6 @@
 						<button> Button 1 </button>
 						<button> Button 1 </button>
 					</div>
-				{/key}
 			</div>
 			<grid
 				class="hidden md:grid grid-cols-4 grid-rows-5 origin-center feature-grid w-[40rem] mr-12 mt-20 space-x-4 space-y-4"
