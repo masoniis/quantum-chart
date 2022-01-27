@@ -16,12 +16,11 @@
 		}
 	}
 
-	const words = ['simple', 'amazing', 'awesome', 'mason', 'efficient', 'nathan'];
+	const words = ['simple', 'amazing', 'awesome', 'mason', 'efficient', 'DUCK'];
 
 	const colors = [
 		'#90afe0',
 		'#d2a3d9',
-		'#6c626e',
 		'#d19fac',
 		'#a2d19f',
 		'#dbd39e',
