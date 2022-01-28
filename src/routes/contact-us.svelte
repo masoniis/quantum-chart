@@ -3,7 +3,7 @@
 	import Visibility from '../components/Visibility.svelte';
 	import Backdrop from '../components/Backdrop.svelte';
 	import closable from 'svelte-closable';
-	import {contactModal, yStore } from '../stores'
+	import {contactModal, yStore, companyName } from '../stores'
 
 	let first, last, email, message;
 
@@ -16,7 +16,7 @@
 	};
 </script>
 
-<title>Beyondgreen - Contact</title>
+<title>{$companyName} - Contact</title>
 
 {#if $contactModal}
 	<Backdrop />

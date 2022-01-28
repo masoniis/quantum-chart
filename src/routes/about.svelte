@@ -1,8 +1,9 @@
 <script>
 	import Logo from '../components/Logo.svelte';
+	import { companyName } from '../stores';
 </script>
 
-<title>Beyondgreen - About</title>
+<title>{$companyName}  - About</title>
 
 <main class="min-h-screen text-maintext overflow-hidden">
 	<!-- Top Section -->

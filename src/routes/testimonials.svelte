@@ -1,11 +1,12 @@
 <script>
 	import { scale, slide, fly, fade } from 'svelte/transition';
 	import { scrollTo, scrollRef } from 'svelte-scrolling';
+	import { companyName } from '../stores';
 
 	let y;
 </script>
 
-<title>Beyondgreen - Testimonials</title>
+<title>{$companyName}  - Testimonials</title>
 
 <svelte:window bind:scrollY={y} />
 

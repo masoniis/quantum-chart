@@ -1,4 +1,6 @@
 <script>
+	import { companyName } from '../stores';
+
 	var basic = 1;
 	var premium = 2;
 	var pro = 3;
@@ -26,7 +28,7 @@
 	let squareFootage;
 </script>
 
-<title>BeyondGreen - Pricing</title>
+<title>{$companyName}  - Pricing</title>
 
 <main class="min-h-screen bg-light-bg pt-20">
 	<!-- <h1 class="text-light-text text-center">

@@ -1,4 +1,8 @@
-<title>Beyondgreen - Products</title>
+<script>
+	import { companyName } from '../stores';
+</script>
+
+<title>{$companyName} - Products</title>
 
 <main class="min-h-screen text-maintext overflow-hidden">
 	<!-- Top Section -->

@@ -1,4 +1,8 @@
-<title>Beyondgreen - Employment</title>
+<script>
+	import { companyName } from '../stores';
+</script>
+
+<title>{$companyName}  - Employment</title>
 
 <main class="min-h-screen text-maintext overflow-hidden">
 	<!-- Intro area -->

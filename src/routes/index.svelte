@@ -51,7 +51,7 @@
 	});
 </script>
 
-<title>Beyondgreen - Home</title>
+<title>{$companyName} - Home</title>
 
 <svelte:window bind:innerWidth={width} />
 
