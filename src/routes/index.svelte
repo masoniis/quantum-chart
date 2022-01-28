@@ -164,27 +164,27 @@
 	<section class="container mx-auto my-24 pt-12">
 		<flex class="hero__flex perspective xl:justify-center mx-8 border-t-2 pt-16 border-black">
 			<div class="max-w-xl z-[3] feature-grid-text">
+				<h2
+					class="text-6xl font-extrabold tracking-tight py-8"
+					style="min-width: 38rem; max-width: 38rem;"
+				>
+					With {$companyName}, life has never been so [
+					{#key index}
+						<p in:fade={{ duration: 400 }} class="inline" style="color: {colors[randColor]}">
+							{words[index]}
+						</p>
+					{/key}
+					].
+				</h2>
+				<p class="text-xl">
+					incredible prices, great prices, low prices, and perfect prices, {$companyName} is a service
+					like no other.
+				</p>
 
-					<h2
-						class="text-6xl font-extrabold tracking-tight py-8"
-						style="min-width: 38rem; max-width: 38rem;"
-					>
-						With {$companyName}, life has never been so [
-						{#key index}
-						<p in:fade={{duration: 400}} class="inline" style="color: {colors[randColor]}">{words[index]}</p>
-						{/key}
-						].
-					
-					</h2>
-					<p class="text-xl">
-						incredible prices, great prices, low prices, and perfect prices, {$companyName} is a
-						service like no other.
-					</p>
-
-					<div class="pt-8">
-						<button> Button 1 </button>
-						<button> Button 1 </button>
-					</div>
+				<div class="pt-8">
+					<button> Button 1 </button>
+					<button> Button 1 </button>
+				</div>
 			</div>
 			<grid
 				class="hidden md:grid grid-cols-4 grid-rows-5 origin-center feature-grid w-[40rem] mr-12 mt-20 space-x-4 space-y-4"
@@ -215,7 +215,7 @@
 				<button
 					use:scrollTo={'professional-section'}
 					class="row-span-3 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
-					>Professional</button
+					>Risk Free</button
 				>
 				<button
 					use:scrollTo={'responsive-section'}
@@ -260,6 +260,53 @@
 	<!-- Section 4 -->
 	<section use:scrollRef={'reputation-section'} class="m-72">
 		<p class="text-center">Trusted by people and stuff</p>
+		<div class="bg-gray-50 pt-12 sm:pt-16">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			  <div class="max-w-4xl mx-auto text-center">
+				<h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+				  Trusted by developers from over 80 planets
+				</h2>
+				<p class="mt-3 text-xl text-gray-500 sm:mt-4">
+				  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus repellat laudantium.
+				</p>
+			  </div>
+			</div>
+			<div class="mt-10 pb-12 bg-white sm:pb-16">
+			  <div class="relative">
+				<div class="absolute inset-0 h-1/2 bg-gray-50"></div>
+				<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				  <div class="max-w-4xl mx-auto">
+					<dl class="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
+					  <div class="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
+						<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
+						  Pepperoni
+						</dt>
+						<dd class="order-1 text-5xl font-extrabold text-indigo-600">
+						  100%
+						</dd>
+					  </div>
+					  <div class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
+						<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
+						  Delivery
+						</dt>
+						<dd class="order-1 text-5xl font-extrabold text-indigo-600">
+						  24/7
+						</dd>
+					  </div>
+					  <div class="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l">
+						<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
+						  Calories
+						</dt>
+						<dd class="order-1 text-5xl font-extrabold text-indigo-600">
+						  100k
+						</dd>
+					  </div>
+					</dl>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
 	</section>
 
 	<!-- Section 4 -->
@@ -270,6 +317,34 @@
 	<!-- Section 4 -->
 	<section use:scrollRef={'responsive-section'} class="m-72">
 		<p class="text-center">RESPONSVIE SECITON</p>
+	</section>
+
+	<!-- Section 5 -->
+	<section use:scrollRef={'responsive-section'} class="m-72">
+		<h1 class="text-center text-4xl font-bold">100% risk-free</h1>
+
+		<p>
+			When you start a free {$companyName} trial, there is no need to put in credit card detials or any
+			commitment. After the trial is up, you can decide if {$companyName} is right for you. As simple
+			as that!
+		</p>
+	</section>
+
+	<!-- Section 6 -->
+	<section class="bg-indigo-50">
+		<div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-24 lg:px-8 lg:flex lg:items-center lg:justify-between">
+		  <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
+			<span class="block">Ready to dive in?</span>
+			<span class="block text-indigo-600">Start your free trial today.</span>
+		  </h2>
+		  <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+			<div class="inline-flex rounded-md shadow">
+			  <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+				Get started
+			  </a>
+			</div>
+		  </div>
+		</div>
 	</section>
 </main>
 

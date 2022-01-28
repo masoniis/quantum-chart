@@ -1,6 +1,8 @@
 <footer class="bg-mainbg text-maintext transition-colors duration-500 p-6 pt-12">
+
+
 	<div
-		class="max-w-screen-2xl mx-auto flex flex-col sm:flex-row justify-between items-center border-t-2 border-stone-400 px-5 transition-all ease-linear duration-1000"
+		class="max-w-screen-2xl pt-2 mx-auto flex flex-col sm:flex-row justify-between items-center border-t-2 border-stone-400 px-5 transition-all ease-linear duration-1000"
 	>
 		<!--Flex Item 1-->
 		<div
