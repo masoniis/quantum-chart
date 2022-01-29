@@ -41,6 +41,7 @@
   "dependencies": {
     "@rgossiaux/svelte-headlessui": "^1.0.0-beta.7",
     "@tailwindcss/forms": "^0.4.0",
+    "chart.js": "^3.7.0",
     "pnpm": "^6.26.1",
     "svelte-closable": "^0.0.0",
     "svelte-hamburger": "^1.0.0",
