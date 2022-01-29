@@ -203,7 +203,7 @@
 					class="row-span-3 col-span-2 bg-gray-200 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
 				>
 					<!-- Easy to Use Image -->
-					<img class="rounded-2xl h-full" src="../static/easy.jpg" alt="Easy to Use" />
+					<img class="rounded-2xl h-full" src="easy.jpg" alt="Easy to Use" />
 				</button>
 				<button
 					use:scrollTo={'easy-section'}
@@ -221,21 +221,21 @@
 					class="row-span-3 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
 				>
 					<!-- Reputable Image -->
-					<img class="rounded-2xl h-full" src="../static/reputable.jpg" alt="Reputable" />
+					<img class="rounded-2xl h-full" src="reputable.jpg" alt="Reputable" />
 				</button>
 				<button
 					use:scrollTo={'professional-section'}
 					class="row-span-3 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
 				>
 					<!-- Responsive Image -->
-					<img class="rounded-2xl h-full" src="../static/responsive.jpg" alt="Responsive" />
+					<img class="rounded-2xl h-full" src="responsive.jpg" alt="Responsive" />
 				</button>
 				<button
 					use:scrollTo={'responsive-section'}
 					class="col-span-2 row-span-2 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
 				>
 					<!-- Risk Free Image -->
-					<img class="rounded-2xl h-full" src="../static/risk-free.jpg" alt="Risk Free" /></button
+					<img class="rounded-2xl h-full" src="risk-free.jpg" alt="Risk Free" /></button
 				>
 			</grid>
 		</flex>
