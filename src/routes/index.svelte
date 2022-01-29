@@ -186,6 +186,8 @@
 					<button> Button 1 </button>
 				</div>
 			</div>
+
+			<!-- 3d Panel -->
 			<grid
 				class="hidden md:grid grid-cols-4 grid-rows-5 origin-center feature-grid w-[40rem] mr-12 mt-20 space-x-4 space-y-4"
 			>
@@ -193,34 +195,47 @@
 					use:scrollTo={'easy-section'}
 					class="row-span-2 bg-gray-200 border mt-4 ml-4 rounded-2xl hover:shadow-xl transition-all hover:scale-[1.05]"
 				>
-					<img class="rounded-2xl" src="../static/Money Sign Icon.jpg" alt="money" />
+					<!-- Low Cost Image -->
+					<img class="rounded-2xl h-full" src="../static/low-cost.jpg" alt="Low Cost" />
 				</button>
 				<button
 					use:scrollTo={'easy-section'}
 					class="row-span-3 col-span-2 bg-gray-200 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
 				>
-					<img class="rounded-2xl" src="../static/Easy Button.jpg" alt="money" />
+					<!-- Easy to Use Image -->
+					<img class="rounded-2xl h-full" src="../static/easy.jpg" alt="Easy to Use" />
 				</button>
 				<button
 					use:scrollTo={'easy-section'}
 					class="row-span-2 bg-gray-200 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
 				>
-					<div class="text-center">Satisfaction Guarenteed</div>
+					<!-- Satisfaction Guarenteed Image -->
+					<img
+						class="rounded-2xl h-full"
+						src="../static/satisfaction-guarenteed.jpg"
+						alt="Satisfaction Guarenteed"
+					/>
 				</button>
 				<button
 					use:scrollTo={'reputation-section'}
 					class="row-span-3 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
-					>Reputable</button
 				>
+					<!-- Reputable Image -->
+					<img class="rounded-2xl h-full" src="../static/reputable.jpg" alt="Reputable" />
+				</button>
 				<button
 					use:scrollTo={'professional-section'}
 					class="row-span-3 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
-					>Risk Free</button
 				>
+					<!-- Responsive Image -->
+					<img class="rounded-2xl h-full" src="../static/responsive.jpg" alt="Responsive" />
+				</button>
 				<button
 					use:scrollTo={'responsive-section'}
 					class="col-span-2 row-span-2 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
-					>Responsive</button
+				>
+					<!-- Risk Free Image -->
+					<img class="rounded-2xl h-full" src="../static/risk-free.jpg" alt="Risk Free" /></button
 				>
 			</grid>
 		</flex>
