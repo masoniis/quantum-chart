@@ -196,7 +196,7 @@
 					class="row-span-2 bg-gray-200 border mt-4 ml-4 rounded-2xl hover:shadow-xl transition-all hover:scale-[1.05]"
 				>
 					<!-- Low Cost Image -->
-					<img class="rounded-2xl h-full" src="../static/low-cost.jpg" alt="Low Cost" />
+					<img class="rounded-2xl h-full" src="low-cost.jpg" alt="Low Cost" />
 				</button>
 				<button
 					use:scrollTo={'easy-section'}
