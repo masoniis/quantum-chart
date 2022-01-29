@@ -163,7 +163,7 @@
 	<!-- Section 2 -->
 	<section class="container mx-auto my-24 pt-12">
 		<flex class="hero__flex perspective xl:justify-center mx-8 border-t-2 pt-16 border-black">
-			<div class="max-w-xl z-[3] feature-grid-text">
+			<div class="max-w-xl z-[3] feature-grid-text pb-36">
 				<h2
 					class="text-6xl font-extrabold tracking-tight py-8"
 					style="min-width: 38rem; max-width: 38rem;"
@@ -193,7 +193,7 @@
 					use:scrollTo={'easy-section'}
 					class="row-span-2 bg-gray-200 border mt-4 ml-4 rounded-2xl hover:shadow-xl transition-all hover:scale-[1.05]"
 				>
-				<svg class="rounded-2xl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 329.99 269.78"><defs><style>.a{fill:#d1d3d4;}.b,.c{fill:#fff;}.b{stroke:#231f20;stroke-miterlimit:10;}.d{font-size:85.72px;fill:#c49a6c;}.d,.e{font-family:Inter-Bold, Inter;font-weight:700;}.e{font-size:47px;fill:#414042;}.f{letter-spacing:-0.01em;}</style></defs><rect class="a" width="329.99" height="269.78"/><path class="b" d="M56.37,188.22"/><path class="c" d="M103.61,222.53l71.12-45.48a4.27,4.27,0,0,0-2.32-7.86l-143.21.67A4.27,4.27,0,0,0,27,177.75l72.08,44.81A4.31,4.31,0,0,0,103.61,222.53Z"/><rect class="c" x="64.56" y="46.58" width="72.54" height="129.71" rx="4.27"/><text class="d" transform="translate(73.39 137.69) scale(1.01 1)">$</text><text class="e" transform="translate(185.78 99.38)">L<tspan class="f" x="26.67" y="0">o</tspan><tspan x="54.88" y="0">w </tspan><tspan x="-7.01" y="45">Cost</tspan></text></svg>
+				<img class="rounded-2xl" src="../static/Money Sign Icon.jpg" alt="money" />
 
 			</button>
 				<button
@@ -361,7 +361,7 @@
 	}
 
 	.feature-grid-text {
-		background: linear-gradient(90deg, rgb(255, 255, 255) 75%, rgba(255, 255, 255, 0));
+		background: linear-gradient(90deg, rgb(255, 255, 255) 83%, rgba(255, 255, 255, 0));
 	}
 
 	.feature-grid {
