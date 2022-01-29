@@ -212,7 +212,7 @@
 					<!-- Satisfaction Guarenteed Image -->
 					<img
 						class="rounded-2xl h-full"
-						src="../static/satisfaction-guarenteed.jpg"
+						src="satisfaction-guarenteed.jpg"
 						alt="Satisfaction Guarenteed"
 					/>
 				</button>
