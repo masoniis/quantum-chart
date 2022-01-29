@@ -193,14 +193,13 @@
 					use:scrollTo={'easy-section'}
 					class="row-span-2 bg-gray-200 border mt-4 ml-4 rounded-2xl hover:shadow-xl transition-all hover:scale-[1.05]"
 				>
-				<img class="rounded-2xl" src="../static/Money Sign Icon.jpg" alt="money" />
-
-			</button>
+					<img class="rounded-2xl" src="../static/Money Sign Icon.jpg" alt="money" />
+				</button>
 				<button
 					use:scrollTo={'easy-section'}
 					class="row-span-3 col-span-2 bg-gray-200 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
 				>
-				<img class="rounded-2xl" src="../static/Easy Button.jpg" alt="money" />
+					<img class="rounded-2xl" src="../static/Easy Button.jpg" alt="money" />
 				</button>
 				<button
 					use:scrollTo={'easy-section'}
@@ -263,51 +262,48 @@
 		<p class="text-center">Trusted by people and stuff</p>
 		<div class="bg-gray-50 pt-12 sm:pt-16">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			  <div class="max-w-4xl mx-auto text-center">
-				<h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-				  Trusted by developers from over 80 planets
-				</h2>
-				<p class="mt-3 text-xl text-gray-500 sm:mt-4">
-				  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus repellat laudantium.
-				</p>
-			  </div>
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+						Trusted by developers from over 80 planets
+					</h2>
+					<p class="mt-3 text-xl text-gray-500 sm:mt-4">
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus repellat
+						laudantium.
+					</p>
+				</div>
 			</div>
 			<div class="mt-10 pb-12 bg-white sm:pb-16">
-			  <div class="relative">
-				<div class="absolute inset-0 h-1/2 bg-gray-50"></div>
-				<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				  <div class="max-w-4xl mx-auto">
-					<dl class="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
-					  <div class="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
-						<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
-						  Pepperoni
-						</dt>
-						<dd class="order-1 text-5xl font-extrabold text-indigo-600">
-						  100%
-						</dd>
-					  </div>
-					  <div class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
-						<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
-						  Delivery
-						</dt>
-						<dd class="order-1 text-5xl font-extrabold text-indigo-600">
-						  24/7
-						</dd>
-					  </div>
-					  <div class="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l">
-						<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
-						  Calories
-						</dt>
-						<dd class="order-1 text-5xl font-extrabold text-indigo-600">
-						  100k
-						</dd>
-					  </div>
-					</dl>
-				  </div>
+				<div class="relative">
+					<div class="absolute inset-0 h-1/2 bg-gray-50" />
+					<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+						<div class="max-w-4xl mx-auto">
+							<dl class="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
+								<div
+									class="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r"
+								>
+									<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
+										Pepperoni
+									</dt>
+									<dd class="order-1 text-5xl font-extrabold text-indigo-600">100%</dd>
+								</div>
+								<div
+									class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r"
+								>
+									<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Delivery</dt>
+									<dd class="order-1 text-5xl font-extrabold text-indigo-600">24/7</dd>
+								</div>
+								<div
+									class="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l"
+								>
+									<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Calories</dt>
+									<dd class="order-1 text-5xl font-extrabold text-indigo-600">100k</dd>
+								</div>
+							</dl>
+						</div>
+					</div>
 				</div>
-			  </div>
 			</div>
-		  </div>
+		</div>
 	</section>
 
 	<!-- Section 4 -->
@@ -333,18 +329,23 @@
 
 	<!-- Section 6 -->
 	<section class="bg-indigo-50">
-		<div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-24 lg:px-8 lg:flex lg:items-center lg:justify-between">
-		  <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
-			<span class="block">Ready to dive in?</span>
-			<span class="block text-indigo-600">Start your free trial today.</span>
-		  </h2>
-		  <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-			<div class="inline-flex rounded-md shadow">
-			  <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
-				Get started
-			  </a>
+		<div
+			class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-24 lg:px-8 lg:flex lg:items-center lg:justify-between"
+		>
+			<h2 class="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
+				<span class="block">Ready to dive in?</span>
+				<span class="block text-indigo-600">Start your free trial today.</span>
+			</h2>
+			<div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+				<div class="inline-flex rounded-md shadow">
+					<a
+						href="#"
+						class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+					>
+						Get started
+					</a>
+				</div>
 			</div>
-		  </div>
 		</div>
 	</section>
 </main>
