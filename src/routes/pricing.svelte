@@ -62,12 +62,12 @@
 						{#key planButtonClicked}
 							<span
 								in:fade={{ duration: 300, delay: 200 }}
-								out:fade={{ duration: 200 }}
+								out:fade|local={{ duration: 200 }}
 								class="text-4xl font-extrabold text-gray-900">${individual}</span
 							>
 							<span
 								in:fade={{ duration: 300, delay: 200 }}
-								out:fade={{ duration: 200 }}
+								out:fade|local={{ duration: 200 }}
 								class="text-base font-medium text-gray-500">/{currentPlanAbbreviated}</span
 							>
 						{/key}
@@ -144,12 +144,12 @@
 					{#key planButtonClicked}
 						<span
 							in:fade={{ duration: 300, delay: 200 }}
-							out:fade={{ duration: 200 }}
+							out:fade|local={{ duration: 200 }}
 							class="text-4xl font-extrabold text-gray-900">${premium}</span
 						>
 						<span
 							in:fade={{ duration: 300, delay: 200 }}
-							out:fade={{ duration: 200 }}
+							out:fade|local={{ duration: 200 }}
 							class="text-base font-medium text-gray-500">/{currentPlanAbbreviated}</span
 						>
 					{/key}
@@ -248,12 +248,12 @@
 						{#key planButtonClicked}
 							<span
 								in:fade={{ duration: 300, delay: 200 }}
-								out:fade={{ duration: 200 }}
+								out:fade|local={{ duration: 200 }}
 								class="text-4xl font-extrabold text-gray-900">${team}</span
 							>
 							<span
 								in:fade={{ duration: 300, delay: 200 }}
-								out:fade={{ duration: 200 }}
+								out:fade|local={{ duration: 200 }}
 								class="text-base font-medium text-gray-500">/{currentPlanAbbreviated}</span
 							>
 						{/key}
