@@ -82,7 +82,7 @@
 <svelte:window bind:scrollY={y} />
 
 <header
-	class="{background} {text} {shadow} transition-all fixed w-full z-10 mb-10 ease-in-out py-2"
+	class="{background} {text} {shadow} transition-all fixed w-full z-50 mb-10 ease-in-out py-2"
 >
 	<nav class="max-w-screen-2xl mx-auto px-8">
 		<div class="flex justify-between h-16">
@@ -111,14 +111,6 @@
 			</div>
 			<!-- Desktop Menu -->
 			<div class="hidden md:ml-6 md:flex md:space-x-8 {text}">
-				<a
-					href="/products"
-					on:click={() => (dropdown = false)}
-					class:active={$page.url.pathname === '/products'}
-					class="border-transparent hover:border-gray-300 hover:text-gray-700 transition-all inline-flex items-center px-1 pt-1 border-b-2 text-sm font-bold"
-				>
-					Products
-				</a>
 				<a
 					href="/pricing"
 					on:click={() => (dropdown = false)}

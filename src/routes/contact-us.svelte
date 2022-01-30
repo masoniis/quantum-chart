@@ -35,12 +35,10 @@
 	</modal>
 {/if}
 
-<main class="min-h-screen text-maintext overflow-hidden pt-20">
+<main class="min-h-screen text-maintext overflow-hidden pt-32">
 	<!-- Intro area -->
 	<div class="text-center mx-auto">
-		<br />
-		<h4 class="pb-4">Have a question?</h4>
-		<h1 class="pb-4 text-4xl">Contact Us</h1>
+		<h1 class="pb-4 text-4xl">Have a Question?</h1>
 		<p class="max-w-lg mx-auto px-4">
 			We're here to help and ready to answer any questions that you have for us. We look forward to
 			hearing from you!
