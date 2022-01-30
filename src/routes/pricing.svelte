@@ -479,10 +479,35 @@
 
 	<!-- FAQ Section -->
 	<section class="bg-white py-24">
-		<grid class="grid grid-cols-2 container mx-auto max-w-2x gap-10">
-			<div>
-				<strong class="text-xl"> Why us </strong>
-				<p class="text-xs">
+		<h1 class="font-extrabold text-5xl text-center pb-12">
+			Frequently Asked Questions
+		</h1>
+		<grid class="grid grid-cols-2 container mx-auto max-w-5xl gap-10">
+			<div class="space-y-2">
+				<strong class="text-xl font-bold">I am a question?</strong>
+				<p class="text-sm font-normal text-maintext">
+					WITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH
+					STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFF
+				</p>
+			</div>
+			<div class="space-y-2">
+				<strong class="text-xl font-bold">I am a question?</strong>
+				<p class="text-sm font-normal text-maintext">
+					WITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH
+					STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFF
+				</p>
+			</div>
+
+			<div class="space-y-2">
+				<strong class="text-xl font-bold">I am a question?</strong>
+				<p class="text-sm font-normal text-maintext">
+					WITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH
+					STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFF
+				</p>
+			</div>
+			<div class="space-y-2">
+				<strong class="text-xl font-bold">I am a question?</strong>
+				<p class="text-sm font-normal text-maintext">
 					WITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH
 					STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFF
 				</p>
