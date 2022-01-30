@@ -482,14 +482,9 @@
 		<h1 class="font-extrabold text-5xl text-center pb-12">
 			Frequently Asked Questions
 		</h1>
-		<grid class="grid grid-cols-2 container mx-auto max-w-5xl gap-10">
-			<div class="space-y-2">
-				<strong class="text-xl font-bold">I am a question?</strong>
-				<p class="text-sm font-normal text-maintext">
-					WITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH
-					STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFF
-				</p>
-			</div>
+
+		<!-- Question Grid -->
+		<grid class="grid grid-cols-1 md:grid-cols-2 container mx-auto max-w-5xl gap-10 px-8">
 			<div class="space-y-2">
 				<strong class="text-xl font-bold">I am a question?</strong>
 				<p class="text-sm font-normal text-maintext">
@@ -505,6 +500,15 @@
 					STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFF
 				</p>
 			</div>
+
+			<div class="space-y-2">
+				<strong class="text-xl font-bold">I am a question?</strong>
+				<p class="text-sm font-normal text-maintext">
+					WITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH
+					STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFF
+				</p>
+			</div>
+
 			<div class="space-y-2">
 				<strong class="text-xl font-bold">I am a question?</strong>
 				<p class="text-sm font-normal text-maintext">
