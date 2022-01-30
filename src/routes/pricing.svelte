@@ -29,6 +29,7 @@
 <title>{$companyName} - Pricing</title>
 
 <main class="min-h-screen bg-light-bg pt-36 bg-gray-300">
+	<!-- Pricing box Section -->
 	<section class="max-w-7xl mx-auto pb-24 px-4 sm:px-6 lg:px-8">
 		<div class="sm:flex sm:flex-col sm:align-center">
 			<h1 class="text-5xl font-extrabold text-gray-900 sm:text-center">Pricing Plans</h1>
@@ -427,6 +428,7 @@
 		</svg>
 	</div>
 
+	<!-- Free Trial Section -->
 	<section class="bg-lightbg py-24">
 		<h1 class="text-6xl text-center">
 			Try {$companyName} on Your Projects
@@ -451,7 +453,7 @@
 		</flex>
 	</section>
 
-	<div class="custom-shape-divider-top-1643506502 bg-mainbg">
+	<div class="trial-wave bg-mainbg">
 		<svg
 			data-name="Layer 1"
 			xmlns="http://www.w3.org/2000/svg"
@@ -474,6 +476,19 @@
 			/>
 		</svg>
 	</div>
+
+	<!-- FAQ Section -->
+	<section class="bg-white py-24">
+		<grid class="grid grid-cols-2 container mx-auto max-w-2x gap-10">
+			<div>
+				<strong class="text-xl"> Why us </strong>
+				<p class="text-xs">
+					WITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH
+					STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFF
+				</p>
+			</div>
+		</grid>
+	</section>
 </main>
 
 <style>
@@ -503,7 +518,7 @@
 		fill: #ffffff80;
 	}
 
-	.custom-shape-divider-top-1643506502 {
+	.trial-wave {
 		position: relative;
 		top: 0;
 		left: 0;
@@ -512,7 +527,7 @@
 		line-height: 0;
 	}
 
-	.custom-shape-divider-top-1643506502 svg {
+	.trial-wave svg {
 		position: relative;
 		display: block;
 		width: calc(163% + 1.3px);
@@ -520,7 +535,7 @@
 		transform: rotateY(180deg);
 	}
 
-	.custom-shape-divider-top-1643506502 .shape-fill {
+	.trial-wave .shape-fill {
 		fill: #f5f5f4;
 	}
 </style>

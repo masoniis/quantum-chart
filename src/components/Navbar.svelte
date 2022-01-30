@@ -157,13 +157,13 @@
 						>
 							<div class="bg-dropdown1">
 								<div
-									class="max-w-7xl mx-auto grid gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16"
+									class="max-w-7xl mx-auto grid gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-12 lg:px-8 lg:py-12 xl:py-16"
 								>
 									<a
 										href="/testimonials"
 										on:click={() => (dropdown = false)}
-										in:fly={{ delay: 225, duration: 150, x: -500 }}
-										class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
+										in:fly={{ delay: 150, duration: 150, x: -500 }}
+										class="-m-3 p-3 col-span-4 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
 									>
 										<div class="flex md:h-full lg:flex-col">
 											<div class="flex-shrink-0">
@@ -194,49 +194,7 @@
 												<div>
 													<p class="text-base font-medium text-gray-900">Testimonials</p>
 													<p class="mt-1 text-sm text-gray-500">
-														Get a better understanding of where your traffic is coming from.
-													</p>
-												</div>
-											</div>
-										</div>
-									</a>
-
-									<a
-										href="/employment"
-										on:click={() => (dropdown = false)}
-										in:fly={{ delay: 150, duration: 150, x: -500 }}
-										class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
-									>
-										<div class="flex md:h-full lg:flex-col">
-											<div class="flex-shrink-0">
-												<div
-													class="inline-flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12"
-												>
-													<!-- Heroicon name: outline/cursor-click -->
-													<svg
-														class="h-6 w-6"
-														xmlns="http://www.w3.org/2000/svg"
-														fill="none"
-														viewBox="0 0 24 24"
-														stroke="currentColor"
-														aria-hidden="true"
-													>
-														<path
-															stroke-linecap="round"
-															stroke-linejoin="round"
-															stroke-width="2"
-															d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
-														/>
-													</svg>
-												</div>
-											</div>
-											<div
-												class="ml-4 md:flex-1 md:flex md:flex-col md:justify-between lg:ml-0 lg:mt-4"
-											>
-												<div>
-													<p class="text-base font-medium text-gray-900">Employment</p>
-													<p class="mt-1 text-sm text-gray-500">
-														Want to join the team? Find out what options you have
+														Don't just take our word for it! Read from our extensive tesimonial list.
 													</p>
 												</div>
 											</div>
@@ -247,7 +205,7 @@
 										href="/contact-us"
 										on:click={() => (dropdown = false)}
 										in:fly={{ delay: 75, duration: 150, x: -500 }}
-										class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
+										class="-m-3 p-3 col-span-4 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
 									>
 										<div class="flex md:h-full lg:flex-col">
 											<div class="flex-shrink-0">
@@ -278,7 +236,7 @@
 												<div>
 													<p class="text-base font-medium text-gray-900">Contact</p>
 													<p class="mt-1 text-sm text-gray-500">
-														Have more questions? Get in touch with the individuals behind it all
+														Have more questions? Get in touch with the individuals behind it all.
 													</p>
 												</div>
 											</div>
@@ -289,7 +247,7 @@
 										href="/about"
 										on:click={() => (dropdown = false)}
 										in:fly={{ delay: 0, duration: 150, x: -500 }}
-										class="-m-3 p-3 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
+										class="-m-3 p-3 col-span-4 flex flex-col justify-between rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
 									>
 										<div class="flex md:h-full lg:flex-col">
 											<div class="flex-shrink-0">
@@ -321,7 +279,7 @@
 													<p class="text-base font-medium text-gray-900">About</p>
 													<p class="mt-1 text-sm text-gray-500">
 														Eager to learn about us? See who's behind the team and what we're all
-														about
+														about.
 													</p>
 												</div>
 											</div>
