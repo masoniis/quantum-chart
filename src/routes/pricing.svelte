@@ -28,7 +28,7 @@
 
 <title>{$companyName} - Pricing</title>
 
-<main class="min-h-screen bg-light-bg pt-36 bg-gray-300">
+<main class="min-h-screen bg-light-bg pt-36 bg-gray-200">
 	<!-- Pricing box Section -->
 	<section class="max-w-7xl mx-auto pb-24 px-4 sm:px-6 lg:px-8">
 		<div class="sm:flex sm:flex-col sm:align-center">
@@ -403,8 +403,8 @@
 		</grid>
 	</section>
 
-	<!-- WAVE DIVIDER -->
-	<div class="pricing-wave bg-gray-300">
+	<!-- WAVE DIVIDER top Free Trial -->
+	<div class="pricing-wave">
 		<svg
 			data-name="Layer 1"
 			xmlns="http://www.w3.org/2000/svg"
@@ -453,6 +453,7 @@
 		</flex>
 	</section>
 
+	<!-- Free Trial Bottom Wave Divider -->
 	<div class="trial-wave bg-mainbg">
 		<svg
 			data-name="Layer 1"
@@ -542,7 +543,7 @@
 	}
 
 	.pricing-wave .shape-fill {
-		fill: #ffffff80;
+		fill: rgb(245 245 244)
 	}
 
 	.trial-wave {

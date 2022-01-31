@@ -115,18 +115,20 @@
 					href="/pricing"
 					on:click={() => (dropdown = false)}
 					class:active={$page.url.pathname === '/pricing'}
-					class="border-transparent hover:border-gray-300 hover:text-gray-700 transition-all inline-flex items-center px-1 pt-1 border-b-2 text-sm font-bold"
+					class="hover:text-gray-700 transition-all inline-flex items-center text-sm font-bold"
 				>
-					Pricing
+					<div class="link link-underline link-underline-black">
+						Pricing
+					</div>
 				</a>
 
 				<!-- Dropdown Menu -->
 				<div class="z-0 inline-flex text-center">
 					<button
-						class="relative font-bold bg-transparent text-sm transition-all hover:border-gray-300 hover:text-gray-700 inline-flex items-center focus:outline-none hover:cursor-pointer unselectable"
+						class="relative font-bold bg-transparent text-sm transition-all hover:text-gray-700 inline-flex items-center focus:outline-none hover:cursor-pointer unselectable"
 						class:active={$page.url.pathname === '/contact-us' ||
-							$page.url.pathname === '/about' ||
-							$page.url.pathname === '/employment'}
+									  $page.url.pathname === '/about' ||
+								  	  $page.url.pathname === '/testimonials'}
 						on:click={() => ((dropdown = !dropdown), ($yStore = y))}
 						bind:this={dropButton}
 					>
