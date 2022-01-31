@@ -28,7 +28,7 @@
 
 <title>{$companyName} - Pricing</title>
 
-<main class="min-h-screen bg-light-bg pt-36 bg-gray-300">
+<main class="min-h-screen bg-light-bg pt-36 bg-gray-200">
 	<!-- Pricing box Section -->
 	<section class="max-w-7xl mx-auto pb-24 px-4 sm:px-6 lg:px-8">
 		<div class="sm:flex sm:flex-col sm:align-center">
@@ -404,7 +404,7 @@
 	</section>
 
 	<!-- WAVE DIVIDER -->
-	<div class="pricing-wave bg-gray-300">
+	<div class="pricing-wave bg-gray-200">
 		<svg
 			data-name="Layer 1"
 			xmlns="http://www.w3.org/2000/svg"

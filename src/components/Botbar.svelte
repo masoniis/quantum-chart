@@ -1,3 +1,7 @@
+<script>
+	import { companyName } from '../stores'
+</script>
+
 <footer class="bg-mainbg text-maintext transition-colors duration-500 p-6 pt-12">
 
 
@@ -10,7 +14,7 @@
 		>
 			<!--Mini-flex Item 1-->
 			<p class="xs:pr-4 py-1 mt-0 xs:mr-4 xs:border-r border-stone-400">
-				Copyright @ 2022 Beyondgreen
+				Copyright @ 2022 {$companyName}
 			</p>
 
 			<!--Mini-flex Item 2, underline from: https://tailwindcomponents.com/component/link-underline-animation -->
