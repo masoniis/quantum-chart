@@ -486,10 +486,9 @@
 		<!-- Question Grid -->
 		<grid class="grid grid-cols-1 md:grid-cols-2 container mx-auto max-w-5xl gap-10 px-8">
 			<div class="space-y-2">
-				<strong class="text-xl font-bold">I am a question?</strong>
+				<strong class="text-xl font-bold">Why should I spend money on this instead of using a free chart software?</strong>
 				<p class="text-sm font-normal text-maintext">
-					WITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH
-					STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFF
+					{$companyName} offers a variety of products not available with free chart software. Our advanced AR software allows you to visualize and edit charts in 3D and our animation features allow you to quickly and easily make charts that will make anyone say "wow!".
 				</p>
 			</div>
 
@@ -502,10 +501,9 @@
 			</div>
 
 			<div class="space-y-2">
-				<strong class="text-xl font-bold">I am a question?</strong>
+				<strong class="text-xl font-bold">How should I choose what plan is best for me?</strong>
 				<p class="text-sm font-normal text-maintext">
-					WITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH
-					STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFF
+					
 				</p>
 			</div>
 
