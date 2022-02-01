@@ -3,6 +3,7 @@
 	import { companyName } from '../stores';
 	import { scrollTo, scrollRef, setGlobalOptions } from 'svelte-scrolling';
 	import { onMount } from 'svelte';
+	import Visibility from '../components/Visibility.svelte';
 	import { slide, fade, fly } from 'svelte/transition';
 	import { cubicIn, cubicInOut } from 'svelte/easing';
 
@@ -247,12 +248,10 @@
 	</section>
 
 	<!-- Section 3 (Easy Section) -->
-	<section use:scrollRef={'easy'} class="container mx-auto my-24 pt-12">
-		<h1 class="md:col-span-3 rows-span-2 text-center text-6xl font-bold py-12">
-			This is how it works
-		</h1>
+	<section use:scrollRef={'easy'} class="container mx-auto pt-12">
+		<h1 class="text-center text-6xl font-bold pt-12">This is how it works</h1>
 
-		<grid class="grid grid-cols-1 grid-rows-5 md:grid-cols-3 md:grid-rows-2 p-12">
+		<grid class="grid grid-cols-1 grid-rows-1 md:grid-cols-3 p-12">
 			<div class="text-center">
 				<p class="h-24 w-24 mx-auto">
 					<Logo />
@@ -277,11 +276,36 @@
 		</grid>
 	</section>
 
+	<!-- Top (Reputation Section) Divider -->
+	<div class="rep-wave fill-lightbg">
+		<svg
+			data-name="Layer 1"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 1200 120"
+			preserveAspectRatio="none"
+		>
+			<path
+				d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+				opacity=".25"
+				class="shape-fill"
+			/>
+			<path
+				d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+				opacity=".5"
+				class="shape-fill"
+			/>
+			<path
+				d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+				class="shape-fill"
+			/>
+		</svg>
+	</div>
+
 	<!-- Section 4 (Reputation Section) -->
-	<section use:scrollRef={'reputable'} class="pt-12">
+	<section use:scrollRef={'reputable'} class="pt-12 bg-lightbg">
 		<flex class="container mx-auto gap-10 max-w-4xl flex flex-row pb-8">
-			<h1 class="w-1/2 font-bold text-5xl">Loved by those who use it</h1>
-			<p class="w-1/2 font-semibold text-xl self-center">
+			<h1 class="w-1/2 font-bold text-5xl text-maintext">Don't just take our word for it</h1>
+			<p class="w-1/2 font-semibold text-xl self-center text-gray-500">
 				No two people have the same goals, luckily {$companyName} caters to a plethora of different people
 				and situations.
 			</p>
@@ -289,8 +313,10 @@
 
 		<!-- Hobbyists -->
 		<div use:scrollRef={'hobbyists'} class="container mx-auto max-w-6xl py-12 flex flex-row">
-			<div class="w-[60%] flex flex-col gap-6">
-				<blockquote class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2">
+			<div in:fly={{ duration: 1200, x: -250 }} class="w-[60%] flex flex-col gap-6">
+				<blockquote
+					class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2"
+				>
 					<div class="flex flex-col mx-auto">
 						<div class="relative">
 							<svg
@@ -326,7 +352,9 @@
 						alt=""
 					/>
 				</blockquote>
-				<blockquote class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2">
+				<blockquote
+					class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2"
+				>
 					<div class="flex flex-col mx-auto">
 						<div class="relative">
 							<svg
@@ -362,7 +390,9 @@
 						alt=""
 					/>
 				</blockquote>
-				<blockquote class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2">
+				<blockquote
+					class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2"
+				>
 					<div class="flex flex-col mx-auto">
 						<div class="relative">
 							<svg
@@ -407,24 +437,71 @@
 					>
 						Hobbyists
 					</button>
-					<button use:scrollTo={'CEOs'} class="text-left text-gray-400 hover:underline font-semibold"> CEOs </button>
-					<button use:scrollTo={'developers'} class="text-left text-gray-400 hover:underline font-semibold">
+					<button
+						use:scrollTo={'CEOs'}
+						class="text-left text-gray-400 hover:underline font-semibold"
+					>
+						CEOs
+					</button>
+					<button
+						use:scrollTo={'developers'}
+						class="text-left text-gray-400 hover:underline font-semibold"
+					>
 						Developers
 					</button>
 				</div>
-				<h1 class="font-bold text-5xl">Certified by hobbyists abroad</h1>
+				<div class="space-y-4">
+					<h1 class="font-bold text-5xl">Certified by hobbyists abroad</h1>
+					<p class="text-gray-500">
+						Normal people from around the world use {$companyName} for many different purposes
+					</p>
+					<button
+						type="submit"
+						class="p-2 contianer mx-auto min-w-[144px] border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-700 hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400"
+					>
+						See more testimonials
+					</button>
+				</div>
 			</flex>
 		</div>
 
+		<!-- Inbetween Top Divider -->
+		<div class="rep-wave fill-gray-200">
+			<svg
+				data-name="Layer 1"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 1200 120"
+				preserveAspectRatio="none"
+			>
+				<path
+					d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+					opacity=".25"
+					class="shape-fill"
+				/>
+				<path
+					d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+					opacity=".5"
+					class="shape-fill"
+				/>
+				<path
+					d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+					class="shape-fill"
+				/>
+			</svg>
+		</div>
+
 		<!-- CEO -->
-		<div use:scrollRef={'CEOs'} class="bg-gray-300 py-12">
+		<div use:scrollRef={'CEOs'} class="bg-gray-200 py-12">
 			<div class="container mx-auto py-12 flex flex-row">
 				<div class="w-[60%]">
 					Bruhlaksjdlkasjdlkjasdlkjasdkljjaslkdjlaksjdlkajsdlkajsslkjlkjlkjasd
 				</div>
 				<flex class="flex flex-col justify-between w-[40%] gap-20">
 					<div class="flex flex-col gap-4">
-						<button use:scrollTo={'hobbyists'} class="text-left font-semibold text-gray-400 hover:underline">
+						<button
+							use:scrollTo={'hobbyists'}
+							class="text-left font-semibold text-gray-400 hover:underline"
+						>
 							Hobbyists
 						</button>
 						<button
@@ -433,7 +510,10 @@
 						>
 							CEOs
 						</button>
-						<button use:scrollTo={'developers'} class="text-left font-semibold text-gray-400 hover:underline">
+						<button
+							use:scrollTo={'developers'}
+							class="text-left font-semibold text-gray-400 hover:underline"
+						>
 							Developers
 						</button>
 					</div>
@@ -442,8 +522,33 @@
 			</div>
 		</div>
 
+		<!-- Inbetween Bottom Divider -->
+		<div class="rep-wave2 fill-gray-200">
+			<svg
+				data-name="Layer 1"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 1200 120"
+				preserveAspectRatio="none"
+			>
+				<path
+					d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+					opacity=".25"
+					class="shape-fill"
+				/>
+				<path
+					d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+					opacity=".5"
+					class="shape-fill"
+				/>
+				<path
+					d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+					class="shape-fill"
+				/>
+			</svg>
+		</div>
+
 		<!-- Developer -->
-		<div use:scrollRef={'developers'} class="bg-gray-200 py-12">
+		<div use:scrollRef={'developers'} class="bg-lightbg py-12">
 			<div class="container mx-auto py-12 flex flex-row">
 				<div class="w-[60%]">
 					<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -490,10 +595,18 @@
 				</div>
 				<flex class="flex flex-col justify-between w-[40%] gap-20">
 					<div class="flex flex-col gap-4">
-						<button use:scrollTo={'hobbyists'} class="text-left font-semibold text-gray-400 hover:underline">
+						<button
+							use:scrollTo={'hobbyists'}
+							class="text-left font-semibold text-gray-400 hover:underline"
+						>
 							Hobbyists
 						</button>
-						<button use:scrollTo={'CEOs'} class="text-left font-semibold text-gray-400 hover:underline"> CEOs </button>
+						<button
+							use:scrollTo={'CEOs'}
+							class="text-left font-semibold text-gray-400 hover:underline"
+						>
+							CEOs
+						</button>
 						<button
 							use:scrollTo={'developers'}
 							class="text-left hover:underline font-semibold decoration-emerald-700 text-emerald-700"
@@ -506,6 +619,31 @@
 			</div>
 		</div>
 	</section>
+
+	<!-- Bot (Reputation Section) Divider -->
+	<div class="rep-wave2 fill-lightbg">
+		<svg
+			data-name="Layer 1"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 1200 120"
+			preserveAspectRatio="none"
+		>
+			<path
+				d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+				opacity=".25"
+				class="shape-fill"
+			/>
+			<path
+				d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+				opacity=".5"
+				class="shape-fill"
+			/>
+			<path
+				d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+				class="shape-fill"
+			/>
+		</svg>
+	</div>
 
 	<!-- Section 5 (Perks) -->
 	<section class="m-72" />
@@ -699,5 +837,38 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+	}
+
+	.rep-wave {
+		position: relative;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+		transform: rotate(180deg);
+	}
+
+	.rep-wave svg {
+		position: relative;
+		display: block;
+		width: calc(100% + 1.3px);
+		height: 24px;
+	}
+
+	.rep-wave2 {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+	}
+
+	.rep-wave2 svg {
+		position: relative;
+		display: block;
+		width: calc(100% + 1.3px);
+		height: 24px;
 	}
 </style>
