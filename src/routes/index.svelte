@@ -1,13 +1,18 @@
 <script>
 	import Logo from '../components/Logo.svelte';
 	import { companyName } from '../stores';
-	import { scrollTo, scrollRef } from 'svelte-scrolling';
+	import { scrollTo, scrollRef, setGlobalOptions } from 'svelte-scrolling';
 	import { onMount } from 'svelte';
 	import { slide, fade, fly } from 'svelte/transition';
-	import tilt from '../components/tilt';
+	import { cubicIn, cubicInOut } from 'svelte/easing';
+
+	setGlobalOptions({
+		duration: 400,
+		offset: -80,
+		easing: cubicInOut
+	});
 
 	let width;
-
 	let squiggle;
 
 	$: {
@@ -56,7 +61,7 @@
 <svelte:window bind:innerWidth={width} />
 
 <main class="min-h-screen text-maintext overflow-hidden">
-	<!-- Section 1 -->
+	<!-- Section 1 (Landing View) -->
 	<section class="min-h-screen min-w-screen bg-topsection pt-24 sm:pt-32">
 		<div class="max-w-6xl mx-auto xl:px-10 pt-4 relative">
 			<grid class="grid grid-cols-1 auto-rows-min w-full sm:px-8">
@@ -97,7 +102,8 @@
 					md:py-4 md:text-md
 					lg:text-xl lg:max-w-2xl lg:mx-0 lg:text-left"
 				>
-					Any chart at the tip of your fingers. With the capability to immerse yourself inside the data through virtual reality, there truly is no limit.
+					Any chart at the tip of your fingers. With the capability to immerse yourself inside the
+					data through virtual reality, there truly is no limit.
 				</h2>
 
 				<form
@@ -159,7 +165,7 @@
 		</svg>
 	</div>
 
-	<!-- Section 2 -->
+	<!-- Section 2 (Navigation Section) -->
 	<section class="container mx-auto my-24 pt-12">
 		<flex class="hero__flex perspective xl:justify-center mx-8 border-t-2 pt-16 border-black">
 			<div class="max-w-xl z-[3] feature-grid-text pb-36">
@@ -240,7 +246,7 @@
 		</flex>
 	</section>
 
-	<!-- Section 3 -->
+	<!-- Section 3 (Easy Section) -->
 	<section use:scrollRef={'easy'} class="container mx-auto my-24 pt-12">
 		<h1 class="md:col-span-3 rows-span-2 text-center text-6xl font-bold py-12">
 			This is how it works
@@ -271,54 +277,129 @@
 		</grid>
 	</section>
 
-	<!-- Section 4 -->
-	<section use:scrollRef={'reputable'} class="m-72">
-		<p class="text-center">Trusted by people and stuff</p>
-		<div class="bg-gray-50 pt-12 sm:pt-16">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="max-w-4xl mx-auto text-center">
-					<h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-						Trusted by developers from over 80 planets
-					</h2>
-					<p class="mt-3 text-xl text-gray-500 sm:mt-4">
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus repellat
-						laudantium.
-					</p>
+	<!-- Section 4 (Reputation Section) -->
+	<section use:scrollRef={'reputable'} class="bg-gray-200 pt-12">
+		<flex class="container mx-auto gap-10 max-w-4xl flex flex-row pb-8">
+			<h1 class="w-1/2 font-bold text-5xl">Loved by those who use it</h1>
+			<p class="w-1/2 font-semibold text-xl self-center">
+				No two people have the same goals, luckily {$companyName} caters to a plethora of different people
+				and situations.
+			</p>
+		</flex>
+
+		<!-- Hobbyists -->
+		<div use:scrollRef={'hobbyists'} class="container mx-auto py-12 flex flex-row">
+			<div class="w-2/3">Bruhlaksjdlkasjdlkjasdlkjasdkljjaslkdjlaksjdlkajsdlkajsslkjlkjlkjasd</div>
+			<flex class="flex flex-col gap-20">
+				<div class="flex flex-col gap-4">
+					<button
+						use:scrollTo={'hobbyists'}
+						class="text-left hover:underline decoration-emerald-700 text-emerald-700"
+					>
+						Hobbyists
+					</button>
+					<button use:scrollTo={'CEOs'} class="text-left hover:underline"> CEOs </button>
+					<button use:scrollTo={'developers'} class="text-left hover:underline">
+						Developers
+					</button>
 				</div>
+				<h1 class="font-bold text-4xl">Certified by hobbyists abroad</h1>
+			</flex>
+		</div>
+
+		<!-- CEO -->
+		<div use:scrollRef={'CEOs'} class="bg-gray-300 py-12">
+			<div class="container mx-auto py-12 flex flex-row">
+				<div class="w-2/3">
+					Bruhlaksjdlkasjdlkjasdlkjasdkljjaslkdjlaksjdlkajsdlkajsslkjlkjlkjasd
+				</div>
+				<flex class="flex flex-col gap-20">
+					<div class="flex flex-col gap-4">
+						<button use:scrollTo={'hobbyists'} class="text-left hover:underline">
+							Hobbyists
+						</button>
+						<button
+							use:scrollTo={'CEOs'}
+							class="text-left hover:underline decoration-emerald-700 text-emerald-700"
+						>
+							CEOs
+						</button>
+						<button use:scrollTo={'developers'} class="text-left hover:underline">
+							Developers
+						</button>
+					</div>
+					<h1 class="font-bold text-2xl">STUFFFFFFF</h1>
+				</flex>
 			</div>
-			<div class="mt-10 pb-12 bg-white sm:pb-16">
-				<div class="relative">
-					<div class="absolute inset-0 h-1/2 bg-gray-50" />
-					<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-						<div class="max-w-4xl mx-auto">
-							<dl class="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
-								<div
-									class="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r"
-								>
-									<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
-										Pepperoni
-									</dt>
-									<dd class="order-1 text-5xl font-extrabold text-indigo-600">100%</dd>
-								</div>
-								<div
-									class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r"
-								>
-									<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Delivery</dt>
-									<dd class="order-1 text-5xl font-extrabold text-indigo-600">24/7</dd>
-								</div>
-								<div
-									class="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l"
-								>
-									<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Calories</dt>
-									<dd class="order-1 text-5xl font-extrabold text-indigo-600">100k</dd>
-								</div>
-							</dl>
+		</div>
+
+		<!-- Developer -->
+		<div use:scrollRef={'developers'} class="bg-gray-200 py-12">
+			<div class="container mx-auto py-12 flex flex-row">
+				<div class="w-2/3">
+					<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+						<div class="max-w-4xl mx-auto text-center">
+							<h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+								Trusted by developers of over 80,000 different applications
+							</h2>
+							<p class="mt-3 text-xl text-gray-500 sm:mt-4">
+								Far and abroad, developers love to use {$companyName} in their workplace for productivity
+								and data display.
+							</p>
+						</div>
+					</div>
+					<div class="mt-10 pb-12 sm:pb-16">
+						<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+							<div class="max-w-4xl mx-auto">
+								<dl class="rounded-lg shadow-lg sm:grid sm:grid-cols-3">
+									<div
+										class="flex flex-col border-b p-6 text-center sm:border-0 sm:border-r bg-mainbg"
+									>
+										<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
+											Reliable
+										</dt>
+										<dd class="order-1 text-5xl font-extrabold text-indigo-600">100%</dd>
+									</div>
+									<div
+										class="flex flex-col border-t border-b border-gray-100 bg-mainbg p-6 text-center sm:border-0 sm:border-l sm:border-r"
+									>
+										<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
+											Support
+										</dt>
+										<dd class="order-1 text-5xl font-extrabold text-indigo-600">24/7</dd>
+									</div>
+									<div
+										class="flex flex-col border-t border-gray-100 bg-mainbg p-6 text-center sm:border-0 sm:border-l"
+									>
+										<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Users</dt>
+										<dd class="order-1 text-5xl font-extrabold text-indigo-600">190k</dd>
+									</div>
+								</dl>
+							</div>
 						</div>
 					</div>
 				</div>
+				<flex class="flex flex-col gap-20">
+					<div class="flex flex-col gap-4">
+						<button use:scrollTo={'hobbyists'} class="text-left hover:underline">
+							Hobbyists
+						</button>
+						<button use:scrollTo={'CEOs'} class="text-left hover:underline"> CEOs </button>
+						<button
+							use:scrollTo={'developers'}
+							class="text-left hover:underline decoration-emerald-700 text-emerald-700"
+						>
+							Developers
+						</button>
+					</div>
+					<h1 class="font-bold text-2xl">STUFFFFFFF</h1>
+				</flex>
 			</div>
 		</div>
 	</section>
+
+	<!-- Section 5 (Perks) -->
+	<section class="m-72" />
 
 	<section use:scrollRef={'low-cost'} class="container mx-auto">
 		<h1 class="text-center text-4xl pb-8">Always at your side</h1>
@@ -369,17 +450,17 @@
 		</div>
 	</section>
 
-	<!-- Section 4 -->
+	<!-- Section 6 -->
 	<section use:scrollRef={'satisfaction-guarenteed'} class="m-72">
 		<p class="text-center">PROFESSION SECITON</p>
 	</section>
 
-	<!-- Section 4 -->
+	<!-- Section 7 -->
 	<section use:scrollRef={'responsive'} class="m-72">
 		<p class="text-center">RESPONSVIE SECITON</p>
 	</section>
 
-	<!-- Section 5 -->
+	<!-- Section 8 (Risk Free Section) -->
 	<section use:scrollRef={'risk-free'} class="m-72">
 		<h1 class="text-center text-4xl font-bold">100% risk-free</h1>
 
