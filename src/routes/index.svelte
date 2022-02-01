@@ -278,7 +278,7 @@
 	</section>
 
 	<!-- Section 4 (Reputation Section) -->
-	<section use:scrollRef={'reputable'} class="bg-gray-200 pt-12">
+	<section use:scrollRef={'reputable'} class="pt-12">
 		<flex class="container mx-auto gap-10 max-w-4xl flex flex-row pb-8">
 			<h1 class="w-1/2 font-bold text-5xl">Loved by those who use it</h1>
 			<p class="w-1/2 font-semibold text-xl self-center">
@@ -288,9 +288,9 @@
 		</flex>
 
 		<!-- Hobbyists -->
-		<div use:scrollRef={'hobbyists'} class="container mx-auto py-12 flex flex-row">
-			<div class="w-2/3 flex flex-col gap-6">
-				<blockquote class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-3/4 p-2">
+		<div use:scrollRef={'hobbyists'} class="container mx-auto max-w-6xl py-12 flex flex-row">
+			<div class="w-[60%] flex flex-col gap-6">
+				<blockquote class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2">
 					<div class="flex flex-col mx-auto">
 						<div class="relative">
 							<svg
@@ -326,7 +326,7 @@
 						alt=""
 					/>
 				</blockquote>
-				<blockquote class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-3/4 p-2">
+				<blockquote class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2">
 					<div class="flex flex-col mx-auto">
 						<div class="relative">
 							<svg
@@ -362,7 +362,7 @@
 						alt=""
 					/>
 				</blockquote>
-				<blockquote class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-3/4 p-2">
+				<blockquote class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2">
 					<div class="flex flex-col mx-auto">
 						<div class="relative">
 							<svg
@@ -399,16 +399,16 @@
 					/>
 				</blockquote>
 			</div>
-			<flex class="flex flex-col gap-20">
+			<flex class="flex flex-col justify-between w-[40%] gap-20 ">
 				<div class="flex flex-col gap-4">
 					<button
 						use:scrollTo={'hobbyists'}
-						class="text-left hover:underline decoration-emerald-700 text-emerald-700"
+						class="text-left hover:underline font-semibold decoration-emerald-700 text-emerald-700"
 					>
 						Hobbyists
 					</button>
-					<button use:scrollTo={'CEOs'} class="text-left hover:underline"> CEOs </button>
-					<button use:scrollTo={'developers'} class="text-left hover:underline">
+					<button use:scrollTo={'CEOs'} class="text-left text-gray-400 hover:underline font-semibold"> CEOs </button>
+					<button use:scrollTo={'developers'} class="text-left text-gray-400 hover:underline font-semibold">
 						Developers
 					</button>
 				</div>
@@ -419,25 +419,25 @@
 		<!-- CEO -->
 		<div use:scrollRef={'CEOs'} class="bg-gray-300 py-12">
 			<div class="container mx-auto py-12 flex flex-row">
-				<div class="w-2/3">
+				<div class="w-[60%]">
 					Bruhlaksjdlkasjdlkjasdlkjasdkljjaslkdjlaksjdlkajsdlkajsslkjlkjlkjasd
 				</div>
-				<flex class="flex flex-col gap-20">
+				<flex class="flex flex-col justify-between w-[40%] gap-20">
 					<div class="flex flex-col gap-4">
-						<button use:scrollTo={'hobbyists'} class="text-left hover:underline">
+						<button use:scrollTo={'hobbyists'} class="text-left font-semibold text-gray-400 hover:underline">
 							Hobbyists
 						</button>
 						<button
 							use:scrollTo={'CEOs'}
-							class="text-left hover:underline decoration-emerald-700 text-emerald-700"
+							class="text-left hover:underline font-semibold decoration-emerald-700 text-emerald-700"
 						>
 							CEOs
 						</button>
-						<button use:scrollTo={'developers'} class="text-left hover:underline">
+						<button use:scrollTo={'developers'} class="text-left font-semibold text-gray-400 hover:underline">
 							Developers
 						</button>
 					</div>
-					<h1 class="font-bold text-2xl">STUFFFFFFF</h1>
+					<h1 class="font-bold text-5xl">Certified by CEOs abroad</h1>
 				</flex>
 			</div>
 		</div>
@@ -445,7 +445,7 @@
 		<!-- Developer -->
 		<div use:scrollRef={'developers'} class="bg-gray-200 py-12">
 			<div class="container mx-auto py-12 flex flex-row">
-				<div class="w-2/3">
+				<div class="w-[60%]">
 					<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 						<div class="max-w-4xl mx-auto text-center">
 							<h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -488,20 +488,20 @@
 						</div>
 					</div>
 				</div>
-				<flex class="flex flex-col gap-20">
+				<flex class="flex flex-col justify-between w-[40%] gap-20">
 					<div class="flex flex-col gap-4">
-						<button use:scrollTo={'hobbyists'} class="text-left hover:underline">
+						<button use:scrollTo={'hobbyists'} class="text-left font-semibold text-gray-400 hover:underline">
 							Hobbyists
 						</button>
-						<button use:scrollTo={'CEOs'} class="text-left hover:underline"> CEOs </button>
+						<button use:scrollTo={'CEOs'} class="text-left font-semibold text-gray-400 hover:underline"> CEOs </button>
 						<button
 							use:scrollTo={'developers'}
-							class="text-left hover:underline decoration-emerald-700 text-emerald-700"
+							class="text-left hover:underline font-semibold decoration-emerald-700 text-emerald-700"
 						>
 							Developers
 						</button>
 					</div>
-					<h1 class="font-bold text-2xl">STUFFFFFFF</h1>
+					<h1 class="font-bold text-5xl">Certified by developers abroad</h1>
 				</flex>
 			</div>
 		</div>
