@@ -451,9 +451,9 @@
 					</button>
 				</div>
 				<div class="space-y-4">
-					<h1 class="font-bold text-5xl">Certified by hobbyists abroad</h1>
+					<h1 class="font-bold text-5xl">Loved by hobbyists around the world</h1>
 					<p class="text-gray-500">
-						Normal people from around the world use {$companyName} for many different purposes
+						Normal people from around the world who use {$companyName} have nothing but love to share
 					</p>
 					<button
 						type="submit"
@@ -492,7 +492,7 @@
 
 		<!-- CEO -->
 		<div use:scrollRef={'CEOs'} class="bg-gray-200 py-12">
-			<div class="container mx-auto py-12 flex flex-row">
+			<div class="container mx-auto max-w-6xl py-12 flex flex-row">
 				<div class="w-[60%]">
 					Bruhlaksjdlkasjdlkjasdlkjasdkljjaslkdjlaksjdlkajsdlkajsslkjlkjlkjasd
 				</div>
@@ -517,7 +517,7 @@
 							Developers
 						</button>
 					</div>
-					<h1 class="font-bold text-5xl">Certified by CEOs abroad</h1>
+					<h1 class="font-bold text-5xl">Respected by hundreds of CEOs</h1>
 				</flex>
 			</div>
 		</div>
