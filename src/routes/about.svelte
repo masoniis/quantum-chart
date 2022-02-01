@@ -3,7 +3,7 @@
 	import { companyName } from '../stores';
 </script>
 
-<title>{$companyName}  - About</title>
+<title>{$companyName} - About</title>
 
 <main class="min-h-screen text-maintext overflow-hidden">
 	<!-- Top Section -->

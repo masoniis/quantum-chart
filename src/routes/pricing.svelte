@@ -480,16 +480,18 @@
 
 	<!-- FAQ Section -->
 	<section class="bg-white py-24">
-		<h1 class="font-extrabold text-5xl text-center pb-12">
-			Frequently Asked Questions
-		</h1>
+		<h1 class="font-extrabold text-5xl text-center pb-12">Frequently Asked Questions</h1>
 
 		<!-- Question Grid -->
 		<grid class="grid grid-cols-1 md:grid-cols-2 container mx-auto max-w-5xl gap-10 px-8">
 			<div class="space-y-2">
-				<strong class="text-xl font-bold">Why should I spend money on this instead of using a free chart software?</strong>
+				<strong class="text-xl font-bold"
+					>Why should I spend money on this instead of using a free chart software?</strong
+				>
 				<p class="text-sm font-normal text-maintext">
-					{$companyName} offers a variety of products not available with free chart software. Our advanced AR software allows you to visualize and edit charts in 3D and our animation features allow you to quickly and easily make charts that will make anyone say "wow!".
+					{$companyName} offers a variety of products not available with free chart software. Our advanced
+					AR software allows you to visualize and edit charts in 3D and our animation features allow
+					you to quickly and easily make charts that will make anyone say "wow!".
 				</p>
 			</div>
 
@@ -503,9 +505,7 @@
 
 			<div class="space-y-2">
 				<strong class="text-xl font-bold">How should I choose what plan is best for me?</strong>
-				<p class="text-sm font-normal text-maintext">
-					
-				</p>
+				<p class="text-sm font-normal text-maintext" />
 			</div>
 
 			<div class="space-y-2">
@@ -543,7 +543,7 @@
 	}
 
 	.pricing-wave .shape-fill {
-		fill: rgb(245 245 244)
+		fill: rgb(245 245 244);
 	}
 
 	.trial-wave {

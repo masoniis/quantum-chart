@@ -6,7 +6,7 @@
 	let y;
 </script>
 
-<title>{$companyName}  - Testimonials</title>
+<title>{$companyName} - Testimonials</title>
 
 <svelte:window bind:scrollY={y} />
 
@@ -59,12 +59,14 @@
 									d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
 								/>
 							</svg>
-							<p class="mt-2 text-sm text-gray-600 
+							<p
+								class="mt-2 text-sm text-gray-600 
 							 	text-center	 
 								2xs:pl-12 2xs:text-left
 								sm:text-base 
 							   	lg:text-sm 
-								xl:text-base">
+								xl:text-base"
+							>
 								I will tell you now, my lawn has never looked so breathtaking!
 							</p>
 						</div>
@@ -100,12 +102,14 @@
 									d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
 								/>
 							</svg>
-							<p class="mt-2 text-sm text-gray-600 
+							<p
+								class="mt-2 text-sm text-gray-600 
 							 	text-center	 
 								2xs:pl-12 2xs:text-left
 								sm:text-base 
 							   	lg:text-sm 
-								xl:text-base">
+								xl:text-base"
+							>
 								I will tell you now, my lawn has never looked so breathtaking!
 							</p>
 						</div>
@@ -141,12 +145,14 @@
 									d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
 								/>
 							</svg>
-							<p class="mt-2 text-sm text-gray-600 
+							<p
+								class="mt-2 text-sm text-gray-600 
 							 	text-center	 
 								2xs:pl-12 2xs:text-left
 								sm:text-base 
 							   	lg:text-sm 
-								xl:text-base">
+								xl:text-base"
+							>
 								I will tell you now, my lawn has never looked so breathtaking!
 							</p>
 						</div>
@@ -182,12 +188,14 @@
 									d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
 								/>
 							</svg>
-							<p class="mt-2 text-sm text-gray-600 
+							<p
+								class="mt-2 text-sm text-gray-600 
 							 	text-center	 
 								2xs:pl-12 2xs:text-left
 								sm:text-base 
 							   	lg:text-sm 
-								xl:text-base">
+								xl:text-base"
+							>
 								I will tell you now, my lawn has never looked so breathtaking!
 							</p>
 						</div>
@@ -223,12 +231,14 @@
 									d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
 								/>
 							</svg>
-							<p class="mt-2 text-sm text-gray-600 
+							<p
+								class="mt-2 text-sm text-gray-600 
 							 	text-center	 
 								2xs:pl-12 2xs:text-left
 								sm:text-base 
 							   	lg:text-sm 
-								xl:text-base">
+								xl:text-base"
+							>
 								I will tell you now, my lawn has never looked so breathtaking!
 							</p>
 						</div>
@@ -264,12 +274,14 @@
 									d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
 								/>
 							</svg>
-							<p class="mt-2 text-sm text-gray-600 
+							<p
+								class="mt-2 text-sm text-gray-600 
 							 	text-center	 
 								2xs:pl-12 2xs:text-left
 								sm:text-base 
 							   	lg:text-sm 
-								xl:text-base">
+								xl:text-base"
+							>
 								I will tell you now, my lawn has never looked so breathtaking!
 							</p>
 						</div>

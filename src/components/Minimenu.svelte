@@ -190,29 +190,29 @@
 
 	/* width */
 	main::-webkit-scrollbar {
-	  width: 7px;
+		width: 7px;
 	}
-	
+
 	/* Track */
 	main::-webkit-scrollbar-track {
-	  background: #9fa6af; 
-	  border-radius: 100vw;
-	  margin-block: .25rem;
+		background: #9fa6af;
+		border-radius: 100vw;
+		margin-block: 0.25rem;
 	}
-	 
+
 	/* Handle */
 	main::-webkit-scrollbar-thumb {
-	  background: rgb(105, 102, 102);
-	  border-radius: 100vw;
+		background: rgb(105, 102, 102);
+		border-radius: 100vw;
 	}
-	
+
 	/* Handle on hover */
 	main::-webkit-scrollbar-thumb:hover {
-	  background: #555; 
+		background: #555;
 	}
 
 	@supports (scrollbar-color: #555 transparent) {
-		 main {
+		main {
 			scrollbar-color: #999 #555;
 			scrollbar-width: thin;
 			overflow-x: hidden;

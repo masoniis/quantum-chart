@@ -3,16 +3,16 @@
 	import Visibility from '../components/Visibility.svelte';
 	import Backdrop from '../components/Backdrop.svelte';
 	import closable from 'svelte-closable';
-	import {contactModal, yStore, companyName } from '../stores'
+	import { contactModal, yStore, companyName } from '../stores';
 
 	let first, last, email, message;
 
 	const handleSubmit = () => {
 		$contactModal = true;
-		first = ""
-		last = ""
-		email = ""
-		message = ""
+		first = '';
+		last = '';
+		email = '';
+		message = '';
 	};
 </script>
 
@@ -20,17 +20,28 @@
 
 {#if $contactModal}
 	<Backdrop />
-	<modal in:slide={{duration: 500}} out:fade={{duration:200}} class="grid grid-cols-1 grid-rows-1 fixed z-30 h-screen w-full">
+	<modal
+		in:slide={{ duration: 500 }}
+		out:fade={{ duration: 200 }}
+		class="grid grid-cols-1 grid-rows-1 fixed z-30 h-screen w-full"
+	>
 		<div class="p-12 justify-self-center self-center">
-			<div use:closable on:outside-click={() => ($contactModal = false)} class="bg-zinc-100 max-w-lg p-10 rounded-lg grid grid-cols-2 grid-rows-2">
+			<div
+				use:closable
+				on:outside-click={() => ($contactModal = false)}
+				class="bg-zinc-100 max-w-lg p-10 rounded-lg grid grid-cols-2 grid-rows-2"
+			>
 				<p class="col-span-2 text-center p-2 md:p-4">
-					Thank you for submitting! We will contact you shortly with a reply to that sweet juicy question!
+					Thank you for submitting! We will contact you shortly with a reply to that sweet juicy
+					question!
 				</p>
-				<button on:click={() => ($contactModal = false)} class="col-span-2 self-center p-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"> 
+				<button
+					on:click={() => ($contactModal = false)}
+					class="col-span-2 self-center p-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+				>
 					Exit
 				</button>
 			</div>
-			
 		</div>
 	</modal>
 {/if}
@@ -53,9 +64,7 @@
 		<!-- Form Element Container, GRID -->
 		<div class="grid grid-cols-2 gap-y-6 gap-x-4 sm:grid-cols-4">
 			<div class="sm:col-span-2">
-				<label for="first-name" class="block text-sm font-medium text-gray-700">
-					First name
-				</label>
+				<label for="first-name" class="block text-sm font-medium text-gray-700"> First name </label>
 				<div class="mt-1">
 					<input
 						bind:value={first}

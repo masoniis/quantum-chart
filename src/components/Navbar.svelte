@@ -88,7 +88,7 @@
 		<div class="flex justify-between h-16">
 			<!-- Logo -->
 			<div class="flex items-center">
-				<a on:click={() => $menu = false} href="/" class="block xs:hidden w-auto">
+				<a on:click={() => ($menu = false)} href="/" class="block xs:hidden w-auto">
 					<p class="h-12 w-12">
 						<Logo />
 					</p>
@@ -117,22 +117,22 @@
 					class:active={$page.url.pathname === '/pricing'}
 					class="hover:text-gray-700 transition-all inline-flex items-center text-sm font-bold"
 				>
-					<div class="link link-underline link-underline-black">
-						Pricing
-					</div>
+					<div class="link link-underline link-underline-black">Pricing</div>
 				</a>
 
 				<!-- Dropdown Menu -->
 				<div class="z-0 inline-flex text-center">
 					<button
-						class="relative font-bold bg-transparent text-sm transition-all hover:text-gray-700 inline-flex items-center focus:outline-none hover:cursor-pointer unselectable"
+						class="relative font-bold bg-transparent text-sm transition-all hover:text-gray-700 inline-flex items-center focus:outline-none hover:cursor-pointer unselectable
+							   "
 						class:active={$page.url.pathname === '/contact-us' ||
-									  $page.url.pathname === '/about' ||
-								  	  $page.url.pathname === '/testimonials'}
+							$page.url.pathname === '/about' ||
+							$page.url.pathname === '/testimonials'}
 						on:click={() => ((dropdown = !dropdown), ($yStore = y))}
 						bind:this={dropButton}
 					>
 						Company
+
 						<!-- Dropdown Icon -->
 						<svg
 							class="ml-2 h-5 w-5 {iconRotate}"
@@ -196,7 +196,8 @@
 												<div>
 													<p class="text-base font-medium text-gray-900">Testimonials</p>
 													<p class="mt-1 text-sm text-gray-500">
-														Don't just take our word for it! Read from our extensive tesimonial list.
+														Don't just take our word for it! Read from our extensive tesimonial
+														list.
 													</p>
 												</div>
 											</div>
