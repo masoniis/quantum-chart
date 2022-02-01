@@ -97,8 +97,7 @@
 					md:py-4 md:text-md
 					lg:text-xl lg:max-w-2xl lg:mx-0 lg:text-left"
 				>
-					Mowing, shoveling, airation, leaf blowing, etc we are very cool basically please buy us
-					please please we need u i swear it will be worth
+					Any chart at the tip of your fingers. With the capability to immerse yourself inside the data through virtual reality, there truly is no limit.
 				</h2>
 
 				<form
