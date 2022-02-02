@@ -592,9 +592,6 @@
 		<!-- CEO -->
 		<div use:scrollRef={'CEOs'} class="bg-gray-200 py-12">
 			<div class="container mx-auto max-w-6xl py-12 flex flex-row">
-				<div class="w-[60%]">
-					Bruhlaksjdlkasjdlkjasdlkjasdkljjaslkdjlaksjdlkajsdlkajsslkjlkjlkjasd
-				</div>
 				<flex class="flex flex-col justify-between w-[40%] gap-20">
 					<div class="flex flex-col gap-4">
 						<button
@@ -624,6 +621,122 @@
 						</p>
 					</div>
 				</flex>
+				<div class="w-[60%] ml-0 flex flex-col gap-4">
+					<blockquote
+						class="bg-mainbg h-fit shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 self-end"
+					>
+						<div class="flex flex-col mx-auto">
+							<div class="relative">
+								<svg
+									class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 100 125"
+								>
+									<path
+										d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
+									/>
+								</svg>
+								<p
+									class="mt-2 text-sm text-gray-600 
+									 text-center	 
+									2xs:pl-12 2xs:text-left
+									sm:text-base 
+									   lg:text-sm 
+									xl:text-base"
+								>
+									I love to play around with {$companyName} in my free time, it's just so satisfying.
+								</p>
+							</div>
+
+							<h3
+								class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
+							>
+								Jane Cooper <span class="hidden xs:inline text-gray-500"> - Happy Neighbor</span>
+							</h3>
+						</div>
+						<img
+							class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
+							src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
+							alt=""
+						/>
+					</blockquote>
+					<blockquote
+					class="bg-mainbg h-fit shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 self-end"
+				>
+					<div class="flex flex-col mx-auto">
+						<div class="relative">
+							<svg
+								class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 100 125"
+							>
+								<path
+									d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
+								/>
+							</svg>
+							<p
+								class="mt-2 text-sm text-gray-600 
+								 text-center	 
+								2xs:pl-12 2xs:text-left
+								sm:text-base 
+								   lg:text-sm 
+								xl:text-base"
+							>
+								I love to play around with {$companyName} in my free time, it's just so satisfying.
+							</p>
+						</div>
+
+						<h3
+							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
+						>
+							Jane Cooper <span class="hidden xs:inline text-gray-500"> - Happy Neighbor</span>
+						</h3>
+					</div>
+					<img
+						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
+						src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
+						alt=""
+					/>
+				</blockquote>
+				<blockquote
+				class="bg-mainbg h-fit shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 self-end"
+			>
+				<div class="flex flex-col mx-auto">
+					<div class="relative">
+						<svg
+							class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 100 125"
+						>
+							<path
+								d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
+							/>
+						</svg>
+						<p
+							class="mt-2 text-sm text-gray-600 
+							 text-center	 
+							2xs:pl-12 2xs:text-left
+							sm:text-base 
+							   lg:text-sm 
+							xl:text-base"
+						>
+							I love to play around with {$companyName} in my free time, it's just so satisfying.
+						</p>
+					</div>
+
+					<h3
+						class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
+					>
+						Jane Cooper <span class="hidden xs:inline text-gray-500"> - Happy Neighbor</span>
+					</h3>
+				</div>
+				<img
+					class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
+					src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
+					alt=""
+				/>
+			</blockquote>
+				</div>
 			</div>
 		</div>
 
@@ -661,7 +774,10 @@
 							<div class="order-1 text-5xl font-extrabold text-indigo-600">99%</div>
 							<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Satisfaction</dt>
 						</div>
-						<p class="col-span-3 pl-4 self-center">"Wow this chart software is so great, I was able to implement it in my portfolio for extremely impressive animations using the api!" - John Mark</p>
+						<p class="col-span-3 pl-4 self-center">
+							"Wow this chart software is so great, I was able to implement it in my portfolio for
+							extremely impressive animations using the api!" - John Mark
+						</p>
 					</blockquote>
 					<blockquote class="grid grid-cols-4 bg-white shadow-lg mr-8 my-6 w-[90%] rounded-md">
 						<div class="p-6 border-r-2 col-span-1">
@@ -700,7 +816,7 @@
 						</button>
 					</div>
 					<div class="space-y-4">
-						<h1 class="font-bold text-[3.25rem] leading-[1]">Certified by developers abroad</h1>
+						<h1 class="font-bold text-[3.25rem] leading-[1]">Certified by developers</h1>
 						<p class="text-gray-500">
 							With our custom API, 24/7 support, and large user-base, Quantum Chart makes it a
 							breeze for developers to implement and deploy simple and immersive charts into their
