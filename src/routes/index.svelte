@@ -209,7 +209,7 @@
 					class="row-span-3 col-span-2 bg-gray-200 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
 				>
 					<!-- Easy to Use Image -->
-					<img class="rounded-2xl h-48" src="easy.jpg" alt="Easy to Use" />
+					<img class="rounded-2xl h-48" src="easy-to-use.jpg" alt="Easy to Use" />
 				</button>
 				<button
 					use:scrollTo={'satisfaction-guarenteed'}
