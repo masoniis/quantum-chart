@@ -551,7 +551,7 @@
 					</button>
 				</div>
 				<div class="space-y-4">
-					<h1 class="font-bold text-5xl">Loved by hobbyists around the world</h1>
+					<h1 class="font-bold text-[3.25rem] leading-[1]">Loved by hobbyists around the world</h1>
 					<p class="text-gray-500">
 						Normal people from around the world who use {$companyName} have nothing but love to share
 					</p>
@@ -617,7 +617,7 @@
 						</button>
 					</div>
 					<div class="space-y-4">
-						<h1 class="font-bold text-5xl">Respected by hundreds of CEOs</h1>
+						<h1 class="font-bold text-[3.25rem] leading-[1]">Respected by hundreds of CEOs</h1>
 						<p class="text-gray-500">
 							It's really no secret, {$companyName} brings many benefits to CEOs and the companies they
 							run.
@@ -655,37 +655,28 @@
 		<!-- Developer -->
 		<div use:scrollRef={'developers'} class="bg-lightbg pt-12">
 			<div class="container mx-auto py-12 flex flex-row max-w-6xl">
-				<div class="w-[60%]">
-					<div class="mt-10 pb-12 sm:pb-16">
-						<div class="relative max-w-7xl">
-							<div class="max-w-4xl mx-auto">
-								<dl class="rounded-lg shadow-lg sm:grid sm:grid-cols-3">
-									<div
-										class="flex flex-col border-b p-6 text-center sm:border-0 sm:border-r bg-mainbg"
-									>
-										<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
-											Satisfaction
-										</dt>
-										<dd class="order-1 text-5xl font-extrabold text-indigo-600">99%</dd>
-									</div>
-									<div
-										class="flex flex-col border-t border-b border-gray-100 bg-mainbg p-6 text-center sm:border-0 sm:border-l sm:border-r"
-									>
-										<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
-											Support
-										</dt>
-										<dd class="order-1 text-5xl font-extrabold text-indigo-600">24/7</dd>
-									</div>
-									<div
-										class="flex flex-col border-t border-gray-100 bg-mainbg p-6 text-center sm:border-0 sm:border-l"
-									>
-										<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Users</dt>
-										<dd class="order-1 text-5xl font-extrabold text-indigo-600">190k</dd>
-									</div>
-								</dl>
-							</div>
+				<div class="w-[60%] flex flex-col justify-between">
+					<blockquote class="grid grid-cols-4 bg-white shadow-lg mr-8 w-[90%] rounded-md">
+						<div class="p-6 border-r-2">
+							<div class="order-1 text-5xl font-extrabold text-indigo-600">99%</div>
+							<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Satisfaction</dt>
 						</div>
-					</div>
+						<p class="col-span-3 pl-4 self-center">"Wow this chart software is so great, I was able to implement it in my portfolio for extremely impressive animations using the api!" - John Mark</p>
+					</blockquote>
+					<blockquote class="grid grid-cols-4 bg-white shadow-lg mr-8 my-6 w-[90%] rounded-md">
+						<div class="p-6 border-r-2 col-span-1">
+							<div class="order-1 text-5xl font-extrabold text-indigo-600">24/7</div>
+							<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Support</dt>
+						</div>
+						<p class="col-span-3 pl-4 self-center">I AM THE QUOTE</p>
+					</blockquote>
+					<blockquote class="grid grid-cols-4 bg-white shadow-lg mr-8 w-[90%] rounded-md">
+						<div class="p-6 border-r-2">
+							<div class="order-1 text-5xl font-extrabold text-indigo-600 ">190k</div>
+							<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Users</dt>
+						</div>
+						<p class="col-span-3 pl-4 self-center">I AM THE QUOTE</p>
+					</blockquote>
 				</div>
 				<flex class="flex flex-col justify-between w-[40%] gap-20">
 					<div class="flex flex-col gap-4">
@@ -709,7 +700,7 @@
 						</button>
 					</div>
 					<div class="space-y-4">
-						<h1 class="font-bold text-5xl">Certified by developers abraod</h1>
+						<h1 class="font-bold text-[3.25rem] leading-[1]">Certified by developers abroad</h1>
 						<p class="text-gray-500">
 							With our custom API, 24/7 support, and large user-base, Quantum Chart makes it a
 							breeze for developers to implement and deploy simple and immersive charts into their
