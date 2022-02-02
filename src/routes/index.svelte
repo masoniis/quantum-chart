@@ -247,7 +247,7 @@
 		</flex>
 	</section>
 
-	<!-- Section 3 (Easy Section) -->
+	<!-- EASY (Section 3) -->
 	<section use:scrollRef={'easy'} class="container mx-auto pt-12">
 		<h1 class="text-center text-6xl font-bold pt-12">This is how it works</h1>
 
@@ -276,9 +276,7 @@
 		</grid>
 	</section>
 
-	<!-- Section 5 (Perks) -->
-	<section class="m-72" />
-
+	<!-- LOW COST (Section 4) -->
 	<section use:scrollRef={'low-cost'} class="container mx-auto">
 		<h1 class="text-center text-4xl pb-8">Always at your side</h1>
 
@@ -328,12 +326,12 @@
 		</div>
 	</section>
 
-	<!-- Section 6 -->
+	<!-- SATISFACTION GUARENTEED (Section 5) -->
 	<section use:scrollRef={'satisfaction-guarenteed'} class="">
 		<p class="text-center">PROFESSION SECITON</p>
 	</section>
 
-	<!-- Section 7 -->
+	<!-- RESPONISVE (Section 7) -->
 	<section use:scrollRef={'responsive'} class="">
 		<p class="text-center">RESPONSVIE SECITON</p>
 	</section>
@@ -854,14 +852,22 @@
 	</div>
 
 	<!-- RISK FREE (Section 8) -->
-	<section use:scrollRef={'risk-free'} class="py-16">
-		<h1 class="text-center text-4xl font-bold">100% risk-free</h1>
+	<section use:scrollRef={'risk-free'} class="py-16 text-center">
+		<h1 class="text-center text-4xl font-bold">Getting started is 100% risk-free</h1>
 
 		<p>
 			When you start a free {$companyName} trial, there is no need to put in credit card detials or any
 			commitment. After the trial is up, you can decide if {$companyName} is right for you. As simple
 			as that!
 		</p>
+		<div class="inline-flex rounded-md shadow mx-auto pt-4 mt-4">
+			<a
+				href="/pricing"
+				class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+			>
+				Start your free trial
+			</a>
+		</div>
 	</section>
 
 	<!-- TOP DIVIDER (for start now section) -->
@@ -899,15 +905,13 @@
 				Start a no-commitment 14 day free trial. No credit card required! Once the trial is up, you
 				get to decide whether {$companyName} is right for you.
 			</p>
-			<div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-				<div class="inline-flex rounded-md shadow mx-auto pt-4">
-					<a
-						href="/pricing"
-						class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
-					>
-						Get started
-					</a>
-				</div>
+			<div class="inline-flex rounded-md shadow mx-auto pt-4 mt-4">
+				<a
+					href="/pricing"
+					class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+				>
+					Start your free trial
+				</a>
 			</div>
 		</div>
 	</section>
