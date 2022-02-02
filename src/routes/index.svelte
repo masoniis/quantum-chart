@@ -329,12 +329,12 @@
 	</section>
 
 	<!-- Section 6 -->
-	<section use:scrollRef={'satisfaction-guarenteed'} class="m-72">
+	<section use:scrollRef={'satisfaction-guarenteed'} class="">
 		<p class="text-center">PROFESSION SECITON</p>
 	</section>
 
 	<!-- Section 7 -->
-	<section use:scrollRef={'responsive'} class="m-72">
+	<section use:scrollRef={'responsive'} class="">
 		<p class="text-center">RESPONSVIE SECITON</p>
 	</section>
 
@@ -364,7 +364,7 @@
 	</div>
 
 	<!-- REPUTATION SECTION (Section 7) -->
-	<section use:scrollRef={'reputable'} class="pt-12 bg-lightbg">
+	<section use:scrollRef={'reputable'} class="py-16 bg-lightbg">
 		<flex class="container mx-auto gap-10 max-w-4xl flex flex-row pb-8">
 			<h1 class="w-1/2 font-bold text-5xl text-maintext">Don't just take our word for it</h1>
 			<p class="w-1/2 font-semibold text-xl self-center text-gray-500">
@@ -622,12 +622,6 @@
 							It's really no secret, {$companyName} brings many benefits to CEOs and the companies they
 							run.
 						</p>
-						<button
-							type="submit"
-							class="p-2 contianer mx-auto min-w-[144px] border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-700 hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400"
-						>
-							See more testimonials
-						</button>
 					</div>
 				</flex>
 			</div>
@@ -659,31 +653,20 @@
 		</div>
 
 		<!-- Developer -->
-		<div use:scrollRef={'developers'} class="bg-lightbg py-12">
-			<div class="container mx-auto py-12 flex flex-row">
+		<div use:scrollRef={'developers'} class="bg-lightbg pt-12">
+			<div class="container mx-auto py-12 flex flex-row max-w-6xl">
 				<div class="w-[60%]">
-					<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-						<div class="max-w-4xl mx-auto text-center">
-							<h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-								Trusted by developers of over 80,000 different applications
-							</h2>
-							<p class="mt-3 text-xl text-gray-500 sm:mt-4">
-								Far and abroad, developers love to use {$companyName} in their workplace for productivity
-								and data display.
-							</p>
-						</div>
-					</div>
 					<div class="mt-10 pb-12 sm:pb-16">
-						<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+						<div class="relative max-w-7xl">
 							<div class="max-w-4xl mx-auto">
 								<dl class="rounded-lg shadow-lg sm:grid sm:grid-cols-3">
 									<div
 										class="flex flex-col border-b p-6 text-center sm:border-0 sm:border-r bg-mainbg"
 									>
 										<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
-											Reliable
+											Satisfaction
 										</dt>
-										<dd class="order-1 text-5xl font-extrabold text-indigo-600">100%</dd>
+										<dd class="order-1 text-5xl font-extrabold text-indigo-600">99%</dd>
 									</div>
 									<div
 										class="flex flex-col border-t border-b border-gray-100 bg-mainbg p-6 text-center sm:border-0 sm:border-l sm:border-r"
@@ -725,7 +708,14 @@
 							Developers
 						</button>
 					</div>
-					<h1 class="font-bold text-5xl">Certified by developers abroad</h1>
+					<div class="space-y-4">
+						<h1 class="font-bold text-5xl">Certified by developers abraod</h1>
+						<p class="text-gray-500">
+							With our custom API, 24/7 support, and large user-base, Quantum Chart makes it a
+							breeze for developers to implement and deploy simple and immersive charts into their
+							working environment.a
+						</p>
+					</div>
 				</flex>
 			</div>
 		</div>
@@ -757,7 +747,7 @@
 	</div>
 
 	<!-- RISK FREE (Section 8) -->
-	<section use:scrollRef={'risk-free'} class="m-72">
+	<section use:scrollRef={'risk-free'} class="py-16">
 		<h1 class="text-center text-4xl font-bold">100% risk-free</h1>
 
 		<p>
@@ -767,14 +757,40 @@
 		</p>
 	</section>
 
+	<!-- TOP DIVIDER (for start now section) -->
+	<div class="start-now-topwave fill-lightbg">
+		<svg
+			data-name="Layer 1"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 1200 120"
+			preserveAspectRatio="none"
+		>
+			<path
+				d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+				opacity=".25"
+				class="shape-fill"
+			/>
+			<path
+				d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+				opacity=".5"
+				class="shape-fill"
+			/>
+			<path
+				d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+				class="shape-fill"
+			/>
+		</svg>
+	</div>
+
 	<!-- START NOW (Section 9) -->
 	<section class="bg-lightbg py-16">
 		<div class="text-center">
-			<h1 class="text-7xl font-bold text-maintext pb-12">
-			Try {$companyName} On Us
+			<h1 class="text-7xl font-bold text-maintext pb-4">
+				Try {$companyName} On Us
 			</h1>
 			<p class="text-gray-500 text-lg max-w-3xl mx-auto">
-				Start a no-commitment 14 day free trial. No credit card required! Once the trial is up, you get to decide whether {$companyName} is right for you.
+				Start a no-commitment 14 day free trial. No credit card required! Once the trial is up, you
+				get to decide whether {$companyName} is right for you.
 			</p>
 			<div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
 				<div class="inline-flex rounded-md shadow mx-auto pt-4">
@@ -788,6 +804,31 @@
 			</div>
 		</div>
 	</section>
+
+	<!-- BOTTOM DIVIDER (for start now section) -->
+	<div class="start-now-bottomwave fill-lightbg">
+		<svg
+			data-name="Layer 1"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 1200 120"
+			preserveAspectRatio="none"
+		>
+			<path
+				d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+				opacity=".25"
+				class="shape-fill"
+			/>
+			<path
+				d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+				opacity=".5"
+				class="shape-fill"
+			/>
+			<path
+				d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+				class="shape-fill"
+			/>
+		</svg>
+	</div>
 </main>
 
 <style>
@@ -919,5 +960,38 @@
 		display: block;
 		width: calc(100% + 1.3px);
 		height: 24px;
+	}
+
+	.start-now-bottomwave {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+	}
+
+	.start-now-bottomwave svg {
+		position: relative;
+		display: block;
+		width: calc(100% + 1.3px);
+		height: 133px;
+	}
+
+	.start-now-topwave {
+		position: relative;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+		transform: rotate(180deg);
+	}
+
+	.start-now-topwave svg {
+		position: relative;
+		display: block;
+		width: calc(161% + 1.3px);
+		height: 76px;
 	}
 </style>
