@@ -5,7 +5,7 @@
 	import closable from 'svelte-closable';
 	import { contactModal, yStore, companyName } from '../stores';
 
-	let first, last, email, message;
+	let first, last, email, message, contactHeight;
 
 	const handleSubmit = () => {
 		$contactModal = true;
@@ -162,7 +162,7 @@
 
 	<!--     Contact Section     -->
 	<Visibility threshold="30" let:visible>
-		<div class="relative mx-0 px-2 min-w-10/12 py-14 md:py-24 bg-lightbg min-height-section">
+		<div bind:clientHeight={contactHeight} class="relative mx-0 px-2 min-w-10/12 py-14 md:py-24 bg-lightbg" style="min-height: {contactHeight}px">
 			{#if visible}
 				<div class="container mx-auto flex flex-col md:flex-row justify-center">
 					<!-- Contact Info ICONS TAKEN FROM: https://iconmonstr.com PAY ATTENTION TO LICENSE-->
@@ -285,10 +285,6 @@
 </main>
 
 <style>
-	.min-height-section {
-		min-height: 626px;
-	}
-
 	.top-wave {
 		position: relative;
 		bottom: 0;
