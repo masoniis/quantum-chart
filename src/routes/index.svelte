@@ -276,7 +276,69 @@
 		</grid>
 	</section>
 
-	<!-- Top (Reputation Section) Divider -->
+	<!-- Section 5 (Perks) -->
+	<section class="m-72" />
+
+	<section use:scrollRef={'low-cost'} class="container mx-auto">
+		<h1 class="text-center text-4xl pb-8">Always at your side</h1>
+
+		<grid class="grid grid-cols-4 grid-rows-1 gap-7">
+			<div
+				class="flex flex-col self-center md:self-start max-w-md shadow-lg bg-stone-50"
+				in:fly={{ duration: 1400, x: -700 }}
+			>
+				<h1 class="font-bold text-lg px-10 py-10 ">Cool Stuff</h1>
+				<div class="px-10 pb-10">Like this</div>
+			</div>
+
+			<div
+				class="flex flex-col self-center md:self-start max-w-md shadow-lg bg-stone-50"
+				in:fly={{ duration: 1400, x: -700 }}
+			>
+				<h1 class="font-bold text-lg px-10 py-10 ">export as interactive md</h1>
+				<div class="px-10 pb-10">Like this</div>
+			</div>
+
+			<div
+				class="flex flex-col self-center md:self-start max-w-md shadow-lg bg-stone-50"
+				in:fly={{ duration: 1400, x: -700 }}
+			>
+				<h1 class="font-bold text-lg px-10 py-10 ">Cool equations</h1>
+				<div class="px-10 pb-10">Like this</div>
+			</div>
+
+			<div
+				class="flex flex-col self-center md:self-start max-w-md shadow-lg bg-stone-50"
+				in:fly={{ duration: 1400, x: -700 }}
+			>
+				<h1 class="font-bold text-lg px-10 py-10 ">Ar and VR</h1>
+				<div class="px-10 pb-10">Like this</div>
+			</div>
+		</grid>
+
+		<h2 class="text-center text-2xl pt-8">Prices starting at $2.95/month, cancel anytime</h2>
+
+		<div class="rounded-md text-center pt-8">
+			<a
+				href="/pricing"
+				class="px-5 py-3 text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+			>
+				Get started
+			</a>
+		</div>
+	</section>
+
+	<!-- Section 6 -->
+	<section use:scrollRef={'satisfaction-guarenteed'} class="m-72">
+		<p class="text-center">PROFESSION SECITON</p>
+	</section>
+
+	<!-- Section 7 -->
+	<section use:scrollRef={'responsive'} class="m-72">
+		<p class="text-center">RESPONSVIE SECITON</p>
+	</section>
+
+	<!-- TOP DIVIDER (for reputation section) -->
 	<div class="rep-wave fill-lightbg">
 		<svg
 			data-name="Layer 1"
@@ -301,7 +363,7 @@
 		</svg>
 	</div>
 
-	<!-- Section 4 (Reputation Section) -->
+	<!-- REPUTATION SECTION (Section 7) -->
 	<section use:scrollRef={'reputable'} class="pt-12 bg-lightbg">
 		<flex class="container mx-auto gap-10 max-w-4xl flex flex-row pb-8">
 			<h1 class="w-1/2 font-bold text-5xl text-maintext">Don't just take our word for it</h1>
@@ -330,11 +392,11 @@
 							</svg>
 							<p
 								class="mt-2 text-sm text-gray-600 
-							 	text-center	 
-								2xs:pl-12 2xs:text-left
-								sm:text-base 
-							   	lg:text-sm 
-								xl:text-base"
+									 text-center	 
+									2xs:pl-12 2xs:text-left
+									sm:text-base 
+									   lg:text-sm 
+									xl:text-base"
 							>
 								I love to play around with {$companyName} in my free time, it's just so satisfying.
 							</p>
@@ -368,11 +430,11 @@
 							</svg>
 							<p
 								class="mt-2 text-sm text-gray-600 
-							 	text-center	 
-								2xs:pl-12 2xs:text-left
-								sm:text-base 
-							   	lg:text-sm 
-								xl:text-base"
+									 text-center	 
+									2xs:pl-12 2xs:text-left
+									sm:text-base 
+									   lg:text-sm 
+									xl:text-base"
 							>
 								I love to play around with {$companyName} in my free time, it's just so satisfying.
 							</p>
@@ -406,10 +468,48 @@
 							</svg>
 							<p
 								class="mt-2 text-sm text-gray-600 
-							 	text-center	 
+									 text-center	 
+									2xs:pl-12 2xs:text-left
+									sm:text-base 
+									   lg:text-sm 
+									xl:text-base"
+							>
+								I love to play around with {$companyName} in my free time, it's just so satisfying.
+							</p>
+						</div>
+
+						<h3
+							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
+						>
+							Jane Cooper <span class="hidden xs:inline text-gray-500"> - Happy Neighbor</span>
+						</h3>
+					</div>
+					<img
+						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
+						src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
+						alt=""
+					/>
+				</blockquote>
+				<blockquote
+					class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2"
+				>
+					<div class="flex flex-col mx-auto">
+						<div class="relative">
+							<svg
+								class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 100 125"
+							>
+								<path
+									d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
+								/>
+							</svg>
+							<p
+								class="mt-2 text-sm text-gray-600 
+								 text-center	 
 								2xs:pl-12 2xs:text-left
 								sm:text-base 
-							   	lg:text-sm 
+								   lg:text-sm 
 								xl:text-base"
 							>
 								I love to play around with {$companyName} in my free time, it's just so satisfying.
@@ -456,10 +556,9 @@
 						Normal people from around the world who use {$companyName} have nothing but love to share
 					</p>
 					<button
-						type="submit"
 						class="p-2 contianer mx-auto min-w-[144px] border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-700 hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400"
 					>
-						See more testimonials
+						<a href="/testimonials"> See more testimonials </a>
 					</button>
 				</div>
 			</flex>
@@ -517,7 +616,19 @@
 							Developers
 						</button>
 					</div>
-					<h1 class="font-bold text-5xl">Respected by hundreds of CEOs</h1>
+					<div class="space-y-4">
+						<h1 class="font-bold text-5xl">Respected by hundreds of CEOs</h1>
+						<p class="text-gray-500">
+							It's really no secret, {$companyName} brings many benefits to CEOs and the companies they
+							run.
+						</p>
+						<button
+							type="submit"
+							class="p-2 contianer mx-auto min-w-[144px] border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-700 hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400"
+						>
+							See more testimonials
+						</button>
+					</div>
 				</flex>
 			</div>
 		</div>
@@ -620,7 +731,7 @@
 		</div>
 	</section>
 
-	<!-- Bot (Reputation Section) Divider -->
+	<!-- BOTTOM DIVIDER (for reputation section) -->
 	<div class="rep-wave2 fill-lightbg">
 		<svg
 			data-name="Layer 1"
@@ -645,69 +756,7 @@
 		</svg>
 	</div>
 
-	<!-- Section 5 (Perks) -->
-	<section class="m-72" />
-
-	<section use:scrollRef={'low-cost'} class="container mx-auto">
-		<h1 class="text-center text-4xl pb-8">Always at your side</h1>
-
-		<grid class="grid grid-cols-4 grid-rows-1 gap-7">
-			<div
-				class="flex flex-col self-center md:self-start max-w-md shadow-lg bg-stone-50"
-				in:fly={{ duration: 1400, x: -700 }}
-			>
-				<h1 class="font-bold text-lg px-10 py-10 ">Cool Stuff</h1>
-				<div class="px-10 pb-10">Like this</div>
-			</div>
-
-			<div
-				class="flex flex-col self-center md:self-start max-w-md shadow-lg bg-stone-50"
-				in:fly={{ duration: 1400, x: -700 }}
-			>
-				<h1 class="font-bold text-lg px-10 py-10 ">export as interactive md</h1>
-				<div class="px-10 pb-10">Like this</div>
-			</div>
-
-			<div
-				class="flex flex-col self-center md:self-start max-w-md shadow-lg bg-stone-50"
-				in:fly={{ duration: 1400, x: -700 }}
-			>
-				<h1 class="font-bold text-lg px-10 py-10 ">Cool equations</h1>
-				<div class="px-10 pb-10">Like this</div>
-			</div>
-
-			<div
-				class="flex flex-col self-center md:self-start max-w-md shadow-lg bg-stone-50"
-				in:fly={{ duration: 1400, x: -700 }}
-			>
-				<h1 class="font-bold text-lg px-10 py-10 ">Ar and VR</h1>
-				<div class="px-10 pb-10">Like this</div>
-			</div>
-		</grid>
-
-		<h2 class="text-center text-2xl pt-8">Prices starting at $2.95/month, cancel anytime</h2>
-
-		<div class="rounded-md text-center pt-8">
-			<a
-				href="/pricing"
-				class="px-5 py-3 text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
-			>
-				Get started
-			</a>
-		</div>
-	</section>
-
-	<!-- Section 6 -->
-	<section use:scrollRef={'satisfaction-guarenteed'} class="m-72">
-		<p class="text-center">PROFESSION SECITON</p>
-	</section>
-
-	<!-- Section 7 -->
-	<section use:scrollRef={'responsive'} class="m-72">
-		<p class="text-center">RESPONSVIE SECITON</p>
-	</section>
-
-	<!-- Section 8 (Risk Free Section) -->
+	<!-- RISK FREE (Section 8) -->
 	<section use:scrollRef={'risk-free'} class="m-72">
 		<h1 class="text-center text-4xl font-bold">100% risk-free</h1>
 
@@ -718,17 +767,17 @@
 		</p>
 	</section>
 
-	<!-- Section 6 -->
-	<section class="bg-indigo-50">
-		<div
-			class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-24 lg:px-8 lg:flex lg:items-center lg:justify-between"
-		>
-			<h2 class="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
-				<span class="block">Ready to dive in?</span>
-				<span class="block text-indigo-600">Start your free trial today.</span>
-			</h2>
+	<!-- START NOW (Section 9) -->
+	<section class="bg-lightbg py-16">
+		<div class="text-center">
+			<h1 class="text-7xl font-bold text-maintext pb-12">
+			Try {$companyName} On Us
+			</h1>
+			<p class="text-gray-500 text-lg max-w-3xl mx-auto">
+				Start a no-commitment 14 day free trial. No credit card required! Once the trial is up, you get to decide whether {$companyName} is right for you.
+			</p>
 			<div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-				<div class="inline-flex rounded-md shadow">
+				<div class="inline-flex rounded-md shadow mx-auto pt-4">
 					<a
 						href="/pricing"
 						class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
