@@ -239,7 +239,7 @@
 
 						<div>
 							<a
-								href="https://www.google.com/search?q=Book+a+Demo"
+								href="/"
 								class="text-mainlink hover:text-mainlinkhover text-lg font-medium link link-underline link-underline-black"
 								>Book a Demo</a
 							>

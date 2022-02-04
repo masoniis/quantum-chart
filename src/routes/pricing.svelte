@@ -445,11 +445,15 @@
 			>
 				Start Trial
 			</button>
-			<button
-				class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+			<form
+				method="post"
+				action="/contact-us"
 			>
-				Contact us
-			</button>
+				<button
+					type="submit"
+					class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+				>Contact us</button>
+			</form>
 		</flex>
 	</section>
 
@@ -480,39 +484,37 @@
 
 	<!-- FAQ Section -->
 	<section class="bg-white py-24">
-		<h1 class="font-extrabold text-5xl text-center pb-12">Frequently Asked Questions</h1>
+		<h1 class="font-extrabold text-5xl text-center pb-12">
+			Frequently Asked Questions
+		</h1>
 
 		<!-- Question Grid -->
 		<grid class="grid grid-cols-1 md:grid-cols-2 container mx-auto max-w-5xl gap-10 px-8">
 			<div class="space-y-2">
-				<strong class="text-xl font-bold"
-					>Why should I spend money on this instead of using a free chart software?</strong
-				>
+				<strong class="text-xl font-bold">Why should I spend money on this instead of using a free chart software?</strong>
 				<p class="text-sm font-normal text-maintext">
-					{$companyName} offers a variety of products not available with free chart software. Our advanced
-					AR software allows you to visualize and edit charts in 3D and our animation features allow
-					you to quickly and easily make charts that will make anyone say "wow!".
+					{$companyName} offers a variety of products not available with free chart software. Our advanced AR and VR software allows you to visualize and edit charts in 3D and our animation features allow you to quickly and easily make charts that will make anyone say "wow!".
 				</p>
 			</div>
 
 			<div class="space-y-2">
-				<strong class="text-xl font-bold">I am a question?</strong>
+				<strong class="text-xl font-bold">How do I set up Quantum Charts on my computer?</strong>
 				<p class="text-sm font-normal text-maintext">
-					WITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH
-					STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFF
+					It's simple! Once you've purchased your subscription, you will be taken to a download page and emailed a unique key. Just download our app, enter the key, and you're good to go! The software provides an easy-to-follow tutorial that you can go through at any time.
 				</p>
 			</div>
 
 			<div class="space-y-2">
 				<strong class="text-xl font-bold">How should I choose what plan is best for me?</strong>
-				<p class="text-sm font-normal text-maintext" />
+				<p class="text-sm font-normal text-maintext">
+					Our Basic plan is best if you only need to make charts occasionally and are fine with simple options. If you want to dive deeper into the possibilities offered by Quantum Charts and have access to all of our unique features, try Premium! Our Team plan works best for larger organizations and groups and offers a discount if you want to register up to 20 users.
+				</p>
 			</div>
 
 			<div class="space-y-2">
-				<strong class="text-xl font-bold">I am a question?</strong>
+				<strong class="text-xl font-bold">What file formats can I export my charts as?</strong>
 				<p class="text-sm font-normal text-maintext">
-					WITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH
-					STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFFWITH STUFF
+					{$companyName} supports .pdf, .jpg, .png, .md, .gif, .jpeg, .ai, and .tif chart exports. If your favorite file type isn't on here then leave us a suggestion on the <a href="/contact-us" class="text-blue-500 underline">Contact Us</a> page!
 				</p>
 			</div>
 		</grid>
@@ -543,7 +545,7 @@
 	}
 
 	.pricing-wave .shape-fill {
-		fill: rgb(245 245 244);
+		fill: rgb(245 245 244)
 	}
 
 	.trial-wave {
