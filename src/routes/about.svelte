@@ -29,8 +29,10 @@
 			<h2 class="text-6xl h-fit sticky overflow-hidden min-w-fit top-[88px] text-left font-bold tracking-tight text-gray-900 sm:leading-none">
 				Our mission
 			</h2>
-			<p class="w-1/2">
-			    {$companyName} started with the question, what if? What if we changed the way charting software worked, making it easier and more accessible for everyone? What if we used unique AR and VR software to make chart designing more interactive and enjoyable? What if we could make it simple for everyone of all ages to make any chart they want? At {$companyName}, we set out to make all those dreams come true in a single software.
+			<p class="w-1/2 text-lg">
+			    {$companyName} started with the question, what if? What if we changed the way charting software worked, making it easier and more accessible for everyone? What if we used unique AR and VR software to make chart designing more interactive and enjoyable? What if we could make it simple for everyone of all ages to make any chart they want?
+				<br /> <br />
+				At {$companyName}, we set out to make all those dreams come true in a single software.
 			</p>
 			</flex>
 	</section>
