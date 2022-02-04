@@ -1,7 +1,8 @@
 <script>
 	import Logo from '../components/Logo.svelte';
 	import { companyName } from '../stores';
-	let johnPhoto='src\components\Icons\John.jpg'
+	let johnPhoto='static/John.jpg'
+	let paulPhoto='static/Paul.png'
 </script>
 
 <title>{$companyName} - About</title>
@@ -54,7 +55,7 @@
 	<div class="flex justify-center">
 		<div class="flex-col mx-20 xl:px-10 w-50">
 			<!--INSERT IMAGE HERE-->
-			<img src={johnPhoto} alt="John" width=500 height=1000>
+			<img class='john-size' alt='John'>
 			<h3 class="text-2xl text-center font-bold text-gray-700">
 				John
 			</h3>
@@ -64,6 +65,7 @@
 		</div>
 		<div class="flex-col mx-20 xl:px-10 w-50">
 			<!--INSERT IMAGE HERE-->
+			<img class='paul-size' alt='Paul'>
 			<h3 class="text-2xl text-center font-bold text-gray-700">
 				Paul
 			</h3>
@@ -74,3 +76,22 @@
 	</div>
 	</section>
 </main>
+
+<style>
+	.john-size {
+		background-image: 'static/John.jpg';
+		width: 500px;
+		height: 1000px;
+		background-position: top;
+		/* Make the background image cover the area of the <div>, and clip the excess */
+		background-size: cover;
+	}
+	.paul-size {
+		background-image: 'static/Paul.png';
+		width: 500px;
+		height: 1000px;
+		background-position: top;
+		/* Make the background image cover the area of the <div>, and clip the excess */
+		background-size: cover;
+	}
+</style>
