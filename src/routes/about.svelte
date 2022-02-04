@@ -14,8 +14,7 @@
 				Learn what {$companyName} is really about
 
 				<p class="text-xl text-left font-normal pt-6">
-					From stuff to stuff to stuffrom stuff to stuff to stuffrom stuff to stuff to stuffrom
-					stuff to stuff to stuffrom stuff to stuff to stuff
+					At {$companyName}, our top priority is to provide the best possible service to every single person who uses our products. We are constantly working to enhance, expand, and elevate our products to standards beyond those of any other company. We make charts modern, immersive, and unique to enhance your experience and revolutionize the chart-creation industry.
 				</p>
 			</h2>
 			<p class="h-[512px] w-[512px]">
