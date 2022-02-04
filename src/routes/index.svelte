@@ -1,13 +1,19 @@
 <script>
 	import Logo from '../components/Logo.svelte';
 	import { companyName } from '../stores';
-	import { scrollTo, scrollRef } from 'svelte-scrolling';
+	import { scrollTo, scrollRef, setGlobalOptions } from 'svelte-scrolling';
 	import { onMount } from 'svelte';
+	import Visibility from '../components/Visibility.svelte';
 	import { slide, fade, fly } from 'svelte/transition';
-	import tilt from '../components/tilt';
+	import { cubicIn, cubicInOut } from 'svelte/easing';
+
+	setGlobalOptions({
+		duration: 400,
+		offset: -80,
+		easing: cubicInOut
+	});
 
 	let width;
-
 	let squiggle;
 
 	$: {
@@ -56,7 +62,7 @@
 <svelte:window bind:innerWidth={width} />
 
 <main class="min-h-screen text-maintext overflow-hidden">
-	<!-- Section 1 -->
+	<!-- Section 1 (Landing View) -->
 	<section class="min-h-screen min-w-screen bg-topsection pt-24 sm:pt-32">
 		<div class="max-w-6xl mx-auto xl:px-10 pt-4 relative">
 			<grid class="grid grid-cols-1 auto-rows-min w-full sm:px-8">
@@ -97,7 +103,8 @@
 					md:py-4 md:text-md
 					lg:text-xl lg:max-w-2xl lg:mx-0 lg:text-left"
 				>
-					Any chart at the tip of your fingers. With the capability to immerse yourself inside the data through virtual reality, there truly is no limit.
+					Any chart at the tip of your fingers. With the capability to immerse yourself inside the
+					data through virtual reality, there truly is no limit.
 				</h2>
 
 				<form
@@ -159,9 +166,9 @@
 		</svg>
 	</div>
 
-	<!-- Section 2 -->
-	<section class="container mx-auto my-24 pt-12">
-		<flex class="hero__flex perspective xl:justify-center mx-8 border-t-2 pt-16 border-black">
+	<!-- Section 2 (Navigation Section) -->
+	<section class="container mx-auto my-24">
+		<flex class="hero__flex perspective xl:justify-center mx-8">
 			<div class="max-w-xl z-[3] feature-grid-text pb-36">
 				<h2
 					class="text-6xl font-extrabold tracking-tight py-8"
@@ -195,14 +202,14 @@
 					class="row-span-2 bg-gray-200 border mt-4 ml-4 rounded-2xl hover:shadow-xl transition-all hover:scale-[1.05]"
 				>
 					<!-- Low Cost Image -->
-					<img class="rounded-2xl h-[120px]" src="low-cost.jpg" alt="Low Cost" />
+					<img class="rounded-2xl h-[120px]" style="background-color: #666766" src="low-cost.jpg" alt="Low Cost" />
 				</button>
 				<button
 					use:scrollTo={'easy'}
 					class="row-span-3 col-span-2 bg-gray-200 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
 				>
 					<!-- Easy to Use Image -->
-					<img class="rounded-2xl h-48" src="easy.jpg" alt="Easy to Use" />
+					<img class="rounded-2xl h-48" style="background-color: #666766" src="easy-to-use.jpg" alt="Easy to Use" />
 				</button>
 				<button
 					use:scrollTo={'satisfaction-guarenteed'}
@@ -210,8 +217,8 @@
 				>
 					<!-- Satisfaction Guarenteed Image -->
 					<img
-						class="rounded-2xl h-[122px]"
-						src="satisfaction-guarenteed.jpg"
+						class="rounded-2xl h-[122px]" style="background-color: #666766"
+						src="satisfaction-guarenteed.svg"
 						alt="Satisfaction Guarenteed"
 					/>
 				</button>
@@ -220,33 +227,31 @@
 					class="row-span-3 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
 				>
 					<!-- Reputable Image -->
-					<img class="rounded-2xl h-[190px]" src="reputable.jpg" alt="Reputable" />
+					<img class="rounded-2xl h-[190px]" style="background-color: #666766" src="reputable.jpg" alt="Reputable" />
 				</button>
 				<button
 					use:scrollTo={'responsive'}
 					class="row-span-3 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
 				>
 					<!-- Responsive Image -->
-					<img class="rounded-2xl h-[191px]" src="responsive.jpg" alt="Responsive" />
+					<img class="rounded-2xl h-[191px]" style="background-color: #666766" src="responsive.jpg" alt="Responsive" />
 				</button>
 				<button
 					use:scrollTo={'risk-free'}
 					class="col-span-2 row-span-2 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
 				>
 					<!-- Risk Free Image -->
-					<img class="rounded-2xl h-[122px]" src="risk-free.jpg" alt="Risk Free" /></button
+					<img class="rounded-2xl h-[122px]" style="background-color: #666766" src="risk-free.jpg" alt="Risk Free" /></button
 				>
 			</grid>
 		</flex>
 	</section>
 
-	<!-- Section 3 -->
-	<section use:scrollRef={'easy'} class="container mx-auto my-24 pt-12">
-		<h1 class="md:col-span-3 rows-span-2 text-center text-6xl font-bold py-12">
-			This is how it works
-		</h1>
+	<!-- EASY (Section 3) -->
+	<section use:scrollRef={'easy'} class="container mx-auto pt-12">
+		<h1 class="text-center text-6xl font-bold pt-12">This is how it works</h1>
 
-		<grid class="grid grid-cols-1 grid-rows-5 md:grid-cols-3 md:grid-rows-2 p-12">
+		<grid class="grid grid-cols-1 grid-rows-1 md:grid-cols-3 p-12">
 			<div class="text-center">
 				<p class="h-24 w-24 mx-auto">
 					<Logo />
@@ -271,55 +276,7 @@
 		</grid>
 	</section>
 
-	<!-- Section 4 -->
-	<section use:scrollRef={'reputable'} class="m-72">
-		<p class="text-center">Trusted by people and stuff</p>
-		<div class="bg-gray-50 pt-12 sm:pt-16">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="max-w-4xl mx-auto text-center">
-					<h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-						Trusted by developers from over 80 planets
-					</h2>
-					<p class="mt-3 text-xl text-gray-500 sm:mt-4">
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus repellat
-						laudantium.
-					</p>
-				</div>
-			</div>
-			<div class="mt-10 pb-12 bg-white sm:pb-16">
-				<div class="relative">
-					<div class="absolute inset-0 h-1/2 bg-gray-50" />
-					<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-						<div class="max-w-4xl mx-auto">
-							<dl class="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
-								<div
-									class="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r"
-								>
-									<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
-										Pepperoni
-									</dt>
-									<dd class="order-1 text-5xl font-extrabold text-indigo-600">100%</dd>
-								</div>
-								<div
-									class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r"
-								>
-									<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Delivery</dt>
-									<dd class="order-1 text-5xl font-extrabold text-indigo-600">24/7</dd>
-								</div>
-								<div
-									class="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l"
-								>
-									<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Calories</dt>
-									<dd class="order-1 text-5xl font-extrabold text-indigo-600">100k</dd>
-								</div>
-							</dl>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
+	<!-- LOW COST (Section 4) -->
 	<section use:scrollRef={'low-cost'} class="container mx-auto">
 		<h1 class="text-center text-4xl pb-8">Always at your side</h1>
 
@@ -369,48 +326,620 @@
 		</div>
 	</section>
 
-	<!-- Section 4 -->
-	<section use:scrollRef={'satisfaction-guarenteed'} class="m-72">
+	<!-- SATISFACTION GUARENTEED (Section 5) -->
+	<section use:scrollRef={'satisfaction-guarenteed'} class="">
 		<p class="text-center">PROFESSION SECITON</p>
 	</section>
 
-	<!-- Section 4 -->
-	<section use:scrollRef={'responsive'} class="m-72">
+	<!-- RESPONISVE (Section 7) -->
+	<section use:scrollRef={'responsive'} class="">
 		<p class="text-center">RESPONSVIE SECITON</p>
 	</section>
 
-	<!-- Section 5 -->
-	<section use:scrollRef={'risk-free'} class="m-72">
-		<h1 class="text-center text-4xl font-bold">100% risk-free</h1>
+	<!-- TOP DIVIDER (for reputation section) -->
+	<div class="rep-wave fill-lightbg">
+		<svg
+			data-name="Layer 1"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 1200 120"
+			preserveAspectRatio="none"
+		>
+			<path
+				d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+				opacity=".25"
+				class="shape-fill"
+			/>
+			<path
+				d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+				opacity=".5"
+				class="shape-fill"
+			/>
+			<path
+				d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+				class="shape-fill"
+			/>
+		</svg>
+	</div>
+
+	<!-- REPUTATION SECTION (Section 7) -->
+	<section use:scrollRef={'reputable'} class="py-16 bg-lightbg">
+		<flex class="container mx-auto gap-10 max-w-4xl flex flex-row pb-8">
+			<h1 class="w-1/2 font-bold text-5xl text-maintext">Don't just take our word for it</h1>
+			<p class="w-1/2 font-semibold text-xl self-center text-gray-500">
+				No two people have the same goals, luckily {$companyName} caters to a plethora of different people
+				and situations.
+			</p>
+		</flex>
+
+		<!-- Hobbyists -->
+		<div use:scrollRef={'hobbyists'} class="container mx-auto max-w-6xl py-12 flex flex-row">
+			<div in:fly={{ duration: 1200, x: -250 }} class="w-[60%] flex flex-col gap-6">
+				<blockquote
+					class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2"
+				>
+					<div class="flex flex-col mx-auto">
+						<div class="relative">
+							<svg
+								class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 100 125"
+							>
+								<path
+									d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
+								/>
+							</svg>
+							<p
+								class="mt-2 text-sm text-gray-600 
+									 text-center	 
+									2xs:pl-12 2xs:text-left
+									sm:text-base 
+									   lg:text-sm 
+									xl:text-base"
+							>
+								I love to play around with {$companyName} in my free time, it's just so satisfying.
+							</p>
+						</div>
+
+						<h3
+							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
+						>
+							Jane Cooper <span class="hidden xs:inline text-gray-500"> - Happy Neighbor</span>
+						</h3>
+					</div>
+					<img
+						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
+						src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
+						alt=""
+					/>
+				</blockquote>
+				<blockquote
+					class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2"
+				>
+					<div class="flex flex-col mx-auto">
+						<div class="relative">
+							<svg
+								class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 100 125"
+							>
+								<path
+									d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
+								/>
+							</svg>
+							<p
+								class="mt-2 text-sm text-gray-600 
+									 text-center	 
+									2xs:pl-12 2xs:text-left
+									sm:text-base 
+									   lg:text-sm 
+									xl:text-base"
+							>
+								I love to play around with {$companyName} in my free time, it's just so satisfying.
+							</p>
+						</div>
+
+						<h3
+							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
+						>
+							Jane Cooper <span class="hidden xs:inline text-gray-500"> - Happy Neighbor</span>
+						</h3>
+					</div>
+					<img
+						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
+						src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
+						alt=""
+					/>
+				</blockquote>
+				<blockquote
+					class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2"
+				>
+					<div class="flex flex-col mx-auto">
+						<div class="relative">
+							<svg
+								class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 100 125"
+							>
+								<path
+									d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
+								/>
+							</svg>
+							<p
+								class="mt-2 text-sm text-gray-600 
+									 text-center	 
+									2xs:pl-12 2xs:text-left
+									sm:text-base 
+									   lg:text-sm 
+									xl:text-base"
+							>
+								I love to play around with {$companyName} in my free time, it's just so satisfying.
+							</p>
+						</div>
+
+						<h3
+							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
+						>
+							Jane Cooper <span class="hidden xs:inline text-gray-500"> - Happy Neighbor</span>
+						</h3>
+					</div>
+					<img
+						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
+						src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
+						alt=""
+					/>
+				</blockquote>
+				<blockquote
+					class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2"
+				>
+					<div class="flex flex-col mx-auto">
+						<div class="relative">
+							<svg
+								class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 100 125"
+							>
+								<path
+									d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
+								/>
+							</svg>
+							<p
+								class="mt-2 text-sm text-gray-600 
+								 text-center	 
+								2xs:pl-12 2xs:text-left
+								sm:text-base 
+								   lg:text-sm 
+								xl:text-base"
+							>
+								I love to play around with {$companyName} in my free time, it's just so satisfying.
+							</p>
+						</div>
+
+						<h3
+							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
+						>
+							Jane Cooper <span class="hidden xs:inline text-gray-500"> - Happy Neighbor</span>
+						</h3>
+					</div>
+					<img
+						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
+						src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
+						alt=""
+					/>
+				</blockquote>
+			</div>
+			<flex class="flex flex-col justify-between w-[40%] gap-20 ">
+				<div class="flex flex-col gap-4">
+					<button
+						use:scrollTo={'hobbyists'}
+						class="text-left hover:underline font-semibold decoration-emerald-700 text-emerald-700"
+					>
+						Hobbyists
+					</button>
+					<button
+						use:scrollTo={'CEOs'}
+						class="text-left text-gray-400 hover:underline font-semibold"
+					>
+						CEOs
+					</button>
+					<button
+						use:scrollTo={'developers'}
+						class="text-left text-gray-400 hover:underline font-semibold"
+					>
+						Developers
+					</button>
+				</div>
+				<div class="space-y-4">
+					<h1 class="font-bold text-[3.25rem] leading-[1]">Loved by hobbyists around the world</h1>
+					<p class="text-gray-500">
+						Normal people from around the world who use {$companyName} have nothing but love to share
+					</p>
+					<button
+						class="p-2 contianer mx-auto min-w-[144px] border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-700 hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400"
+					>
+						<a href="/testimonials"> See more testimonials </a>
+					</button>
+				</div>
+			</flex>
+		</div>
+
+		<!-- Inbetween Top Divider -->
+		<div class="rep-wave fill-gray-200">
+			<svg
+				data-name="Layer 1"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 1200 120"
+				preserveAspectRatio="none"
+			>
+				<path
+					d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+					opacity=".25"
+					class="shape-fill"
+				/>
+				<path
+					d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+					opacity=".5"
+					class="shape-fill"
+				/>
+				<path
+					d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+					class="shape-fill"
+				/>
+			</svg>
+		</div>
+
+		<!-- CEO -->
+		<div use:scrollRef={'CEOs'} class="bg-gray-200 py-12">
+			<div class="container mx-auto max-w-6xl py-12 flex flex-row">
+				<flex class="flex flex-col justify-between w-[40%] gap-20">
+					<div class="flex flex-col gap-4">
+						<button
+							use:scrollTo={'hobbyists'}
+							class="text-left font-semibold text-gray-400 hover:underline"
+						>
+							Hobbyists
+						</button>
+						<button
+							use:scrollTo={'CEOs'}
+							class="text-left hover:underline font-semibold decoration-emerald-700 text-emerald-700"
+						>
+							CEOs
+						</button>
+						<button
+							use:scrollTo={'developers'}
+							class="text-left font-semibold text-gray-400 hover:underline"
+						>
+							Developers
+						</button>
+					</div>
+					<div class="space-y-4">
+						<h1 class="font-bold text-[3.25rem] leading-[1]">Respected by hundreds of CEOs</h1>
+						<p class="text-gray-500">
+							It's really no secret, {$companyName} brings many benefits to CEOs and the companies they
+							run.
+						</p>
+					</div>
+				</flex>
+				<div class="w-[60%] ml-0 flex flex-col gap-4">
+					<blockquote
+						class="bg-mainbg h-fit shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 self-end"
+					>
+						<div class="flex flex-col mx-auto">
+							<div class="relative">
+								<svg
+									class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 100 125"
+								>
+									<path
+										d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
+									/>
+								</svg>
+								<p
+									class="mt-2 text-sm text-gray-600 
+									 text-center	 
+									2xs:pl-12 2xs:text-left
+									sm:text-base 
+									   lg:text-sm 
+									xl:text-base"
+								>
+									I love to play around with {$companyName} in my free time, it's just so satisfying.
+								</p>
+							</div>
+
+							<h3
+								class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
+							>
+								Jane Cooper <span class="hidden xs:inline text-gray-500"> - Happy Neighbor</span>
+							</h3>
+						</div>
+						<img
+							class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
+							src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
+							alt=""
+						/>
+					</blockquote>
+					<blockquote
+						class="bg-mainbg h-fit shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 self-end"
+					>
+						<div class="flex flex-col mx-auto">
+							<div class="relative">
+								<svg
+									class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 100 125"
+								>
+									<path
+										d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
+									/>
+								</svg>
+								<p
+									class="mt-2 text-sm text-gray-600 
+								 text-center	 
+								2xs:pl-12 2xs:text-left
+								sm:text-base 
+								   lg:text-sm 
+								xl:text-base"
+								>
+									I love to play around with {$companyName} in my free time, it's just so satisfying.
+								</p>
+							</div>
+
+							<h3
+								class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
+							>
+								Jane Cooper <span class="hidden xs:inline text-gray-500"> - Happy Neighbor</span>
+							</h3>
+						</div>
+						<img
+							class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
+							src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
+							alt=""
+						/>
+					</blockquote>
+					<blockquote
+						class="bg-mainbg h-fit shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 self-end"
+					>
+						<div class="flex flex-col mx-auto">
+							<div class="relative">
+								<svg
+									class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 100 125"
+								>
+									<path
+										d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
+									/>
+								</svg>
+								<p
+									class="mt-2 text-sm text-gray-600 
+							 text-center	 
+							2xs:pl-12 2xs:text-left
+							sm:text-base 
+							   lg:text-sm 
+							xl:text-base"
+								>
+									I love to play around with {$companyName} in my free time, it's just so satisfying.
+								</p>
+							</div>
+
+							<h3
+								class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
+							>
+								Jane Cooper <span class="hidden xs:inline text-gray-500"> - Happy Neighbor</span>
+							</h3>
+						</div>
+						<img
+							class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
+							src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
+							alt=""
+						/>
+					</blockquote>
+				</div>
+			</div>
+		</div>
+
+		<!-- Inbetween Bottom Divider -->
+		<div class="rep-wave2 fill-gray-200">
+			<svg
+				data-name="Layer 1"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 1200 120"
+				preserveAspectRatio="none"
+			>
+				<path
+					d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+					opacity=".25"
+					class="shape-fill"
+				/>
+				<path
+					d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+					opacity=".5"
+					class="shape-fill"
+				/>
+				<path
+					d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+					class="shape-fill"
+				/>
+			</svg>
+		</div>
+
+		<!-- Developer -->
+		<div use:scrollRef={'developers'} class="bg-lightbg pt-12">
+			<div class="container mx-auto py-12 flex flex-row max-w-6xl">
+				<div class="w-[60%] flex flex-col justify-between">
+					<blockquote class="grid grid-cols-4 bg-white shadow-lg mr-8 w-[90%] rounded-md">
+						<div class="p-6 border-r-2">
+							<div class="order-1 text-5xl font-extrabold text-indigo-600">99%</div>
+							<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Satisfaction</dt>
+						</div>
+						<p class="col-span-3 pl-4 self-center">
+							"Wow this chart software is so great, I was able to implement it in my portfolio for
+							extremely impressive animations using the api!" - John Mark
+						</p>
+					</blockquote>
+					<blockquote class="grid grid-cols-4 bg-white shadow-lg mr-8 my-6 w-[90%] rounded-md">
+						<div class="p-6 border-r-2 col-span-1">
+							<div class="order-1 text-5xl font-extrabold text-indigo-600">24/7</div>
+							<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Support</dt>
+						</div>
+						<p class="col-span-3 pl-4 self-center">I AM THE QUOTE</p>
+					</blockquote>
+					<blockquote class="grid grid-cols-4 bg-white shadow-lg mr-8 w-[90%] rounded-md">
+						<div class="p-6 border-r-2">
+							<div class="order-1 text-5xl font-extrabold text-indigo-600 ">190k</div>
+							<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Users</dt>
+						</div>
+						<p class="col-span-3 pl-4 self-center">I AM THE QUOTE</p>
+					</blockquote>
+				</div>
+				<flex class="flex flex-col justify-between w-[40%] gap-20">
+					<div class="flex flex-col gap-4">
+						<button
+							use:scrollTo={'hobbyists'}
+							class="text-left font-semibold text-gray-400 hover:underline"
+						>
+							Hobbyists
+						</button>
+						<button
+							use:scrollTo={'CEOs'}
+							class="text-left font-semibold text-gray-400 hover:underline"
+						>
+							CEOs
+						</button>
+						<button
+							use:scrollTo={'developers'}
+							class="text-left hover:underline font-semibold decoration-emerald-700 text-emerald-700"
+						>
+							Developers
+						</button>
+					</div>
+					<div class="space-y-4">
+						<h1 class="font-bold text-[3.25rem] leading-[1]">Certified by developers</h1>
+						<p class="text-gray-500">
+							With our custom API, 24/7 support, and large user-base, Quantum Chart makes it a
+							breeze for developers to implement and deploy simple and immersive charts into their
+							working environment.a
+						</p>
+					</div>
+				</flex>
+			</div>
+		</div>
+	</section>
+
+	<!-- BOTTOM DIVIDER (for reputation section) -->
+	<div class="rep-wave2 fill-lightbg">
+		<svg
+			data-name="Layer 1"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 1200 120"
+			preserveAspectRatio="none"
+		>
+			<path
+				d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+				opacity=".25"
+				class="shape-fill"
+			/>
+			<path
+				d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+				opacity=".5"
+				class="shape-fill"
+			/>
+			<path
+				d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+				class="shape-fill"
+			/>
+		</svg>
+	</div>
+
+	<!-- RISK FREE (Section 8) -->
+	<section use:scrollRef={'risk-free'} class="py-16 text-center">
+		<h1 class="text-center text-4xl font-bold">Getting started is 100% risk-free</h1>
 
 		<p>
 			When you start a free {$companyName} trial, there is no need to put in credit card detials or any
 			commitment. After the trial is up, you can decide if {$companyName} is right for you. As simple
 			as that!
 		</p>
+		<div class="inline-flex rounded-md shadow mx-auto pt-4 mt-4">
+			<a
+				href="/pricing"
+				class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+			>
+				Start your free trial
+			</a>
+		</div>
 	</section>
 
-	<!-- Section 6 -->
-	<section class="bg-indigo-50">
-		<div
-			class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-24 lg:px-8 lg:flex lg:items-center lg:justify-between"
+	<!-- TOP DIVIDER (for start now section) -->
+	<div class="start-now-topwave fill-lightbg">
+		<svg
+			data-name="Layer 1"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 1200 120"
+			preserveAspectRatio="none"
 		>
-			<h2 class="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
-				<span class="block">Ready to dive in?</span>
-				<span class="block text-indigo-600">Start your free trial today.</span>
-			</h2>
-			<div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-				<div class="inline-flex rounded-md shadow">
-					<a
-						href="/pricing"
-						class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
-					>
-						Get started
-					</a>
-				</div>
+			<path
+				d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+				opacity=".25"
+				class="shape-fill"
+			/>
+			<path
+				d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+				opacity=".5"
+				class="shape-fill"
+			/>
+			<path
+				d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+				class="shape-fill"
+			/>
+		</svg>
+	</div>
+
+	<!-- START NOW (Section 9) -->
+	<section class="bg-lightbg py-16">
+		<div class="text-center">
+			<h1 class="text-7xl font-bold text-maintext pb-4">
+				Try {$companyName} On Us
+			</h1>
+			<p class="text-gray-500 text-lg max-w-3xl mx-auto">
+				Start a no-commitment 14 day free trial. No credit card required! Once the trial is up, you
+				get to decide whether {$companyName} is right for you.
+			</p>
+			<div class="inline-flex rounded-md shadow mx-auto pt-4 mt-4">
+				<a
+					href="/pricing"
+					class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+				>
+					Start your free trial
+				</a>
 			</div>
 		</div>
 	</section>
+
+	<!-- BOTTOM DIVIDER (for start now section) -->
+	<div class="start-now-bottomwave fill-lightbg">
+		<svg
+			data-name="Layer 1"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 1200 120"
+			preserveAspectRatio="none"
+		>
+			<path
+				d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+				opacity=".25"
+				class="shape-fill"
+			/>
+			<path
+				d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+				opacity=".5"
+				class="shape-fill"
+			/>
+			<path
+				d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+				class="shape-fill"
+			/>
+		</svg>
+	</div>
 </main>
 
 <style>
@@ -509,5 +1038,71 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+	}
+
+	.rep-wave {
+		position: relative;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+		transform: rotate(180deg);
+	}
+
+	.rep-wave svg {
+		position: relative;
+		display: block;
+		width: calc(100% + 1.3px);
+		height: 24px;
+	}
+
+	.rep-wave2 {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+	}
+
+	.rep-wave2 svg {
+		position: relative;
+		display: block;
+		width: calc(100% + 1.3px);
+		height: 24px;
+	}
+
+	.start-now-bottomwave {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+	}
+
+	.start-now-bottomwave svg {
+		position: relative;
+		display: block;
+		width: calc(100% + 1.3px);
+		height: 133px;
+	}
+
+	.start-now-topwave {
+		position: relative;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+		transform: rotate(180deg);
+	}
+
+	.start-now-topwave svg {
+		position: relative;
+		display: block;
+		width: calc(161% + 1.3px);
+		height: 76px;
 	}
 </style>

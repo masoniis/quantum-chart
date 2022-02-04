@@ -9,7 +9,7 @@
 
 	$: {
 		if ($menu === true) {
-			hide = 'fixed';
+			hide = 'min-w-full fixed -translate-x-[50%] left-[50%]';
 		} else {
 			hide = '';
 		}
