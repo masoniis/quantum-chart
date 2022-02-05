@@ -1,8 +1,6 @@
 <script>
 	import Logo from '../components/Logo.svelte';
 	import { companyName } from '../stores';
-	let johnPhoto = 'static/John.jpg';
-	let paulPhoto = 'static/Paul.png';
 </script>
 
 <title>{$companyName} - About</title>
@@ -78,7 +76,7 @@
 	<section>
 		<div class="flex flex-col lg:flex-row gap-6">
 			<div class="flex-col text-center justify-center mx-auto xl:px-10 w-50">
-				<img src={johnPhoto} alt="John" width="500" height="1000" class='text-center'/>
+				<img src='John.jpg' alt="John" width="500" height="1000" class='text-center'/>
 				<h3 class="text-2xl my-2 mb-1 text-center font-bold text-gray-700">John</h3>
 				<p>
 					"I never saw myself where I am today--a young entrepreneur, partnering with a college
@@ -87,7 +85,7 @@
 				</p>
 			</div>
 			<div class="flex-col justify-center mx-auto xl:px-10 w-50">
-				<img src={paulPhoto} alt="Paul" width="500" height="1000" class='justify-center'/>
+				<img src='Paul.png' alt="Paul" width="500" height="1000" class='justify-center'/>
 				<h3 class="text-2xl mt-2 mb-1 text-center font-bold text-gray-700">Paul</h3>
 				<p>
 					"I've dreamt of creating my own app since middle school. Now, with {$companyName}, that
