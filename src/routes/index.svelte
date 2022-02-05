@@ -389,23 +389,24 @@
 
 	<!-- REPUTATION SECTION (Section 7) -->
 	<section use:scrollRef={'reputable'} class="py-16 bg-lightbg">
-		<flex class="container mx-auto gap-10 max-w-4xl flex flex-row pb-8">
-			<h1 class="w-1/2 font-bold text-maintext
-					text-4xl
+		<flex class="container p-4 md:p-2 mx-auto gap-10 max-w-4xl flex flex-row pb-8">
+			<h1 class="w-1/2 font-bold text-maintext md:my-0 my-auto
+					text-3xl
+					sm:text-4xl
 					md:text-5xl">Don't just take our word for it</h1>
 			<p class="w-1/2 font-semibold self-center text-gray-500
-					text-lg
+					text-md
 					md:text-xl">
-				No two people have the same goals, luckily {$companyName} caters to a plethora of different people
-				and situations.
+					No two people have the same goals, luckily {$companyName} caters to a plethora of different people
+					and situations.
 			</p>
 		</flex>
 
 		<!-- Hobbyists -->
 		<div use:scrollRef={'hobbyists'} class="container mx-auto max-w-6xl py-12 flex flex-col-reverse md:flex-row">
-			<div in:fly={{ duration: 1200, x: -250 }} class="md:w-[60%] flex flex-col gap-6">
+			<div in:fly={{ duration: 1200, x: -250 }} class="md:w-[60%] flex flex-col gap-6 md:pl-4">
 				<blockquote
-					class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 md:mx-0 mx-auto md:mt-0 mt-8"
+					class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 md:mx-0 mx-auto md:mt-0 mt-6"
 				>
 					<div class="flex flex-col mx-auto">
 						<div class="relative">
@@ -622,9 +623,9 @@
 
 		<!-- CEO -->
 		<div use:scrollRef={'CEOs'} class="bg-gray-200 py-12">
-			<div class="container mx-auto max-w-6xl py-12 flex flex-row">
-				<flex class="flex flex-col justify-between w-[40%] gap-20">
-					<div class="flex flex-col gap-4">
+			<div class="container mx-auto max-w-6xl py-12 flex flex-col md:flex-row">
+				<flex class="flex flex-col justify-between md:w-[40%] gap-20 md:pl-4">
+					<div class="hidden md:flex flex-col gap-4">
 						<button
 							use:scrollTo={'hobbyists'}
 							class="text-left font-semibold text-gray-400 hover:underline"
@@ -645,16 +646,19 @@
 						</button>
 					</div>
 					<div class="space-y-4">
-						<h1 class="font-bold text-[3.25rem] leading-[1]">Respected by hundreds of CEOs</h1>
-						<p class="text-gray-500">
+						<h1 class="font-bold text-center md:text-left leading-[1]
+						text-4xl
+						sm:text-5xl		
+						md:text-[3.25rem]">Respected by hundreds of CEOs</h1>
+						<p class="text-gray-500 text-center md:text-left">
 							It's really no secret, {$companyName} brings many benefits to CEOs and the companies they
 							run.
 						</p>
 					</div>
 				</flex>
-				<div class="w-[60%] ml-0 flex flex-col gap-4">
+				<div class="md:w-[60%] ml-0 flex flex-col gap-4 md:pr-4">
 					<blockquote
-						class="bg-mainbg h-fit shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 self-end"
+						class="bg-mainbg h-fit shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 self-center md:self-end md:mt-0 mt-6"
 					>
 						<div class="flex flex-col mx-auto">
 							<div class="relative">
@@ -692,7 +696,7 @@
 						/>
 					</blockquote>
 					<blockquote
-						class="bg-mainbg h-fit shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 self-end"
+						class="bg-mainbg h-fit shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 self-center md:self-end"
 					>
 						<div class="flex flex-col mx-auto">
 							<div class="relative">
@@ -730,7 +734,7 @@
 						/>
 					</blockquote>
 					<blockquote
-						class="bg-mainbg h-fit shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 self-end"
+						class="bg-mainbg h-fit shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 self-center md:self-end"
 					>
 						<div class="flex flex-col mx-auto">
 							<div class="relative">
@@ -798,35 +802,35 @@
 
 		<!-- Developer -->
 		<div use:scrollRef={'developers'} class="bg-lightbg pt-12">
-			<div class="container mx-auto py-12 flex flex-row max-w-6xl">
-				<div class="w-[60%] flex flex-col justify-between">
-					<blockquote class="grid grid-cols-4 bg-white shadow-lg mr-8 w-[90%] rounded-md">
-						<div class="p-6 border-r-2">
+			<div class="container mx-auto py-12 flex flex-col-reverse md:flex-row max-w-6xl">
+				<div class="md:w-[60%] flex flex-col justify-between md:mt-0 mt-6">
+					<blockquote class="grid grid-cols-4 bg-white shadow-lg md:mr-8 w-[90%] rounded-md self-center">
+						<div class="py-6 text-center border-r-2">
 							<div class="order-1 text-5xl font-extrabold text-indigo-600">99%</div>
 							<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Satisfaction</dt>
 						</div>
-						<p class="col-span-3 pl-4 self-center">
+						<p class="col-span-3 pl-4 self-center text-[1rem]">
 							"Wow this chart software is so great, I was able to implement it in my portfolio for
 							extremely impressive animations using the api!" - John Mark
 						</p>
 					</blockquote>
-					<blockquote class="grid grid-cols-4 bg-white shadow-lg mr-8 my-6 w-[90%] rounded-md">
-						<div class="p-6 border-r-2 col-span-1">
+					<blockquote class="grid grid-cols-4 bg-white shadow-lg md:mr-8 my-6 w-[90%] rounded-md self-center">
+						<div class="py-6 text-center border-r-2">
 							<div class="order-1 text-5xl font-extrabold text-indigo-600">24/7</div>
 							<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Support</dt>
 						</div>
 						<p class="col-span-3 pl-4 self-center">I AM THE QUOTE</p>
 					</blockquote>
-					<blockquote class="grid grid-cols-4 bg-white shadow-lg mr-8 w-[90%] rounded-md">
-						<div class="p-6 border-r-2">
+					<blockquote class="grid grid-cols-4 bg-white shadow-lg md:mr-8 w-[90%] rounded-md self-center">
+						<div class="py-6 text-center border-r-2">
 							<div class="order-1 text-5xl font-extrabold text-indigo-600 ">190k</div>
 							<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Users</dt>
 						</div>
 						<p class="col-span-3 pl-4 self-center">I AM THE QUOTE</p>
 					</blockquote>
 				</div>
-				<flex class="flex flex-col justify-between w-[40%] gap-20">
-					<div class="flex flex-col gap-4">
+				<flex class="flex flex-col justify-between md:w-[40%] gap-20">
+					<div class="hidden md:flex flex-col gap-4">
 						<button
 							use:scrollTo={'hobbyists'}
 							class="text-left font-semibold text-gray-400 hover:underline"
@@ -847,8 +851,11 @@
 						</button>
 					</div>
 					<div class="space-y-4">
-						<h1 class="font-bold text-[3.25rem] leading-[1]">Certified by developers</h1>
-						<p class="text-gray-500">
+						<h1 class="font-bold text-center md:text-left leading-[1]
+						text-4xl
+						sm:text-5xl		
+						md:text-[3.25rem]">Certified by developers</h1>
+						<p class="text-gray-500 text-center md:text-left">
 							With our custom API, 24/7 support, and large user-base, Quantum Chart makes it a
 							breeze for developers to implement and deploy simple and immersive charts into their
 							working environment.a
