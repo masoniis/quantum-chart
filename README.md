@@ -6,14 +6,10 @@ This website is made by Dawson and Mason for the 2021-2022 FBLA competition.
   <summary>[ANSWER]</summary>
   
   Create a website for a new business in your local community, region, or state.
-The website must include a business name, photos, and description of the
-entity. The website must include a minimum of four web pages, including a
-contact us page and embedded features. The website should feature social
-media and marketing material to promote the new business
-  
-  ```javascript
-  console.log("I'm a code block!");
-  ```
+    The website must include a business name, photos, and description of the
+    entity. The website must include a minimum of four web pages, including a
+    contact us page and embedded features. The website should feature social
+    media and marketing material to promote the new business
   
 </details>
 
