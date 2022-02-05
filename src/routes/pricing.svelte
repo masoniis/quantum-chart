@@ -493,7 +493,7 @@
 			<div class="space-y-2">
 				<strong class="text-xl font-bold">What file formats can I export my charts as?</strong>
 				<p class="text-sm font-normal text-maintext">
-					{$companyName} supports .pdf, .jpg, .png, .md, .gif, .jpeg, .ai, and .tif chart exports. If your favorite file type isn't on here then leave us a suggestion on the <a href="/contact-us" class="text-blue-500 underline">Contact Us</a> page!
+					{$companyName} supports .pdf, .jpg, .png, .md, .gif, .jpeg, .ai, and .tif chart exports. If your favorite file type isn't on here, feel free to <a href="/contact-us" class="text-mainlink hover:text-mainlinkhover link link-underline link-underline-black">contact us</a> with new suggestions!
 				</p>
 			</div>
 		</grid>
