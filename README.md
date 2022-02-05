@@ -1,9 +1,8 @@
 # Purpose
 This website is made by Dawson and Mason for the 2021-2022 FBLA competition. 
 
-## What was the FBLA prompt?
 <details>
-  <summary>###[ANSWER]</summary>
+  <summary>###[FBLA 2022 Website Design Prompt]</summary>
   
   Create a website for a new business in your local community, region, or state.
     The website must include a business name, photos, and description of the
