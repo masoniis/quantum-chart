@@ -4,7 +4,7 @@ This website is made by Dawson and Mason for the 2021-2022 FBLA competition.
 <details>
   <summary>FBLA 2022 Website Design Prompt</summary>
   
-  Create a website for a new business in your local community, region, or state.
+    Create a website for a new business in your local community, region, or state.
     The website must include a business name, photos, and description of the
     entity. The website must include a minimum of four web pages, including a
     contact us page and embedded features. The website should feature social
