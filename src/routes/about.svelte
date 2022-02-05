@@ -33,13 +33,13 @@
 
 	<!-- Our Mission -->
 	<section class="bg-gray-200 py-16 my-8">
-		<flex class="flex flex-col lg:flex-row justify-center mx-auto container gap-6">
+		<flex class="flex flex-col lg:flex-row mx-auto container gap-6">
 			<h2
-				class="mx-auto text-center text-5xl xs:text-6xl h-fit lg:sticky overflow-hidden min-w-fit top-[88px] font-bold tracking-tight text-gray-900 sm:leading-none"
+				class="sm:w-1/2 text-center mx-auto sm:text-left lg:ml-8 text-5xl xs:text-6xl h-fit lg:sticky overflow-hidden min-w-fit top-[88px] font-bold tracking-tight text-gray-900 sm:leading-none"
 			>
 				Our Mission
 			</h2>
-			<p class="lg:w-1/2 text-sm xs:text-lg text-center">
+			<p class="sm:w-1/2 mx-auto text-sm xs:text-lg text-center sm:text-left">
 				{$companyName} started with the question, what if? What if we changed the way charting software
 				worked, making it easier and more accessible for everyone? What if we used unique AR and VR software
 				to make chart designing more interactive and enjoyable? What if we could make it simple for everyone
@@ -59,12 +59,12 @@
 	<section class="bg-gray-200 py-16 my-8">
 		<flex class="flex flex-col lg:flex-row justify-center mx-auto container gap-6">
 			<h2
-				class="mx-auto text-center text-5xl xs:text-6xl h-fit lg:sticky overflow-visible min-w-fit top-[88px] font-bold tracking-tight text-gray-900 sm:leading-none"
+				class="sm:w-1/2 mx-auto text-center sm:text-left lg:ml-8 text-5xl xs:text-6xl h-fit lg:sticky overflow-visible min-w-fit top-[88px] font-bold tracking-tight text-gray-900 sm:leading-none"
 			>
 				Our Story
 			</h2>
-			<p class="lg:w-1/2 text-lg text-center">
-				Our two founders, John and Paul, met as college roommates, both pursuing a career in
+			<p class="sm:w-1/2 mx-auto text-center sm:text-left text-sm xs:text-lg">
+				Our two founders, John and Paul, met as college roommates at the University of Colorado, both pursuing a career in
 				software development. They both ended up working on similar projects: creating a program
 				that could take data and turn it into a line graph. When they realized that they were both
 				working on the same thing, they realized how much potential there was for this program. John
@@ -80,10 +80,10 @@
 			<div class="flex-col text-center justify-center mx-auto xl:px-10 w-50">
 				<img src='John.jpg' alt="John" width="500" height="1000" class='mx-auto'/>
 				<h3 class="text-2xl my-2 mb-1 text-center font-bold text-gray-700">John</h3>
-				<p class='text-center'>
+				<p class='text-center mb-4 sm:mb-0'>
 					"I never saw myself where I am today--a young entrepreneur, partnering with a college
 					roommate to spend five years creating a charting app. But I don't regret a minute of it. {$companyName}
-					feels like a part of me now and I love seeing people's positive opinions of it."
+					feels like a part of me now and I love seeing people's positive reactions to it."
 				</p>
 			</div>
 			<div class="flex-col justify-center mx-auto xl:px-10 w-50">
