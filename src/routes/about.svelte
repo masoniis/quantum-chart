@@ -1,7 +1,8 @@
 <script>
 	import Logo from '../components/Logo.svelte';
 	import { companyName } from '../stores';
-	let johnPhoto = 'srccomponentsIconsJohn.jpg';
+	let johnPhoto = 'static/John.jpg';
+	let paulPhoto = 'static/Paul.png';
 </script>
 
 <title>{$companyName} - About</title>
@@ -80,6 +81,7 @@
 			</div>
 			<div class="flex-col mx-20 xl:px-10 w-50">
 				<!--INSERT IMAGE HERE-->
+				<img src={paulPhoto} alt="Paul" width="500" height="1000" />
 				<h3 class="text-2xl text-center font-bold text-gray-700">Paul</h3>
 				<p>
 					"I've dreamt of creating my own app since middle school. Now, with {$companyName}, that
