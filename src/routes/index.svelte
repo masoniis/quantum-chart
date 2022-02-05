@@ -136,7 +136,7 @@
 
 		<!-- Animated Squiggle -->
 		<div
-			class="md:block hidden 4xl:hidden z-[1000] w-screen lg:scale-y-[-1] -mt-16 lg:-mt-8 lg:scale-x-100 lg:rotate-6"
+			class="sm:block hidden 4xl:hidden z-[1000] w-screen lg:scale-y-[-1] -mt-16 lg:-mt-8 lg:scale-x-100 lg:rotate-6"
 		>
 			<svg
 				class=""
@@ -202,14 +202,24 @@
 					class="row-span-2 bg-gray-200 border mt-4 ml-4 rounded-2xl hover:shadow-xl transition-all hover:scale-[1.05]"
 				>
 					<!-- Low Cost Image -->
-					<img class="rounded-2xl h-[120px]" style="background-color: #666766" src="low-cost.jpg" alt="Low Cost" />
+					<img
+						class="rounded-2xl h-[120px]"
+						style="background-color: #666766"
+						src="low-cost.jpg"
+						alt="Low Cost"
+					/>
 				</button>
 				<button
 					use:scrollTo={'easy'}
 					class="row-span-3 col-span-2 bg-gray-200 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
 				>
 					<!-- Easy to Use Image -->
-					<img class="rounded-2xl h-48" style="background-color: #666766" src="easy-to-use.jpg" alt="Easy to Use" />
+					<img
+						class="rounded-2xl h-48"
+						style="background-color: #666766"
+						src="easy-to-use.jpg"
+						alt="Easy to Use"
+					/>
 				</button>
 				<button
 					use:scrollTo={'satisfaction-guarenteed'}
@@ -217,7 +227,8 @@
 				>
 					<!-- Satisfaction Guarenteed Image -->
 					<img
-						class="rounded-2xl h-[122px]" style="background-color: #666766"
+						class="rounded-2xl h-[122px]"
+						style="background-color: #666766"
 						src="satisfaction-guarenteed.svg"
 						alt="Satisfaction Guarenteed"
 					/>
@@ -227,21 +238,36 @@
 					class="row-span-3 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
 				>
 					<!-- Reputable Image -->
-					<img class="rounded-2xl h-[190px]" style="background-color: #666766" src="reputable.jpg" alt="Reputable" />
+					<img
+						class="rounded-2xl h-[190px]"
+						style="background-color: #666766"
+						src="reputable.jpg"
+						alt="Reputable"
+					/>
 				</button>
 				<button
 					use:scrollTo={'responsive'}
 					class="row-span-3 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
 				>
 					<!-- Responsive Image -->
-					<img class="rounded-2xl h-[191px]" style="background-color: #666766" src="responsive.jpg" alt="Responsive" />
+					<img
+						class="rounded-2xl h-[191px]"
+						style="background-color: #666766"
+						src="responsive.jpg"
+						alt="Responsive"
+					/>
 				</button>
 				<button
 					use:scrollTo={'risk-free'}
 					class="col-span-2 row-span-2 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
 				>
 					<!-- Risk Free Image -->
-					<img class="rounded-2xl h-[122px]" style="background-color: #666766" src="risk-free.jpg" alt="Risk Free" /></button
+					<img
+						class="rounded-2xl h-[122px]"
+						style="background-color: #666766"
+						src="risk-free.jpg"
+						alt="Risk Free"
+					/></button
 				>
 			</grid>
 		</flex>
@@ -364,18 +390,22 @@
 	<!-- REPUTATION SECTION (Section 7) -->
 	<section use:scrollRef={'reputable'} class="py-16 bg-lightbg">
 		<flex class="container mx-auto gap-10 max-w-4xl flex flex-row pb-8">
-			<h1 class="w-1/2 font-bold text-5xl text-maintext">Don't just take our word for it</h1>
-			<p class="w-1/2 font-semibold text-xl self-center text-gray-500">
+			<h1 class="w-1/2 font-bold text-maintext
+					text-4xl
+					md:text-5xl">Don't just take our word for it</h1>
+			<p class="w-1/2 font-semibold self-center text-gray-500
+					text-lg
+					md:text-xl">
 				No two people have the same goals, luckily {$companyName} caters to a plethora of different people
 				and situations.
 			</p>
 		</flex>
 
 		<!-- Hobbyists -->
-		<div use:scrollRef={'hobbyists'} class="container mx-auto max-w-6xl py-12 flex flex-row">
-			<div in:fly={{ duration: 1200, x: -250 }} class="w-[60%] flex flex-col gap-6">
+		<div use:scrollRef={'hobbyists'} class="container mx-auto max-w-6xl py-12 flex flex-col-reverse md:flex-row">
+			<div in:fly={{ duration: 1200, x: -250 }} class="md:w-[60%] flex flex-col gap-6">
 				<blockquote
-					class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2"
+					class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 md:mx-0 mx-auto md:mt-0 mt-8"
 				>
 					<div class="flex flex-col mx-auto">
 						<div class="relative">
@@ -413,7 +443,7 @@
 					/>
 				</blockquote>
 				<blockquote
-					class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2"
+					class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 md:mx-0 mx-auto"
 				>
 					<div class="flex flex-col mx-auto">
 						<div class="relative">
@@ -451,7 +481,7 @@
 					/>
 				</blockquote>
 				<blockquote
-					class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2"
+					class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 md:mx-0 mx-auto"
 				>
 					<div class="flex flex-col mx-auto">
 						<div class="relative">
@@ -489,7 +519,7 @@
 					/>
 				</blockquote>
 				<blockquote
-					class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2"
+					class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 md:mx-0 mx-auto"
 				>
 					<div class="flex flex-col mx-auto">
 						<div class="relative">
@@ -527,8 +557,8 @@
 					/>
 				</blockquote>
 			</div>
-			<flex class="flex flex-col justify-between w-[40%] gap-20 ">
-				<div class="flex flex-col gap-4">
+			<flex class="flex flex-row md:flex-col justify-between md:w-[40%] gap-20 ">
+				<div class="hidden md:flex flex-col gap-4">
 					<button
 						use:scrollTo={'hobbyists'}
 						class="text-left hover:underline font-semibold decoration-emerald-700 text-emerald-700"
@@ -548,13 +578,16 @@
 						Developers
 					</button>
 				</div>
-				<div class="space-y-4">
-					<h1 class="font-bold text-[3.25rem] leading-[1]">Loved by hobbyists around the world</h1>
-					<p class="text-gray-500">
+				<div class="space-y-4 text-center md:text-left">
+					<h1 class="font-bold text-center md:text-left leading-[1]
+							text-4xl
+							sm:text-5xl		
+							md:text-[3.25rem]">Loved by hobbyists around the world</h1>
+					<p class="text-gray-500 text-center md:text-left">
 						Normal people from around the world who use {$companyName} have nothing but love to share
 					</p>
 					<button
-						class="p-2 contianer mx-auto min-w-[144px] border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-700 hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400"
+						class="p-2 mx-auto min-w-[144px] border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-700 hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400"
 					>
 						<a href="/testimonials"> See more testimonials </a>
 					</button>
@@ -852,21 +885,35 @@
 	</div>
 
 	<!-- RISK FREE (Section 8) -->
-	<section use:scrollRef={'risk-free'} class="py-16 text-center">
-		<h1 class="text-center text-4xl font-bold">Getting started is 100% risk-free</h1>
+	<section use:scrollRef={'risk-free'} class="pt-24 pb-48 text-center">
+		<div class="container mx-auto flex flex-row gap-8 justify-center">
+			<div class="flex flex-col self-center md:self-start max-w-md shadow-lg bg-stone-50">
+				<!-- Flex Item 1 -->
+				<h1 class="font-bold text-xl px-10 py-10">Getting Started is 100% risk-free</h1>
 
-		<p>
-			When you start a free {$companyName} trial, there is no need to put in credit card detials or any
-			commitment. After the trial is up, you can decide if {$companyName} is right for you. As simple
-			as that!
-		</p>
-		<div class="inline-flex rounded-md shadow mx-auto pt-4 mt-4">
-			<a
-				href="/pricing"
-				class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+				<!-- Flex item 2 -->
+				<div class="inline-flex rounded-md shadow mx-auto mb-10">
+					<a
+						href="/pricing"
+						class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+					>
+						Start your free trial
+					</a>
+				</div>
+			</div>
+
+			<div
+				class="flex flex-col self-center md:self-start max-w-md shadow-lg bg-stone-50 -translate-x-12 translate-y-20 -z-10"
 			>
-				Start your free trial
-			</a>
+				<!-- Flex Item 1 -->
+				<h1 class="font-bold text-lg px-10 py-10 ">Getting Started is 100% risk-free</h1>
+
+				<ul class="text-left ml-6 mb-10">
+					<li>No credit card info</li>
+					<li>No commitments</li>
+					<li>14 days to try it out</li>
+				</ul>
+			</div>
 		</div>
 	</section>
 
@@ -898,10 +945,15 @@
 	<!-- START NOW (Section 9) -->
 	<section class="bg-lightbg py-16">
 		<div class="text-center">
-			<h1 class="text-7xl font-bold text-maintext pb-4">
+			<h1 class="font-bold text-maintext pb-4
+					text-5xl
+					md:text-6xl 
+					lg:text-7xl">
 				Try {$companyName} On Us
 			</h1>
-			<p class="text-gray-500 text-lg max-w-3xl mx-auto">
+			<p class="text-gray-500 max-w-3xl mx-auto
+					text-md	
+					lg:text-lg">
 				Start a no-commitment 14 day free trial. No credit card required! Once the trial is up, you
 				get to decide whether {$companyName} is right for you.
 			</p>
