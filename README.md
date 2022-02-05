@@ -1,7 +1,8 @@
 # Purpose
-This website is made for the 2021-2022 FBLA competition. 
+This website is made by Dawson and Mason for the 2021-2022 FBLA competition. 
 
 # Developement
+When we signed up for the website design event at FBLA, we knew that there would be many competetitors who chose the route of Wix, Wordpress, or any similar alternatives. While we could have easily done that too, we decided to code the website from the ground up with the prioritization of our education in mind. To be straight up, we have no regrets. It was super cool to learn about web development, and we learned way more than we ever would have learned with Wix.
 
 ## Svelte
 - Quantum chart is a svelte-based website. In the search for an ideal framework, we came across Svelte which seemed to offer nothing but benefits over other frameworks such as Next.js, Gatsby, base React, Vue, etc.
