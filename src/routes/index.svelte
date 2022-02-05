@@ -624,7 +624,7 @@
 		<!-- CEO -->
 		<div use:scrollRef={'CEOs'} class="bg-gray-200 py-12">
 			<div class="container mx-auto max-w-6xl py-12 flex flex-col md:flex-row">
-				<flex class="flex flex-col justify-between md:w-[40%] gap-20">
+				<flex class="flex flex-col justify-between md:w-[40%] gap-20 md:pl-4">
 					<div class="hidden md:flex flex-col gap-4">
 						<button
 							use:scrollTo={'hobbyists'}
