@@ -1,23 +1,21 @@
 # Purpose
 This website is made by Dawson and Mason for the 2021-2022 FBLA competition. 
 
+## What was the FBLA prompt?
 <details>
-  <summary>Spoiler warning</summary>
+  <summary>[ANSWER]</summary>
   
-  Spoiler text. Note that it's important to have a space after the summary tag. You should be able to write any markdown you want inside the `<details>` tag... just make sure you close `<details>` afterward.
+  Create a website for a new business in your local community, region, or state.
+The website must include a business name, photos, and description of the
+entity. The website must include a minimum of four web pages, including a
+contact us page and embedded features. The website should feature social
+media and marketing material to promote the new business
   
   ```javascript
   console.log("I'm a code block!");
   ```
   
 </details>
-
-## What was the FBLA prompt?
-- The FBLA prompt was as follows: Create a website for a new business in your local community, region, or state.
-The website must include a business name, photos, and description of the
-entity. The website must include a minimum of four web pages, including a
-contact us page and embedded features. The website should feature social
-media and marketing material to promote the new business
 
 ## What is the website about?
 
