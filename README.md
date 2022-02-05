@@ -12,9 +12,9 @@ This website is made by Dawson and Mason for the 2021-2022 FBLA competition.
   
 </details>
 
-## What is the website about?
+### What is the website about?
 
-## Why is it software-based, and not a general business like a restaurant?
+### Why is it software-based, and not a general business like a restaurant?
 - We chose to do a software based website for a number of reasons. First and foremost, a purely software-based website gives us the ability to create fully custom graphics. If we were to do a more "normal" business, we would be forced to spend time searching for stock images and other images that make a website feel plain.
 
 # Developement
