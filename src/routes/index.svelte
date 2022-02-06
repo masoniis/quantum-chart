@@ -13,6 +13,7 @@
 		easing: cubicInOut
 	});
 
+	let intro;
 	let width;
 	let squiggle;
 
@@ -42,7 +43,11 @@
 	let index = 0;
 	let randColor = randomColor();
 
+	let bla;
+
 	onMount(() => {
+		intro = true;
+
 		const interval = setInterval(() => {
 			// Set `randIndex` to a new value each interval.
 			index = index + 1;
@@ -51,8 +56,6 @@
 				index = 0;
 			}
 		}, 2400);
-
-
 
 		return () => {
 			clearInterval(interval);
@@ -66,101 +69,103 @@
 
 <main class="min-h-screen text-maintext overflow-hidden">
 	<!-- Section 1 (Landing View) -->
-	<section class="min-h-screen min-w-screen bg-topsection pt-24 sm:pt-32">
-		<div class="max-w-6xl mx-auto xl:px-10 pt-4 relative">
-			<grid class="grid grid-cols-1 auto-rows-min w-full sm:px-8">
-				<h1
-					in:slide={{duration: 500}}
-					class="col-span-1 max-w-lg font-extrabold text-gray-900 sm:leading-none mx-auto text-center text-3xl
+		<section class="min-h-screen min-w-screen bg-topsection pt-24 sm:pt-32">
+			{#if intro}
+			<div class="max-w-6xl mx-auto xl:px-10 pt-4 relative">
+				<grid class="grid grid-cols-1 auto-rows-min w-full sm:px-8">
+					<h1
+						in:slide={{ duration: 500 }}
+						class="col-span-1 max-w-lg font-extrabold text-gray-900 sm:leading-none mx-auto text-center text-3xl
 					xs:text-4xl
 					sm:text-5xl sm:max-w-3xl
 					md:text-6xl md:max-w-4xl
 					lg:text-7xl lg:mx-0 lg:text-left"
-				>
-					Not just your ordinary chart software
-				</h1>
-				{#if squiggle}
-					<div
-						class="col-span-1 row-span-1 flex justify-center mb-0 2xs:mb-4 xs:mb-10 py-8 object"
-						style="-webkit-transform:translateZ(1px); clear:both;"
 					>
-						<svg
-							class="relative child"
-							viewBox="200 110 1200 200"
-							xmlns="http://www.w3.org/2000/svg"
-							style="vector-effect: non-scaling-stroke; -webkit-transform:translateZ(1px); clear:both;"
+						Not just your ordinary chart software
+					</h1>
+					{#if squiggle}
+						<div
+							class="col-span-1 row-span-1 flex justify-center mb-0 2xs:mb-4 xs:mb-10 py-8 object"
+							style="-webkit-transform:translateZ(1px); clear:both;"
 						>
-							<path
-								d="m-2.99994,3c463.50597,367 708.06434,182 752.36473,255c44.30039,73 -176.98353,39 5.41698,-54c182.40051,-93 543.35036,13 746.51432,37"
-								opacity="NaN"
-								stroke-width="13"
-								stroke="#000"
-								fill="transparent"
-							/>
-						</svg>
-					</div>
-				{/if}
-				<h2
-					in:fly={{duration:500, delay:500, y:200}}
-					class="col-span-1 mx-auto text-center max-w-xl text-sm px-2
+							<svg
+								class="relative child"
+								viewBox="200 110 1200 200"
+								xmlns="http://www.w3.org/2000/svg"
+								style="vector-effect: non-scaling-stroke; -webkit-transform:translateZ(1px); clear:both;"
+							>
+								<path
+									d="m-2.99994,3c463.50597,367 708.06434,182 752.36473,255c44.30039,73 -176.98353,39 5.41698,-54c182.40051,-93 543.35036,13 746.51432,37"
+									opacity="NaN"
+									stroke-width="13"
+									stroke="#000"
+									fill="transparent"
+								/>
+							</svg>
+						</div>
+					{/if}
+					<h2
+						in:fly={{ duration: 500, delay: 500, y: 200 }}
+						class="col-span-1 mx-auto text-center max-w-xl text-sm px-2
 					xs:py-2
 					sm:py-2 
 					md:py-4 md:text-md
 					lg:text-xl lg:max-w-2xl lg:mx-0 lg:text-left"
-				>
-					Any chart at the tip of your fingers. With the capability to immerse yourself inside the
-					data through virtual reality, there truly is no limit.
-				</h2>
+					>
+						Any chart at the tip of your fingers. With the capability to immerse yourself inside the
+						data through virtual reality, there truly is no limit.
+					</h2>
 
-				<form
-					in:fly={{duration:500, delay:600, y:200}}
-					class="col-span-1 justify-self-center flex flex-row gap-2 sm:space-x-4 py-6 z-[2]
+					<form
+						in:fly={{ duration: 500, delay: 600, y: 200 }}
+						class="col-span-1 justify-self-center flex flex-row gap-2 sm:space-x-4 py-6 z-[2]
 					xs:flex-row
 					md:max-w-md
 					lg:mx-0 lg:justify-self-start"
-				>
-					<input
-						type="email"
-						id="demo"
-						placeholder="Enter Email*"
-						class="shadow-lg contianer mx-auto my-2 text-center focus:ring-emerald-400 focus:border-emerald-500 block border-gray-300 rounded-full scale-75
+					>
+						<input
+							type="email"
+							id="demo"
+							placeholder="Enter Email*"
+							class="shadow-lg contianer mx-auto my-2 text-center focus:ring-emerald-400 focus:border-emerald-500 block border-gray-300 rounded-full scale-75
 						2xs:text-sm 2xs:text-left 2xs:my-0 2xs:pl-[1.3rem] 2xs:scale-100 2xs:w-3/4
 						sm:mr-0
 						md:self-start"
-					/>
-					<button
-						type="submit"
-						class="py-2 contianer mx-auto min-w-[144px] border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400 scale-75
+						/>
+						<button
+							type="submit"
+							class="py-2 contianer mx-auto min-w-[144px] border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400 scale-75
 						2xs:w-1/4 2xs:scale-100
 						md:px-2 md:self-start"
-					>
-						Request a demo
-					</button>
-				</form>
-			</grid>
-		</div>
+						>
+							Request a demo
+						</button>
+					</form>
+				</grid>
+			</div>
 
-		<!-- Animated Squiggle -->
-		<div
-			class="sm:block hidden 4xl:hidden z-[1000] w-screen lg:scale-y-[-1] -mt-16 lg:-mt-8 lg:scale-x-100 lg:rotate-6"
-		>
-			<svg
-				class=""
-				viewBox="0 0 1480 310"
-				xmlns="http://www.w3.org/2000/svg"
-				style="vector-effect: non-scaling-stroke;"
+			<!-- Animated Squiggle -->
+			<div
+				class="sm:block hidden 4xl:hidden z-[1000] w-screen lg:scale-y-[-1] -mt-16 lg:-mt-8 lg:scale-x-100 lg:rotate-6"
 			>
-				<path
-					id="swirl"
-					d="m-2.99994,3c463.50597,367 708.06434,182 752.36473,255c44.30039,73 -176.98353,39 5.41698,-54c182.40051,-93 543.35036,13 746.51432,37"
-					opacity="NaN"
-					stroke-width="12"
-					stroke="#000"
-					fill="transparent"
-				/>
-			</svg>
-		</div>
-	</section>
+				<svg
+					class=""
+					viewBox="0 0 1480 310"
+					xmlns="http://www.w3.org/2000/svg"
+					style="vector-effect: non-scaling-stroke;"
+				>
+					<path
+						id="swirl"
+						d="m-2.99994,3c463.50597,367 708.06434,182 752.36473,255c44.30039,73 -176.98353,39 5.41698,-54c182.40051,-93 543.35036,13 746.51432,37"
+						opacity="NaN"
+						stroke-width="12"
+						stroke="#000"
+						fill="transparent"
+					/>
+				</svg>
+			</div>
+			{/if}
+		</section>
 
 	<!-- Wave Divider -->
 	<div class="topsection-wave bg-mainbg fill-topsection z-[-1]">
@@ -396,20 +401,29 @@
 	<!-- REPUTATION SECTION (Section 7) -->
 	<section use:scrollRef={'reputable'} class="py-16 bg-lightbg">
 		<flex class="container p-4 md:p-2 mx-auto gap-10 max-w-4xl flex flex-row pb-8">
-			<h1 class="w-1/2 font-bold text-maintext md:my-0 my-auto
+			<h1
+				class="w-1/2 font-bold text-maintext md:my-0 my-auto
 					text-3xl
 					sm:text-4xl
-					md:text-5xl">Don't just take our word for it</h1>
-			<p class="w-1/2 font-semibold self-center text-gray-500
+					md:text-5xl"
+			>
+				Don't just take our word for it
+			</h1>
+			<p
+				class="w-1/2 font-semibold self-center text-gray-500
 					text-md
-					md:text-xl">
-					No two people have the same goals, luckily {$companyName} caters to a plethora of different people
-					and situations.
+					md:text-xl"
+			>
+				No two people have the same goals, luckily {$companyName} caters to a plethora of different people
+				and situations.
 			</p>
 		</flex>
 
 		<!-- Hobbyists -->
-		<div use:scrollRef={'hobbyists'} class="container mx-auto max-w-6xl py-12 flex flex-col-reverse md:flex-row">
+		<div
+			use:scrollRef={'hobbyists'}
+			class="container mx-auto max-w-6xl py-12 flex flex-col-reverse md:flex-row"
+		>
 			<div in:fly={{ duration: 1200, x: -250 }} class="md:w-[60%] flex flex-col gap-6 md:pl-4">
 				<blockquote
 					class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 md:mx-0 mx-auto md:mt-0 mt-6"
@@ -586,10 +600,14 @@
 					</button>
 				</div>
 				<div class="space-y-4 text-center md:text-left">
-					<h1 class="font-bold text-center md:text-left leading-[1]
+					<h1
+						class="font-bold text-center md:text-left leading-[1]
 							text-4xl
 							sm:text-5xl		
-							md:text-[3.25rem]">Loved by hobbyists around the world</h1>
+							md:text-[3.25rem]"
+					>
+						Loved by hobbyists around the world
+					</h1>
 					<p class="text-gray-500 text-center md:text-left">
 						Normal people from around the world who use {$companyName} have nothing but love to share
 					</p>
@@ -652,10 +670,14 @@
 						</button>
 					</div>
 					<div class="space-y-4">
-						<h1 class="font-bold text-center md:text-left leading-[1]
+						<h1
+							class="font-bold text-center md:text-left leading-[1]
 						text-4xl
 						sm:text-5xl		
-						md:text-[3.25rem]">Respected by hundreds of CEOs</h1>
+						md:text-[3.25rem]"
+						>
+							Respected by hundreds of CEOs
+						</h1>
 						<p class="text-gray-500 text-center md:text-left">
 							It's really no secret, {$companyName} brings many benefits to CEOs and the companies they
 							run.
@@ -810,7 +832,9 @@
 		<div use:scrollRef={'developers'} class="bg-lightbg pt-12">
 			<div class="container mx-auto py-12 flex flex-col-reverse md:flex-row max-w-6xl">
 				<div class="md:w-[60%] flex flex-col justify-between md:mt-0 mt-6">
-					<blockquote class="grid grid-cols-4 bg-white shadow-lg md:mr-8 w-[90%] rounded-md self-center">
+					<blockquote
+						class="grid grid-cols-4 bg-white shadow-lg md:mr-8 w-[90%] rounded-md self-center"
+					>
 						<div class="py-6 text-center border-r-2">
 							<div class="order-1 text-5xl font-extrabold text-indigo-600">99%</div>
 							<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Satisfaction</dt>
@@ -820,14 +844,18 @@
 							extremely impressive animations using the api!" - John Mark
 						</p>
 					</blockquote>
-					<blockquote class="grid grid-cols-4 bg-white shadow-lg md:mr-8 my-6 w-[90%] rounded-md self-center">
+					<blockquote
+						class="grid grid-cols-4 bg-white shadow-lg md:mr-8 my-6 w-[90%] rounded-md self-center"
+					>
 						<div class="py-6 text-center border-r-2">
 							<div class="order-1 text-5xl font-extrabold text-indigo-600">24/7</div>
 							<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Support</dt>
 						</div>
 						<p class="col-span-3 pl-4 self-center">I AM THE QUOTE</p>
 					</blockquote>
-					<blockquote class="grid grid-cols-4 bg-white shadow-lg md:mr-8 w-[90%] rounded-md self-center">
+					<blockquote
+						class="grid grid-cols-4 bg-white shadow-lg md:mr-8 w-[90%] rounded-md self-center"
+					>
 						<div class="py-6 text-center border-r-2">
 							<div class="order-1 text-5xl font-extrabold text-indigo-600 ">190k</div>
 							<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Users</dt>
@@ -857,10 +885,14 @@
 						</button>
 					</div>
 					<div class="space-y-4">
-						<h1 class="font-bold text-center md:text-left leading-[1]
+						<h1
+							class="font-bold text-center md:text-left leading-[1]
 						text-4xl
 						sm:text-5xl		
-						md:text-[3.25rem]">Certified by developers</h1>
+						md:text-[3.25rem]"
+						>
+							Certified by developers
+						</h1>
 						<p class="text-gray-500 text-center md:text-left">
 							With our custom API, 24/7 support, and large user-base, Quantum Chart makes it a
 							breeze for developers to implement and deploy simple and immersive charts into their
@@ -958,16 +990,20 @@
 	<!-- START NOW (Section 9) -->
 	<section class="bg-lightbg py-16">
 		<div class="text-center px-4">
-			<h1 class="font-bold text-maintext pb-4
+			<h1
+				class="font-bold text-maintext pb-4
 					text-4xl
 					xs:text-5xl
 					md:text-6xl 
-					lg:text-7xl">
+					lg:text-7xl"
+			>
 				Try {$companyName} On Us
 			</h1>
-			<p class="text-gray-500 max-w-3xl mx-auto
+			<p
+				class="text-gray-500 max-w-3xl mx-auto
 					text-md	
-					lg:text-lg">
+					lg:text-lg"
+			>
 				Start a no-commitment 14 day free trial. No credit card required! Once the trial is up, you
 				get to decide whether {$companyName} is right for you.
 			</p>
