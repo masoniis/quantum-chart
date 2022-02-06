@@ -455,11 +455,9 @@
 			<p
 				class="w-1/2 font-semibold self-center text-gray-500
 					text-md
-<<<<<<< HEAD
 					md:text-xl">
 					No two people have the same goals. Luckily, {$companyName} caters to a plethora of different people
 					and situations.
-=======
 			</p>
 		</flex>
 
