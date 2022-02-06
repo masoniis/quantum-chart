@@ -897,7 +897,7 @@
 					>
 						<div class="py-6 text-center border-r-2">
 							<div class="order-1 text-5xl font-extrabold text-indigo-600">99%</div>
-							<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Satisfaction</dt>
+							<div class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Satisfaction</div>
 						</div>
 						<p class="col-span-3 pl-4 self-center text-[1rem]">
 							"This chart software is so great, I was able to implement it in my portfolio for
@@ -909,7 +909,7 @@
 					>
 						<div class="py-6 text-center border-r-2">
 							<div class="order-1 text-5xl font-extrabold text-indigo-600">24/7</div>
-							<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Support</dt>
+							<div class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Support</div>
 						</div>
 						<p class="col-span-3 pl-4 self-center">I AM THE QUOTE</p>
 					</blockquote>
@@ -918,7 +918,7 @@
 					>
 						<div class="py-6 text-center border-r-2">
 							<div class="order-1 text-5xl font-extrabold text-indigo-600 ">190k</div>
-							<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Users</dt>
+							<div class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Users</div>
 						</div>
 						<p class="col-span-3 pl-4 self-center">I AM THE QUOTE</p>
 					</blockquote>
