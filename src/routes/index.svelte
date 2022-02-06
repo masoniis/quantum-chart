@@ -496,11 +496,11 @@
 							</p>
 						</div>
 
-						<h3
+						<h2
 							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
 						>
 							Jane Cooper <span class="hidden xs:inline text-gray-500"> - Happy Neighbor</span>
-						</h3>
+						</h2>
 					</div>
 					<img
 						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
@@ -535,11 +535,11 @@
 							</p>
 						</div>
 
-						<h3
+						<h2
 							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
 						>
 							Iris Williams <span class="hidden xs:inline text-gray-500"> - Chart Enthusiast</span>
-						</h3>
+						</h2>
 					</div>
 					<img
 						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
@@ -573,13 +573,13 @@
 							</p>
 						</div>
 
-						<h3
+						<h2
 							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
 						>
 							Nicholas Carboni <span class="hidden xs:inline text-gray-500">
 								- Financial Consultant</span
 							>
-						</h3>
+						</h2>
 					</div>
 					<img
 						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
@@ -614,13 +614,13 @@
 							</p>
 						</div>
 
-						<h3
+						<h2
 							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
 						>
 							Victor Appat <span class="hidden xs:inline text-gray-500">
 								- High School Student</span
 							>
-						</h3>
+						</h2>
 					</div>
 					<img
 						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
@@ -763,13 +763,13 @@
 								</p>
 							</div>
 
-							<h3
+							<h2
 								class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
 							>
 								Marcus Paslay <span class="hidden xs:inline text-gray-500">
 									- CEO of Piattello</span
 								>
-							</h3>
+							</h2>
 						</div>
 						<img
 							class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
@@ -804,13 +804,13 @@
 								</p>
 							</div>
 
-							<h3
+							<h2
 								class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
 							>
 								Avery Harris <span class="hidden xs:inline text-gray-500">
 									- CEO of AmeriGo Finance</span
 								>
-							</h3>
+							</h2>
 						</div>
 						<img
 							class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
@@ -845,13 +845,13 @@
 								</p>
 							</div>
 
-							<h3
+							<h2
 								class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
 							>
 								Carter Wilson <span class="hidden xs:inline text-gray-500">
 									- CEO of Grateful Law</span
 								>
-							</h3>
+							</h2>
 						</div>
 						<img
 							class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
