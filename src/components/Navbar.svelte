@@ -89,13 +89,13 @@
 		<div class="flex justify-between h-16">
 			<!-- Logo -->
 			<div class="flex items-center">
-				<a on:click={() => ($menu = false)} href="/" class="block xs:hidden w-auto">
+				<a on:click={() => ($menu = false)} href="/" aria-label="Home Button" class="block xs:hidden w-auto">
 					<p class="h-12 w-12">
 						<Logo />
 					</p>
 				</a>
 
-				<a href="/" class="hidden xs:flex flex-row">
+				<a href="/" class="hidden xs:flex flex-row" aria-label="Home Button">
 					<div class="h-12 w-12">
 						<Logo />
 					</div>
@@ -106,7 +106,7 @@
 			<!-- Mobile Menu -->
 			<!-- Mobile menu button -->
 			<div class="block md:hidden self-center">
-				<Hamburger bind:open --color={text} --padding={0} aria-label="Navigation Menu"> </Hamburger>
+				<Hamburger bind:open --color={text} --padding={0} />
 					
 				<Menu bind:open />
 			</div>

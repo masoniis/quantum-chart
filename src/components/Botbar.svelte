@@ -32,6 +32,7 @@
 			<a
 				href="https://facebook.com/"
 				class="text-maintext hover:text-lighthover py-1 link link-underline link-underline-black"
+				aria-label="Facebook Page Button"
 			>
 				<svg
 					fill="currentColor"
@@ -48,6 +49,7 @@
 			<a
 				href="https://twitter.com class="
 				class="ml-3 text-maintext hover:text-lighthover py-1 link link-underline link-underline-black"
+				aria-label="Twitter Page Button"
 			>
 				<svg
 					fill="currentColor"
@@ -66,6 +68,7 @@
 			<a
 				href="https://instagram.com"
 				class="ml-3 text-maintext hover:text-lighthover py-1 link link-underline link-underline-black"
+				aria-label="Instagram Page Button"
 			>
 				<svg
 					fill="none"
@@ -84,6 +87,7 @@
 			<a
 				href="https://linkedin.com"
 				class="ml-3 text-maintext hover:text-lighthover py-1 link link-underline link-underline-black"
+				aria-label="Linkedin Page Button"
 			>
 				<svg
 					fill="currentColor"
