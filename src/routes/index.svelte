@@ -51,6 +51,9 @@
 				index = 0;
 			}
 		}, 2400);
+
+
+
 		return () => {
 			clearInterval(interval);
 		};
@@ -67,6 +70,7 @@
 		<div class="max-w-6xl mx-auto xl:px-10 pt-4 relative">
 			<grid class="grid grid-cols-1 auto-rows-min w-full sm:px-8">
 				<h1
+					in:slide={{duration: 500}}
 					class="col-span-1 max-w-lg font-extrabold text-gray-900 sm:leading-none mx-auto text-center text-3xl
 					xs:text-4xl
 					sm:text-5xl sm:max-w-3xl
@@ -97,6 +101,7 @@
 					</div>
 				{/if}
 				<h2
+					in:fly={{duration:500, delay:500, y:200}}
 					class="col-span-1 mx-auto text-center max-w-xl text-sm px-2
 					xs:py-2
 					sm:py-2 
@@ -108,6 +113,7 @@
 				</h2>
 
 				<form
+					in:fly={{duration:500, delay:600, y:200}}
 					class="col-span-1 justify-self-center flex flex-row gap-2 sm:space-x-4 py-6 z-[2]
 					xs:flex-row
 					md:max-w-md
@@ -951,9 +957,10 @@
 
 	<!-- START NOW (Section 9) -->
 	<section class="bg-lightbg py-16">
-		<div class="text-center">
+		<div class="text-center px-4">
 			<h1 class="font-bold text-maintext pb-4
-					text-5xl
+					text-4xl
+					xs:text-5xl
 					md:text-6xl 
 					lg:text-7xl">
 				Try {$companyName} On Us
