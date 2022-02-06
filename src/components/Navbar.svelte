@@ -96,7 +96,7 @@
 				</a>
 
 				<a href="/" class="hidden xs:flex flex-row">
-					<div class="h-10 w-10">
+					<div class="h-12 w-12">
 						<Logo />
 					</div>
 					<p class="pl-5 self-center font-extrabold unselectable">{$companyName}</p>

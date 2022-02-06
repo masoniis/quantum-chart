@@ -69,7 +69,7 @@
 	const handleReqDemo = () => {
 		$demoModal = true;
 		email = '';
-	}
+	};
 </script>
 
 <title>{$companyName} - Home</title>
@@ -105,8 +105,8 @@
 
 <main class="min-h-screen text-maintext overflow-hidden">
 	<!-- Section 1 (Landing View) -->
-		<section class="min-h-screen min-w-screen bg-topsection pt-24 sm:pt-32">
-			{#if intro}
+	<section class="min-h-screen min-w-screen bg-topsection pt-24 sm:pt-32">
+		{#if intro}
 			<div class="max-w-6xl mx-auto xl:px-10 pt-4 relative">
 				<grid class="grid grid-cols-1 auto-rows-min w-full sm:px-8">
 					<h1
@@ -121,7 +121,7 @@
 					</h1>
 					{#if squiggle}
 						<div
-							in:fly={{ duration: 500, delay: 500, y: 200}}
+							in:fly={{ duration: 500, delay: 500, y: 200 }}
 							class="col-span-1 row-span-1 flex justify-center mb-0 2xs:mb-4 xs:mb-10 py-8 object"
 							style="-webkit-transform:translateZ(1px); clear:both;"
 						>
@@ -204,8 +204,8 @@
 					/>
 				</svg>
 			</div>
-			{/if}
-		</section>
+		{/if}
+	</section>
 
 	<!-- Wave Divider -->
 	<div class="topsection-wave bg-mainbg fill-topsection z-[-1]">
@@ -230,13 +230,19 @@
 				>
 					With {$companyName}, life has never been so
 					{#key index}
-						<p in:fade={{ duration: 400 }} class="inline before:content-['['] before:text-maintext after:content-['].'] after:text-maintext" style="color: {colors[randColor]}">
+						<p
+							in:fade={{ duration: 400 }}
+							class="inline before:content-['['] before:text-maintext after:content-['].'] after:text-maintext"
+							style="color: {colors[randColor]}"
+						>
 							{words[index]}
 						</p>
 					{/key}
 				</h2>
-				<p class="text-md mx-auto text-center max-w-sm 
-						md:mx-0 md:text-left md:text-xl md:max-w-3xl">
+				<p
+					class="text-md mx-auto text-center max-w-sm 
+						md:mx-0 md:text-left md:text-xl md:max-w-3xl"
+				>
 					incredible prices, great prices, low prices, and perfect prices, {$companyName} is a service
 					like no other.
 				</p>
@@ -276,7 +282,7 @@
 					/>
 				</button>
 				<button
-					use:scrollTo={'satisfaction-guaranteed'}
+					use:scrollTo={'risk-free'}
 					class="row-span-2 bg-gray-200 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
 				>
 					<!-- Satisfaction Guarenteed Image -->
@@ -289,7 +295,7 @@
 				</button>
 				<button
 					use:scrollTo={'reputable'}
-					class="row-span-3 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
+					class="row-span-3 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
 				>
 					<!-- Reputable Image -->
 					<img
@@ -301,7 +307,7 @@
 				</button>
 				<button
 					use:scrollTo={'responsive'}
-					class="row-span-3 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
+					class="row-span-3 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
 				>
 					<!-- Responsive Image -->
 					<img
@@ -313,7 +319,7 @@
 				</button>
 				<button
 					use:scrollTo={'risk-free'}
-					class="col-span-2 row-span-2 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.1]"
+					class="col-span-2 row-span-2 bg-gray-300 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
 				>
 					<!-- Risk Free Image -->
 					<img
@@ -406,11 +412,6 @@
 		</div>
 	</section>
 
-	<!-- SATISFACTION GUARENTEED (Section 5) -->
-	<section use:scrollRef={'satisfaction-guarenteed'} class="">
-		<p class="text-center">PROFESSION SECITON</p>
-	</section>
-
 	<!-- RESPONISVE (Section 7) -->
 	<section use:scrollRef={'responsive'} class="">
 		<p class="text-center">RESPONSVIE SECITON</p>
@@ -455,9 +456,10 @@
 			<p
 				class="w-1/2 font-semibold self-center text-gray-500
 					text-md
-					md:text-xl">
-					No two people have the same goals. Luckily, {$companyName} caters to a plethora of different people
-					and situations.
+					md:text-xl"
+			>
+				No two people have the same goals. Luckily, {$companyName} caters to a plethora of different
+				people and situations.
 			</p>
 		</flex>
 
@@ -527,7 +529,8 @@
 									   lg:text-sm 
 									xl:text-base"
 							>
-								Making charts has been my hobby for a while and {$companyName} is by far the best software I've ever used.
+								Making charts has been my hobby for a while and {$companyName} is by far the best software
+								I've ever used.
 							</p>
 						</div>
 
@@ -572,7 +575,9 @@
 						<h3
 							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
 						>
-							Nicholas Carboni <span class="hidden xs:inline text-gray-500"> - Financial Consultant</span>
+							Nicholas Carboni <span class="hidden xs:inline text-gray-500">
+								- Financial Consultant</span
+							>
 						</h3>
 					</div>
 					<img
@@ -603,14 +608,17 @@
 								   lg:text-sm 
 								xl:text-base"
 							>
-								When my teachers ask how I make such good chart graphics, I just show them to this software.
+								When my teachers ask how I make such good chart graphics, I just show them to this
+								software.
 							</p>
 						</div>
 
 						<h3
 							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
 						>
-							Victor Appat <span class="hidden xs:inline text-gray-500"> - High School Student</span>
+							Victor Appat <span class="hidden xs:inline text-gray-500">
+								- High School Student</span
+							>
 						</h3>
 					</div>
 					<img
@@ -749,14 +757,17 @@
 									   lg:text-sm 
 									xl:text-base"
 								>
-									I got the starting loan for my company with a presentation make with this software. Thank you {$companyName}!
+									I got the starting loan for my company with a presentation make with this
+									software. Thank you {$companyName}!
 								</p>
 							</div>
 
 							<h3
 								class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
 							>
-								Marcus Paslay <span class="hidden xs:inline text-gray-500"> - CEO of Piattello</span>
+								Marcus Paslay <span class="hidden xs:inline text-gray-500">
+									- CEO of Piattello</span
+								>
 							</h3>
 						</div>
 						<img
@@ -787,14 +798,17 @@
 								   lg:text-sm 
 								xl:text-base"
 								>
-									All of my employees are required to learn how to use {$companyName} as one of the first parts of their training.
+									All of my employees are required to learn how to use {$companyName} as one of the first
+									parts of their training.
 								</p>
 							</div>
 
 							<h3
 								class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
 							>
-								Avery Harris <span class="hidden xs:inline text-gray-500"> - CEO of AmeriGo Finance</span>
+								Avery Harris <span class="hidden xs:inline text-gray-500">
+									- CEO of AmeriGo Finance</span
+								>
 							</h3>
 						</div>
 						<img
@@ -825,14 +839,17 @@
 							   lg:text-sm 
 							xl:text-base"
 								>
-									{$companyName} makes our workplace more fun with its graphics, animations, and immersive AR and VR technology.
+									{$companyName} makes our workplace more fun with its graphics, animations, and immersive
+									AR and VR technology.
 								</p>
 							</div>
 
 							<h3
 								class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
 							>
-								Carter Wilson <span class="hidden xs:inline text-gray-500"> - CEO of Grateful Law</span>
+								Carter Wilson <span class="hidden xs:inline text-gray-500">
+									- CEO of Grateful Law</span
+								>
 							</h3>
 						</div>
 						<img
@@ -971,14 +988,22 @@
 		</svg>
 	</div>
 
-	<!-- RISK FREE (Section 8) -->
-	<section use:scrollRef={'risk-free'} class="pt-24 pb-48 text-center">
-		<div class="container mx-auto flex flex-row gap-8 justify-center">
+	<!-- RISK FREE and SATISFACTION (Section 8) -->
+	<section use:scrollRef={'risk-free'} class="pt-24 pb-48">
+		<div class="container mx-auto flex flex-col md:flex-row gap-8 justify-center">
+			<!-- Risk free box -->
 			<div class="flex flex-col self-center md:self-start max-w-md shadow-lg bg-stone-50">
 				<!-- Flex Item 1 -->
-				<h1 class="font-bold text-xl px-10 py-10">Getting Started is 100% risk-free</h1>
+				<h1 class="text-xl font-bold px-10 py-10">Getting started is 100% risk-free</h1>
 
 				<!-- Flex item 2 -->
+				<ul class="text-left ml-6 mb-10">
+					<li>No credit card info</li>
+					<li>No commitments</li>
+					<li>14 days to try it out</li>
+				</ul>
+
+				<!-- Flex item 3 -->
 				<div class="inline-flex rounded-md shadow mx-auto mb-10">
 					<a
 						href="/pricing"
@@ -989,17 +1014,27 @@
 				</div>
 			</div>
 
+			<!-- Satisfaction guarenteed section -->
 			<div
-				class="flex flex-col self-center md:self-start max-w-md shadow-lg bg-stone-50 -translate-x-12 translate-y-20 -z-10"
+				class="flex flex-col max-w-sm px-2 md:pl-8 self-center md:self-end border-t-2 translate-y-8 md:border-0 mt-6 border-black"
+				in:fly={{ duration: 1400, x: 700 }}
 			>
-				<!-- Flex Item 1 -->
-				<h1 class="font-bold text-lg px-10 py-10 ">Getting Started is 100% risk-free</h1>
+				<h1 class="text-xl font-bold pb-3 pt-4">Satisfaction Guaranteed</h1>
+				<div>
+					<div
+						class="text-mainlink text-lg font-medium"
+						>Money back</div
+					>
+					<p class="pb-4">If you decide to purchase a subscrition and find it's not what you thought, we offer 100% of your money back.</p>
+				</div>
 
-				<ul class="text-left ml-6 mb-10">
-					<li>No credit card info</li>
-					<li>No commitments</li>
-					<li>14 days to try it out</li>
-				</ul>
+				<div class="py-4 mb-4 border-y-[1px] border-black">
+					<div
+						class="text-mainlink text-lg font-medium"
+						>Live support</div
+					>
+					<p>Our live support can help you fix any issues you are having on the spot.</p>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -1087,15 +1122,6 @@
 </main>
 
 <style>
-	.hero__flex {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-align: start;
-		-ms-flex-align: start;
-		align-items: flex-start;
-	}
-
 	.feature-grid-text {
 		background: linear-gradient(90deg, rgb(255, 255, 255) 83%, rgba(255, 255, 255, 0));
 	}
