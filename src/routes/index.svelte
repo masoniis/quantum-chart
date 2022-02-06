@@ -363,7 +363,7 @@
 	</section>
 
 	<!-- LOW COST (Section 4) -->
-	<section use:scrollRef={'low-cost'} class="container mx-auto">
+	<section use:scrollRef={'low-cost'} class="container mx-auto hidden">
 		<h1 class="text-center text-4xl pb-8">Always at your side</h1>
 
 		<grid class="grid grid-cols-4 grid-rows-1 gap-7">
@@ -413,7 +413,7 @@
 	</section>
 
 	<!-- RESPONISVE (Section 7) -->
-	<section use:scrollRef={'responsive'} class="">
+	<section use:scrollRef={'responsive'} class="hidden">
 		<p class="text-center">RESPONSVIE SECITON</p>
 	</section>
 
@@ -989,7 +989,7 @@
 	</div>
 
 	<!-- RISK FREE and SATISFACTION (Section 8) -->
-	<section use:scrollRef={'risk-free'} class="pt-24 pb-48">
+	<section use:scrollRef={'risk-free'} class="pt-36 pb-48">
 		<div class="container mx-auto flex flex-col md:flex-row gap-8 justify-center">
 			<!-- Risk free box -->
 			<div class="flex flex-col self-center md:self-start max-w-md shadow-lg bg-stone-50">
@@ -997,10 +997,10 @@
 				<h1 class="text-xl font-bold px-10 py-10">Getting started is 100% risk-free</h1>
 
 				<!-- Flex item 2 -->
-				<ul class="text-left ml-6 mb-10">
-					<li>No credit card info</li>
-					<li>No commitments</li>
-					<li>14 days to try it out</li>
+				<ul class="text-left ml-10 mb-10">
+					<li>- No credit card info needed</li>
+					<li>- No surprise charges or fees</li>
+					<li>- 14 days to try all the features</li>
 				</ul>
 
 				<!-- Flex item 3 -->
