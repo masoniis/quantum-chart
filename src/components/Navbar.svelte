@@ -106,7 +106,7 @@
 			<!-- Mobile Menu -->
 			<!-- Mobile menu button -->
 			<div class="block md:hidden self-center">
-				<Hamburger bind:open --color={text} --padding={0}> Navigation Menu </Hamburger>
+				<Hamburger bind:open --color={text} --padding={0} aria-label="Navigation Menu"> </Hamburger>
 					
 				<Menu bind:open />
 			</div>
