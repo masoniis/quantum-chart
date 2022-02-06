@@ -23,7 +23,7 @@
 	<modal
 		in:slide={{ duration: 500 }}
 		out:fade={{ duration: 200 }}
-		class="grid grid-cols-1 grid-rows-1 fixed z-30 h-screen w-full"
+		class="grid grid-cols-1 grid-rows-1 fixed z-[101] h-screen w-full"
 	>
 		<div class="p-12 justify-self-center self-center">
 			<div

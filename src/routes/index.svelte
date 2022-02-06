@@ -1,11 +1,13 @@
 <script>
-	import Logo from '../components/Logo.svelte';
-	import { companyName } from '../stores';
+	import { companyName, demoModal } from '../stores';
 	import { scrollTo, scrollRef, setGlobalOptions } from 'svelte-scrolling';
 	import { onMount } from 'svelte';
-	import Visibility from '../components/Visibility.svelte';
 	import { slide, fade, fly } from 'svelte/transition';
-	import { cubicIn, cubicInOut } from 'svelte/easing';
+	import { cubicInOut } from 'svelte/easing';
+	import closable from 'svelte-closable';
+	import Visibility from '../components/Visibility.svelte';
+	import Logo from '../components/Logo.svelte';
+	import Backdrop from '../components/Backdrop.svelte';
 
 	setGlobalOptions({
 		duration: 400,
@@ -14,6 +16,8 @@
 	});
 
 	let intro;
+
+	// Squiggle Animaition Variables
 	let width;
 	let squiggle;
 
@@ -43,8 +47,6 @@
 	let index = 0;
 	let randColor = randomColor();
 
-	let bla;
-
 	onMount(() => {
 		intro = true;
 
@@ -61,11 +63,45 @@
 			clearInterval(interval);
 		};
 	});
+
+	let email = '';
+
+	const handleReqDemo = () => {
+		$demoModal = true;
+		email = '';
+	}
 </script>
 
 <title>{$companyName} - Home</title>
 
 <svelte:window bind:innerWidth={width} />
+
+{#if $demoModal}
+	<Backdrop />
+	<modal
+		in:slide={{ duration: 500 }}
+		out:fade={{ duration: 200 }}
+		class="grid grid-cols-1 grid-rows-1 fixed z-[101] h-screen w-full"
+	>
+		<div class="p-12 justify-self-center self-center">
+			<div
+				use:closable
+				on:outside-click={() => ($demoModal = false)}
+				class="bg-zinc-100 max-w-lg p-10 rounded-lg grid grid-cols-2 grid-rows-2"
+			>
+				<p class="col-span-2 text-center p-2 md:p-4">
+					Thanks for your demo request! We will respond with an invitation shortly.
+				</p>
+				<button
+					on:click={() => ($demoModal = false)}
+					class="col-span-2 self-center p-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+				>
+					Exit
+				</button>
+			</div>
+		</div>
+	</modal>
+{/if}
 
 <main class="min-h-screen text-maintext overflow-hidden">
 	<!-- Section 1 (Landing View) -->
@@ -85,6 +121,7 @@
 					</h1>
 					{#if squiggle}
 						<div
+							in:fly={{ duration: 500, delay: 500, y: 200}}
 							class="col-span-1 row-span-1 flex justify-center mb-0 2xs:mb-4 xs:mb-10 py-8 object"
 							style="-webkit-transform:translateZ(1px); clear:both;"
 						>
@@ -117,6 +154,7 @@
 					</h2>
 
 					<form
+						on:submit|preventDefault={handleReqDemo}
 						in:fly={{ duration: 500, delay: 600, y: 200 }}
 						class="col-span-1 justify-self-center flex flex-row gap-2 sm:space-x-4 py-6 z-[2]
 					xs:flex-row
@@ -124,6 +162,8 @@
 					lg:mx-0 lg:justify-self-start"
 					>
 						<input
+							bind:value={email}
+							required
 							type="email"
 							id="demo"
 							placeholder="Enter Email*"
@@ -179,21 +219,24 @@
 
 	<!-- Section 2 (Navigation Section) -->
 	<section class="container mx-auto my-24">
-		<flex class="hero__flex perspective xl:justify-center mx-8">
+		<flex class="flex justify-center md:justify-start md:items-start perspective xl:justify-center">
 			<div class="max-w-xl z-[3] feature-grid-text pb-36">
 				<h2
-					class="text-6xl font-extrabold tracking-tight py-8"
-					style="min-width: 38rem; max-width: 38rem;"
+					class="font-extrabold tracking-tight py-8 
+						text-5xl text-center
+						sm:text-5xl sm:px-8
+						md:text-6xl md:text-left md:min-w-[38rem] md:px-0"
+					style="max-width: 38rem;"
 				>
-					With {$companyName}, life has never been so [
+					With {$companyName}, life has never been so
 					{#key index}
-						<p in:fade={{ duration: 400 }} class="inline" style="color: {colors[randColor]}">
+						<p in:fade={{ duration: 400 }} class="inline before:content-['['] before:text-maintext after:content-['].'] after:text-maintext" style="color: {colors[randColor]}">
 							{words[index]}
 						</p>
 					{/key}
-					].
 				</h2>
-				<p class="text-xl">
+				<p class="text-md mx-auto text-center max-w-sm 
+						md:mx-0 md:text-left md:text-xl md:max-w-3xl">
 					incredible prices, great prices, low prices, and perfect prices, {$companyName} is a service
 					like no other.
 				</p>
