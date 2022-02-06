@@ -122,7 +122,7 @@
 					</h1>
 					{#if squiggle}
 						<div
-							in:fly={{ duration: 500, delay: 500, y: 200 }}
+							in:fade={{ duration: 500, delay: 500 }}
 							class="col-span-1 row-span-1 flex justify-center mb-0 2xs:mb-4 xs:mb-10 py-8 object"
 							style="-webkit-transform:translateZ(1px); clear:both;"
 						>
