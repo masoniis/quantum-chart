@@ -29,7 +29,7 @@
 		}
 	}
 
-	const words = ['simple', 'amazing', 'awesome', 'mason', 'efficient'];
+	const words = ['simple', 'amazing', 'efficient', 'immersive', 'awesome'];
 
 	const colors = [
 		'#90afe0', //Light Blue
@@ -276,7 +276,7 @@
 					/>
 				</button>
 				<button
-					use:scrollTo={'satisfaction-guarenteed'}
+					use:scrollTo={'satisfaction-guaranteed'}
 					class="row-span-2 bg-gray-200 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
 				>
 					<!-- Satisfaction Guarenteed Image -->
@@ -337,21 +337,21 @@
 					<Logo />
 				</p>
 				<h2 class="text-5xl py-4">Subscribe</h2>
-				<p>with a simple 16 step process</p>
+				<p>with a simple two-step process</p>
 			</div>
 			<div class="text-center">
 				<p class="h-24 w-24 mx-auto">
 					<Logo />
 				</p>
 				<h2 class="text-5xl py-4">Describe</h2>
-				<p>exactly how you want the job done, and we will guartntee your satisfaction</p>
+				<p>exactly how you want the job done, and we will guarantee your satisfaction</p>
 			</div>
 			<div class="text-center">
 				<p class="h-24 w-24 mx-auto">
 					<Logo />
 				</p>
 				<h2 class="text-5xl py-4">Vibe</h2>
-				<p>inside while all the work is done by us on the outside</p>
+				<p>while exploring all the amazing features offered by {$companyName}</p>
 			</div>
 		</grid>
 	</section>
@@ -455,10 +455,11 @@
 			<p
 				class="w-1/2 font-semibold self-center text-gray-500
 					text-md
-					md:text-xl"
-			>
-				No two people have the same goals, luckily {$companyName} caters to a plethora of different people
-				and situations.
+<<<<<<< HEAD
+					md:text-xl">
+					No two people have the same goals. Luckily, {$companyName} caters to a plethora of different people
+					and situations.
+=======
 			</p>
 		</flex>
 
@@ -528,14 +529,14 @@
 									   lg:text-sm 
 									xl:text-base"
 							>
-								I love to play around with {$companyName} in my free time, it's just so satisfying.
+								Making charts has been my hobby for a while and {$companyName} is by far the best software I've ever used.
 							</p>
 						</div>
 
 						<h3
 							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
 						>
-							Jane Cooper <span class="hidden xs:inline text-gray-500"> - Happy Neighbor</span>
+							Iris Williams <span class="hidden xs:inline text-gray-500"> - Chart Enthusiast</span>
 						</h3>
 					</div>
 					<img
@@ -566,14 +567,14 @@
 									   lg:text-sm 
 									xl:text-base"
 							>
-								I love to play around with {$companyName} in my free time, it's just so satisfying.
+								{$companyName} has made it so easy to make charts for work presentations!
 							</p>
 						</div>
 
 						<h3
 							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
 						>
-							Jane Cooper <span class="hidden xs:inline text-gray-500"> - Happy Neighbor</span>
+							Nicholas Carboni <span class="hidden xs:inline text-gray-500"> - Financial Consultant</span>
 						</h3>
 					</div>
 					<img
@@ -604,14 +605,14 @@
 								   lg:text-sm 
 								xl:text-base"
 							>
-								I love to play around with {$companyName} in my free time, it's just so satisfying.
+								When my teachers ask how I make such good chart graphics, I just show them to this software.
 							</p>
 						</div>
 
 						<h3
 							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
 						>
-							Jane Cooper <span class="hidden xs:inline text-gray-500"> - Happy Neighbor</span>
+							Victor Appat <span class="hidden xs:inline text-gray-500"> - High School Student</span>
 						</h3>
 					</div>
 					<img
@@ -750,14 +751,14 @@
 									   lg:text-sm 
 									xl:text-base"
 								>
-									I love to play around with {$companyName} in my free time, it's just so satisfying.
+									I got the starting loan for my company with a presentation make with this software. Thank you {$companyName}!
 								</p>
 							</div>
 
 							<h3
 								class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
 							>
-								Jane Cooper <span class="hidden xs:inline text-gray-500"> - Happy Neighbor</span>
+								Marcus Paslay <span class="hidden xs:inline text-gray-500"> - CEO of Piattello</span>
 							</h3>
 						</div>
 						<img
@@ -788,14 +789,14 @@
 								   lg:text-sm 
 								xl:text-base"
 								>
-									I love to play around with {$companyName} in my free time, it's just so satisfying.
+									All of my employees are required to learn how to use {$companyName} as one of the first parts of their training.
 								</p>
 							</div>
 
 							<h3
 								class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
 							>
-								Jane Cooper <span class="hidden xs:inline text-gray-500"> - Happy Neighbor</span>
+								Avery Harris <span class="hidden xs:inline text-gray-500"> - CEO of AmeriGo Finance</span>
 							</h3>
 						</div>
 						<img
@@ -826,14 +827,14 @@
 							   lg:text-sm 
 							xl:text-base"
 								>
-									I love to play around with {$companyName} in my free time, it's just so satisfying.
+									{$companyName} makes our workplace more fun with its graphics, animations, and immersive AR and VR technology.
 								</p>
 							</div>
 
 							<h3
 								class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
 							>
-								Jane Cooper <span class="hidden xs:inline text-gray-500"> - Happy Neighbor</span>
+								Carter Wilson <span class="hidden xs:inline text-gray-500"> - CEO of Grateful Law</span>
 							</h3>
 						</div>
 						<img
@@ -883,8 +884,8 @@
 							<dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Satisfaction</dt>
 						</div>
 						<p class="col-span-3 pl-4 self-center text-[1rem]">
-							"Wow this chart software is so great, I was able to implement it in my portfolio for
-							extremely impressive animations using the api!" - John Mark
+							"This chart software is so great, I was able to implement it in my portfolio for
+							extremely impressive animations using the API!" - John Mark
 						</p>
 					</blockquote>
 					<blockquote

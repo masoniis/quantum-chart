@@ -29,14 +29,14 @@
 
 <main class="min-h-screen bg-light-bg pt-36 bg-gray-200">
 	<!-- Pricing box Section -->
-	<section class="max-w-7xl mx-auto pb-24 px-4 sm:px-6 lg:px-8">
+	<section class="max-w-7xl mx-auto pb-24 px-2 sm:px-6 lg:px-8">
 		<div class="sm:flex sm:flex-col sm:align-center">
-			<h1 class="text-5xl font-extrabold text-gray-900 sm:text-center">Pricing Plans</h1>
-			<p class="mt-5 text-xl text-gray-500 sm:text-center">
+			<h1 class="text-5xl font-extrabold text-gray-900 text-center">Pricing Plans</h1>
+			<p class="mt-5 text-xl text-gray-500 text-center">
 				Start building for free, then add a site plan to go live. Account plans unlock additional
 				features.
 			</p>
-			<div class="relative self-center mt-6 bg-lightbg rounded-lg p-0.5 flex sm:mt-8">
+			<div class="relative self-center mt-6 mb-6 sm:mb-0 mx-auto bg-lightbg rounded-lg p-0.5 flex sm:mt-8">
 				<button
 					type="button"
 					class="relative w-1/2 border-gray-200 transition-all duration-300 rounded-md shadow-sm py-2 text-sm font-medium text-gray-900 whitespace-nowrap focus:outline-none focus:z-10 sm:w-auto sm:px-8"
@@ -52,7 +52,7 @@
 			</div>
 		</div>
 		<grid
-			class="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 gap-8 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 xl:grid-cols-3 bg-transparent"
+			class="mt-12 space-y-4 sm:mt-16 sm:space-y-0 grid-cols-1 sm:grid sm:grid-cols-2 gap-8 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 xl:grid-cols-3 bg-transparent"
 		>
 			<div class="border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200 bg-lightbg">
 				<div class="p-6">
@@ -418,9 +418,9 @@
 			needed.)
 		</p>
 
-		<flex class="flex justify-center gap-24 pt-4">
+		<flex class="flex justify-center gap-12 sm:gap-24 pt-4">
 			<button
-				class="bg-blue-500 py-3 px-6 border border-gray-300 rounded-md shadow-sm text-4xl font-medium text-gray-700 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+				class="bg-blue-500 py-2 sm:py-3 px-4 sm:px-6 border border-gray-300 rounded-md shadow-sm text-xl sm:text-2xl font-medium text-gray-700 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 			>
 				Start Trial
 			</button>
@@ -430,8 +430,8 @@
 			>
 				<button
 					type="submit"
-					class="bg-mainlink py-3 px-6 border border-gray-300 rounded-md shadow-sm text-4xl font-medium text-gray-300 hover:bg-mainlinkhover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-				>Contact us</button>
+					class="bg-mainlink py-2 sm:py-3 px-4 sm:px-6 border border-gray-300 rounded-md shadow-sm text-xl sm:text-2xl font-medium text-gray-300 hover:bg-mainlinkhover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+				>Contact Us</button>
 			</form>
 		</flex>
 	</section>
