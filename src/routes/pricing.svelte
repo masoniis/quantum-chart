@@ -26,6 +26,7 @@
 </script>
 
 <title>{$companyName} - Pricing</title>
+<meta name="description" content="{$companyName} price page, pay little to access beautiful charts.">
 
 <main class="min-h-screen bg-light-bg pt-36 bg-gray-200">
 	<!-- Pricing box Section -->
