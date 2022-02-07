@@ -72,11 +72,12 @@
 	};
 </script>
 
-<title>{$companyName} - Home</title>
-<meta name="description" content="{$companyName} home page, make beautiful charts in the blink of an eye.">
-
 <svelte:head>
+	<title>{$companyName} - Home</title>
+	<meta name="description" content="{$companyName} home page, make beautiful charts in the blink of an eye.">
+	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name='viewport' content='viewport-fit=cover, width=device-width, initial-scale=1.0'>
 </svelte:head>
 
 <svelte:window bind:innerWidth={width} />
