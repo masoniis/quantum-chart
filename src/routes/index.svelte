@@ -73,10 +73,8 @@
 </script>
 
 <svelte:head>
-	<title>{$companyName} - Home</title>
+	<title>Home - {$companyName}</title>
 	<meta name="description" content="{$companyName} home page, make beautiful charts in the blink of an eye.">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 </svelte:head>
 
 <svelte:window bind:innerWidth={width} />
