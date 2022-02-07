@@ -74,7 +74,10 @@
 
 <title>{$companyName} - Home</title>
 <meta name="description" content="{$companyName} home page, make beautiful charts in the blink of an eye.">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<svelte:head>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+</svelte:head>
 
 <svelte:window bind:innerWidth={width} />
 
