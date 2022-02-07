@@ -1,6 +1,16 @@
 <script>
 	import Logo from '../components/Logo.svelte';
-	import { companyName } from '../stores';
+	import { companyName, requestModal } from '../stores';
+	import Backdrop from '../components/Backdrop.svelte';
+	import { slide, fade } from 'svelte/transition';
+	import closable from 'svelte-closable';
+
+	let email;
+
+	const handleReqInfo = () => {
+		$requestModal = true;
+		email = '';
+	};
 </script>
 
 <title>{$companyName} - About</title>
@@ -8,6 +18,34 @@
 	name="description"
 	content="{$companyName} about page, learn more about who we are behind the scenes."
 />
+
+{#if $requestModal}
+	<Backdrop />
+	<modal
+		in:slide={{ duration: 500 }}
+		out:fade={{ duration: 200 }}
+		class="grid grid-cols-1 grid-rows-1 fixed z-[101] h-screen w-full"
+	>
+		<div class="p-12 justify-self-center self-center">
+			<div
+				use:closable
+				on:outside-click={() => ($requestModal = false)}
+				class="bg-zinc-100 max-w-lg p-10 rounded-lg grid grid-cols-2 grid-rows-2"
+			>
+				<p class="col-span-2 text-center p-2 md:p-4">
+					Thanks for your information request. We will reply to the email you submitted shortly with
+					information on how to apply or contribute to {$companyName}.
+				</p>
+				<button
+					on:click={() => ($requestModal = false)}
+					class="col-span-2 self-center p-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+				>
+					Exit
+				</button>
+			</div>
+		</div>
+	</modal>
+{/if}
 
 <main class="min-h-screen text-maintext">
 	<!-- Top Section -->
@@ -105,7 +143,7 @@
 
 	<!-- Join the team section -->
 	<section class="bg-lightbg py-16 my-16">
-		<div class="text-center px-4">
+		<div class="text-center px-4 grid">
 			<h1
 				class="font-bold text-maintext pb-4
 					text-4xl
@@ -124,12 +162,13 @@
 				interview! We would love working with you.
 			</p>
 			<form
+				on:submit|preventDefault={handleReqInfo}
 				class="col-span-1 mx-auto flex flex-row gap-2 self-center items-center sm:space-x-4 py-6 z-[2]
 					xs:flex-row
-					md:max-w-md
-					"
+					md:max-w-md"
 			>
 				<input
+					bind:value={email}
 					required
 					type="email"
 					id="demo"
@@ -142,7 +181,7 @@
 					class="py-2 min-w-[144px] border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400
 						2xs:w-1/4 2xs:scale-100"
 				>
-					Request a demo
+					Request info
 				</button>
 			</form>
 		</div>
