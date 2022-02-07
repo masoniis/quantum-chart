@@ -31,4 +31,16 @@ When we signed up for the website design event at FBLA, we knew that there would
 - Since we used Tailwind, we decided to also incorporate some of the stylistic choices from the TailwindUI license. TailwindUI was a very helpful reference, and it was nice to see examples from the creators of Tailwind.
 
 # Stylistic Choices
+Why did we choose certain elements, fonts, etc.
 
+## Font
+- For our font, we decided to use the **Inter** font. We chose this font not only because it is entirely open source and free, but also because it is beautful for web developmenet. The font is very sleek, consistent, and universal. 
+
+## Animations
+- In terms of our animations, we chose to include these to add uniqueness to our site compared to competitors. Website builders (probably) allow for animations to be built-in, but ours are customized using code so they are unlikley to be the same as other sites.
+
+## Waves
+- We often use SVG waves between our element because it feels more natural to the eye and creates a more interesting transition as compared to an instant color change.
+
+## 3D perspective
+- On the home page of the site, there is a 3D panel. We chose to include this because it's unique and attracts attention while also looking pretty cool.
