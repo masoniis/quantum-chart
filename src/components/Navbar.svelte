@@ -2,7 +2,7 @@
 	import { fly, fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
-	import { menu, contactModal, demoModal, yStore, companyName } from '../stores';
+	import { menu, contactModal, demoModal, requestModal, yStore, companyName } from '../stores';
 	import Hamburger from 'svelte-hamburgers';
 	import closable from 'svelte-closable';
 	import Logo from '../components/Logo.svelte';
@@ -62,6 +62,7 @@
 			dropdown = false;
 			$contactModal = false;
 			$demoModal = false;
+			$requestModal = false;
 		}
 	}
 </script>

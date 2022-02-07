@@ -1,16 +1,59 @@
 <script>
 	import Logo from '../components/Logo.svelte';
-	import { companyName } from '../stores';
+	import { companyName, requestModal } from '../stores';
+	import Backdrop from '../components/Backdrop.svelte';
+	import { slide, fade } from 'svelte/transition';
+	import closable from 'svelte-closable';
+
+	let email;
+
+	const handleReqInfo = () => {
+		$requestModal = true;
+		email = '';
+	};
 </script>
 
 <title>{$companyName} - About</title>
-<meta name="description" content="{$companyName} about page, learn more about who we are behind the scenes.">
+<meta
+	name="description"
+	content="{$companyName} about page, learn more about who we are behind the scenes."
+/>
+
+{#if $requestModal}
+	<Backdrop />
+	<modal
+		in:slide={{ duration: 500 }}
+		out:fade={{ duration: 200 }}
+		class="grid grid-cols-1 grid-rows-1 fixed z-[101] h-screen w-full"
+	>
+		<div class="p-12 justify-self-center self-center">
+			<div
+				use:closable
+				on:outside-click={() => ($requestModal = false)}
+				class="bg-zinc-100 max-w-lg p-10 rounded-lg grid grid-cols-2 grid-rows-2"
+			>
+				<p class="col-span-2 text-center p-2 md:p-4">
+					Thanks for your information request. We will reply to the email you submitted shortly with
+					information on how to apply or contribute to {$companyName}.
+				</p>
+				<button
+					on:click={() => ($requestModal = false)}
+					class="col-span-2 self-center p-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+				>
+					Exit
+				</button>
+			</div>
+		</div>
+	</modal>
+{/if}
 
 <main class="min-h-screen text-maintext">
 	<!-- Top Section -->
 	<section class="min-w-screen min-h-screen pt-40">
 		<div class="flex flex-row container max-w-6xl px-12 mx-auto xl:px-10 space-x-6">
-			<h2 class="text-2xl xs:text-4xl sm:text-5xl md:text-6xl text-center font-bold tracking-tight text-gray-900 sm:leading-none">
+			<h2
+				class="text-2xl xs:text-4xl sm:text-5xl md:text-6xl text-center font-bold tracking-tight text-gray-900 sm:leading-none"
+			>
 				<div class="mx-auto md:hidden h-[128px] w-[128px]">
 					<Logo />
 				</div>
@@ -27,10 +70,9 @@
 				<Logo />
 			</p>
 		</div>
-		<br/>
-		<br/>
+		<br />
+		<br />
 	</section>
-
 
 	<!-- Our Mission -->
 	<section class="bg-gray-200 py-16 my-8">
@@ -46,12 +88,12 @@
 				to make chart designing more interactive and enjoyable? What if we could make it simple for everyone
 				of all ages to make any chart they want?
 				<br /> <br />
-				At {$companyName}, we set out to make all those dreams come true in a single software. We offer a wide
-				variety of charts for people to make with a simple user interface, optimize our programs to make your
-				experience as quick and smooth as possible, and crossed the borders of what was thought to be
-				possible with charting software by implementing AR and VR technology directly into our program. We
-				offer the best charts at the best prices, making the newest cutting-edge technology available to
-				everyone.
+				At {$companyName}, we set out to make all those dreams come true in a single software. We
+				offer a wide variety of charts for people to make with a simple user interface, optimize our
+				programs to make your experience as quick and smooth as possible, and crossed the borders of
+				what was thought to be possible with charting software by implementing AR and VR technology
+				directly into our program. We offer the best charts at the best prices, making the newest
+				cutting-edge technology available to everyone.
 			</p>
 		</flex>
 	</section>
@@ -65,12 +107,12 @@
 				Our Story
 			</h2>
 			<p class="sm:w-1/2 mx-auto text-center sm:text-left text-sm xs:text-lg">
-				Our two founders, John and Paul, met as college roommates at the University of Colorado, both pursuing a career in
-				software development. They both ended up working on similar projects: creating a program
-				that could take data and turn it into a line graph. When they realized that they were both
-				working on the same thing, they realized how much potential there was for this program. John
-				and Paul combined their projects, dropped out of college, and spent the next five years
-				building their project up until it became {$companyName}.
+				Our two founders, John and Paul, met as college roommates at the University of Colorado,
+				both pursuing a career in software development. They both ended up working on similar
+				projects: creating a program that could take data and turn it into a line graph. When they
+				realized that they were both working on the same thing, they realized how much potential
+				there was for this program. John and Paul combined their projects, dropped out of college,
+				and spent the next five years building their project up until it became {$companyName}.
 			</p>
 		</flex>
 	</section>
@@ -79,23 +121,69 @@
 	<section>
 		<div class="flex flex-col lg:flex-row lg:gap-6">
 			<div class="flex-col text-center justify-center mx-auto xl:px-10 w-50">
-				<img src='John.jpg' alt="John" width="500" height="1000" class='mx-auto'/>
+				<img src="John.jpg" alt="John" width="500" height="1000" class="mx-auto" />
 				<h3 class="text-2xl my-2 mb-1 text-center font-bold text-gray-700">John</h3>
-				<p class='text-center mb-4 sm:mb-0'>
+				<p class="text-center mb-4 sm:mb-0">
 					"I never saw myself where I am today--a young entrepreneur, partnering with a college
 					roommate to spend five years creating a charting app. But I don't regret a minute of it. {$companyName}
 					feels like a part of me now and I love seeing people's positive reactions to it."
 				</p>
 			</div>
 			<div class="flex-col justify-center mx-auto xl:px-10 w-50">
-				<img src='Paul.png' alt="Paul" width="500" height="1000" class='mx-auto'/>
+				<img src="Paul.png" alt="Paul" width="500" height="1000" class="mx-auto" />
 				<h3 class="text-2xl mt-2 mb-1 text-center font-bold text-gray-700">Paul</h3>
-				<p class='text-center'>
+				<p class="text-center">
 					"I've dreamt of creating my own app since middle school. Now, with {$companyName}, that
 					dream has become a reality for me. I hope that {$companyName} can make life easier for people
 					who want to create presentations or anything else that needs charts."
 				</p>
 			</div>
+		</div>
+	</section>
+
+	<!-- Join the team section -->
+	<section class="bg-lightbg py-16 my-16">
+		<div class="text-center px-4 grid">
+			<h1
+				class="font-bold text-maintext pb-4
+					text-4xl
+					xs:text-5xl
+					md:text-6xl 
+					lg:text-7xl"
+			>
+				Join the {$companyName} team
+			</h1>
+			<p
+				class="text-gray-500 max-w-3xl mx-auto
+					text-md	
+					lg:text-lg"
+			>
+				Email us if you are interested and we will be sure to respond with the chance at an
+				interview! We would love working with you.
+			</p>
+			<form
+				on:submit|preventDefault={handleReqInfo}
+				class="col-span-1 mx-auto flex flex-row gap-2 self-center items-center sm:space-x-4 py-6 z-[2]
+					xs:flex-row
+					md:max-w-md"
+			>
+				<input
+					bind:value={email}
+					required
+					type="email"
+					id="demo"
+					placeholder="Enter Email*"
+					class="shadow-lg my-2 text-center focus:ring-emerald-400 focus:border-emerald-500 block border-gray-300 rounded-full scale-75
+						2xs:text-sm 2xs:text-left 2xs:my-0 2xs:pl-[1.3rem] 2xs:scale-100 2xs:w-3/4"
+				/>
+				<button
+					type="submit"
+					class="py-2 min-w-[144px] border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400
+						2xs:w-1/4 2xs:scale-100"
+				>
+					Request info
+				</button>
+			</form>
 		</div>
 	</section>
 </main>
