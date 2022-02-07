@@ -7,11 +7,15 @@ This website is made by Dawson and Mason for the 2021-2022 FBLA competition.
 </details>
 
 ### What is the website about?
+ - Our website is a chart-creation software that allows the user to design a variety of different charts using advanced technology, including AR and VR software.
 
 ### Why is it software-based, and not a general business like a restaurant?
 - We chose to do a software based website for a number of reasons. First and foremost, a purely software-based website gives us the ability to create fully custom graphics. If we were to do a more "normal" business, we would be forced to spend time searching for stock images and other images that make a website feel plain.
 
-# Developement
+### Why did you choose to make a chart website?
+ - We both enjoy math and are both currently taking AP Statistics, so charts fit well with both of our interests. We wanted to create a website that would give us the opportunity to make our own icons, limit our use of stock photos, and create multiple different pricing plans. Chart creation is a relatively unique idea for a website that allows us to do all of those things.
+
+# Development
 When we signed up for the website design event at FBLA, we knew that there would be many competetitors who chose the route of Wix, Wordpress, or any similar alternatives. While we could have easily done that too, we decided to code the website from the ground up with the prioritization of our education in mind. To be straight up, we have no regrets. It was super cool to learn about web development, and we learned way more than we ever would have learned with Wix.
 
 ### Svelte
@@ -25,3 +29,6 @@ When we signed up for the website design event at FBLA, we knew that there would
 
 #### TailwindUI
 - Since we used Tailwind, we decided to also incorporate some of the stylistic choices from the TailwindUI license. TailwindUI was a very helpful reference, and it was nice to see examples from the creators of Tailwind.
+
+# Stylistic Choices
+
