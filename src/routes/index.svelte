@@ -32,12 +32,15 @@
 	const words = ['simple', 'amazing', 'efficient', 'awesome', 'sleek', 'seamless', 'quick', 'beautiful', 'immersive'];
 
 	const colors = [
-		'#90afe0', //Light Blue
-		'#d2a3d9', //Light Purple
-		'#ed8798', //Light Red
-		'#a2d19f', //Seafoam Green
-		'#dbd39e', //Tan or Light Yellow
-		'#b3e6db' //Light Cyan
+		'#61C9A8', //Ocean Green 			(green)
+		'#BBC8CA', //Silver Sand 			(blue)
+		'#B592A0', //Lilac Luster 			(lilac)
+		'#677DB7', //Glaucous 				(blue)
+		'#FB3640', //Red Salsa 				(red)
+		'#ED9B40', //Carrot Orange 			(orange)
+		'#FAF2A1', //Green Yellow Crayola	(tanish)
+		'#EB6534', //Flame					(orange)
+		'#DBAFC1', //Cameo Pink				(pink)
 	];
 
 	const randomColor = () => {
@@ -54,6 +57,7 @@
 			// Set `randIndex` to a new value each interval.
 			index = index + 1;
 			randColor = randomColor();
+			console.log(randColor);
 			if (index > words.length - 1) {
 				index = 0;
 			}
