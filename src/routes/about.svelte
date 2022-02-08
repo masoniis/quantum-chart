@@ -74,116 +74,149 @@
 		<br />
 	</section>
 
-	<!-- Our Mission -->
-	<section class="bg-gray-200 py-16 my-8">
-		<flex class="flex flex-col lg:flex-row mx-auto container gap-6">
-			<h2
-				class="sm:w-1/2 text-center mx-auto sm:text-left lg:ml-8 text-5xl xs:text-6xl h-fit lg:sticky overflow-hidden min-w-fit top-[88px] font-bold tracking-tight text-gray-900 sm:leading-none"
-			>
-				Our Mission
-			</h2>
-			<p class="sm:w-1/2 mx-auto text-sm xs:text-lg text-center sm:text-left">
-				{$companyName} started with the question, what if? What if we changed the way charting software
-				worked, making it easier and more accessible for everyone? What if we used unique AR and VR software
-				to make chart designing more interactive and enjoyable? What if we could make it simple for everyone
-				of all ages to make any chart they want?
-				<br /> <br />
-				At {$companyName}, we set out to make all those dreams come true in a single software. We
-				offer a wide variety of charts for people to make with a simple user interface, optimize our
-				programs to make your experience as quick and smooth as possible, and crossed the borders of
-				what was thought to be possible with charting software by implementing AR and VR technology
-				directly into our program. We offer the best charts at the best prices, making the newest
-				cutting-edge technology available to everyone.
-			</p>
-		</flex>
-	</section>
-
-	<!-- Our Story -->
-	<section class="bg-gray-200 py-16 my-8">
-		<flex class="flex flex-col lg:flex-row justify-center mx-auto container gap-6">
-			<h2
-				class="sm:w-1/2 mx-auto text-center sm:text-left lg:ml-8 text-5xl xs:text-6xl h-fit lg:sticky overflow-visible min-w-fit top-[88px] font-bold tracking-tight text-gray-900 sm:leading-none"
-			>
-				Our Story
-			</h2>
-			<p class="sm:w-1/2 mx-auto text-center sm:text-left text-sm xs:text-lg">
-				Our two founders, John and Paul, met as college roommates at the University of Colorado,
-				both pursuing a career in software development. They both ended up working on similar
-				projects: creating a program that could take data and turn it into a line graph. When they
-				realized that they were both working on the same thing, they realized how much potential
-				there was for this program. John and Paul combined their projects, dropped out of college,
-				and spent the next five years building their project up until it became {$companyName}.
-			</p>
-		</flex>
-	</section>
-
-	<!-- Founder Bios -->
-	<section>
-		<div class="flex flex-col lg:flex-row lg:gap-6">
-			<div class="flex-col text-center justify-center mx-auto xl:px-10 w-50">
-				<img src="John.jpg" alt="John" width="500" height="1000" class="mx-auto" />
-				<h3 class="text-2xl my-2 mb-1 text-center font-bold text-gray-700">John</h3>
-				<p class="text-center mb-4 sm:mb-0">
-					"I never saw myself where I am today--a young entrepreneur, partnering with a college
-					roommate to spend five years creating a charting app. But I don't regret a minute of it. {$companyName}
-					feels like a part of me now and I love seeing people's positive reactions to it."
-				</p>
+	<!-- Our Values -->
+	<section class="bg-gray-200">
+		<h2 class="mb-8 text-center text-6xl sm:text-7xl font-bold text-gray-900">
+			Our Values
+		</h2>
+		<grid class="bg-gray-200 mx-auto mb-16 w-1/2 justify-center gap-y-4 text-center text-gray-700 text-3xl grid grid-cols-2 grid-rows-3 origin-center">
+			<div class="flex flex-col">
+				<h2>We <span class="text-pink-400">care</span></h2>
+				<p class="text-gray-500 text-xl">about making {$companyName} perfect for all of you.</p>
 			</div>
-			<div class="flex-col justify-center mx-auto xl:px-10 w-50">
-				<img src="Paul.png" alt="Paul" width="500" height="1000" class="mx-auto" />
-				<h3 class="text-2xl mt-2 mb-1 text-center font-bold text-gray-700">Paul</h3>
-				<p class="text-center">
-					"I've dreamt of creating my own app since middle school. Now, with {$companyName}, that
-					dream has become a reality for me. I hope that {$companyName} can make life easier for people
-					who want to create presentations or anything else that needs charts."
-				</p>
+			<div>
+				<h2>We <span class="text-yellow-400">design</span></h2>
+				<p class="text-gray-500 text-xl">an easy-to-use app with hundreds of unique features.</p>
 			</div>
-		</div>
+			<div>
+				<h2>We <span class="text-blue-600">learn</span></h2>
+				<p class="text-gray-500 text-xl">to constantly improve on our products.</p>
+			</div>
+			<div>
+				<h2>We <span class="text-red-500">create</span></h2>
+				<p class="text-gray-500 text-xl"></p>
+			</div>
+			<div>
+				<h2>We <span class="text-purple-500">respond</span></h2>
+				<p class="text-gray-500 text-xl">to your feedback and use it to make {$companyName} better.</p>
+			</div>
+			<div>
+				<h2>We <span class="text-orange-400">inspire</span></h2>
+				<p class="text-gray-500 text-xl">a new generation of chart-creation software.</p>
+			</div>
+		</grid>
 	</section>
 
-	<!-- Join the team section -->
-	<section class="bg-lightbg py-16 my-16">
-		<div class="text-center px-4 grid">
-			<h1
-				class="font-bold text-maintext pb-4
+		<!-- Our Mission -->
+		<section class="bg-gray-200 py-16 my-8">
+			<flex class="flex flex-col lg:flex-row mx-auto container gap-6">
+				<h2
+					class="sm:w-1/2 text-center mx-auto sm:text-left lg:ml-8 text-5xl xs:text-6xl h-fit lg:sticky overflow-hidden min-w-fit top-[88px] font-bold tracking-tight text-gray-900 sm:leading-none"
+				>
+					Our Mission
+				</h2>
+				<p class="sm:w-1/2 mx-auto text-sm xs:text-lg text-center sm:text-left">
+					{$companyName} started with the question, what if? What if we changed the way charting software
+					worked, making it easier and more accessible for everyone? What if we used unique AR and VR
+					software to make chart designing more interactive and enjoyable? What if we could make it simple
+					for everyone of all ages to make any chart they want?
+					<br /> <br />
+					At {$companyName}, we set out to make all those dreams come true in a single software. We
+					offer a wide variety of charts for people to make with a simple user interface, optimize
+					our programs to make your experience as quick and smooth as possible, and crossed the
+					borders of what was thought to be possible with charting software by implementing AR and
+					VR technology directly into our program. We offer the best charts at the best prices,
+					making the newest cutting-edge technology available to everyone.
+				</p>
+			</flex>
+		</section>
+
+		<!-- Our Story -->
+		<section class="bg-gray-200 py-16 my-8">
+			<flex class="flex flex-col lg:flex-row justify-center mx-auto container gap-6">
+				<h2
+					class="sm:w-1/2 mx-auto text-center sm:text-left lg:ml-8 text-5xl xs:text-6xl h-fit lg:sticky overflow-visible min-w-fit top-[88px] font-bold tracking-tight text-gray-900 sm:leading-none"
+				>
+					Our Story
+				</h2>
+				<p class="sm:w-1/2 mx-auto text-center sm:text-left text-sm xs:text-lg">
+					Our two founders, John and Paul, met as college roommates at the University of Colorado,
+					both pursuing a career in software development. They both ended up working on similar
+					projects: creating a program that could take data and turn it into a line graph. When they
+					realized that they were both working on the same thing, they realized how much potential
+					there was for this program. John and Paul combined their projects, dropped out of college,
+					and spent the next five years building their project up until it became {$companyName}.
+				</p>
+			</flex>
+		</section>
+
+		<!-- Founder Bios -->
+		<section>
+			<div class="flex flex-col lg:flex-row lg:gap-6">
+				<div class="flex-col text-center justify-center mx-auto xl:px-10 w-50">
+					<img src="John.png" alt="John" width="500" height="1000" class="mx-auto" />
+					<h3 class="text-2xl my-2 mb-1 text-center font-bold text-gray-700">John</h3>
+					<p class="text-center mb-4 sm:mb-0">
+						"I never saw myself where I am today--a young entrepreneur, partnering with a college
+						roommate to spend five years creating a charting app. But I don't regret a minute of it. {$companyName}
+						feels like a part of me now and I love seeing people's positive reactions to it."
+					</p>
+				</div>
+				<div class="flex-col justify-center mx-auto xl:px-10 w-50">
+					<img src="Paul.png" alt="Paul" width="500" height="1000" class="mx-auto" />
+					<h3 class="text-2xl mt-2 mb-1 text-center font-bold text-gray-700">Paul</h3>
+					<p class="text-center">
+						"I've dreamt of creating my own app since middle school. Now, with {$companyName}, that
+						dream has become a reality for me. I hope that {$companyName} can make life easier for people
+						who want to create presentations or anything else that needs charts."
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Join the team section -->
+		<section class="bg-lightbg py-16 my-16">
+			<div class="text-center px-4 grid">
+				<h1
+					class="font-bold text-maintext pb-4
 					text-4xl
 					xs:text-5xl
 					md:text-6xl 
 					lg:text-7xl"
-			>
-				Join the {$companyName} team
-			</h1>
-			<p
-				class="text-gray-500 max-w-3xl mx-auto
+				>
+					Join the {$companyName} team
+				</h1>
+				<p
+					class="text-gray-500 max-w-3xl mx-auto
 					text-md	
 					lg:text-lg"
-			>
-				Email us if you are interested and we will be sure to respond with the chance at an
-				interview! We would love working with you.
-			</p>
-			<form
-				on:submit|preventDefault={handleReqInfo}
-				class="col-span-1 mx-auto flex flex-row gap-2 self-center items-center sm:space-x-4 py-6 z-[2]
+				>
+					Email us if you are interested and we will be sure to respond with the chance at an
+					interview! We would love to work with you.
+				</p>
+				<form
+					on:submit|preventDefault={handleReqInfo}
+					class="col-span-1 mx-auto flex flex-row gap-2 self-center items-center sm:space-x-4 py-6 z-[2]
 					xs:flex-row
 					md:max-w-md"
-			>
-				<input
-					bind:value={email}
-					required
-					type="email"
-					id="demo"
-					placeholder="Enter Email*"
-					class="shadow-lg my-2 text-center focus:ring-emerald-400 focus:border-emerald-500 block border-gray-300 rounded-full scale-75
-						2xs:text-sm 2xs:text-left 2xs:my-0 2xs:pl-[1.3rem] 2xs:scale-100 2xs:w-3/4"
-				/>
-				<button
-					type="submit"
-					class="py-2 min-w-[144px] border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400
-						2xs:w-1/4 2xs:scale-100"
 				>
-					Request info
-				</button>
-			</form>
-		</div>
-	</section>
+					<input
+						bind:value={email}
+						required
+						type="email"
+						id="demo"
+						placeholder="Enter Email*"
+						class="shadow-lg my-2 text-center focus:ring-emerald-400 focus:border-emerald-500 block border-gray-300 rounded-full scale-75
+						2xs:text-sm 2xs:text-left 2xs:my-0 2xs:pl-[1.3rem] 2xs:scale-100 2xs:w-3/4"
+					/>
+					<button
+						type="submit"
+						class="py-2 min-w-[144px] border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400
+						2xs:w-1/4 2xs:scale-100"
+					>
+						Request info
+					</button>
+				</form>
+			</div>
+		</section>
 </main>

@@ -55,7 +55,7 @@
 		<grid
 			class="mt-12 space-y-4 sm:mt-16 sm:space-y-0 grid-cols-1 sm:grid sm:grid-cols-2 gap-8 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 xl:grid-cols-3 bg-transparent"
 		>
-			<div class="border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200 bg-lightbg">
+			<div in:fade={{ duration: 300, delay: 600}} class="border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200 bg-lightbg">
 				<div class="p-6">
 					<h2 class="text-lg leading-6 font-medium text-gray-900">Basic</h2>
 					<p class="mt-4 text-sm text-gray-500">Your standard chart service</p>
