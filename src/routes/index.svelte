@@ -57,7 +57,6 @@
 			// Set `randIndex` to a new value each interval.
 			index = index + 1;
 			randColor = randomColor();
-			console.log(randColor);
 			if (index > words.length - 1) {
 				index = 0;
 			}
@@ -79,6 +78,7 @@
 <svelte:head>
 	<title>Home - {$companyName}</title>
 	<meta name="description" content="{$companyName} home page, make beautiful charts in the blink of an eye.">
+	<meta name="theme-color" content="#e0cf9b">
 </svelte:head>
 
 <svelte:window bind:innerWidth={width} />
