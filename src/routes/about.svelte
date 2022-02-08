@@ -73,7 +73,7 @@
 		<br />
 		<br />
 	</section>
-	
+
 	<section class="bg-gray-200 py-16 my-8">
 		<flex class="flex flex-col lg:flex-row justify-center mx-auto container gap-6">
 			<h2
@@ -81,65 +81,47 @@
 			>
 				Our Values
 			</h2>
-			<flex class="sm:w-1/2 flex-flex-col mx-auto text-sm xs:text-lg">
-				<flex class="flex flex-row">
-					<div>1 image</div>
-					<div>Value</div>
+			<flex class="sm:w-1/2 flex-flex-col mx-auto text-lg">
+				<flex class="flex flex-row py-3">
+					<div class="hidden">1 image</div>
+					<div class="flex flex-col">
+						<h2 class="font-bold">We
+							<span class="text-pink-400">care</span>
+						</h2>
+						<p class="text-lg text-gray-500 font-normal">about making {$companyName} perfect for you.</p>
+					</div>
 				</flex>
-				<flex class="flex flex-row">
-					<div>1 image</div>
-					<div>Value</div>
+				<flex class="flex flex-row py-3">
+					<div>
+						<h2 class="font-bold">We
+							<span class="text-yellow-400">design</span>
+						</h2>
+						<p class="text-lg text-gray-500">a simple app with hundreds of unique features.</p>
+					</div>
 				</flex>
-				<flex class="flex flex-row">
-					<div>1 image</div>
-					<div>Reliability</div>
+				<flex class="flex flex-row py-3">
+					<div>
+						<h2 class="font-bold">We <span class="text-blue-600">learn</span></h2>
+					<p class="text-gray-500 text-lg">to constantly improve on our products.</p>
 				</flex>
-				<flex class="flex flex-row">
-					<div>1 image</div>
-					<div>Value</div>
+				<flex class="flex flex-row py-3">
+					<div>
+						<h2 class="font-bold">We <span class="text-red-500">create</span></h2>
+					<p class="text-gray-500 text-lg">charts for anywhere you might need them.</p>
 				</flex>
-				<flex class="flex flex-row">
-					<div>1 image</div>
-					<div>Value</div>
+				<flex class="flex flex-row py-3">
+					<div>
+						<h2 class="font-bold">We <span class="text-purple-600">respond</span></h2>
+						<p class="text-gray-500 text-lg">and your feedback makes our software better.</p>
+					</div>
 				</flex>
-				<flex class="flex flex-row">
-					<div>1 image</div>
-					<div>Value</div>
+				<flex class="flex flex-row py-3">
+					<div>
+						<h2 class="font-bold">We <span class="text-orange-400">inspire</span></h2>
+					<p class="text-gray-500 text-lg">a new generation of chart-creation software.</p>
+					</div>
 				</flex>
 			</flex>
-		</flex>
-	</section>
-	<!-- Our Values -->
-	<section class="bg-gray-200">
-		<h2 class="mb-8 text-center text-6xl sm:text-7xl font-bold text-gray-900">
-			Our Values
-		</h2>
-		<grid class="bg-gray-200 mx-auto mb-16 w-1/2 justify-center gap-y-4 text-center text-gray-700 text-3xl grid grid-cols-2 grid-rows-3 origin-center">
-			<div class="flex flex-col">
-				<h2>We <span class="text-pink-400">care</span></h2>
-				<p class="text-gray-500 text-xl">about making {$companyName} perfect for all of you.</p>
-			</div>
-			<div>
-				<h2>We <span class="text-yellow-400">design</span></h2>
-				<p class="text-gray-500 text-xl">an easy-to-use app with hundreds of unique features.</p>
-			</div>
-			<div>
-				<h2>We <span class="text-blue-600">learn</span></h2>
-				<p class="text-gray-500 text-xl">to constantly improve on our products.</p>
-			</div>
-			<div>
-				<h2>We <span class="text-red-500">create</span></h2>
-				<p class="text-gray-500 text-xl"></p>
-			</div>
-			<div>
-				<h2>We <span class="text-purple-500">respond</span></h2>
-				<p class="text-gray-500 text-xl">to your feedback and use it to make {$companyName} better.</p>
-			</div>
-			<div>
-				<h2>We <span class="text-orange-400">inspire</span></h2>
-				<p class="text-gray-500 text-xl">a new generation of chart-creation software.</p>
-			</div>
-		</grid>
 	</section>
 
 		<!-- Our Mission -->
