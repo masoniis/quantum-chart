@@ -364,8 +364,8 @@
 				<p>your design, bringing it to life in the real world</p>
 			</div>
 			<div class="text-center">
-				<p class="h-24 w-24 mx-auto">
-					<Logo />
+				<p class="h-24 w-24 mx-auto scale-125 translate-y-6">
+					<img src="Airplane.png" alt="airplane" />
 				</p>
 				<h2 class="text-5xl py-4">Deploy</h2>
 				<p>the design to any application supported</p>
