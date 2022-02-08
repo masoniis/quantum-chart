@@ -1,5 +1,5 @@
 <script>
-	import { companyName, demoModal } from '../stores';
+	import { companyName, demoModal, statusBar } from '../stores';
 	import { scrollTo, scrollRef, setGlobalOptions } from 'svelte-scrolling';
 	import { onMount } from 'svelte';
 	import { slide, fade, fly } from 'svelte/transition';
@@ -57,7 +57,6 @@
 			// Set `randIndex` to a new value each interval.
 			index = index + 1;
 			randColor = randomColor();
-			console.log(randColor);
 			if (index > words.length - 1) {
 				index = 0;
 			}

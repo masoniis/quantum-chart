@@ -17,7 +17,6 @@
 </script>
 
 <svelte:head>
-	<meta name="theme-color" content="#e0cf9b">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 </svelte:head>

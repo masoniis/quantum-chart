@@ -2,11 +2,18 @@
 	import { fly, fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
-	import { menu, contactModal, demoModal, requestModal, yStore, companyName } from '../stores';
+	import { menu, contactModal, demoModal, requestModal, yStore, companyName, statusBar } from '../stores';
 	import Hamburger from 'svelte-hamburgers';
 	import closable from 'svelte-closable';
 	import Logo from '../components/Logo.svelte';
 	import Menu from './Minimenu.svelte';
+	import { tweened } from 'svelte/motion';
+	import { cubicOut } from 'svelte/easing'
+
+	const alpha = tweened(0, {
+		duration: 400,
+		easing: cubicOut
+	});
 
 	let dropdown = false;
 	let dropButton;
@@ -79,6 +86,8 @@
 		rel="stylesheet"
 		href="https://cdn.jsdelivr.net/npm/svelte-hamburgers@3/dist/css/types/spin.css"
 	/>
+
+	<meta name="theme-color" content="#fffff">
 </svelte:head>
 
 <svelte:window bind:scrollY={y} />
