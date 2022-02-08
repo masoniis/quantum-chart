@@ -79,6 +79,8 @@
 		rel="stylesheet"
 		href="https://cdn.jsdelivr.net/npm/svelte-hamburgers@3/dist/css/types/spin.css"
 	/>
+
+	<meta name="theme-color" content="#e0cf9b">
 </svelte:head>
 
 <svelte:window bind:scrollY={y} />
