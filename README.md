@@ -16,7 +16,7 @@ This website is made by Dawson and Mason for the 2021-2022 FBLA competition.
  - We both enjoy math and are both currently taking AP Statistics, so charts fit well with both of our interests. We wanted to create a website that would give us the opportunity to make our own icons, limit our use of stock photos, and create multiple different pricing plans. Chart creation is a relatively unique idea for a website that allows us to do all of those things.
 
 # Development
-When we signed up for the website design event at FBLA, we knew that there would be many competetitors who chose the route of Wix, Wordpress, or any similar alternatives. While we could have easily done that too, we decided to code the website from the ground up with the prioritization of our education in mind. To be straight up, we have no regrets. It was super cool to learn about web development, and we learned way more than we ever would have learned with Wix.
+When we signed up for the website design event at FBLA, we knew that there would be many competetitors who chose the route of <u>Wix, Wordpress, or any similar alternatives.</u> While we could have easily done that too, we decided to code the website from the ground up with the prioritization of our education in mind. To be straight up, we have no regrets. It was super cool to learn about web development, and we learned way more than we ever would have learned with Wix.
 
 ### Svelte
 - Quantum chart is a svelte-based website. In the search for an ideal framework, we came across Svelte which seemed to offer nothing but benefits over other frameworks such as Next.js, Gatsby, base React, Vue, etc.
