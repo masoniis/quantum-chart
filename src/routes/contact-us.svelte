@@ -257,7 +257,7 @@
 						</div>
 						<div>
 							<a
-								href="/"
+								href="/about"
 								class="text-mainlink hover:text-mainlinkhover text-lg font-medium pt-4 link link-underline link-underline-black"
 								>Join the Team</a
 							>

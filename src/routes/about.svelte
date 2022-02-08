@@ -81,7 +81,7 @@
 		</svg>
 	</div>
 
-	<section class="bg-gray-200 py-16 mb-8">
+	<section class="bg-gray-200 py-16">
 		<flex class="flex flex-col lg:flex-row justify-center mx-auto container gap-6">
 			<h2
 				class="sm:w-1/2 mx-auto text-center sm:text-left lg:ml-8 text-5xl xs:text-6xl h-fit lg:sticky overflow-visible min-w-fit top-[88px] font-bold tracking-tight text-gray-900 sm:leading-none"
@@ -131,8 +131,17 @@
 			</flex>
 	</section>
 
+	<div class="topsection-wave bg-gray-100 fill-gray-200 z-[-1]">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+			<path
+				d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+				class="shape-fill"
+			/>
+		</svg>
+	</div>
+
 		<!-- Our Mission -->
-		<section class="bg-gray-200 py-16 my-8">
+		<section class="bg-gray-100 py-16">
 			<flex class="flex flex-col lg:flex-row mx-auto container gap-6">
 				<h2
 					class="sm:w-1/2 text-center mx-auto sm:text-left lg:ml-8 text-5xl xs:text-6xl h-fit lg:sticky overflow-hidden min-w-fit top-[88px] font-bold tracking-tight text-gray-900 sm:leading-none"
@@ -155,8 +164,17 @@
 			</flex>
 		</section>
 
+		<div class="topsection-wave bg-gray-200 fill-gray-100 z-[1]">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+				<path
+					d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+					class="shape-fill"
+				/>
+			</svg>
+		</div>
+
 		<!-- Our Story -->
-		<section class="bg-gray-200 py-16 my-8">
+		<section class="bg-gray-200 py-16">
 			<flex class="flex flex-col lg:flex-row justify-center mx-auto container gap-6">
 				<h2
 					class="sm:w-1/2 mx-auto text-center sm:text-left lg:ml-8 text-5xl xs:text-6xl h-fit lg:sticky overflow-visible min-w-fit top-[88px] font-bold tracking-tight text-gray-900 sm:leading-none"
@@ -183,8 +201,20 @@
 			</flex>
 		</section>
 
+		<div class="bottomsection-wave bg-white fill-gray-200 z-[1]">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+				<path
+					d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+					class="shape-fill"
+				/>
+			</svg>
+		</div>
+
 		<!-- Founder Bios -->
 		<section>
+			<h1 style="margin-top: -0.45rem" class="text-center mx-auto mb-4 text-5xl xs:text-6xl h-fit overflow-visible min-w-fit font-bold tracking-tight text-gray-900 sm:leading-none">
+				Our Founders
+			</h1>
 			<div class="flex flex-col lg:flex-row lg:gap-6">
 				<div class="flex-col text-center justify-center mx-auto xl:px-10 w-50">
 					<img src="John.png" alt="John" width="500" height="1000" class="mx-auto" />
@@ -232,8 +262,17 @@
 		</svg>
 	</div>
 
+	<div class="topsection-wave bg-gray-200 fill-white z-[1]">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+			<path
+				d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+				class="shape-fill"
+			/>
+		</svg>
+	</div>
+
 	<!-- Join the team section -->
-	<section class="bg-lightbg py-16">
+	<section class="bg-gray-200 py-16">
 		<div class="text-center px-4 grid">
 			<h1
 				class="font-bold text-maintext pb-4
@@ -279,7 +318,7 @@
 	</section>
 
 	<!-- BOTTOM DIVIDER (for start now section) -->
-	<div class="join-team-bottomwave fill-lightbg mb-24">
+	<div class="join-team-bottomwave fill-gray-200 mb-24">
 		<svg
 			data-name="Layer 1"
 			xmlns="http://www.w3.org/2000/svg"
@@ -319,6 +358,22 @@
 		display: block;
 		width: calc(122% + 1.3px);
 		height: 103px;
+	}
+	
+	.bottomsection-wave {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+	}
+
+	.bottomsection-wave svg {
+		position: relative;
+		display: block;
+		width: calc(122% + 1.3px);
+		height: 80px;
 	}
 	.join-team-bottomwave {
 		position: relative;

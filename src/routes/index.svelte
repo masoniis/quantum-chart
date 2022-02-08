@@ -503,12 +503,12 @@
 						<h2
 							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
 						>
-							Jane Cooper <span class="hidden xs:inline text-gray-500"> - Happy Neighbor</span>
+							Jane Cooper <span class="hidden xs:inline text-gray-500"> - Coding Hobbyist</span>
 						</h2>
 					</div>
 					<img
 						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-						src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
+						src="static/Testimonial Woman 3 (1).jpg"
 						alt=""
 					/>
 				</blockquote>
@@ -547,7 +547,7 @@
 					</div>
 					<img
 						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-						src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
+						src="static/Testimonial Woman 1 (1).jpg"
 						alt=""
 					/>
 				</blockquote>
@@ -587,7 +587,7 @@
 					</div>
 					<img
 						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-						src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
+						src="static/Testimonial Man 1 (1).jpg"
 						alt=""
 					/>
 				</blockquote>
@@ -613,8 +613,8 @@
 								   lg:text-sm 
 								xl:text-base"
 							>
-								When my teachers ask how I make such good charts, I just show them to this
-								software.
+								When my professors ask how I make such good charts, I just show them to this
+								software. It's also very easy to use!
 							</p>
 						</div>
 
@@ -622,13 +622,13 @@
 							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
 						>
 							Victor Appat <span class="hidden xs:inline text-gray-500">
-								- High School Student</span
+								- College Student</span
 							>
 						</h2>
 					</div>
 					<img
 						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-						src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
+						src="static/Testimonial Man 3 (1).jpg"
 						alt=""
 					/>
 				</blockquote>
@@ -777,7 +777,7 @@
 						</div>
 						<img
 							class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-							src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
+							src="static/Testimonial Man 2 (1).jpeg"
 							alt=""
 						/>
 					</blockquote>
@@ -818,7 +818,7 @@
 						</div>
 						<img
 							class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-							src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
+							src="static/Testimonial Woman 2 (1).jpg"
 							alt=""
 						/>
 					</blockquote>
@@ -859,7 +859,7 @@
 						</div>
 						<img
 							class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-							src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
+							src="static/Testimonial Man 4 (1).jpg"
 							alt=""
 						/>
 					</blockquote>
