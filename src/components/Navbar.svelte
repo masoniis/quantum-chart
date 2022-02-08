@@ -38,9 +38,11 @@
 		if (y >= 60) {
 			shadow = 'shadow-lg';
 			background = 'bg-mainbg';
+			$statusBar = 'bg-black';
 		} else if (y < 60) {
 			shadow = '';
 			background = 'bg-transparent';
+			$statusBar= 'bg-transparent';
 		}
 
 		if (open === true) {
