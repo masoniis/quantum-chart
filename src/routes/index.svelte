@@ -61,7 +61,7 @@
 			if (index > words.length - 1) {
 				index = 0;
 			}
-		}, 2400);
+		}, 2000);
 
 		return () => {
 			clearInterval(interval);
