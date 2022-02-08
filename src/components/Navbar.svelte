@@ -10,9 +10,7 @@
 	import { tweened } from 'svelte/motion';
 	import { cubicOut } from 'svelte/easing'
 
-	let statusAlpha = 0;
-
-	const progress = tweened(0, {
+	const alpha = tweened(0, {
 		duration: 400,
 		easing: cubicOut
 	});
@@ -47,19 +45,9 @@
 		if (y >= 60) {
 			shadow = 'shadow-lg';
 			background = 'bg-mainbg';
-			$statusBar = '#fffff'
 		} else if (y < 60) {
 			shadow = '';
 			background = 'bg-transparent';
-			if ($page.url.pathname === '/') {
-				$statusBar = 'transparent'
-			}
-			if ($page.url.pathname === '/about') {
-				$statusBar = 'transparent'
-			}
-			if ($page.url.pathname === '/pricing') {
-				$statusBar = 'transparent'
-			}
 		}
 
 		if (open === true) {
@@ -99,7 +87,7 @@
 		href="https://cdn.jsdelivr.net/npm/svelte-hamburgers@3/dist/css/types/spin.css"
 	/>
 
-	<meta name="theme-color" content="{$statusBar}">
+	<meta name="theme-color" content="#fffff">
 </svelte:head>
 
 <svelte:window bind:scrollY={y} />
