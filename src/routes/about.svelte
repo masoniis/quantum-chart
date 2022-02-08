@@ -255,10 +255,24 @@
 					interview! We would love to work with you.
 				</p>
 				<form
-					on:submit|preventDefault={handleReqInfo}
-					class="col-span-1 mx-auto flex flex-row gap-2 self-center items-center sm:space-x-4 py-6 z-[2]
+				on:submit|preventDefault={handleReqInfo}
+				class="col-span-1 mx-auto flex flex-row gap-2 self-center items-center sm:space-x-4 py-6 z-[2]
 					xs:flex-row
 					md:max-w-md"
+			>
+				<input
+					bind:value={email}
+					required
+					type="email"
+					id="demo"
+					placeholder="Enter Email*"
+					class="shadow-lg my-2 text-center focus:ring-emerald-400 focus:border-emerald-500 block border-gray-300 rounded-full scale-75
+						2xs:text-sm 2xs:text-left 2xs:my-0 2xs:pl-[1.3rem] 2xs:scale-100 2xs:w-3/4"
+				/>
+				<button
+					type="submit"
+					class="py-2 min-w-[144px] border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400
+						2xs:w-1/4 2xs:scale-100"
 				>
 					Request info
 				</button>
