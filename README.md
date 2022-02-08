@@ -7,7 +7,7 @@ This website is made by Dawson and Mason for the 2021-2022 FBLA competition.
 </details>
 
 ### What is the website about?
- - Our website is a chart-creation software that allows the user to design a variety of different charts using advanced technology, including AR and VR software.
+ - Our website is made for a chart-creation software that allows the user to design a variety of different charts using advanced technology, including AR and VR software.
 
 ### Why is it software-based, and not a general business like a restaurant?
 - We chose to do a software based website for a number of reasons. First and foremost, a purely software-based website gives us the ability to create fully custom graphics. If we were to do a more "normal" business, we would be forced to spend time searching for stock images and other images that make a website feel plain.
@@ -48,5 +48,6 @@ Why did we choose certain elements, fonts, etc.
 # Copyright Information
  - Most of our the images we use in our website are designed by us. However, we did use some stock photos for the testimonials and about pages.
 
-“Handsome Businessman Smiling.” TopPNG, 28 July 2019, toppng.com. Accessed 8 Feb. 2022. 
+“Handsome Businessman Smiling.” TopPNG, 28 July 2019, toppng.com. Accessed 8 Feb. 2022.
+
 “Man in Suit.” Nappy, nappy.co. Accessed 8 Feb. 2022.
