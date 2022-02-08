@@ -29,6 +29,16 @@
 			}
 		}
 
+		if ($page.url.pathname === '/') {
+				$statusBar = '#e0cf9b'
+			}
+			if ($page.url.pathname === '/about') {
+				$statusBar = '#FFFFF'
+			}
+			if ($page.url.pathname === '/pricing') {
+				$statusBar = '#e5e7eb'
+			}
+
 		window.addEventListener('resize', onResize);
 		return () => window.removeEventListener('resize', onResize);
 	});
