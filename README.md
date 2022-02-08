@@ -30,6 +30,9 @@ When we signed up for the website design event at FBLA, we knew that there would
 #### TailwindUI
 - Since we used Tailwind, we decided to also incorporate some of the stylistic choices from our **TailwindUI non-exclusive license**. TailwindUI was a very helpful reference, and it was nice to see examples from the creators of Tailwind.
 
+### Vercel
+- The website is deployed to the internet for free using Vercel. Vercel helps to develop Svelte so it worked perfectly.
+
 # Stylistic Choices
 Why did we choose certain elements, fonts, etc.
 
