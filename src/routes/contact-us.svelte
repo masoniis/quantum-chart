@@ -147,7 +147,7 @@
 	<br /><br /><br /><br /><br /><br /><br /><br />
 
 	<!--  ↓ Top Shape Divider ↓  -->
-	<div class="top-wave fill-lightbg">
+	<div class="top-wave fill-gray-100">
 		<svg
 			data-name="Layer 1"
 			xmlns="http://www.w3.org/2000/svg"
@@ -163,7 +163,7 @@
 
 	<!--     Contact Section     -->
 	<Visibility threshold="30" let:visible>
-		<div bind:clientHeight={contactHeight} class="relative mx-0 px-2 min-w-10/12 py-14 md:py-24 bg-lightbg" style="min-height: {contactHeight}px">
+		<div bind:clientHeight={contactHeight} class="relative mx-0 px-2 min-w-10/12 py-14 md:py-24 bg-gray-100" style="min-height: {contactHeight}px">
 			{#if visible}
 				<div class="container mx-auto flex flex-col md:flex-row justify-center">
 					<!-- Contact Info ICONS TAKEN FROM: https://iconmonstr.com PAY ATTENTION TO LICENSE-->
@@ -221,7 +221,7 @@
 								>
 								<a
 									class="text-mainlink hover:text-mainlinkhover link link-underline link-underline-black"
-									href="mail@landscape.com">mail@landscape.com</a
+									href="support@quantumchart.com">support@quantumchart.com</a
 								>
 							</div>
 						</div>
@@ -244,24 +244,24 @@
 								class="text-mainlink hover:text-mainlinkhover text-lg font-medium link link-underline link-underline-black"
 								>Book a Demo</a
 							>
-							<p class="pb-4">Request a demo from one of our landscape masters.</p>
+							<p class="pb-4">Request a demo from one of our charting masters.</p>
 						</div>
 
 						<div class="py-4 mb-4 border-y-[1px] border-black">
 							<a
-								href="https://www.google.com/search?q=Do+Something"
+								href="/pricing"
 								class=" text-mainlink hover:text-mainlinkhover text-lg font-medium link link-underline link-underline-black"
-								>Do something</a
+								>Start Your Free Trial</a
 							>
-							<p>Hey we can do something.</p>
+							<p>Start a 14-day free trial of {$companyName}. No credit card required!</p>
 						</div>
 						<div>
 							<a
-								href="https://www.google.com/search?q=Join+the+Team"
+								href="/"
 								class="text-mainlink hover:text-mainlinkhover text-lg font-medium pt-4 link link-underline link-underline-black"
 								>Join the Team</a
 							>
-							<p>Join our force and earn commission for every successful task.</p>
+							<p>Join our force and help us make {$companyName} better!</p>
 						</div>
 					</div>
 				</div>

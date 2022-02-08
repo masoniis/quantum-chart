@@ -251,14 +251,9 @@
 					class="text-md mx-auto text-center max-w-sm 
 						md:mx-0 md:text-left md:text-xl md:max-w-3xl"
 				>
-					incredible prices, great prices, low prices, and perfect prices, {$companyName} is a service
+					Unrivaled service, revolutionary technology, and low prices, {$companyName} is a service
 					like no other.
 				</p>
-
-				<div class="pt-8">
-					<button> Button 1 </button>
-					<button> Button 1 </button>
-				</div>
 			</div>
 
 			<!-- 3d Panel -->
@@ -502,7 +497,7 @@
 									   lg:text-sm 
 									xl:text-base"
 							>
-								I love to play around with {$companyName} in my free time, it's just so satisfying.
+								I love to play around with {$companyName} in my free time, it's just so satisfying!
 							</p>
 						</div>
 
@@ -619,7 +614,7 @@
 								   lg:text-sm 
 								xl:text-base"
 							>
-								When my teachers ask how I make such good chart graphics, I just show them to this
+								When my teachers ask how I make such good charts, I just show them to this
 								software.
 							</p>
 						</div>
@@ -768,7 +763,7 @@
 									   lg:text-sm 
 									xl:text-base"
 								>
-									I got the starting loan for my company with a presentation make with this
+									I got the starting loan for my company with a presentation made with this
 									software. Thank you {$companyName}!
 								</p>
 							</div>
@@ -921,7 +916,7 @@
 							<div class="order-1 text-5xl font-extrabold text-indigo-600">24/7</div>
 							<div class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Support</div>
 						</div>
-						<p class="col-span-3 pl-4 self-center">I AM THE QUOTE</p>
+						<p class="col-span-3 pl-4 self-center">"{$companyName} is an absolute must for any website I develop, it makes everything look better and always impresses my clients." - Evelyn Campbell</p>
 					</blockquote>
 					<blockquote
 						class="grid grid-cols-4 bg-white shadow-lg md:mr-8 w-[90%] rounded-md self-center"
@@ -930,7 +925,7 @@
 							<div class="order-1 text-5xl font-extrabold text-indigo-600 ">190k</div>
 							<div class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Users</div>
 						</div>
-						<p class="col-span-3 pl-4 self-center">I AM THE QUOTE</p>
+						<p class="col-span-3 pl-4 self-center">"This was the first time I've ever implemented AR animations into a project and {$companyName} made it so easy. I use it for everything now." - Francis Stewart</p>
 					</blockquote>
 				</div>
 				<flex class="flex flex-col justify-between md:w-[40%] gap-20">
@@ -966,7 +961,7 @@
 						<p class="text-gray-500 text-center md:text-left">
 							With our custom API, 24/7 support, and large user-base, Quantum Chart makes it a
 							breeze for developers to implement and deploy simple and immersive charts into their
-							working environment.a
+							working environment.
 						</p>
 					</div>
 				</flex>

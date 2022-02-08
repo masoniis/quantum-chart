@@ -34,8 +34,8 @@
 		<div class="sm:flex sm:flex-col sm:align-center">
 			<h1 class="text-5xl font-extrabold text-gray-900 text-center">Pricing Plans</h1>
 			<p class="mt-5 text-xl text-gray-500 text-center">
-				Start building for free, then add a site plan to go live. Account plans unlock additional
-				features.
+				Try any of our plans and experiment with their unique features. Switch at any time for no additional
+				fees.
 			</p>
 			<div class="relative self-center mt-6 mb-6 sm:mb-0 mx-auto bg-lightbg rounded-lg p-0.5 flex sm:mt-8">
 				<button
@@ -234,6 +234,26 @@
 									clip-rule="evenodd"
 								/>
 							</svg>
+							<span class="text-sm text-gray-500"
+								>Immerse yourself in your charts with advanced AR and VR technology</span
+							>
+						</li>
+
+						<li class="flex space-x-3">
+							<!-- Heroicon name: solid/check -->
+							<svg
+								class="flex-shrink-0 h-5 w-5 text-green-500"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+								aria-hidden="true"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+									clip-rule="evenodd"
+								/>
+							</svg>
 							<span class="text-sm text-gray-500">Unlimited charts per month</span>
 						</li>
 					</ul>
@@ -357,6 +377,26 @@
 									clip-rule="evenodd"
 								/>
 							</svg>
+							<span class="text-sm text-gray-500"
+								>Immerse yourself in your charts with advanced AR and VR technology</span
+							>
+						</li>
+
+						<li class="flex space-x-3">
+							<!-- Heroicon name: solid/check -->
+							<svg
+								class="flex-shrink-0 h-5 w-5 text-green-500"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+								aria-hidden="true"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+									clip-rule="evenodd"
+								/>
+							</svg>
 							<span class="text-sm text-gray-500">Unlimited charts per month</span>
 						</li>
 
@@ -438,7 +478,7 @@
 	</section>
 
 	<!-- Free Trial Bottom Wave Divider -->
-	<div class="trial-wave bg-mainbg">
+	<div class="trial-wave bg-gray-200">
 		<svg
 			data-name="Layer 1"
 			xmlns="http://www.w3.org/2000/svg"
@@ -463,7 +503,7 @@
 	</div>
 
 	<!-- FAQ Section -->
-	<section class="bg-white py-24">
+	<section class="bg-gray-200 py-24">
 		<h1 class="font-extrabold text-5xl text-center pb-12">
 			Frequently Asked Questions
 		</h1>
@@ -478,7 +518,7 @@
 			</div>
 
 			<div class="space-y-2">
-				<strong class="text-xl font-bold">How do I set up Quantum Charts on my computer?</strong>
+				<strong class="text-xl font-bold">How do I set up {$companyName} on my computer?</strong>
 				<p class="text-sm font-normal text-maintext">
 					It's simple! Once you've purchased your subscription, you will be taken to a download page and emailed a unique key. Just download our app, enter the key, and you're good to go! The software provides an easy-to-follow tutorial that you can go through at any time.
 				</p>
