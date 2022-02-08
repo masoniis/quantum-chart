@@ -141,6 +141,30 @@
 		</div>
 	</section>
 
+		<!-- Our Story -->
+		<section class="bg-gray-200 py-16 my-8">
+			<flex class="flex flex-col lg:flex-row justify-center mx-auto container gap-6">
+				<h2
+					class="sm:w-1/2 mx-auto text-center sm:text-left lg:ml-8 text-5xl xs:text-6xl h-fit lg:sticky overflow-visible min-w-fit top-[88px] font-bold tracking-tight text-gray-900 sm:leading-none"
+				>
+					Our Values
+				</h2>
+				<flex class="sm:w-1/2 flex-flex-col mx-auto text-sm xs:text-lg">
+					<div>
+						<flex>
+							
+						</flex>
+					</div>
+					<div>
+						2
+					</div>
+					<div>
+						3
+					</div>
+				</flex>
+			</flex>
+		</section>
+
 	<!-- TOP DIVIDER (for start now section) -->
 	<div class="join-team-topwave fill-lightbg mt-24">
 		<svg
