@@ -39,8 +39,11 @@
 			shadow = 'shadow-lg';
 			background = 'bg-mainbg';
 
-			if ($page.url.pathname === '/about') {
+			if ($page.url.pathname === '/') {
 				$statusBar = '#e0cf9b'
+			}
+			if ($page.url.pathname === '/about') {
+				$statusBar = '#FFFFF'
 			}
 		} else if (y < 60) {
 			shadow = '';
