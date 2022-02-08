@@ -29,16 +29,6 @@
 			}
 		}
 
-		if ($page.url.pathname === '/') {
-				$statusBar = '#e0cf9b'
-			}
-			if ($page.url.pathname === '/about') {
-				$statusBar = '#FFFFF'
-			}
-			if ($page.url.pathname === '/pricing') {
-				$statusBar = '#e5e7eb'
-			}
-
 		window.addEventListener('resize', onResize);
 		return () => window.removeEventListener('resize', onResize);
 	});
@@ -48,16 +38,19 @@
 		if (y >= 60) {
 			shadow = 'shadow-lg';
 			background = 'bg-mainbg';
-
+			$statusBar = '#fffff'
+		} else if (y < 60) {
+			shadow = '';
+			background = 'bg-transparent';
 			if ($page.url.pathname === '/') {
 				$statusBar = '#e0cf9b'
 			}
 			if ($page.url.pathname === '/about') {
 				$statusBar = '#FFFFF'
 			}
-		} else if (y < 60) {
-			shadow = '';
-			background = 'bg-transparent';
+			if ($page.url.pathname === '/pricing') {
+				$statusBar = '#e5e7eb'
+			}
 		}
 
 		if (open === true) {
