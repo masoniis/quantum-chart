@@ -44,10 +44,3 @@ Why did we choose certain elements, fonts, etc.
 
 ## 3D perspective
 - On the home page of the site, there is a 3D panel. We chose to include this because it's unique and attracts attention while also looking pretty cool.
-
-# Copyright Information
- - Most of our the images we use in our website are designed by us. However, we did use some stock photos for the testimonials and about pages.
-
-“Handsome Businessman Smiling.” TopPNG, 28 July 2019, toppng.com. Accessed 8 Feb. 2022.
-
-“Man in Suit.” Nappy, nappy.co. Accessed 8 Feb. 2022.
