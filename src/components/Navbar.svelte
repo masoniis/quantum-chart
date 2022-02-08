@@ -7,6 +7,15 @@
 	import closable from 'svelte-closable';
 	import Logo from '../components/Logo.svelte';
 	import Menu from './Minimenu.svelte';
+	import { tweened } from 'svelte/motion';
+	import { cubicOut } from 'svelte/easing'
+
+	let statusAlpha = 0;
+
+	const progress = tweened(0, {
+		duration: 400,
+		easing: cubicOut
+	});
 
 	let dropdown = false;
 	let dropButton;
@@ -43,13 +52,13 @@
 			shadow = '';
 			background = 'bg-transparent';
 			if ($page.url.pathname === '/') {
-				$statusBar = '#e0cf9b'
+				$statusBar = 'transparent'
 			}
 			if ($page.url.pathname === '/about') {
-				$statusBar = '#FFFFF'
+				$statusBar = 'transparent'
 			}
 			if ($page.url.pathname === '/pricing') {
-				$statusBar = '#e5e7eb'
+				$statusBar = 'transparent'
 			}
 		}
 
