@@ -1107,7 +1107,7 @@
 	</section>
 
 	<!-- BOTTOM DIVIDER (for start now section) -->
-	<div class="start-now-bottomwave fill-lightbg">
+	<div class="start-now-bottomwave fill-lightbg mb-24">
 		<svg
 			data-name="Layer 1"
 			xmlns="http://www.w3.org/2000/svg"
