@@ -38,11 +38,13 @@
 		if (y >= 60) {
 			shadow = 'shadow-lg';
 			background = 'bg-mainbg';
-			$statusBar = 'bg-black';
+
+			if ($page.url.pathname === '') {
+				$statusBar = '#e0cf9b'
+			}
 		} else if (y < 60) {
 			shadow = '';
 			background = 'bg-transparent';
-			$statusBar= 'bg-transparent';
 		}
 
 		if (open === true) {

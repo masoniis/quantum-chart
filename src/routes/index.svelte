@@ -52,7 +52,6 @@
 
 	onMount(() => {
 		intro = true;
-		$statusBar = "#e0cf9b";
 
 		const interval = setInterval(() => {
 			// Set `randIndex` to a new value each interval.
