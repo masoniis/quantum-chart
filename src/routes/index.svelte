@@ -32,12 +32,15 @@
 	const words = ['simple', 'amazing', 'efficient', 'awesome', 'sleek', 'seamless', 'quick', 'beautiful', 'immersive'];
 
 	const colors = [
-		'#90afe0', //Light Blue
-		'#d2a3d9', //Light Purple
-		'#ed8798', //Light Red
-		'#a2d19f', //Seafoam Green
-		'#dbd39e', //Tan or Light Yellow
-		'#b3e6db' //Light Cyan
+		'#61C9A8', //Ocean Green 			(green)
+		'#BBC8CA', //Silver Sand 			(blue)
+		'#B592A0', //Lilac Luster 			(lilac)
+		'#677DB7', //Glaucous 				(blue)
+		'#FB3640', //Red Salsa 				(red)
+		'#ED9B40', //Carrot Orange 			(orange)
+		'#FAF2A1', //Green Yellow Crayola	(tanish)
+		'#EB6534', //Flame					(orange)
+		'#DBAFC1', //Cameo Pink				(pink)
 	];
 
 	const randomColor = () => {
@@ -54,6 +57,7 @@
 			// Set `randIndex` to a new value each interval.
 			index = index + 1;
 			randColor = randomColor();
+			console.log(randColor);
 			if (index > words.length - 1) {
 				index = 0;
 			}
@@ -72,8 +76,10 @@
 	};
 </script>
 
-<title>{$companyName} - Home</title>
-<meta name="description" content="{$companyName} home page, make beautiful charts in the blink of an eye.">
+<svelte:head>
+	<title>Home - {$companyName}</title>
+	<meta name="description" content="{$companyName} home page, make beautiful charts in the blink of an eye.">
+</svelte:head>
 
 <svelte:window bind:innerWidth={width} />
 
@@ -358,8 +364,8 @@
 				<p>your design, bringing it to life in the real world</p>
 			</div>
 			<div class="text-center">
-				<p class="h-24 w-24 mx-auto">
-					<Logo />
+				<p class="h-24 w-24 mx-auto scale-125 translate-y-6">
+					<img src="Airplane.png" alt="airplane" />
 				</p>
 				<h2 class="text-5xl py-4">Deploy</h2>
 				<p>the design to any application supported</p>
@@ -1101,7 +1107,7 @@
 	</section>
 
 	<!-- BOTTOM DIVIDER (for start now section) -->
-	<div class="start-now-bottomwave fill-lightbg">
+	<div class="start-now-bottomwave fill-lightbg mb-24">
 		<svg
 			data-name="Layer 1"
 			xmlns="http://www.w3.org/2000/svg"
