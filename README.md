@@ -16,31 +16,31 @@ This website is made by Dawson and Mason for the 2021-2022 FBLA competition.
  - We both enjoy math and are both currently taking AP Statistics, so charts fit well with both of our interests. We wanted to create a website that would give us the opportunity to make our own icons, limit our use of stock photos, and create multiple different pricing plans. Chart creation is a relatively unique idea for a website that allows us to do all of those things.
 
 # Development
-When we signed up for the website design event at FBLA, we knew that there would be many competetitors who chose the route of <ins>Wix, Wordpress, or any similar alternatives.</ins> While we could have easily done that too, we decided to code the website from the ground up with the prioritization of our education in mind. To be straight up, we have no regrets. It was super cool to learn about web development, and we learned way more than we ever would have learned with Wix.
+When we signed up for the website design event at FBLA, we knew that there would be many competetitors who chose the route of **Wix, Wordpress, or any similar alternatives.** While we could have easily done that too, we decided to **code the website from the ground up** with the prioritization of our **education** in mind. It was super cool to learn about web development, and we learned way more than we ever would have learned using a website builder.
 
 ### Svelte
-- Quantum chart is a svelte-based website. In the search for an ideal framework, we came across Svelte which seemed to offer nothing but benefits over other frameworks such as Next.js, Gatsby, base React, Vue, etc.
+- Quantum chart is a svelte-based website. In the search for an **ideal framework**, we came across Svelte which seemed to offer nothing but benefits over other frameworks such as Next.js, Gatsby, base React, Vue, etc. Svelte is **fast, clean, and powerful**. This allows for our website to perform extremely well with lightning fast loading times.
 
 #### Sveltekit
-- Due to our use of Svelte, it only seemed natural to use it in coordination with Sveltekit for SSR and other important features.
+- Due to our use of Svelte, it only seemed natural to use it in coordination with Sveltekit for useful features like **server side rendering, flexible file routing**, etc.
 
 ### TailwindCSS
-- For the CSS portion of our website, we decided to test out Tailwind. Tailwind made it incredibly easy to quickly set up custom classes for html elements while also helping us to remain consistent across the website. In hindsight, Tailwind was very helpful, but it does definietly make the sourcecode itself look very cluttered.
+- For the CSS portion of our website, we decided to test out Tailwind. Tailwind made it incredibly **easy to quickly set up custom classes for html elements** while also helping us to **remain consistent** across the website. In hindsight, Tailwind was very helpful, but it does definietly make the sourcecode itself look very cluttered.
 
 #### TailwindUI
-- Since we used Tailwind, we decided to also incorporate some of the stylistic choices from the TailwindUI license. TailwindUI was a very helpful reference, and it was nice to see examples from the creators of Tailwind.
+- Since we used Tailwind, we decided to also incorporate some of the stylistic choices from our **TailwindUI non-exclusive license**. TailwindUI was a very helpful reference, and it was nice to see examples from the creators of Tailwind.
 
 # Stylistic Choices
 Why did we choose certain elements, fonts, etc.
 
 ## Font
-- For our font, we decided to use the **Inter** font. We chose this font not only because it is entirely open source and free, but also because it is beautful for web developmenet. The font is very sleek, consistent, and universal. 
+- For our font, we decided to use the **Inter** font. We chose this font not only because it is **entirely open source and free**, but also because it is beautful for web developmenet. The font is **very sleek, consistent, and universal**. 
 
 ## Animations
-- In terms of our animations, we chose to include these to add uniqueness to our site compared to competitors. Website builders (probably) allow for animations to be built-in, but ours are customized using code so they are unlikley to be the same as other sites.
+- In terms of our animations, we chose to include these to add **uniqueness and engagement** to our site compared to competitors. Website builders (probably) allow for animations to be built-in, but ours are customized using code so they are unlikley to be the same as other sites.
 
 ## Waves
-- We often use SVG waves between our element because it feels more natural to the eye and creates a more interesting transition as compared to an instant color change.
+- We often use SVG waves between our element because it feels more **natural as a transition** and creates a more interesting transition as compared to an instant color change.
 
 ## 3D perspective
 - On the home page of the site, there is a 3D panel. We chose to include this because it's unique and attracts attention while also looking pretty cool.
