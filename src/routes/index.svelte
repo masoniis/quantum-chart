@@ -508,8 +508,8 @@
 					</div>
 					<img
 						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-						src="static/Testimonial Woman 3 (1).jpg"
-						alt=""
+						src="Testimonial Woman 3 (1).jpg"
+						alt="Testimonial Woman"
 					/>
 				</blockquote>
 				<blockquote
@@ -547,8 +547,8 @@
 					</div>
 					<img
 						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-						src="static/Testimonial Woman 1 (1).jpg"
-						alt=""
+						src="Testimonial Woman 1 (1).jpg"
+						alt="Testimonial Woman"
 					/>
 				</blockquote>
 				<blockquote
@@ -587,8 +587,8 @@
 					</div>
 					<img
 						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-						src="static/Testimonial Man 1 (1).jpg"
-						alt=""
+						src="Testimonial Man 1 (1).jpg"
+						alt="Testimonial Woman"
 					/>
 				</blockquote>
 				<blockquote
@@ -628,8 +628,8 @@
 					</div>
 					<img
 						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-						src="static/Testimonial Man 3 (1).jpg"
-						alt=""
+						src="Testimonial Man 3 (1).jpg"
+						alt="Testimonial Woman"
 					/>
 				</blockquote>
 			</div>
@@ -777,8 +777,8 @@
 						</div>
 						<img
 							class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-							src="static/Testimonial Man 2 (1).jpeg"
-							alt=""
+							src="Testimonial Man 2 (1).jpeg"
+							alt="Testimonial Woman"
 						/>
 					</blockquote>
 					<blockquote
@@ -818,8 +818,8 @@
 						</div>
 						<img
 							class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-							src="static/Testimonial Woman 2 (1).jpg"
-							alt=""
+							src="Testimonial Woman 2 (1).jpg"
+							alt="Testimonial Woman"
 						/>
 					</blockquote>
 					<blockquote
@@ -859,8 +859,8 @@
 						</div>
 						<img
 							class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-							src="static/Testimonial Man 4 (1).jpg"
-							alt=""
+							src="Testimonial Man 4 (1).jpg"
+							alt="Testimonial Woman"
 						/>
 					</blockquote>
 				</div>
