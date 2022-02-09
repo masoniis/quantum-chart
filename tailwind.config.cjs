@@ -30,8 +30,8 @@ module.exports = {
         'topsection' : '#e0cf9b',
 
         // ↓ Navbar ↓
-        'dropdown1' : '#eae9f2',
-        'mobilemenu': '#f9e9d2',
+        'dropdown1' : '#f5f5f4',
+        'mobilemenu': '#f5f5f4',
       },
     },
   },

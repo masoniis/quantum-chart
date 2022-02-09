@@ -53,8 +53,10 @@
 		if (open === true) {
 			background = 'bg-mobilemenu';
 			$menu = true;
+			$statusBar = "#f5f5f4";
 		} else {
 			$menu = false;
+			$statusBar = "#FFFFF";
 		}
 
 		if (dropdown === true) {
@@ -87,7 +89,7 @@
 		href="https://cdn.jsdelivr.net/npm/svelte-hamburgers@3/dist/css/types/spin.css"
 	/>
 
-	<meta name="theme-color" content="#fffff">
+	<meta name="theme-color" content="{$statusBar}">
 </svelte:head>
 
 <svelte:window bind:scrollY={y} />

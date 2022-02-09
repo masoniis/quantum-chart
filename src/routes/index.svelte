@@ -38,9 +38,9 @@
 		'#677DB7', //Glaucous 				(blue)
 		'#FB3640', //Red Salsa 				(red)
 		'#ED9B40', //Carrot Orange 			(orange)
-		'#FAF2A1', //Green Yellow Crayola	(tanish)
 		'#EB6534', //Flame					(orange)
 		'#DBAFC1', //Cameo Pink				(pink)
+		'#92B4A7', //Cambridge Blue			(cyan-like)
 	];
 
 	const randomColor = () => {
@@ -235,7 +235,7 @@
 						md:text-6xl md:text-left md:min-w-[38rem] md:px-0"
 					style="max-width: 38rem;"
 				>
-					With {$companyName}, life has never been so
+					With {$companyName}, data has never been so
 					{#key index}
 						<p
 							in:fade={{ duration: 400 }}
@@ -528,8 +528,8 @@
 					</div>
 					<img
 						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-						src="static/Testimonial Woman 3 (1).jpg"
-						alt=""
+						src="Testimonial Woman 3 (1).jpg"
+						alt="Testimonial Woman"
 					/>
 				</blockquote>
 				<blockquote
@@ -567,8 +567,8 @@
 					</div>
 					<img
 						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-						src="static/Testimonial Woman 1 (1).jpg"
-						alt=""
+						src="Testimonial Woman 1 (1).jpg"
+						alt="Testimonial Woman"
 					/>
 				</blockquote>
 				<blockquote
@@ -607,8 +607,8 @@
 					</div>
 					<img
 						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-						src="static/Testimonial Man 1 (1).jpg"
-						alt=""
+						src="Testimonial Man 1 (1).jpg"
+						alt="Testimonial Woman"
 					/>
 				</blockquote>
 				<blockquote
@@ -648,8 +648,8 @@
 					</div>
 					<img
 						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-						src="static/Testimonial Man 3 (1).jpg"
-						alt=""
+						src="Testimonial Man 3 (1).jpg"
+						alt="Testimonial Woman"
 					/>
 				</blockquote>
 			</div>
@@ -797,8 +797,8 @@
 						</div>
 						<img
 							class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-							src="static/Testimonial Man 2 (1).jpeg"
-							alt=""
+							src="Testimonial Man 2 (1).jpeg"
+							alt="Testimonial Woman"
 						/>
 					</blockquote>
 					<blockquote
@@ -838,8 +838,8 @@
 						</div>
 						<img
 							class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-							src="static/Testimonial Woman 2 (1).jpg"
-							alt=""
+							src="Testimonial Woman 2 (1).jpg"
+							alt="Testimonial Woman"
 						/>
 					</blockquote>
 					<blockquote
@@ -879,8 +879,8 @@
 						</div>
 						<img
 							class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-							src="static/Testimonial Man 4 (1).jpg"
-							alt=""
+							src="Testimonial Man 4 (1).jpg"
+							alt="Testimonial Woman"
 						/>
 					</blockquote>
 				</div>
@@ -1101,7 +1101,7 @@
 
 	<!-- START NOW (Section 9) -->
 	<section class="bg-lightbg py-16">
-		<div class="text-center px-4">
+		<div class="text-center px-4 grid">
 			<h1
 				class="font-bold text-maintext pb-4
 					text-4xl
