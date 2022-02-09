@@ -226,7 +226,7 @@
 	<!-- Section 2 (Navigation Section) -->
 	<section class="container mx-auto my-24">
 		<flex class="flex justify-center md:justify-start md:items-start perspective xl:justify-center max-h-64 md:max-h-fit">
-			<div class="max-w-xl z-[3] feature-grid-text pb-36">
+			<div class="max-w-xl z-[3] feature-grid-text pb-48">
 				<h2
 					class="font-extrabold tracking-tight py-8 
 						text-3xl
