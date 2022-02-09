@@ -38,9 +38,10 @@
 		'#677DB7', //Glaucous 				(blue)
 		'#FB3640', //Red Salsa 				(red)
 		'#ED9B40', //Carrot Orange 			(orange)
-		'#FAF2A1', //Green Yellow Crayola	(tanish)
+		'#F3F9D2', //Light Goldenrod Yellow	(tanish)
 		'#EB6534', //Flame					(orange)
 		'#DBAFC1', //Cameo Pink				(pink)
+		'#92B4A7', //Cambridge Blue			(cyan-like)
 	];
 
 	const randomColor = () => {
@@ -235,7 +236,7 @@
 						md:text-6xl md:text-left md:min-w-[38rem] md:px-0"
 					style="max-width: 38rem;"
 				>
-					With {$companyName}, life has never been so
+					With {$companyName}, data has never been so
 					{#key index}
 						<p
 							in:fade={{ duration: 400 }}
@@ -1071,7 +1072,7 @@
 
 	<!-- START NOW (Section 9) -->
 	<section class="bg-lightbg py-16">
-		<div class="text-center px-4">
+		<div class="text-center px-4 grid">
 			<h1
 				class="font-bold text-maintext pb-4
 					text-4xl

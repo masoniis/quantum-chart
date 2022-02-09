@@ -40,7 +40,7 @@
 				on:click={() => (open = false)}
 				transition:fly={{ duration: 150, x: 500 }}
 				href="/"
-				class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-right"
+				class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
 			>
 				Home</a
 			>
@@ -48,7 +48,7 @@
 				on:click={() => (open = false)}
 				transition:fly={{ duration: 300, x: 500 }}
 				href="/pricing"
-				class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-right"
+				class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
 			>
 				Pricing</a
 			>
@@ -119,9 +119,9 @@
 						</a>
 					</div>
 
-					<!-- Grid Item 4 -->
+					<!-- Grid Item 3 -->
 					<div
-						class="flex justify-start xs:justify-center xs:pl-0 pl-4 space-x-2"
+						class="flex justify-start xs:col-span-2 xs:justify-center xs:pl-0 pl-4 space-x-2"
 						transition:fly={{ duration: 1050, x: 300 }}
 					>
 						<svg

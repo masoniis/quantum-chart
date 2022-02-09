@@ -31,7 +31,7 @@ module.exports = {
 
         // ↓ Navbar ↓
         'dropdown1' : '#eae9f2',
-        'mobilemenu': '#f9e9d2',
+        'mobilemenu': '#f5f5f4',
       },
     },
   },
