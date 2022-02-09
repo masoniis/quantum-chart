@@ -26,7 +26,10 @@
 </script>
 
 <title>{$companyName} - Pricing</title>
-<meta name="description" content="{$companyName} price page, pay little to access beautiful charts.">
+<meta
+	name="description"
+	content="{$companyName} price page, pay little to access beautiful charts."
+/>
 
 <main class="min-h-screen bg-light-bg pt-36 bg-gray-200">
 	<!-- Pricing box Section -->
@@ -34,10 +37,12 @@
 		<div class="sm:flex sm:flex-col sm:align-center">
 			<h1 class="text-5xl font-extrabold text-gray-900 text-center">Pricing Plans</h1>
 			<p class="mt-5 text-xl text-gray-500 text-center">
-				Try any of our plans and experiment with their unique features. Switch at any time for no additional
-				fees.
+				Try any of our plans and experiment with their unique features. Switch at any time for no
+				additional fees.
 			</p>
-			<div class="relative self-center mt-6 mb-6 sm:mb-0 mx-auto bg-lightbg rounded-lg p-0.5 flex sm:mt-8">
+			<div
+				class="relative self-center mt-6 mb-6 sm:mb-0 mx-auto bg-lightbg rounded-lg p-0.5 flex sm:mt-8"
+			>
 				<button
 					type="button"
 					class="relative w-1/2 border-gray-200 transition-all duration-300 rounded-md shadow-sm py-2 text-sm font-medium text-gray-900 whitespace-nowrap focus:outline-none focus:z-10 sm:w-auto sm:px-8"
@@ -55,7 +60,10 @@
 		<grid
 			class="mt-12 space-y-4 sm:mt-16 sm:space-y-0 grid-cols-1 sm:grid sm:grid-cols-2 gap-8 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 xl:grid-cols-3 bg-transparent"
 		>
-			<div in:fade={{ delay: 0, duration: 300 }} class="border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200 bg-lightbg">
+			<div
+				in:fade={{ delay: 0, duration: 300 }}
+				class="border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200 bg-lightbg"
+			>
 				<div class="p-6">
 					<h2 class="text-lg leading-6 font-medium text-gray-900">Basic</h2>
 					<p class="mt-4 text-sm text-gray-500">Your standard chart service</p>
@@ -137,7 +145,10 @@
 					</ul>
 				</div>
 			</div>
-			<div in:fade={{ delay: 250, duration: 300 }} class="border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200 bg-lightbg">
+			<div
+				in:fade={{ delay: 250, duration: 300 }}
+				class="border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200 bg-lightbg"
+			>
 				<div class="p-6">
 					<h2 class="text-lg leading-6 font-medium text-gray-900">Premium</h2>
 					<p class="mt-4 text-sm text-gray-500 mb-8">Every chart you need and more</p>
@@ -259,7 +270,10 @@
 					</ul>
 				</div>
 			</div>
-			<div in:fade={{ delay: 500, duration: 300 }} class="border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200 bg-lightbg">
+			<div
+				in:fade={{ delay: 500, duration: 300 }}
+				class="border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200 bg-lightbg"
+			>
 				<div class="p-6">
 					<h2 class="text-lg leading-6 font-medium text-gray-900">Team</h2>
 					<p class="mt-4 text-sm text-gray-500">Charts for the whole group</p>
@@ -285,7 +299,6 @@
 				<div class="pt-6 pb-8 px-6">
 					<h3 class="text-xs font-medium text-gray-900 tracking-wide uppercase">What's included</h3>
 					<ul class="mt-6 space-y-4">
-
 						<li class="flex space-x-3">
 							<!-- Heroicon name: solid/check -->
 							<svg
@@ -459,20 +472,23 @@
 			needed.)
 		</p>
 
-		<flex class="flex justify-center gap-12 sm:gap-24 pt-4">
-			<button
-				class="bg-blue-500 py-2 sm:py-3 px-4 sm:px-6 border border-gray-300 rounded-md shadow-sm text-xl sm:text-2xl font-medium text-gray-700 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-			>
-				Start Trial
-			</button>
-			<form
-				method="post"
-				action="/contact-us"
-			>
-				<button
-					type="submit"
-					class="bg-mainlink py-2 sm:py-3 px-4 sm:px-6 border border-gray-300 rounded-md shadow-sm text-xl sm:text-2xl font-medium text-gray-300 hover:bg-mainlinkhover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-				>Contact Us</button>
+		<flex class="flex justify-center pt-2">
+			<form class="space-x-6">
+				<div class="inline-flex rounded-md shadow mx-auto pt-4 mt-4">
+					<button
+						class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+					>
+						Start Trial
+					</button>
+				</div>
+				<div class="inline-flex rounded-md shadow mx-auto pt-4 mt-4">
+					<a
+						href="/contact-us"
+						class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+					>
+						Contact Us
+					</a>
+				</div>
 			</form>
 		</flex>
 	</section>
@@ -504,37 +520,51 @@
 
 	<!-- FAQ Section -->
 	<section class="bg-gray-200 py-24">
-		<h1 class="font-extrabold text-5xl text-center pb-12">
-			Frequently Asked Questions
-		</h1>
+		<h1 class="font-extrabold text-5xl text-center pb-12">Frequently Asked Questions</h1>
 
 		<!-- Question Grid -->
 		<grid class="grid grid-cols-1 md:grid-cols-2 container mx-auto max-w-5xl gap-10 px-8">
 			<div class="space-y-2">
-				<strong class="text-xl font-bold">Why should I spend money on this instead of using a free chart software?</strong>
+				<strong class="text-xl font-bold"
+					>Why should I spend money on this instead of using a free chart software?</strong
+				>
 				<p class="text-sm font-normal text-maintext">
-					{$companyName} offers a variety of products not available with free chart software. Our advanced AR and VR software allows you to visualize and edit charts in 3D and our animation features allow you to quickly and easily make charts that will make anyone say "wow!".
+					{$companyName} offers a variety of products not available with free chart software. Our advanced
+					AR and VR software allows you to visualize and edit charts in 3D and our animation features
+					allow you to quickly and easily make charts that will make anyone say "wow!".
 				</p>
 			</div>
 
 			<div class="space-y-2">
 				<strong class="text-xl font-bold">How do I set up {$companyName} on my computer?</strong>
 				<p class="text-sm font-normal text-maintext">
-					It's simple! Once you've purchased your subscription, you will be taken to a download page and emailed a unique key. Just download our app, enter the key, and you're good to go! The software provides an easy-to-follow tutorial that you can go through at any time.
+					It's simple! Once you've purchased your subscription, you will be taken to a download page
+					and emailed a unique key. Just download our app, enter the key, and you're good to go! The
+					software provides an easy-to-follow tutorial that you can go through at any time.
 				</p>
 			</div>
 
 			<div class="space-y-2">
 				<strong class="text-xl font-bold">How should I choose what plan is best for me?</strong>
 				<p class="text-sm font-normal text-maintext">
-					Our Basic plan is best if you only need to make charts occasionally and are fine with simple options. If you want to dive deeper into the possibilities offered by Quantum Charts and have access to all of our unique features, try Premium! Our Team plan works best for larger organizations and groups and offers a discount if you want to register up to 20 users.
+					Our Basic plan is best if you only need to make charts occasionally and are fine with
+					simple options. If you want to dive deeper into the possibilities offered by Quantum
+					Charts and have access to all of our unique features, try Premium! Our Team plan works
+					best for larger organizations and groups and offers a discount if you want to register up
+					to 20 users.
 				</p>
 			</div>
 
 			<div class="space-y-2">
 				<strong class="text-xl font-bold">What file formats can I export my charts as?</strong>
 				<p class="text-sm font-normal text-maintext">
-					{$companyName} supports .pdf, .jpg, .png, .md, .gif, .jpeg, .ai, and .tif chart exports. If your favorite file type isn't on here, feel free to <a href="/contact-us" class="text-mainlink hover:text-mainlinkhover link link-underline link-underline-black">contact us</a> with new suggestions!
+					{$companyName} supports .pdf, .jpg, .png, .md, .gif, .jpeg, .ai, and .tif chart exports. If
+					your favorite file type isn't on here, feel free to
+					<a
+						href="/contact-us"
+						class="text-mainlink hover:text-mainlinkhover link link-underline link-underline-black"
+						>contact us</a
+					> with new suggestions!
 				</p>
 			</div>
 		</grid>
@@ -565,7 +595,7 @@
 	}
 
 	.pricing-wave .shape-fill {
-		fill: rgb(245 245 244)
+		fill: rgb(245 245 244);
 	}
 
 	.trial-wave {
