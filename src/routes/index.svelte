@@ -335,8 +335,18 @@
 		</flex>
 	</section>
 
+	<!-- How It Works Wave -->
+	<div class="howitworks-wave bg-gray-200 fill-gray-50 z-[1]">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+			<path
+				d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+				class="shape-fill"
+			/>
+		</svg>
+	</div>
+
 	<!-- EASY - How it works (Section 3) -->
-	<section use:scrollRef={'easy'} class="container mx-auto py-16 pb-32">
+	<section use:scrollRef={'easy'} class="bg-gray-200 container mx-auto py-16 pb-32">
 		<h1 class="text-center font-bold pt-6
 				text-4xl
 				sm:text-5xl
@@ -366,6 +376,16 @@
 			</div>
 		</grid>
 	</section>
+
+	<!-- How It Works Wave -->
+	<div class="howitworks-wave bg-lightbg fill-gray-200 z-[1]">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+			<path
+				d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+				class="shape-fill"
+			/>
+		</svg>
+	</div>
 
 	<!-- LOW COST (Section 4) -->
 	<section use:scrollRef={'low-cost'} class="container mx-auto hidden">
@@ -993,8 +1013,18 @@
 		</svg>
 	</div>
 
+		<!-- Satisfaction Guaranteed Top Wave -->
+		<div class="howitworks-wave bg-gray-200 fill-white z-[1]">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+				<path
+					d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+					class="shape-fill"
+				/>
+			</svg>
+		</div>
+	
 	<!-- RISK FREE and SATISFACTION (Section 8) -->
-	<section use:scrollRef={'risk-free'} class="pt-36 pb-48">
+	<section use:scrollRef={'risk-free'} class="bg-gray-200 pt-36 pb-48">
 		<div class="container mx-auto flex flex-col md:flex-row gap-8 justify-center">
 			<!-- Risk free box -->
 			<div class="flex flex-col self-center md:self-start max-w-md shadow-lg bg-stone-50">
@@ -1019,7 +1049,7 @@
 				</div>
 			</div>
 
-			<!-- Satisfaction guarenteed section -->
+			<!-- Satisfaction guaranteed section -->
 			<div
 				class="flex flex-col max-w-sm px-2 md:pl-8 self-center md:self-end border-t-2 translate-y-8 md:border-0 mt-6 border-black"
 				in:fly={{ duration: 1400, x: 700 }}
@@ -1030,7 +1060,7 @@
 						class="text-mainlink text-lg font-medium"
 						>Money back</div
 					>
-					<p class="pb-4">If you decide to purchase a subscrition and find it's not what you thought, we offer 100% of your money back.</p>
+					<p class="pb-4">If you decide to purchase a subscription and find it's not what you thought, we offer 100% of your money back.</p>
 				</div>
 
 				<div class="py-4 mb-4 border-y-[1px] border-black">
@@ -1045,7 +1075,7 @@
 	</section>
 
 	<!-- TOP DIVIDER (for start now section) -->
-	<div class="start-now-topwave fill-lightbg">
+	<div class="start-now-topwave fill-lightbg bg-gray-200">
 		<svg
 			data-name="Layer 1"
 			xmlns="http://www.w3.org/2000/svg"
@@ -1279,5 +1309,21 @@
 		display: block;
 		width: calc(161% + 1.3px);
 		height: 76px;
+	}
+
+	.howitworks-wave {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+	}
+
+	.howitworks-wave svg {
+		position: relative;
+		display: block;
+		width: calc(122% + 1.3px);
+		height: 103px;
 	}
 </style>
