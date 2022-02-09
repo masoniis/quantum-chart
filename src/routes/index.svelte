@@ -38,7 +38,6 @@
 		'#677DB7', //Glaucous 				(blue)
 		'#FB3640', //Red Salsa 				(red)
 		'#ED9B40', //Carrot Orange 			(orange)
-		'#F3F9D2', //Light Goldenrod Yellow	(tanish)
 		'#EB6534', //Flame					(orange)
 		'#DBAFC1', //Cameo Pink				(pink)
 		'#92B4A7', //Cambridge Blue			(cyan-like)
