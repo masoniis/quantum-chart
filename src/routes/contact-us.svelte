@@ -20,6 +20,8 @@
 		modalComponent.toggleModal();
 		modalComponent.storeY();
 
+		console.log("submit clicked!")
+
 		console.log(formFields)
 
 		Object.keys(formFields).forEach(key => formFields[key]=null);

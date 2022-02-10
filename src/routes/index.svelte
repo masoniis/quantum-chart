@@ -79,8 +79,7 @@
 
 	let email = '';
 
-	//From the Modal component
-	let showModal = false;
+	//Create a component to bind Modal
 	let modalComponent;
 
 	function handleReqDemo(e) {
@@ -99,7 +98,7 @@
 
 <svelte:window bind:innerWidth={width} />
 
-<Modal bind:this={modalComponent} bind:showModal>
+<Modal bind:this={modalComponent}>
 	Thank you for requesting a demo. Watch your email for an invitation and information!
 </Modal>
 
