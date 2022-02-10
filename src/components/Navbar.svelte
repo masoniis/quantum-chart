@@ -72,8 +72,6 @@
 			$contactModal = false;
 			$demoModal = false;
 			$requestModal = false;
-
-			$modal = false;
 		}
 	}
 </script>

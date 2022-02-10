@@ -1,3 +1,13 @@
+<script context="module">
+	export let yStore;
+	export let y;
+
+	export function storeY() {
+		yStore = y;
+		console.log(yStore);
+	}
+</script>
+
 <script>
 	import { slide, fade } from 'svelte/transition';
 	import closable from 'svelte-closable';
@@ -5,19 +15,9 @@
 
 	export let message = 'Oops! You forgot to set a message parameter.';
 	export let showModal = false;
-
-	const dispatch = createEventDispatcher();
-
- function onScroll(event) {
-     console.log("SCROLLED")
- };
-
-	let y;
 </script>
 
 <svelte:window bind:scrollY={y} />
-
-<div on:scroll={onScroll} />
 
 {#if showModal}
 	<div class="w-screen h-screen fixed bg-black/40 z-[100]" on:click|self>
