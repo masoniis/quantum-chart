@@ -2,7 +2,7 @@
 	import { fly, slide, fade } from 'svelte/transition';
 	import Visibility from '../components/scripts/Visibility.svelte';
 	import closable from 'svelte-closable';
-	import { contactModal, companyName } from '../stores';
+	import { companyName } from '../stores';
 	import Modal from '../components/Modal.svelte';
 
 	//From the Modal component

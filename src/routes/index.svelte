@@ -1,5 +1,5 @@
 <script>
-	import { companyName, demoModal, statusBar } from '../stores';
+	import { companyName, statusBar } from '../stores';
 	import { scrollTo, scrollRef, setGlobalOptions } from 'svelte-scrolling';
 	import { onMount } from 'svelte';
 	import { slide, fade, fly } from 'svelte/transition';

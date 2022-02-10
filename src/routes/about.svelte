@@ -1,6 +1,6 @@
 <script>
 	import Logo from '../components/Logo.svelte';
-	import { companyName, requestModal } from '../stores';
+	import { companyName } from '../stores';
 	import { slide, fade } from 'svelte/transition';
 	import closable from 'svelte-closable';
 	import Modal from '../components/Modal.svelte'
