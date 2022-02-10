@@ -5,7 +5,7 @@
 	import { slide, fade, fly } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 	import closable from 'svelte-closable';
-	import Visibility from '../components/Visibility.svelte';
+	import Visibility from '../components/scripts/Visibility.svelte';
 	import Logo from '../components/Logo.svelte';
 	import Backdrop from '../components/Backdrop.svelte';
 
