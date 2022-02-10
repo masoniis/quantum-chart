@@ -43,6 +43,3 @@
 		</modal>
 	</div>
 {/if}
-
-<style>
-</style>
