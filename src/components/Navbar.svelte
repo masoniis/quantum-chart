@@ -2,7 +2,7 @@
 	import { fly, fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
-	import { menu, contactModal, demoModal, requestModal, yStore, companyName, statusBar, modal } from '../stores';
+	import { menu, yStore, companyName, statusBar } from '../stores';
 	import Hamburger from 'svelte-hamburgers';
 	import closable from 'svelte-closable';
 	import Logo from '../components/Logo.svelte';
@@ -53,10 +53,8 @@
 		if (open === true) {
 			background = 'bg-mobilemenu';
 			$menu = true;
-			$statusBar = "#f5f5f4";
 		} else {
 			$menu = false;
-			$statusBar = "#FFFFF";
 		}
 
 		if (dropdown === true) {
@@ -69,9 +67,6 @@
 		// Toggle dropdown when scrolling
 		if ($yStore - y != 0) {
 			dropdown = false;
-			$contactModal = false;
-			$demoModal = false;
-			$requestModal = false;
 		}
 	}
 </script>

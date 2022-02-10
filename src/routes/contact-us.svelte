@@ -1,20 +1,31 @@
 <script lang="ts">
-	import { fly, slide, fade } from 'svelte/transition';
-	import Visibility from '../components/scripts/Visibility.svelte';
-	import closable from 'svelte-closable';
+	import { fly  } from 'svelte/transition';
 	import { companyName } from '../stores';
+	import Visibility from '../components/scripts/Visibility.svelte';
 	import Modal from '../components/Modal.svelte';
 
-	//From the Modal component
-	let showModal = false;
+	let contactHeight;
+
+	//A variable to bind the modal component
 	let modalComponent;
 
-	let first, last, email, message, contactHeight;
+	const formFields = {
+		first: '',
+		last: '',
+		email: '',
+		message: '',
+	}
 
 	function handleSubmit(e) {
 		modalComponent.toggleModal();
 		modalComponent.storeY();
+
+		console.log(formFields)
+
+		Object.keys(formFields).forEach(key => formFields[key]=null);
 	}
+
+	
 </script>
 
 <title>{$companyName} - Contact</title>
@@ -23,7 +34,7 @@
 	content="{$companyName} contact page, ask any questions that we haven't already answered."
 />
 
-<Modal bind:this={modalComponent} bind:showModal>
+<Modal bind:this={modalComponent}>
 	Thank you for submitting! We will contact you shortly with a reply to your awesome question :)
 </Modal>
 
@@ -48,7 +59,7 @@
 				<label for="first-name" class="block text-sm font-medium text-gray-700"> First name </label>
 				<div class="mt-1">
 					<input
-						bind:value={first}
+						bind:value={formFields.first}
 						type="text"
 						name="first-name"
 						id="first-name"
@@ -63,7 +74,7 @@
 				<label for="last-name" class="block text-sm font-medium text-gray-700"> Last name </label>
 				<div class="mt-1">
 					<input
-						bind:value={last}
+						bind:value={formFields.last}
 						type="text"
 						name="last-name"
 						id="last-name"
@@ -80,7 +91,7 @@
 				</label>
 				<div class="mt-1">
 					<input
-						bind:value={email}
+						bind:value={formFields.email}
 						id="email"
 						name="email"
 						type="email"
@@ -97,7 +108,7 @@
 				</label>
 				<div class="mt-1">
 					<textarea
-						bind:value={message}
+						bind:value={formFields.message}
 						id="message"
 						name="message"
 						rows="3"
@@ -124,10 +135,9 @@
 			</div>
 		</div>
 	</form>
-	<br /><br /><br /><br /><br /><br /><br /><br />
 
 	<!--  ↓ Top Shape Divider ↓  -->
-	<div class="top-wave fill-gray-100">
+	<div class="top-wave fill-gray-100 mt-48">
 		<svg
 			data-name="Layer 1"
 			xmlns="http://www.w3.org/2000/svg"

@@ -19,7 +19,6 @@
 
 	$: visible = !intersectionObserverSupport || percent >= threshold;
 	$: if (intersectionObserverSupport && visible && once) unobserve();
-	$: console.log(percent)
 
 	function intersectPercent(entries) {
 		entries.forEach((entry) => {
