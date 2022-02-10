@@ -2,32 +2,37 @@
 	import { fly  } from 'svelte/transition';
 	import { companyName } from '../stores';
 	import Visibility from '../components/scripts/Visibility.svelte';
-	import Modal from '../components/Modal.svelte';
+	import Modal from '../components/Modal.svelte'; 
 
 	let contactHeight;
 
 	//A variable to bind the modal component
 	let modalComponent;
 
-	const formFields = {
-		first: '',
-		last: '',
-		email: '',
-		message: '',
-	}
+	let first, last, email, message;
 
 	function handleSubmit(e) {
 		modalComponent.toggleModal();
 		modalComponent.storeY();
+		postForm();
 
-		console.log("submit clicked!")
-
-		console.log(formFields)
-
-		Object.keys(formFields).forEach(key => formFields[key]=null);
+		first = last = email = message = "";
 	}
 
-	
+	async function postForm() {
+		const submit = await fetch("/api/contact", {
+			method: "POST",
+			body: JSON.stringify({
+				first,
+				last,
+				email,
+				message,
+			}),
+		});
+
+		const data = await submit.json()
+		console.log(data);
+	}
 </script>
 
 <title>{$companyName} - Contact</title>
@@ -61,7 +66,7 @@
 				<label for="first-name" class="block text-sm font-medium text-gray-700"> First name </label>
 				<div class="mt-1">
 					<input
-						bind:value={formFields.first}
+						bind:value={first}
 						type="text"
 						name="first-name"
 						id="first-name"
@@ -76,7 +81,7 @@
 				<label for="last-name" class="block text-sm font-medium text-gray-700"> Last name </label>
 				<div class="mt-1">
 					<input
-						bind:value={formFields.last}
+						bind:value={last}
 						type="text"
 						name="last-name"
 						id="last-name"
@@ -93,7 +98,7 @@
 				</label>
 				<div class="mt-1">
 					<input
-						bind:value={formFields.email}
+						bind:value={email}
 						id="email"
 						name="email"
 						type="email"
@@ -110,7 +115,7 @@
 				</label>
 				<div class="mt-1">
 					<textarea
-						bind:value={formFields.message}
+						bind:value={message}
 						id="message"
 						name="message"
 						rows="3"
