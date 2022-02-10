@@ -1,9 +1,6 @@
 <script>
 	import { slide, fade } from 'svelte/transition';
-	import closable from 'svelte-closable';
-	import { createEventDispatcher } from 'svelte';
 
-	export let message = 'Oops! You forgot to set a message parameter.';
 	export let showModal = false;
 
     let y = 0;
@@ -32,7 +29,7 @@
 			class="mx-auto vertical-center relative z-[101] bg-zinc-100 rounded-md max-w-lg p-10 grid grid-cols-2 grid-rows-2"
 		>
 			<p class="col-span-2 text-center p-2 md:p-4">
-				{message}
+				<slot />
 			</p>
 			<button
 				on:click={() => (showModal = false)}

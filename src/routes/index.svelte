@@ -8,6 +8,7 @@
 	import Visibility from '../components/scripts/Visibility.svelte';
 	import Logo from '../components/Logo.svelte';
 	import Backdrop from '../components/Backdrop.svelte';
+	import Modal from '../components/Modal.svelte';
 
 	setGlobalOptions({
 		duration: 400,
@@ -29,7 +30,17 @@
 		}
 	}
 
-	const words = ['simple', 'amazing', 'efficient', 'awesome', 'sleek', 'seamless', 'quick', 'beautiful', 'immersive'];
+	const words = [
+		'simple',
+		'amazing',
+		'efficient',
+		'awesome',
+		'sleek',
+		'seamless',
+		'quick',
+		'beautiful',
+		'immersive'
+	];
 
 	const colors = [
 		'#61C9A8', //Ocean Green 			(green)
@@ -40,7 +51,7 @@
 		'#ED9B40', //Carrot Orange 			(orange)
 		'#EB6534', //Flame					(orange)
 		'#DBAFC1', //Cameo Pink				(pink)
-		'#92B4A7', //Cambridge Blue			(cyan-like)
+		'#92B4A7' //Cambridge Blue			(cyan-like)
 	];
 
 	const randomColor = () => {
@@ -69,45 +80,33 @@
 
 	let email = '';
 
-	const handleReqDemo = () => {
-		$demoModal = true;
-		email = '';
+	//From the Modal component
+	let showModal = false;
+	let modalComponent;
+
+	const toggleModal = () => {
+		showModal = !showModal;
 	};
+
+	function handleReqDemo(e) {
+		toggleModal();
+		modalComponent.storeY();
+	}
 </script>
 
 <svelte:head>
 	<title>Home - {$companyName}</title>
-	<meta name="description" content="{$companyName} home page, make beautiful charts in the blink of an eye.">
+	<meta
+		name="description"
+		content="{$companyName} home page, make beautiful charts in the blink of an eye."
+	/>
 </svelte:head>
 
 <svelte:window bind:innerWidth={width} />
 
-{#if $demoModal}
-	<Backdrop />
-	<modal
-		in:slide={{ duration: 500 }}
-		out:fade={{ duration: 200 }}
-		class="grid grid-cols-1 grid-rows-1 fixed z-[101] h-screen w-full"
-	>
-		<div class="p-12 justify-self-center self-center">
-			<div
-				use:closable
-				on:outside-click={() => ($demoModal = false)}
-				class="bg-zinc-100 max-w-lg p-10 rounded-lg grid grid-cols-2 grid-rows-2"
-			>
-				<p class="col-span-2 text-center p-2 md:p-4">
-					Thanks for your demo request! We will respond with an invitation shortly.
-				</p>
-				<button
-					on:click={() => ($demoModal = false)}
-					class="col-span-2 self-center p-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-				>
-					Exit
-				</button>
-			</div>
-		</div>
-	</modal>
-{/if}
+<Modal on:click={toggleModal} bind:this={modalComponent} bind:showModal>
+	Thank you for requesting a demo. Watch your email for an invitation and information!
+</Modal>
 
 <main class="min-h-screen text-maintext overflow-hidden">
 	<!-- Section 1 (Landing View) -->
@@ -225,7 +224,9 @@
 
 	<!-- Section 2 (Navigation Section) -->
 	<section class="container mx-auto my-24">
-		<flex class="flex justify-center md:justify-start md:items-start perspective xl:justify-center max-h-64 md:max-h-fit">
+		<flex
+			class="flex justify-center md:justify-start md:items-start perspective xl:justify-center max-h-64 md:max-h-fit"
+		>
 			<div class="max-w-xl z-[3] feature-grid-text pb-48">
 				<h2
 					class="font-extrabold tracking-tight py-8 
@@ -250,8 +251,8 @@
 					class="text-md mx-auto text-center max-w-sm 
 						md:mx-0 md:text-left md:text-xl md:max-w-3xl"
 				>
-					Unrivaled service, revolutionary technology, and low prices, {$companyName} is a service
-					like no other.
+					Unrivaled service, revolutionary technology, and low prices, {$companyName} is a service like
+					no other.
 				</p>
 			</div>
 
@@ -337,15 +338,44 @@
 
 	<!-- EASY - How it works (Section 3) -->
 	<section use:scrollRef={'easy'} class="container mx-auto py-16 pb-32">
-		<h1 class="text-center font-bold pt-6
+		<h1
+			class="text-center font-bold pt-6
 				text-4xl
 				sm:text-5xl
-				md:text-6xl">This is how it works</h1>
+				md:text-6xl"
+		>
+			This is how it works
+		</h1>
 
 		<grid class="grid grid-cols-1 grid-rows-1 md:grid-cols-3 py-12 gap-x-4 gap-y-12">
 			<div class="text-center">
 				<p class="h-24 w-24 mx-auto -translate-y-10">
-					<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.55 299.81"><defs><style>.cls-1{fill:#fdf8ad;}.cls-2{fill:#808184;}</style></defs><path class="fill-yellow-200" d="M297.52,118.31c0-49.2-46.06-88.83-101.88-86.54-49.77,2.05-90.18,38-92.56,82.3-1.27,23.83,8.27,45.67,24.64,62a84.57,84.57,0,0,1,25.22,60.15v22l94.61.61V235.11a81.92,81.92,0,0,1,24.8-58.66C288,161.08,297.52,140.69,297.52,118.31Z" transform="translate(-102.97 -31.68)"/><path class="cls-2" d="M61.63,233.57h71.79a10.17,10.17,0,0,1,10.17,10.17v7.59a0,0,0,0,1,0,0H51.46a0,0,0,0,1,0,0v-7.59A10.17,10.17,0,0,1,61.63,233.57Z"/><rect class="cls-2" x="50.5" y="257.93" width="92.48" height="18.15"/><path class="cls-2" d="M50.5,281.66H143a0,0,0,0,1,0,0v8a10.17,10.17,0,0,1-10.17,10.17H60.67A10.17,10.17,0,0,1,50.5,289.64v-8a0,0,0,0,1,0,0Z"/></svg>
+					<svg
+						id="Layer_1"
+						data-name="Layer 1"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 194.55 299.81"
+						><defs
+							><style>
+								.cls-1 {
+									fill: #fdf8ad;
+								}
+								.cls-2 {
+									fill: #808184;
+								}
+							</style></defs
+						><path
+							class="fill-yellow-200"
+							d="M297.52,118.31c0-49.2-46.06-88.83-101.88-86.54-49.77,2.05-90.18,38-92.56,82.3-1.27,23.83,8.27,45.67,24.64,62a84.57,84.57,0,0,1,25.22,60.15v22l94.61.61V235.11a81.92,81.92,0,0,1,24.8-58.66C288,161.08,297.52,140.69,297.52,118.31Z"
+							transform="translate(-102.97 -31.68)"
+						/><path
+							class="cls-2"
+							d="M61.63,233.57h71.79a10.17,10.17,0,0,1,10.17,10.17v7.59a0,0,0,0,1,0,0H51.46a0,0,0,0,1,0,0v-7.59A10.17,10.17,0,0,1,61.63,233.57Z"
+						/><rect class="cls-2" x="50.5" y="257.93" width="92.48" height="18.15" /><path
+							class="cls-2"
+							d="M50.5,281.66H143a0,0,0,0,1,0,0v8a10.17,10.17,0,0,1-10.17,10.17H60.67A10.17,10.17,0,0,1,50.5,289.64v-8a0,0,0,0,1,0,0Z"
+						/></svg
+					>
 				</p>
 				<h2 class="text-5xl py-4">Imagine</h2>
 				<p>how you want your data displayed</p>
@@ -621,9 +651,7 @@
 						<h2
 							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
 						>
-							Victor Appat <span class="hidden xs:inline text-gray-500">
-								- College Student</span
-							>
+							Victor Appat <span class="hidden xs:inline text-gray-500"> - College Student</span>
 						</h2>
 					</div>
 					<img
@@ -901,7 +929,9 @@
 					>
 						<div class="py-6 text-center border-r-2">
 							<div class="order-1 text-5xl font-extrabold text-indigo-600">99%</div>
-							<div class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Satisfaction</div>
+							<div class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
+								Satisfaction
+							</div>
 						</div>
 						<p class="col-span-3 pl-4 self-center text-[1rem]">
 							"This chart software is so great, I was able to implement it in my portfolio for
@@ -915,7 +945,10 @@
 							<div class="order-1 text-5xl font-extrabold text-indigo-600">24/7</div>
 							<div class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Support</div>
 						</div>
-						<p class="col-span-3 pl-4 self-center">"{$companyName} is an absolute must for any website I develop, it makes everything look better and always impresses my clients." - Evelyn Campbell</p>
+						<p class="col-span-3 pl-4 self-center">
+							"{$companyName} is an absolute must for any website I develop, it makes everything look
+							better and always impresses my clients." - Evelyn Campbell
+						</p>
 					</blockquote>
 					<blockquote
 						class="grid grid-cols-4 bg-white shadow-lg md:mr-8 w-[90%] rounded-md self-center"
@@ -924,7 +957,10 @@
 							<div class="order-1 text-5xl font-extrabold text-indigo-600 ">190k</div>
 							<div class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Users</div>
 						</div>
-						<p class="col-span-3 pl-4 self-center">"This was the first time I've ever implemented AR animations into a project and {$companyName} made it so easy. I use it for everything now." - Francis Stewart</p>
+						<p class="col-span-3 pl-4 self-center">
+							"This was the first time I've ever implemented AR animations into a project and {$companyName}
+							made it so easy. I use it for everything now." - Francis Stewart
+						</p>
 					</blockquote>
 				</div>
 				<flex class="flex flex-col justify-between md:w-[40%] gap-20">
@@ -1026,18 +1062,15 @@
 			>
 				<h1 class="text-xl font-bold pb-3 pt-4">Satisfaction Guaranteed</h1>
 				<div>
-					<div
-						class="text-mainlink text-lg font-medium"
-						>Money back</div
-					>
-					<p class="pb-4">If you decide to purchase a subscription and find it's not what you thought, we offer 100% of your money back.</p>
+					<div class="text-mainlink text-lg font-medium">Money back</div>
+					<p class="pb-4">
+						If you decide to purchase a subscription and find it's not what you thought, we offer
+						100% of your money back.
+					</p>
 				</div>
 
 				<div class="py-4 mb-4 border-y-[1px] border-black">
-					<div
-						class="text-mainlink text-lg font-medium"
-						>Live support</div
-					>
+					<div class="text-mainlink text-lg font-medium">Live support</div>
 					<p>Our live support can help you fix any issues you are having on the spot.</p>
 				</div>
 			</div>

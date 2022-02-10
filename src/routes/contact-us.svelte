@@ -1,51 +1,36 @@
-<script>
+<script lang="ts">
 	import { fly, slide, fade } from 'svelte/transition';
 	import Visibility from '../components/scripts/Visibility.svelte';
 	import Backdrop from '../components/Backdrop.svelte';
 	import closable from 'svelte-closable';
-	import { contactModal, yStore, companyName } from '../stores';
+	import { contactModal, companyName } from '../stores';
+	import Modal from '../components/Modal.svelte';
+
+	//From the Modal component
+	let showModal = false;
+	let modalComponent;
 
 	let first, last, email, message, contactHeight;
 
-	const handleSubmit = () => {
-		$contactModal = true;
-		first = '';
-		last = '';
-		email = '';
-		message = '';
+	const toggleModal = () => {
+		showModal = !showModal;
 	};
+
+	function handleSubmit(e) {
+		toggleModal();
+		modalComponent.storeY();
+	}
 </script>
 
 <title>{$companyName} - Contact</title>
-<meta name="description" content="{$companyName} contact page, ask any questions that we haven't already answered.">
+<meta
+	name="description"
+	content="{$companyName} contact page, ask any questions that we haven't already answered."
+/>
 
-{#if $contactModal}
-	<Backdrop />
-	<modal
-		in:slide={{ duration: 500 }}
-		out:fade={{ duration: 200 }}
-		class="grid grid-cols-1 grid-rows-1 fixed z-[101] h-screen w-full"
-	>
-		<div class="p-12 justify-self-center self-center">
-			<div
-				use:closable
-				on:outside-click={() => ($contactModal = false)}
-				class="bg-zinc-100 max-w-lg p-10 rounded-lg grid grid-cols-2 grid-rows-2"
-			>
-				<p class="col-span-2 text-center p-2 md:p-4">
-					Thank you for submitting! We will contact you shortly with a reply to that sweet juicy
-					question!
-				</p>
-				<button
-					on:click={() => ($contactModal = false)}
-					class="col-span-2 self-center p-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-				>
-					Exit
-				</button>
-			</div>
-		</div>
-	</modal>
-{/if}
+<Modal on:click={toggleModal} bind:this={modalComponent} bind:showModal>
+	Thank you for submitting! We will contact you shortly with a reply to your awesome question :)
+</Modal>
 
 <main class="min-h-screen text-maintext overflow-hidden pt-32">
 	<!-- Intro area -->
@@ -163,7 +148,11 @@
 
 	<!--     Contact Section     -->
 	<Visibility threshold="30" let:visible>
-		<div bind:clientHeight={contactHeight} class="relative mx-0 px-2 min-w-10/12 py-14 md:py-24 bg-gray-100" style="min-height: {contactHeight}px">
+		<div
+			bind:clientHeight={contactHeight}
+			class="relative mx-0 px-2 min-w-10/12 py-14 md:py-24 bg-gray-100"
+			style="min-height: {contactHeight}px"
+		>
 			{#if visible}
 				<div class="container mx-auto flex flex-col md:flex-row justify-center">
 					<!-- Contact Info ICONS TAKEN FROM: https://iconmonstr.com PAY ATTENTION TO LICENSE-->
