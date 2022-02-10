@@ -1,13 +1,3 @@
-<script context="module">
-	export let yStore;
-	export let y;
-
-	export function storeY() {
-		yStore = y;
-		console.log(yStore);
-	}
-</script>
-
 <script>
 	import { slide, fade } from 'svelte/transition';
 	import closable from 'svelte-closable';
@@ -15,6 +5,24 @@
 
 	export let message = 'Oops! You forgot to set a message parameter.';
 	export let showModal = false;
+
+    let y = 0;
+    let yStore = 0;
+
+    export function storeY() {
+        yStore = y;
+
+        console.log("The stored y value is: " + yStore)
+    }
+
+    $: {
+        if (yStore - y != 0) {
+        showModal = false;
+        yStore = y;
+        console.log("MODAL FALSE?")
+    }
+}
+
 </script>
 
 <svelte:window bind:scrollY={y} />

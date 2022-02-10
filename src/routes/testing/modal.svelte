@@ -1,9 +1,10 @@
 <script>
-	import Modal, { storeY, y, yStore } from '../../components/Modal.svelte';
+	import Modal from '../../components/Modal.svelte';
 	import { modal } from '../../stores';
 
 	//From the Modal component
 	let showModal = false;
+    let modalComponent;
 
 	const toggleModal = () => {
 		showModal = !showModal;
@@ -14,19 +15,19 @@
 
 		console.log($modal);
 
-		console.log(yStore - y)
+
 	}
 
 	function clickHandler() {
 		toggleModal();
-		storeY();
+        modalComponent.storeY();
 
 		console.log('Consider the click handeled');
 
 	}
 </script>
 
-<Modal {showModal} on:click={toggleModal} />
+<Modal bind:this={modalComponent} bind:showModal={showModal} on:click={toggleModal} />
 
 <main
 	class="min-h-screen"
