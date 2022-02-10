@@ -22,8 +22,6 @@
 		toggleModal();
         modalComponent.storeY();
 
-		console.log('Consider the click handeled');
-
 	}
 </script>
 

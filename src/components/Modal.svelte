@@ -11,15 +11,12 @@
 
     export function storeY() {
         yStore = y;
-
-        console.log("The stored y value is: " + yStore)
     }
 
     $: {
         if (yStore - y != 0) {
         showModal = false;
         yStore = y;
-        console.log("MODAL FALSE?")
     }
 }
 
