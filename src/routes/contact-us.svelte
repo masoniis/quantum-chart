@@ -14,25 +14,25 @@
 	function handleSubmit(e) {
 		modalComponent.toggleModal();
 		modalComponent.storeY();
-		postForm();
+		// postForm();
 
 		first = last = email = message = "";
 	}
 
-	async function postForm() {
-		const submit = await fetch("/api/contact", {
-			method: "POST",
-			body: JSON.stringify({
-				first,
-				last,
-				email,
-				message,
-			}),
-		});
+	// async function postForm() {
+	// 	const submit = await fetch("/api/contact", {
+	// 		method: "POST",
+	// 		body: JSON.stringify({
+	// 			first,
+	// 			last,
+	// 			email,
+	// 			message,
+	// 		}),
+	// 	});
 
-		const data = await submit.json()
-		console.log(data);
-	}
+	// 	const data = await submit.json()
+	// 	console.log(data);
+	// }
 </script>
 
 <title>{$companyName} - Contact</title>
