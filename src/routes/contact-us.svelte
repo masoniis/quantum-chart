@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { fly, slide, fade } from 'svelte/transition';
 	import Visibility from '../components/scripts/Visibility.svelte';
-	import Backdrop from '../components/Backdrop.svelte';
 	import closable from 'svelte-closable';
 	import { contactModal, companyName } from '../stores';
 	import Modal from '../components/Modal.svelte';

@@ -7,7 +7,6 @@
 	import closable from 'svelte-closable';
 	import Visibility from '../components/scripts/Visibility.svelte';
 	import Logo from '../components/Logo.svelte';
-	import Backdrop from '../components/Backdrop.svelte';
 	import Modal from '../components/Modal.svelte';
 
 	setGlobalOptions({
@@ -1312,21 +1311,5 @@
 		display: block;
 		width: calc(161% + 1.3px);
 		height: 76px;
-	}
-
-	.howitworks-wave {
-		position: relative;
-		top: 0;
-		left: 0;
-		width: 100%;
-		overflow: hidden;
-		line-height: 0;
-	}
-
-	.howitworks-wave svg {
-		position: relative;
-		display: block;
-		width: calc(122% + 1.3px);
-		height: 103px;
 	}
 </style>
