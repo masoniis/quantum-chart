@@ -11,12 +11,8 @@
 
 	let first, last, email, message, contactHeight;
 
-	const toggleModal = () => {
-		showModal = !showModal;
-	};
-
 	function handleSubmit(e) {
-		toggleModal();
+		modalComponent.toggleModal();
 		modalComponent.storeY();
 	}
 </script>
@@ -27,7 +23,7 @@
 	content="{$companyName} contact page, ask any questions that we haven't already answered."
 />
 
-<Modal on:click={toggleModal} bind:this={modalComponent} bind:showModal>
+<Modal bind:this={modalComponent} bind:showModal>
 	Thank you for submitting! We will contact you shortly with a reply to your awesome question :)
 </Modal>
 

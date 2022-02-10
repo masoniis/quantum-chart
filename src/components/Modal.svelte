@@ -10,6 +10,10 @@
         yStore = y;
     }
 
+	export function toggleModal() {
+		return showModal = !showModal;
+	}
+
     $: {
         if (yStore - y != 0) {
         showModal = false;
@@ -22,7 +26,7 @@
 <svelte:window bind:scrollY={y} />
 
 {#if showModal}
-	<div class="w-screen h-screen fixed bg-black/40 z-[100]" on:click|self>
+	<div class="w-screen h-screen fixed bg-black/40 z-[100]" on:click|self={toggleModal}>
 		<modal
 			in:slide={{ duration: 500 }}
 			out:fade={{ duration: 200 }}

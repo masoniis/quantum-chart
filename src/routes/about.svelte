@@ -11,12 +11,8 @@
 	let showModal = false;
 	let modalComponent;
 
-	const toggleModal = () => {
-		showModal = !showModal;
-	};
-
 	function handleReqInfo(e) {
-		toggleModal();
+		modalComponent.toggleModal();
 		modalComponent.storeY();
 		email = ''
 	}
@@ -28,7 +24,7 @@
 	content="{$companyName} about page, learn more about who we are behind the scenes."
 />
 
-<Modal on:click={toggleModal} bind:this={modalComponent} bind:showModal >
+<Modal bind:this={modalComponent} bind:showModal >
 	Thanks for your information request. We will reply to the email you submitted shortly with
 	information on how to apply or contribute to {$companyName}.
 </Modal>

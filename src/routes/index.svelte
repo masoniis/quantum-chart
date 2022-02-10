@@ -83,12 +83,8 @@
 	let showModal = false;
 	let modalComponent;
 
-	const toggleModal = () => {
-		showModal = !showModal;
-	};
-
 	function handleReqDemo(e) {
-		toggleModal();
+		modalComponent.toggleModal();
 		modalComponent.storeY();
 	}
 </script>
@@ -103,7 +99,7 @@
 
 <svelte:window bind:innerWidth={width} />
 
-<Modal on:click={toggleModal} bind:this={modalComponent} bind:showModal>
+<Modal bind:this={modalComponent} bind:showModal>
 	Thank you for requesting a demo. Watch your email for an invitation and information!
 </Modal>
 
