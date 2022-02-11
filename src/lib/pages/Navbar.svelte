@@ -2,11 +2,11 @@
 	import { fly, fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
-	import { menu, yStore, companyName, statusBar } from '../stores';
+	import { menu, yStore, companyName, statusBar } from '../../stores';
 	import Hamburger from 'svelte-hamburgers';
 	import closable from 'svelte-closable';
-	import Logo from './Logo.svelte';
-	import Menu from './Minimenu.svelte';
+	import Logo from '../Logo.svelte';
+	import Menu from '../Minimenu.svelte';
 	import { tweened } from 'svelte/motion';
 	import { cubicOut } from 'svelte/easing'
 
