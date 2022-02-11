@@ -87,7 +87,7 @@
 		</svg>
 	</div>
 
-	<!-- Section 2 -->
+	<!-- Section 2 QUOTES -->
 	<section
 		use:scrollRef={'testimonial-section'}
 		class="flex items-center justify-center py-16 md:py-28 bg-gray-200 min-w-screen"
