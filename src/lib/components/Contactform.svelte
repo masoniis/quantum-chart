@@ -1,7 +1,4 @@
 <script>
-	//A variable to bind the modal component
-	let modalComponent;
-
 	export let first, last, email, message;
 
 	async function postForm() {
