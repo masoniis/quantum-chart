@@ -15,7 +15,7 @@
 	function handleSubmit(e) {
 		modalComponent.toggleModal();
 		modalComponent.storeY();
-		postForm();
+		// postForm();
 
 		first = last = email = message = "";
 	}
