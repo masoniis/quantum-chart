@@ -37,7 +37,7 @@ const quotes = [
         src: 'people/carter.jpg'
     },
 
-    { text: '', person: '', reference: '', src: '' }
+    { text: '', person: 'joe mama', reference: '', src: '' }
 ];
 
 export default quotes;

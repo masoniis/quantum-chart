@@ -3,52 +3,9 @@
 	import { scrollTo, scrollRef } from 'svelte-scrolling';
 	import { companyName } from '../stores';
 	import Blockquote from '../lib/Blockquote.svelte';
-	import test from '../lib/scripts/testimonialQuotes';
-
-	console.log(test)
+	import testimonialQuotes from '../lib/scripts/testimonialQuotes';
 
 	let y;
-
-	const quotes = [
-		{
-			text: 'Making charts has been my hobby for a while and {$companyName} is by far the best software I have ever used.',
-			person: 'Iris Williams',
-			reference: 'Chart Enthusiast',
-			src: 'people/iris.jpg'
-		},
-		{
-			text: 'All of my employees are required to learn how to use {$companyName} as one of the first parts of their training.',
-			person: 'Avery Harris',
-			reference: 'CEO of AmeriGo Finance',
-			src: 'people/avery.jpg'
-		},
-		{
-			text: 'When my professors ask how I make such good charts, I just show them to this software. It Is also very easy to use!',
-			person: 'Victor Appat',
-			reference: 'College Student ',
-			src: 'people/victor.jpg'
-		},
-		{
-			text: 'I got the starting loan for my company with a presentation made with this software. thank you {$companyName}!',
-			person: 'Marcus Paslay',
-			reference: 'CEO of Piatello',
-			src: 'people/marcus.jpeg'
-		},
-		{
-			text: '{$companyName} has made it so easy to make charts for work presentations!',
-			person: 'Nicholas Carboni',
-			reference: 'Financial Consultant',
-			src: 'people/nicholas.jpg'
-		},
-		{
-			text: '{$companyName} makes our workplace much more fun with its graphics, animations, and immersive AR and VR technology.',
-			person: 'Carter Wilson',
-			reference: 'bro',
-			src: 'people/carter.jpg'
-		},
-
-		{ text: '', person: '', reference: '', src: '' }
-	];
 </script>
 
 <title>{$companyName} - Testimonials</title>
@@ -99,7 +56,7 @@
 			<div
 				class="grid grid-cols-1 grid-rows-3 lg:grid-cols-4 lg:grid-rows-2 items-center gap-10 w-full"
 			>
-				{#each quotes as quote}
+				{#each testimonialQuotes as quote}
 					<Blockquote src={quote.src} classes="min-h-full">
 						<span slot="quote">
 							{quote.text}
