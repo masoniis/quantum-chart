@@ -2,8 +2,50 @@
 	import { scale, slide, fly, fade } from 'svelte/transition';
 	import { scrollTo, scrollRef } from 'svelte-scrolling';
 	import { companyName } from '../stores';
+	import Blockquote from '../components/Blockquote.svelte';
 
 	let y;
+
+	const quotes = [
+		{
+			text: 'Making charts has been my hobby for a while and {$companyName} is by far the best software I have ever used.',
+			person: 'Iris Williams',
+			reference: 'Chart Enthusiast',
+			src: 'people/iris.jpg'
+		},
+		{
+			text: 'All of my employees are required to learn how to use {$companyName} as one of the first parts of their training.',
+			person: 'Avery Harris',
+			reference: 'CEO of AmeriGo Finance',
+			src: 'Testimonial Woman 2 (1).jpg'
+		},
+		{
+			text: 'When my professors ask how I make such good charts, I just show them to this software. It Is also very easy to use!',
+			person: 'Victor Appat',
+			reference: 'College Student ',
+			src: 'Testimonial Man 1 (1).jpg'
+		},
+		{
+			text: 'I got the starting loan for my company with a presentation made with this software. thank you {$companyName}!',
+			person: 'Marcus Paslay',
+			reference: 'CEO of Piatello',
+			src: 'Testimonial Man 2 (1).jpeg'
+		},
+		{
+			text: '{$companyName} has made it so easy to make charts for work presentations!',
+			person: 'Nicholas Carboni',
+			reference: 'Financial Consultant',
+			src: 'Testimonial Man 3 (1).jpg'
+		},
+		{
+			text: '{$companyName} makes our workplace much more fun with its graphics, animations, and immersive AR and VR technology.',
+			person: 'Carter Wilson',
+			reference: 'bro',
+			src: 'Testimonial Man 4 (1).jpg'
+		},
+
+		{ text: '', person: '', reference: '', src: '' }
+	];
 </script>
 
 <title>{$companyName} - Testimonials</title>
@@ -54,273 +96,21 @@
 			<div
 				class="grid grid-cols-1 grid-rows-3 lg:grid-cols-4 lg:grid-rows-2 items-center gap-10 w-full"
 			>
-				<!-- Card #2 -->
-				<blockquote
-					class="flex items-center justify-between w-full col-span-2 bg-white rounded-lg shadow min-h-full
-					p-2
-					xs:p-3
-					sm:p-6"
-				>
-					<div class="flex flex-col mx-auto">
-						<div class="relative">
-							<svg
-								class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 100 125"
-							>
-								<path
-									d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
-								/>
-							</svg>
-							<p
-								class="mt-2 text-sm text-gray-600 
-							 	text-center	 
-								2xs:pl-12 2xs:text-left
-								sm:text-base 
-							   	lg:text-sm 
-								xl:text-base"
-							>
-								Making charts has been my hobby for a while and {$companyName} is by far the best software
-								I've ever used.
-							</p>
-						</div>
+				{#each quotes as quote}
+					<Blockquote src={quote.src}>
+						<span slot="quote">
+							{quote.text}
+						</span>
 
-						<h3
-							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
-						>
-							Iris Williams <span class="hidden xs:inline text-gray-500"> - Chart Enthusiast </span>
-						</h3>
-					</div>
-					<img
-						class="hidden sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-						src="Testimonial Woman 1 (1).jpg"
-						alt="Testimonial Woman"
-					/>
-				</blockquote>
+						<span slot="person">
+							{quote.person}
+						</span>
 
-				<!-- Card #3 -->
-				<blockquote
-					class="flex items-center justify-between w-full col-span-2 bg-white rounded-lg shadow min-h-full
-					p-2
-					xs:p-3
-					sm:p-6"
-				>
-					<div class="flex flex-col mx-auto">
-						<div class="relative">
-							<svg
-								class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 100 125"
-							>
-								<path
-									d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
-								/>
-							</svg>
-							<p
-								class="mt-2 text-sm text-gray-600 
-							 	text-center	 
-								2xs:pl-12 2xs:text-left
-								sm:text-base 
-							   	lg:text-sm 
-								xl:text-base"
-							>
-								All of my employees are required to learn how to use {$companyName} as one of the first
-								parts of their training.
-							</p>
-						</div>
-
-						<h3
-							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
-						>
-							Avery Harris <span class="hidden xs:inline text-gray-500">
-								- CEO of AmeriGo Finance
-							</span>
-						</h3>
-					</div>
-					<img
-						class="hidden sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-						src="Testimonial Woman 2 (1).jpg"
-						alt="Testimonial Woman"
-					/>
-				</blockquote>
-
-				<!-- Card #4 -->
-				<blockquote
-					class="flex items-center justify-between w-full col-span-2 bg-white rounded-lg shadow min-h-full
-					p-2
-					xs:p-3
-					sm:p-6"
-				>
-					<div class="flex flex-col mx-auto">
-						<div class="relative">
-							<svg
-								class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 100 125"
-							>
-								<path
-									d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
-								/>
-							</svg>
-							<p
-								class="mt-2 text-sm text-gray-600 
-							 	text-center	 
-								2xs:pl-12 2xs:text-left
-								sm:text-base 
-							   	lg:text-sm 
-								xl:text-base"
-							>
-								When my professors ask how I make such good charts, I just show them to this
-								software. It's also very easy to use!
-							</p>
-						</div>
-
-						<h3
-							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
-						>
-							Victor Appat <span class="hidden xs:inline text-gray-500"> - College Student </span>
-						</h3>
-					</div>
-					<img
-						class="hidden sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-						src="Testimonial Man 1 (1).jpg"
-						alt="Testimonial Woman"
-					/>
-				</blockquote>
-
-				<!-- Card #5 -->
-				<blockquote
-					class="flex items-center justify-between w-full col-span-2 bg-white rounded-lg shadow min-h-full
-					p-2
-					xs:p-3
-					sm:p-6"
-				>
-					<div class="flex flex-col mx-auto">
-						<div class="relative">
-							<svg
-								class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 100 125"
-							>
-								<path
-									d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
-								/>
-							</svg>
-							<p
-								class="mt-2 text-sm text-gray-600 
-							 	text-center	 
-								2xs:pl-12 2xs:text-left
-								sm:text-base 
-							   	lg:text-sm 
-								xl:text-base"
-							>
-								I got the starting loan for my company with a presentation made with this software.
-								Thank you {$companyName}!
-							</p>
-						</div>
-
-						<h3
-							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
-						>
-							Marcus Paslay <span class="hidden xs:inline text-gray-500"> - CEO of Piatello </span>
-						</h3>
-					</div>
-					<img
-						class="hidden sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-						src="Testimonial Man 2 (1).jpeg"
-						alt="Testimonial Woman"
-					/>
-				</blockquote>
-
-				<!-- Card #6 -->
-				<blockquote
-					class="flex items-center justify-between w-full col-span-2 bg-white rounded-lg shadow min-h-full
-					p-2
-					xs:p-3
-					sm:p-6"
-				>
-					<div class="flex flex-col mx-auto">
-						<div class="relative">
-							<svg
-								class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 100 125"
-							>
-								<path
-									d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
-								/>
-							</svg>
-							<p
-								class="mt-2 text-sm text-gray-600 
-							 	text-center	 
-								2xs:pl-12 2xs:text-left
-								sm:text-base 
-							   	lg:text-sm 
-								xl:text-base"
-							>
-								{$companyName} has made it so easy to make charts for work presentations!
-							</p>
-						</div>
-
-						<h3
-							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
-						>
-							Nicholas Carboni <span class="hidden xs:inline text-gray-500">
-								- Financial Consultant
-							</span>
-						</h3>
-					</div>
-					<img
-						class="hidden sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-						src="Testimonial Man 3 (1).jpg"
-						alt="Testimonial Woman"
-					/>
-				</blockquote>
-				<!-- Card #6 -->
-				<blockquote
-					class="flex items-center justify-between w-full col-span-2 bg-white rounded-lg shadow min-h-full
-					p-2
-					xs:p-3
-					sm:p-6"
-				>
-					<div class="flex flex-col mx-auto">
-						<div class="relative">
-							<svg
-								class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 100 125"
-							>
-								<path
-									d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
-								/>
-							</svg>
-							<p
-								class="mt-2 text-sm text-gray-600 
-							 	text-center	 
-								2xs:pl-12 2xs:text-left
-								sm:text-base 
-							   	lg:text-sm 
-								xl:text-base"
-							>
-								{$companyName} makes our workplace much more fun with its graphics, animations, and immersive
-								AR and VR technology.
-							</p>
-						</div>
-
-						<h3
-							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
-						>
-							Carter Wilson <span class="hidden xs:inline text-gray-500">
-								- CEO of Grateful Law
-							</span>
-						</h3>
-					</div>
-					<img
-						class="hidden sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-						src="Testimonial Man 4 (1).jpg"
-						alt="Testimonial Woman"
-					/>
-				</blockquote>
+						<span slot="reference">
+							{quote.reference}
+						</span>
+					</Blockquote>
+				{/each}
 			</div>
 		</div>
 	</section>
