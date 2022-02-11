@@ -45,7 +45,7 @@
             <p class="inline text-gray-500">
                 <slot name="reference"> 
                     <span class="text-red-300">
-                        Profession spot
+                        Reference Spot
                     </span>
                 </slot>
             </p>

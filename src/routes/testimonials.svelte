@@ -17,31 +17,31 @@
 			text: 'All of my employees are required to learn how to use {$companyName} as one of the first parts of their training.',
 			person: 'Avery Harris',
 			reference: 'CEO of AmeriGo Finance',
-			src: 'Testimonial Woman 2 (1).jpg'
+			src: 'people/avery.jpg'
 		},
 		{
 			text: 'When my professors ask how I make such good charts, I just show them to this software. It Is also very easy to use!',
 			person: 'Victor Appat',
 			reference: 'College Student ',
-			src: 'Testimonial Man 1 (1).jpg'
+			src: 'people/victor.jpg'
 		},
 		{
 			text: 'I got the starting loan for my company with a presentation made with this software. thank you {$companyName}!',
 			person: 'Marcus Paslay',
 			reference: 'CEO of Piatello',
-			src: 'Testimonial Man 2 (1).jpeg'
+			src: 'people/marcus.jpeg'
 		},
 		{
 			text: '{$companyName} has made it so easy to make charts for work presentations!',
 			person: 'Nicholas Carboni',
 			reference: 'Financial Consultant',
-			src: 'Testimonial Man 3 (1).jpg'
+			src: 'people/nicholas.jpg'
 		},
 		{
 			text: '{$companyName} makes our workplace much more fun with its graphics, animations, and immersive AR and VR technology.',
 			person: 'Carter Wilson',
 			reference: 'bro',
-			src: 'Testimonial Man 4 (1).jpg'
+			src: 'people/carter.jpg'
 		},
 
 		{ text: '', person: '', reference: '', src: '' }
