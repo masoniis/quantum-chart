@@ -2,8 +2,8 @@
 	import { scale, slide, fly, fade } from 'svelte/transition';
 	import { scrollTo, scrollRef } from 'svelte-scrolling';
 	import { companyName } from '../stores';
-	import Blockquote from '../lib/components/Blockquote.svelte';
-	import testimonialQuotes from '../lib/scripts/testimonialQuotes';
+	import Blockquote from '$lib/components/Blockquote.svelte';
+	import testimonialQuotes from '$lib/scripts/testimonialQuotes';
 
 	let y;
 </script>

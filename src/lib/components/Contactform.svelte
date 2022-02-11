@@ -19,6 +19,7 @@
 
 <form
 	on:submit|preventDefault
+	on:submit|preventDefault={postForm}
 	method="POST"
 	action="/api/contact"
 	class="w-10/12 max-w-lg mx-auto my-10 p-10 bg-violet-100 rounded-xl shadow-lg"
