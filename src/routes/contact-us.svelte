@@ -3,6 +3,7 @@
 	import { companyName } from '../stores';
 	import Visibility from '../components/scripts/Visibility.svelte';
 	import Modal from '../components/Modal.svelte'; 
+	import { browser } from '$app/env'
 
 	let contactHeight;
 
@@ -14,25 +15,25 @@
 	function handleSubmit(e) {
 		modalComponent.toggleModal();
 		modalComponent.storeY();
-		// postForm();
+		postForm();
 
 		first = last = email = message = "";
 	}
 
-	// async function postForm() {
-	// 	const submit = await fetch("/api/contact", {
-	// 		method: "POST",
-	// 		body: JSON.stringify({
-	// 			first,
-	// 			last,
-	// 			email,
-	// 			message,
-	// 		}),
-	// 	});
+	async function postForm() {
+		console.log("Start of form post?")
+		const submit = await fetch('/api/contact', {
+			method: "POST",
+			body: JSON.stringify({
+				first,
+				last,
+				email,
+				message,
+			}),
+		});
+		console.log("End of form post?")
+	}
 
-	// 	const data = await submit.json()
-	// 	console.log(data);
-	// }
 </script>
 
 <title>{$companyName} - Contact</title>
@@ -55,9 +56,10 @@
 		</p>
 	</div>
 
-	<!-- Form Section -->
 	<form
 		on:submit|preventDefault={handleSubmit}
+		method="POST"
+		action="/api/contact"
 		class="w-10/12 max-w-lg mx-auto my-10 p-10 bg-violet-100 rounded-xl shadow-lg"
 	>
 		<!-- Form Element Container, GRID -->
