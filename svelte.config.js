@@ -11,3 +11,6 @@ const config = {
 		adapter: adapter(),
 	}
 };
+
+export default config;
+
