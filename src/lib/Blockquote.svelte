@@ -1,9 +1,10 @@
 <script>
 	export let src;
+	export let classes= "";
 </script>
 
 <blockquote
-	class="flex items-center justify-between w-full col-span-2 bg-white rounded-lg shadow min-h-full
+	class="flex items-center justify-between w-full col-span-2 bg-white rounded-lg shadow {classes}
 					p-2
 					xs:p-3
 					sm:p-6"

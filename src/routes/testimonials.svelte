@@ -97,7 +97,7 @@
 				class="grid grid-cols-1 grid-rows-3 lg:grid-cols-4 lg:grid-rows-2 items-center gap-10 w-full"
 			>
 				{#each quotes as quote}
-					<Blockquote src={quote.src}>
+					<Blockquote src={quote.src} classes="min-h-full">
 						<span slot="quote">
 							{quote.text}
 						</span>

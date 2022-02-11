@@ -8,6 +8,7 @@
 	import Visibility from '../lib/scripts/Visibility.svelte';
 	import Logo from '../lib/svg/Logo.svelte';
 	import Modal from '../lib/Modal.svelte';
+	import Blockquote from '../lib/Blockquote.svelte'
 
 	setGlobalOptions({
 		duration: 400,
@@ -262,7 +263,7 @@
 					<img
 						class="rounded-2xl h-[120px]"
 						style="background-color: #666766"
-						src="low-cost.jpg"
+						src="panel/low-cost.jpg"
 						alt="Low Cost"
 					/>
 				</button>
@@ -274,7 +275,7 @@
 					<img
 						class="rounded-2xl h-48"
 						style="background-color: #666766"
-						src="easy-to-use.jpg"
+						src="panel/easy-to-use.jpg"
 						alt="Easy to Use"
 					/>
 				</button>
@@ -286,7 +287,7 @@
 					<img
 						class="rounded-2xl h-[122px]"
 						style="background-color: #666766"
-						src="satisfaction-guarenteed.svg"
+						src="panel/satisfaction-guarenteed.jpg"
 						alt="Satisfaction Guarenteed"
 					/>
 				</button>
@@ -298,7 +299,7 @@
 					<img
 						class="rounded-2xl h-[190px]"
 						style="background-color: #666766"
-						src="reputable.jpg"
+						src="panel/reputable.jpg"
 						alt="Reputable"
 					/>
 				</button>
@@ -310,7 +311,7 @@
 					<img
 						class="rounded-2xl h-[191px]"
 						style="background-color: #666766"
-						src="responsive.jpg"
+						src="panel/responsive.jpg"
 						alt="Responsive"
 					/>
 				</button>
@@ -322,7 +323,7 @@
 					<img
 						class="rounded-2xl h-[122px]"
 						style="background-color: #666766"
-						src="risk-free.jpg"
+						src="panel/risk-free.jpg"
 						alt="Risk Free"
 					/></button
 				>
@@ -498,162 +499,60 @@
 			class="container mx-auto max-w-6xl py-12 flex flex-col-reverse md:flex-row"
 		>
 			<div in:fly={{ duration: 1200, x: -250 }} class="md:w-[60%] flex flex-col gap-6 md:pl-4">
-				<blockquote
-					class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 md:mx-0 mx-auto md:mt-0 mt-6"
-				>
-					<div class="flex flex-col mx-auto">
-						<div class="relative">
-							<svg
-								class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 100 125"
-							>
-								<path
-									d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
-								/>
-							</svg>
-							<p
-								class="mt-2 text-sm text-gray-600 
-									 text-center	 
-									2xs:pl-12 2xs:text-left
-									sm:text-base 
-									   lg:text-sm 
-									xl:text-base"
-							>
-								I love to play around with {$companyName} in my free time, it's just so satisfying!
-							</p>
-						</div>
+				<Blockquote src={"people/jane.jpg"} classes="w-[90%]">
+					<span slot="quote">
+						I love to play around with {$companyName} in my free time, it's just so satisfying!
+					</span>
 
-						<h2
-							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
-						>
-							Jane Cooper <span class="hidden xs:inline text-gray-500"> - Coding Hobbyist</span>
-						</h2>
-					</div>
-					<img
-						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-						src="Testimonial Woman 3 (1).jpg"
-						alt="Testimonial Woman"
-					/>
-				</blockquote>
-				<blockquote
-					class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 md:mx-0 mx-auto"
-				>
-					<div class="flex flex-col mx-auto">
-						<div class="relative">
-							<svg
-								class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 100 125"
-							>
-								<path
-									d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
-								/>
-							</svg>
-							<p
-								class="mt-2 text-sm text-gray-600 
-									 text-center	 
-									2xs:pl-12 2xs:text-left
-									sm:text-base 
-									   lg:text-sm 
-									xl:text-base"
-							>
-								Making charts has been my hobby for a while and {$companyName} is by far the best software
+					<span slot="person">
+						Jane Cooper
+					</span>
+
+					<span slot="reference">
+						Coding Enthusiast
+					</span>
+				</Blockquote>
+				<Blockquote src={"people/nicholas.jpg"} classes="w-[90%]">
+					<span slot="quote">
+						Making charts has been my hobby for a while and {$companyName} is by far the best software
 								I've ever used.
-							</p>
-						</div>
+					</span>
 
-						<h2
-							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
-						>
-							Iris Williams <span class="hidden xs:inline text-gray-500"> - Chart Enthusiast</span>
-						</h2>
-					</div>
-					<img
-						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-						src="Testimonial Woman 1 (1).jpg"
-						alt="Testimonial Woman"
-					/>
-				</blockquote>
-				<blockquote
-					class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 md:mx-0 mx-auto"
-				>
-					<div class="flex flex-col mx-auto">
-						<div class="relative">
-							<svg
-								class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 100 125"
-							>
-								<path
-									d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
-								/>
-							</svg>
-							<p
-								class="mt-2 text-sm text-gray-600 
-									 text-center	 
-									2xs:pl-12 2xs:text-left
-									sm:text-base 
-									   lg:text-sm 
-									xl:text-base"
-							>
-								{$companyName} has made it so easy to make charts for work presentations!
-							</p>
-						</div>
+					<span slot="person">
+						Nicholas Carboni
+					</span>
 
-						<h2
-							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
-						>
-							Nicholas Carboni <span class="hidden xs:inline text-gray-500">
-								- Financial Consultant</span
-							>
-						</h2>
-					</div>
-					<img
-						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-						src="Testimonial Man 1 (1).jpg"
-						alt="Testimonial Woman"
-					/>
-				</blockquote>
-				<blockquote
-					class="bg-mainbg shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 md:mx-0 mx-auto"
-				>
-					<div class="flex flex-col mx-auto">
-						<div class="relative">
-							<svg
-								class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 100 125"
-							>
-								<path
-									d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
-								/>
-							</svg>
-							<p
-								class="mt-2 text-sm text-gray-600 
-								 text-center	 
-								2xs:pl-12 2xs:text-left
-								sm:text-base 
-								   lg:text-sm 
-								xl:text-base"
-							>
-								When my professors ask how I make such good charts, I just show them to this
+					<span slot="reference">
+						Financial Consultant
+					</span>
+				</Blockquote>
+				<Blockquote src={"people/iris.jpg"} classes="w-[90%]">
+					<span slot="quote">
+						{$companyName} has made it so easy to make charts for work presentations!
+					</span>
+
+					<span slot="person">
+						Iris Williams
+					</span>
+
+					<span slot="reference">
+						Chart Enthusiast
+					</span>
+				</Blockquote>
+				<Blockquote src={"people/victor.jpg"} classes="w-[90%]">
+					<span slot="quote">
+						When my professors ask how I make such good charts, I just show them to this
 								software. It's also very easy to use!
-							</p>
-						</div>
+					</span>
 
-						<h2
-							class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
-						>
-							Victor Appat <span class="hidden xs:inline text-gray-500"> - College Student</span>
-						</h2>
-					</div>
-					<img
-						class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-						src="Testimonial Man 3 (1).jpg"
-						alt="Testimonial Woman"
-					/>
-				</blockquote>
+					<span slot="person">
+						Victor Appat
+					</span>
+
+					<span slot="reference">
+						College Student
+					</span>
+				</Blockquote>
 			</div>
 			<flex class="flex flex-row md:flex-col justify-between md:w-[40%] gap-20 ">
 				<div class="hidden md:flex flex-col gap-4">
