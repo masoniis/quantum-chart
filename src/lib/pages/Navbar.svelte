@@ -5,7 +5,7 @@
 	import { menu, yStore, companyName, statusBar } from '../../stores';
 	import Hamburger from 'svelte-hamburgers';
 	import closable from 'svelte-closable';
-	import Logo from '../Logo.svelte';
+	import Logo from '../svg/Logo.svelte';
 	import Menu from '../Minimenu.svelte';
 	import { tweened } from 'svelte/motion';
 	import { cubicOut } from 'svelte/easing'

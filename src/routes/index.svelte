@@ -6,7 +6,7 @@
 	import { cubicInOut } from 'svelte/easing';
 	import closable from 'svelte-closable';
 	import Visibility from '../lib/scripts/Visibility.svelte';
-	import Logo from '../lib/Logo.svelte';
+	import Logo from '../lib/svg/Logo.svelte';
 	import Modal from '../lib/Modal.svelte';
 
 	setGlobalOptions({
