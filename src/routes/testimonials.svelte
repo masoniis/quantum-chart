@@ -3,6 +3,9 @@
 	import { scrollTo, scrollRef } from 'svelte-scrolling';
 	import { companyName } from '../stores';
 	import Blockquote from '../lib/Blockquote.svelte';
+	import test from '../lib/scripts/testimonialQuotes';
+
+	console.log(test)
 
 	let y;
 

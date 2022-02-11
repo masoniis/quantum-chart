@@ -661,129 +661,48 @@
 					</div>
 				</flex>
 				<div class="md:w-[60%] ml-0 flex flex-col gap-4 md:pr-4">
-					<blockquote
-						class="bg-mainbg h-fit shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 self-center md:self-end md:mt-0 mt-6"
-					>
-						<div class="flex flex-col mx-auto">
-							<div class="relative">
-								<svg
-									class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 100 125"
-								>
-									<path
-										d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
-									/>
-								</svg>
-								<p
-									class="mt-2 text-sm text-gray-600 
-									 text-center	 
-									2xs:pl-12 2xs:text-left
-									sm:text-base 
-									   lg:text-sm 
-									xl:text-base"
-								>
-									I got the starting loan for my company with a presentation made with this
+					<Blockquote src={"people/marcus.jpeg"} classes="w-[90%]">
+						<span slot="quote">
+							I got the starting loan for my company with a presentation made with this
 									software. Thank you {$companyName}!
-								</p>
-							</div>
-
-							<h2
-								class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
-							>
-								Marcus Paslay <span class="hidden xs:inline text-gray-500">
-									- CEO of Piattello</span
-								>
-							</h2>
-						</div>
-						<img
-							class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-							src="Testimonial Man 2 (1).jpeg"
-							alt="Testimonial Woman"
-						/>
-					</blockquote>
-					<blockquote
-						class="bg-mainbg h-fit shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 self-center md:self-end"
-					>
-						<div class="flex flex-col mx-auto">
-							<div class="relative">
-								<svg
-									class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 100 125"
-								>
-									<path
-										d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
-									/>
-								</svg>
-								<p
-									class="mt-2 text-sm text-gray-600 
-								 text-center	 
-								2xs:pl-12 2xs:text-left
-								sm:text-base 
-								   lg:text-sm 
-								xl:text-base"
-								>
-									All of my employees are required to learn how to use {$companyName} as one of the first
+						</span>
+	
+						<span slot="person">
+							Marcus Piaslay
+						</span>
+	
+						<span slot="reference">
+							CEO Of Piattello
+						</span>
+					</Blockquote>
+					<Blockquote src={"people/avery.jpg"} classes="w-[90%]">
+						<span slot="quote">
+							All of my employees are required to learn how to use {$companyName} as one of the first
 									parts of their training.
-								</p>
-							</div>
-
-							<h2
-								class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
-							>
-								Avery Harris <span class="hidden xs:inline text-gray-500">
-									- CEO of AmeriGo Finance</span
-								>
-							</h2>
-						</div>
-						<img
-							class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-							src="Testimonial Woman 2 (1).jpg"
-							alt="Testimonial Woman"
-						/>
-					</blockquote>
-					<blockquote
-						class="bg-mainbg h-fit shadow-lg rounded-lg flex flex-row justify-between w-[90%] p-2 self-center md:self-end"
-					>
-						<div class="flex flex-col mx-auto">
-							<div class="relative">
-								<svg
-									class="2xs:absolute mx-auto 2xs:mx-0 left-0 w-10 h-10 text-red-700 fill-current"
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 100 125"
-								>
-									<path
-										d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
-									/>
-								</svg>
-								<p
-									class="mt-2 text-sm text-gray-600 
-							 text-center	 
-							2xs:pl-12 2xs:text-left
-							sm:text-base 
-							   lg:text-sm 
-							xl:text-base"
-								>
-									{$companyName} makes our workplace more fun with its graphics, animations, and immersive
+						</span>
+	
+						<span slot="person">
+							Avery Harris
+						</span>
+	
+						<span slot="reference">
+							CEO of AmeriGo Finance
+						</span>
+					</Blockquote>
+					<Blockquote src={"people/carter.jpg"} classes="w-[90%]">
+						<span slot="quote">
+							{$companyName} makes our workplace more fun with its graphics, animations, and immersive
 									AR and VR technology.
-								</p>
-							</div>
-
-							<h2
-								class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
-							>
-								Carter Wilson <span class="hidden xs:inline text-gray-500">
-									- CEO of Grateful Law</span
-								>
-							</h2>
-						</div>
-						<img
-							class="hidden m-2 sm:block sm:ml-4 w-24 h-24 bg-gray-300 rounded-full"
-							src="Testimonial Man 4 (1).jpg"
-							alt="Testimonial Woman"
-						/>
-					</blockquote>
+						</span>
+	
+						<span slot="person">
+							Carter Wilson
+						</span>
+	
+						<span slot="reference">
+							CEO of Ungrateful Law
+						</span>
+					</Blockquote>
 				</div>
 			</div>
 		</div>
