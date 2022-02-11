@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { fly  } from 'svelte/transition';
 	import { companyName } from '../stores';
-	import Visibility from '../components/scripts/Visibility.svelte';
-	import Modal from '../components/Modal.svelte'; 
-	import Contactform from '../components/Contactform.svelte';
+	import Visibility from '../lib/scripts/Visibility.svelte';
+	import Modal from '../lib/Modal.svelte'; 
+	import Contactform from '../lib/Contactform.svelte';
 
 	let contactHeight;
 

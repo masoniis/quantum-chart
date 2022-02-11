@@ -1,9 +1,9 @@
 <script>
-	import Logo from '../components/Logo.svelte';
+	import Logo from '../lib/Logo.svelte';
 	import { companyName } from '../stores';
 	import { slide, fade } from 'svelte/transition';
 	import closable from 'svelte-closable';
-	import Modal from '../components/Modal.svelte'
+	import Modal from '../lib/Modal.svelte'
 
 	let email;
 

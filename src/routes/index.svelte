@@ -5,9 +5,9 @@
 	import { slide, fade, fly } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 	import closable from 'svelte-closable';
-	import Visibility from '../components/scripts/Visibility.svelte';
-	import Logo from '../components/Logo.svelte';
-	import Modal from '../components/Modal.svelte';
+	import Visibility from '../lib/scripts/Visibility.svelte';
+	import Logo from '../lib/Logo.svelte';
+	import Modal from '../lib/Modal.svelte';
 
 	setGlobalOptions({
 		duration: 400,

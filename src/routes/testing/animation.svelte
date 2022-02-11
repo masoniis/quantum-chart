@@ -1,6 +1,6 @@
 <script>
 	import { fade, fly, draw } from 'svelte/transition';
-	import Visibility from '../../components/scripts/Visibility.svelte';
+	import Visibility from '../../lib/components/Visibility.sveltey.svelte';
 </script>
 
 <main class="min-h-screen text-maintext overflow-hidden bg-gray-500">
