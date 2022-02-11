@@ -3,7 +3,7 @@
 	import { menu } from '../stores';
 	import Navbar from '../lib/pages/Navbar.svelte';
 	import Botbar from '../lib/pages/Botbar.svelte';
-	import Menubackground from '../lib/Menubackground.svelte';
+	import Menubackground from '../lib/components/Menubackground.svelte';
 
 	let hide;
 

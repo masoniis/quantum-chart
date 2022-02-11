@@ -4,7 +4,7 @@
 	import { page } from '$app/stores';
 	import { onMount, onDestroy } from 'svelte';
 	import { writable, readable, get } from 'svelte/store';
-	import { menu } from '../stores';
+	import { menu } from '../../stores';
 
 	export let open;
 

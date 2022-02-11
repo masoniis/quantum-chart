@@ -7,8 +7,8 @@
 	import closable from 'svelte-closable';
 	import Visibility from '../lib/scripts/Visibility.svelte';
 	import Logo from '../lib/svg/Logo.svelte';
-	import Modal from '../lib/Modal.svelte';
-	import Blockquote from '../lib/Blockquote.svelte'
+	import Modal from '../lib/components/Modal.svelte';
+	import Blockquote from '../lib/components/Blockquote.svelte'
 
 	setGlobalOptions({
 		duration: 400,
