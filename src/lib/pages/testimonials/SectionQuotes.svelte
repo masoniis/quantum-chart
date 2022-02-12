@@ -1,6 +1,6 @@
 <script>
 	import { scrollRef } from 'svelte-scrolling';
-	import Blockquote from '$lib/components/Blockquote.svelte';
+	import Blockquote from '$components/Blockquote.svelte';
 	import testimonialQuotes from '$lib/pages/testimonials/testimonialQuotes';
 </script>
 

@@ -26,7 +26,7 @@
 <svelte:window bind:scrollY={y} />
 
 {#if showModal}
-	<div class="w-screen h-screen fixed bg-black/40 z-[100]" on:click|self={toggleModal}>
+	<div in:fade={{duration: 200}} out:fade={{duration: 100}} class="w-screen h-screen fixed bg-black/40 z-[100]" on:click|self={toggleModal}>
 		<modal
 			in:slide={{ duration: 500 }}
 			out:fade={{ duration: 200 }}
