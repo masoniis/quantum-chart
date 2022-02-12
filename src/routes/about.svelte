@@ -2,7 +2,7 @@
 	import { companyName } from '$stores';
 	import Logo from '$icons/Logo.svelte';
 	import Modal from '$components/Modal.svelte';
-	import SectionHeader from '$pages/about/SectionHeader';
+
 
 	let email;
 
@@ -17,7 +17,7 @@
 	}
 </script>
 
-<SectionHeader />
+
 
 <Modal bind:this={modalComponent} bind:showModal >
 	Thanks for your information request. We will reply to the email you submitted shortly with
