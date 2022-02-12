@@ -18,7 +18,7 @@
 	}
 </script>
 
-
+<SectionHeader />
 
 <Modal bind:this={modalComponent} bind:showModal >
 	Thanks for your information request. We will reply to the email you submitted shortly with
