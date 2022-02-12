@@ -1,6 +1,6 @@
 <script>
 	import { scrollTo } from 'svelte-scrolling';
-	import { companyName } from '../../../stores';
+	import { companyName } from '$stores';
 </script>
 
 <section class="min-w-screen min-h-screen bg-gray-50 pt-40">

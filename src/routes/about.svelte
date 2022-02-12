@@ -1,9 +1,7 @@
 <script>
-	import Logo from '$lib/icons/Logo.svelte';
-	import { companyName } from '../stores';
-	import { slide, fade } from 'svelte/transition';
-	import closable from 'svelte-closable';
-	import Modal from '$lib/components/Modal.svelte'
+	import { companyName } from '$stores';
+	import Logo from '$icons/Logo.svelte';
+	import Modal from '$components/Modal.svelte'
 
 	let email;
 

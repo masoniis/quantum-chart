@@ -13,7 +13,11 @@ const config = {
 		vite: {
 			resolve: {
 				alias: {
-					$components: path.resolve('./src/lib/components')
+					$components: path.resolve('./src/lib/components'),
+					$pages: path.resolve('./src/lib/pages'),
+					$icons: path.resolve('./src/lib/icons'),
+					$scripts: path.resolve('./src/lib/scripts'),
+					$stores: path.resolve('./src/stores.js')
 				}
 			}
 		}

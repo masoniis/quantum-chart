@@ -1,6 +1,4 @@
 <script>
-	import { add_flush_callback } from 'svelte/internal';
-
 	export let type;
 </script>
 

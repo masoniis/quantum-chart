@@ -1,5 +1,5 @@
 <script>
-	import { companyName } from '../stores';
+	import { companyName } from '$stores';
 	import { fade, fly } from 'svelte/transition';
 
 	let individual = 4;

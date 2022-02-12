@@ -1,14 +1,12 @@
 <script>
-	import { companyName, statusBar } from '../stores';
+	import { companyName, statusBar } from '$stores';
 	import { scrollTo, scrollRef, setGlobalOptions } from 'svelte-scrolling';
 	import { onMount } from 'svelte';
 	import { slide, fade, fly } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
-	import closable from 'svelte-closable';
-	import Visibility from '$lib/scripts/Visibility.svelte';
-	import Logo from '$lib/icons/Logo.svelte';
-	import Modal from '$lib/components/Modal.svelte';
-	import Blockquote from '$lib/components/Blockquote.svelte'
+	import Logo from '$icons/Logo.svelte';
+	import Modal from '$components/Modal.svelte';
+	import Blockquote from '$components/Blockquote.svelte'
 
 	setGlobalOptions({
 		duration: 400,

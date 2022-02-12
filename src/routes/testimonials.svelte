@@ -1,8 +1,8 @@
 <script>
-	import TestimonialDividers from '$lib/pages/testimonials/TestimonialDividers.svelte';
-	import SectionQuotes from '$lib/pages/testimonials/SectionQuotes.svelte';
-	import SectionIntroduction from '$lib/pages/testimonials/SectionIntroduction.svelte';
-	import SectionHeader from '$lib/pages/testimonials/SectionHeader.svelte';
+	import TestimonialDividers from '$pages/testimonials/TestimonialDividers.svelte';
+	import SectionQuotes from '$pages/testimonials/SectionQuotes.svelte';
+	import SectionIntroduction from '$pages/testimonials/SectionIntroduction.svelte';
+	import SectionHeader from '$pages/testimonials/SectionHeader.svelte';
 </script>
 
 <SectionHeader />

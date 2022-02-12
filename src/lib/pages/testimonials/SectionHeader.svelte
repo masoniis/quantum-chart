@@ -1,5 +1,5 @@
 <script>
-    import {companyName} from '../../../stores'
+    import {companyName} from '$stores'
 </script>
 
 <title>{$companyName} - Testimonials</title>

@@ -1,5 +1,5 @@
 <script>
-	import { companyName } from '../../stores';
+	import { companyName } from '$stores';
 </script>
 
 <footer class="bg-mainbg text-maintext transition-colors duration-500 p-6 pt-12">

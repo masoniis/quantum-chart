@@ -1,10 +1,7 @@
 <script>
-	import { fade, fly, scale, slide } from 'svelte/transition';
+	import { fade, fly, scale } from 'svelte/transition';
 	import { quadIn } from 'svelte/easing';
-	import { page } from '$app/stores';
-	import { onMount, onDestroy } from 'svelte';
-	import { writable, readable, get } from 'svelte/store';
-	import { menu } from '../../stores';
+	import { menu } from '$stores';
 
 	export let open;
 
