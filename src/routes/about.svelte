@@ -1,5 +1,5 @@
 <script>
-	import Logo from '$lib/svg/Logo.svelte';
+	import Logo from '$lib/icons/Logo.svelte';
 	import { companyName } from '../stores';
 	import { slide, fade } from 'svelte/transition';
 	import closable from 'svelte-closable';

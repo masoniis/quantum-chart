@@ -1,6 +1,6 @@
 <script>
 	export let src;
-	export let classes= "";
+	export let classes = '';
 </script>
 
 <blockquote
@@ -29,8 +29,9 @@
 								xl:text-base"
 			>
 				<slot name="quote">
-                    <span class="text-red-300">Wait a minute... Why isn't there a real quote right here?</span>
-                </slot>
+					<span class="text-red-300">Wait a minute... Why isn't there a real quote right here?</span
+					>
+				</slot>
 			</p>
 		</div>
 
@@ -38,19 +39,15 @@
 			class="items-center text-center 2xs:text-left 2xs:pl-12 mt-3 text-sm font-medium leading-5 text-maintext sm:text-base lg:text-base"
 		>
 			<slot name="person">
-                <span class="text-red-300">Bro, a quote NEEDS a reference to the person who quoted it.</span>  
-
-
-            </slot>
-            -
-            <p class="inline text-gray-500">
-                <slot name="reference"> 
-                    <span class="text-red-300">
-                        Reference Spot
-                    </span>
-                </slot>
-            </p>
-
+				<span class="text-red-300">Bro, a quote NEEDS a reference to the person who quoted it.</span
+				>
+			</slot>
+			-
+			<p class="inline text-gray-500">
+				<slot name="reference">
+					<span class="text-red-300"> Reference Spot </span>
+				</slot>
+			</p>
 		</h3>
 	</div>
 	<img
