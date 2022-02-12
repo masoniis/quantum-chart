@@ -9,6 +9,7 @@
     "pnpm-lock.yaml": true,
     "postcss.config.cjs": true,
     "rollup.config.js": true,
-    ".prettierrc": true
+    ".prettierrc": true,
+    ".svelte-kit": true,
   }
 }
