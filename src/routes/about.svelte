@@ -1,7 +1,8 @@
 <script>
 	import { companyName } from '$stores';
 	import Logo from '$icons/Logo.svelte';
-	import Modal from '$components/Modal.svelte'
+	import Modal from '$components/Modal.svelte';
+	import SectionHeader from '$pages/about/SectionHeader';
 
 	let email;
 
@@ -16,11 +17,7 @@
 	}
 </script>
 
-<title>{$companyName} - About</title>
-<meta
-	name="description"
-	content="{$companyName} about page, learn more about who we are behind the scenes."
-/>
+<SectionHeader />
 
 <Modal bind:this={modalComponent} bind:showModal >
 	Thanks for your information request. We will reply to the email you submitted shortly with
