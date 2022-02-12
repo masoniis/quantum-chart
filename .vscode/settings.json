@@ -1,0 +1,14 @@
+{
+  "files.exclude": {
+    "README.md": true,
+    ".eslintrc.cjs": true,
+    ".gitignore": true,
+    ".npmrc": true,
+    "package-lock.json": true,
+    "package.json": true,
+    "pnpm-lock.yaml": true,
+    "postcss.config.cjs": true,
+    "rollup.config.js": true,
+    ".prettierrc": true
+  }
+}
