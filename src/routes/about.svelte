@@ -2,6 +2,7 @@
 	import { companyName } from '$stores';
 	import Logo from '$icons/Logo.svelte';
 	import Modal from '$components/Modal.svelte';
+	import SectionHeader from '$pages/about/SectionHeader.svelte';
 
 
 	let email;
