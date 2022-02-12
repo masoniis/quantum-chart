@@ -1,6 +1,7 @@
 <script>
 	import { companyName } from '$stores';
 	import { fade, fly } from 'svelte/transition';
+	import SectionHeader from '$pages/pricing/SectionHeader.svelte'
 
 	let individual = 4;
 	let premium = 10;
@@ -25,11 +26,7 @@
 	}
 </script>
 
-<title>{$companyName} - Pricing</title>
-<meta
-	name="description"
-	content="{$companyName} price page, pay little to access beautiful charts."
-/>
+<SectionHeader />
 
 <main class="min-h-screen bg-light-bg pt-36 bg-gray-200">
 	<!-- Pricing box Section -->

@@ -7,6 +7,7 @@
 	import Logo from '$icons/Logo.svelte';
 	import Modal from '$components/Modal.svelte';
 	import Blockquote from '$components/Blockquote.svelte'
+	import SectionHeader from '$pages/index/SectionHeader.svelte'
 
 	setGlobalOptions({
 		duration: 400,
@@ -87,13 +88,7 @@
 	}
 </script>
 
-<svelte:head>
-	<title>Home - {$companyName}</title>
-	<meta
-		name="description"
-		content="{$companyName} home page, make beautiful charts in the blink of an eye."
-	/>
-</svelte:head>
+<SectionHeader />
 
 <svelte:window bind:innerWidth={width} />
 

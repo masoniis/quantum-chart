@@ -4,7 +4,10 @@
 	import Contactform from '$components/Contactform.svelte';
 	import Visibility from '$scripts/Visibility.svelte';
 	import Modal from '$components/Modal.svelte'; 
+	import SectionHeader from '$pages/contact/SectionHeader.svelte'
+import SectionIntro from '$lib/pages/contact/SectionIntro.svelte';
 
+	
 	let contactHeight;
 
 	//A variable to bind the modal component
@@ -21,25 +24,15 @@
 
 </script>
 
-<title>{$companyName} - Contact</title>
-<meta
-	name="description"
-	content="{$companyName} contact page, ask any questions that we haven't already answered."
-/>
+<SectionHeader />
 
 <Modal bind:this={modalComponent}>
 	Thank you for submitting! We will contact you shortly with a reply to your awesome question :)
 </Modal>
 
 <main class="min-h-screen text-maintext overflow-hidden pt-32">
-	<!-- Intro area -->
-	<div class="text-center mx-auto">
-		<h1 class="pb-4 text-4xl">Have a Question?</h1>
-		<p class="max-w-lg mx-auto px-4">
-			We're here to help and ready to answer any questions that you have for us. We look forward to
-			hearing from you!
-		</p>
-	</div>
+
+	<SectionIntro />
 
 	<Contactform {first} {last} {email} {message} on:submit={handleSubmit} />
 

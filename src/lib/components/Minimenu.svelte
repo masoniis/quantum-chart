@@ -109,7 +109,7 @@
 						</svg>
 						<a
 							on:click={() => (open = false)}
-							href="/contact-us"
+							href="/contact"
 							class="border-transparent text-maintext hover:text-lighthover block pr-4 py-2 border-l-4 font-medium"
 						>
 							Contact

@@ -1,8 +1,8 @@
 <script lang="ts">
 	import '../app.css';
 	import { menu } from '$stores';
-	import Navbar from '$pages/Navbar.svelte';
-	import Botbar from '$pages/Botbar.svelte';
+	import Navbar from '$components/Navbar.svelte';
+	import Botbar from '$components/Botbar.svelte';
 	import Menubackground from '$components/Menubackground.svelte';
 
 	let hide;
