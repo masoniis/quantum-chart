@@ -3,7 +3,11 @@
 	import Logo from '$icons/Logo.svelte';
 	import Modal from '$components/Modal.svelte';
 	import SectionHeader from '$pages/about/SectionHeader.svelte';
-
+	import SectionIntro from '$pages/about/SectionIntro.svelte';
+	import AboutDividers from '$pages/about/AboutDividers.svelte';
+	import SectionValues from '$pages/about/SectionValues.svelte';
+	import SectionMission from '$pages/about/SectionMission.svelte';
+	import SectionStory from '$pages/about/SectionStory.svelte';
 
 	let email;
 
@@ -14,144 +18,23 @@
 	function handleReqInfo(e) {
 		modalComponent.toggleModal();
 		modalComponent.storeY();
-		email = ''
+		email = '';
 	}
 </script>
 
 <SectionHeader />
 
-<Modal bind:this={modalComponent} bind:showModal >
+<Modal bind:this={modalComponent} bind:showModal>
 	Thanks for your information request. We will reply to the email you submitted shortly with
 	information on how to apply or contribute to {$companyName}.
 </Modal>
 
 <main class="min-h-screen text-maintext">
-	<!-- Top Section -->
-	<section class="min-w-screen pt-40 mb-24">
-		<div class="flex flex-col md:flex-row container max-w-6xl px-12 mx-auto xl:px-10 space-x-6">
-			<h2
-				class="text-2xl xs:text-4xl sm:text-5xl md:text-6xl text-center font-bold tracking-tight text-gray-900 sm:leading-none"
-			>
-				Learn what {$companyName} is really about
-			</h2>
-			<div class="mx-auto self-center pt-4 md:hidden h-[128px] w-[128px]">
-				<Logo />
-			</div>
-			<p class="hidden md:block md:h-[200px] md:w-[252px]">
-				<Logo />
-			</p>
-		</div>
+	<SectionIntro />
 
-		<p class="text-sm xs:text-lg max-w-5xl mx-auto text-left font-normal pt-6 px-16">
-			At {$companyName}, our top priority is to provide the best possible service to every single
-			person who uses our products. We are constantly working to enhance, expand, and elevate our
-			products to standards beyond those of any other company. We make charts modern, immersive, and
-			unique to enhance your experience and revolutionize the chart-creation industry.
-		</p>
-	</section>
+	<SectionValues />
 
-	<div class="topsection-wave bg-gray-200 fill-white z-[1]">
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-			<path
-				d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-				class="shape-fill"
-			/>
-		</svg>
-	</div>
-
-	<section class="bg-gray-200 py-16">
-		<flex class="flex flex-col lg:flex-row justify-center mx-auto container gap-6">
-			<h2
-				class="sm:w-1/2 mx-auto text-center sm:text-left lg:ml-8 text-5xl xs:text-6xl h-fit lg:sticky overflow-visible min-w-fit top-[88px] font-bold tracking-tight text-gray-900 sm:leading-none"
-			>
-				Our Values
-			</h2>
-			<flex class="sm:w-1/2 flex-flex-col mx-auto text-lg">
-				<flex class="flex flex-row py-3">
-					<div class="hidden">1 image</div>
-					<div class="flex flex-col">
-						<h2 class="font-bold">
-							We
-							<span class="text-pink-400">care</span>
-						</h2>
-						<p class="text-lg text-gray-500 font-normal">
-							about making {$companyName} perfect for you.
-						</p>
-					</div>
-				</flex>
-				<flex class="flex flex-row py-3">
-					<div>
-						<h2 class="font-bold">
-							We
-							<span class="text-yellow-400">design</span>
-						</h2>
-						<p class="text-lg text-gray-500">
-							an easy-to-use app with hundreds of unique features.
-						</p>
-					</div>
-				</flex>
-				<flex class="flex flex-row py-3">
-					<div>
-						<h2 class="font-bold">We <span class="text-blue-600">learn</span></h2>
-						<p class="text-gray-500 text-lg">to constantly make our software better.</p>
-					</div></flex
-				>
-				<flex class="flex flex-row py-3">
-					<div>
-						<h2 class="font-bold">We <span class="text-red-500">create</span></h2>
-						<p class="text-gray-500 text-lg">
-							charts for anywhere and everywhere you might need them.
-						</p>
-					</div></flex
-				>
-				<flex class="flex flex-row py-3">
-					<div>
-						<h2 class="font-bold">We <span class="text-purple-600">respond</span></h2>
-						<p class="text-gray-500 text-lg">and your feedback helps us improve our software.</p>
-					</div>
-				</flex>
-				<flex class="flex flex-row py-3">
-					<div>
-						<h2 class="font-bold">We <span class="text-orange-400">inspire</span></h2>
-						<p class="text-gray-500 text-lg">a new generation of chart-creation software.</p>
-					</div>
-				</flex>
-			</flex>
-		</flex>
-	</section>
-
-	<div class="topsection-wave bg-gray-100 fill-gray-200 z-[-1]">
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-			<path
-				d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-				class="shape-fill"
-			/>
-		</svg>
-	</div>
-
-	<!-- Our Mission -->
-	<section class="bg-gray-100 py-16">
-		<flex class="flex flex-col lg:flex-row mx-auto container gap-6">
-			<h2
-				class="sm:w-1/2 text-center mx-auto sm:text-left lg:ml-8 text-5xl xs:text-6xl h-fit lg:sticky overflow-hidden min-w-fit top-[88px] font-bold tracking-tight text-gray-900 sm:leading-none"
-			>
-				Our Mission
-			</h2>
-			<p class="sm:w-1/2 mx-auto text-sm xs:text-lg text-center sm:text-left">
-				{$companyName} started with the question, what if? What if we changed the way charting software
-				worked, making it easier and more accessible for everyone? What if we used unique AR and VR software
-				to make chart designing more interactive and enjoyable? What if we could make it simple for everyone
-				of all ages to make any chart they want?
-				<br /> <br />
-				At {$companyName}, we set out to make all those dreams come true in a single software. We
-				offer a wide variety of charts for people to make with a simple user interface, optimize our
-				programs to make your experience as quick and smooth as possible, and crossed the borders of
-				what was thought to be possible with charting software by implementing AR and VR technology
-				directly into our program. We offer the best charts at the best prices, making the newest
-				cutting-edge technology available to everyone.
-			</p>
-		</flex>
-	</section>
+	<SectionMission />
 
 	<div class="topsection-wave bg-gray-200 fill-gray-100 z-[1]">
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -162,33 +45,7 @@
 		</svg>
 	</div>
 
-	<!-- Our Story -->
-	<section class="bg-gray-200 py-16">
-		<flex class="flex flex-col lg:flex-row justify-center mx-auto container gap-6">
-			<h2
-				class="sm:w-1/2 mx-auto text-center sm:text-left lg:ml-8 text-5xl xs:text-6xl h-fit lg:sticky overflow-visible min-w-fit top-[88px] font-bold tracking-tight text-gray-900 sm:leading-none"
-			>
-				Our Story
-			</h2>
-			<p class="sm:w-1/2 mx-auto text-center sm:text-left text-sm xs:text-lg">
-				Our two founders, John Howard and Paul Sanders, met as college roommates at the University
-				of Colorado, both pursuing a career in software development. They both ended up working on
-				similar projects: creating a program that could take data and turn it into a line graph.
-				When they realized that they were both working on the same thing, they realized how much
-				potential there was for this program. John and Paul combined their projects, dropped out of
-				college, and spent the next five years building their project up until it became {$companyName}.
-				<br />
-				<br />
-				{$companyName} is built on a foundation of learning, sharing, and creating. John and Paul's dream--to
-				help others innovate, create, and share their ideas with the world--is alive today in our company.
-				Everything we do is intended to help people communicate in ways that they weren't able to before.
-				We are built on the idea of innovation. Every one of our employees is expected to create something
-				new and contribute something that no one else would have thought of. This is our story, and this
-				is why we prioritize innovation above everything else: not only for you, but also for the future
-				of {$companyName} and the entire chart-creation industry.
-			</p>
-		</flex>
-	</section>
+	<SectionStory />
 
 	<div class="bottomsection-wave bg-white fill-gray-200 z-[1]">
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
