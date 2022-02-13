@@ -1,6 +1,9 @@
 <script>
     import { companyName } from '$stores'
+    import IndexDividers from './IndexDividers.svelte'
 </script>
+
+<IndexDividers type="startnow.top" />
 
 <section class="bg-lightbg py-16">
     <div class="text-center px-4 grid">
@@ -31,3 +34,5 @@
         </div>
     </div>
 </section>
+
+<IndexDividers type="startnow.bot" />
