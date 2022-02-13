@@ -1,6 +1,4 @@
 <script>
-	import { intros } from 'svelte/internal';
-
 	export let type;
 </script>
 
