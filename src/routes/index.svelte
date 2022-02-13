@@ -869,20 +869,6 @@
 		height: 103px;
 	}
 
-	.object {
-		width: 100%;
-		display: block;
-		height: auto;
-		position: relative;
-	}
-
-	.child {
-		width: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
-
 	.rep-wave {
 		position: relative;
 		bottom: 0;
