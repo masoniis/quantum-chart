@@ -55,26 +55,7 @@
 					Not just your ordinary chart software
 				</h1>
 				{#if squiggle}
-					<div
-						in:fade={{ duration: 500, delay: 500 }}
-						class="col-span-1 row-span-1 flex justify-center mb-0 2xs:mb-4 xs:mb-10 py-8 object"
-						style="-webkit-transform:translateZ(1px); clear:both;"
-					>
-						<svg
-							class="relative child"
-							viewBox="200 110 1200 200"
-							xmlns="http://www.w3.org/2000/svg"
-							style="vector-effect: non-scaling-stroke; -webkit-transform:translateZ(1px); clear:both;"
-						>
-							<path
-								d="m-2.99994,3c463.50597,367 708.06434,182 752.36473,255c44.30039,73 -176.98353,39 5.41698,-54c182.40051,-93 543.35036,13 746.51432,37"
-								opacity="NaN"
-								stroke-width="13"
-								stroke="#000"
-								fill="transparent"
-							/>
-						</svg>
-					</div>
+TESTTESTTEST
 				{/if}
 				<h2
 					in:fly={{ duration: 500, delay: 500, y: 200 }}
