@@ -137,7 +137,7 @@
 			class="container mx-auto max-w-6xl py-12 flex flex-col-reverse md:flex-row"
 		>
 			<div in:fly={{ duration: 1200, x: -250 }} class="md:w-[60%] flex flex-col gap-6 md:pl-4">
-				<Blockquote src={"people/jane.jpg"} classes="w-[93%] self-center mt-8 md:mt-0">
+				<Blockquote src={"people/jane.jpg"} classes="w-[92%] self-center md:self-start mt-8 md:mt-0">
 					<span slot="quote">
 						I love to play around with {$companyName} in my free time, it's just so satisfying!
 					</span>
@@ -150,7 +150,7 @@
 						Coding Enthusiast
 					</span>
 				</Blockquote>
-				<Blockquote src={"people/nicholas.jpg"} classes="w-[93%] self-center">
+				<Blockquote src={"people/nicholas.jpg"} classes="w-[92%] self-center md:self-start">
 					<span slot="quote">
 						Making charts has been my hobby for a while and {$companyName} is by far the best software
 								I've ever used.
@@ -164,7 +164,7 @@
 						Financial Consultant
 					</span>
 				</Blockquote>
-				<Blockquote src={"people/iris.jpg"} classes="w-[93%] self-center">
+				<Blockquote src={"people/iris.jpg"} classes="w-[92%] self-center md:self-start">
 					<span slot="quote">
 						{$companyName} has made it so easy to make charts for work presentations!
 					</span>
@@ -177,7 +177,7 @@
 						Chart Enthusiast
 					</span>
 				</Blockquote>
-				<Blockquote src={"people/victor.jpg"} classes="w-[93%] self-center">
+				<Blockquote src={"people/victor.jpg"} classes="w-[92%] self-center md:self-start">
 					<span slot="quote">
 						When my professors ask how I make such good charts, I just show them to this
 								software. It's also very easy to use!
@@ -299,7 +299,7 @@
 					</div>
 				</flex>
 				<div class="md:w-[60%] ml-0 flex flex-col gap-4 md:pr-4">
-					<Blockquote src={"people/marcus.jpeg"} classes="w-[93%] md:self-end self-center mt-4 md:mt-0">
+					<Blockquote src={"people/marcus.jpeg"} classes="w-[92%] self-end">
 						<span slot="quote">
 							I got the starting loan for my company with a presentation made with this
 									software. Thank you {$companyName}!
@@ -313,7 +313,7 @@
 							CEO Of Piattello
 						</span>
 					</Blockquote>
-					<Blockquote src={"people/avery.jpg"} classes="w-[93%] md:self-end self-center">
+					<Blockquote src={"people/avery.jpg"} classes="w-[92%] md:self-end self-center">
 						<span slot="quote">
 							All of my employees are required to learn how to use {$companyName} as one of the first
 									parts of their training.
@@ -327,7 +327,7 @@
 							CEO of AmeriGo Finance
 						</span>
 					</Blockquote>
-					<Blockquote src={"people/carter.jpg"} classes="w-[93%] md:self-end self-center">
+					<Blockquote src={"people/carter.jpg"} classes="w-[92%] md:self-end self-center">
 						<span slot="quote">
 							{$companyName} makes our workplace more fun with its graphics, animations, and immersive
 									AR and VR technology.
