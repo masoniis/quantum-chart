@@ -24,8 +24,6 @@
 <main class="min-h-screen text-maintext overflow-hidden">
 	<SectionIntro />
 
-	<IndexDividers type="intro.bot" />
-
 	<SectionNavigation />
 
 	<SectionEasy />

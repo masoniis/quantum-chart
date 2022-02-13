@@ -2,7 +2,7 @@
 	import { slide, fade, fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import Modal from '$components/Modal.svelte';
-	import IndexDividers from '$pages/index/SectionIntro.svelte';
+	import IndexDividers from '$pages/index/IndexDividers.svelte';
 
 	let intro;
 
@@ -141,6 +141,7 @@
 	{/if}
 </section>
 
+<IndexDividers type="intro.bot" />
 
 <style>
 	#swirl {
