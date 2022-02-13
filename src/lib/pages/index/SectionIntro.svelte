@@ -22,6 +22,7 @@
 	function handleReqDemo(e) {
 		modalComponent.toggleModal();
 		modalComponent.storeY();
+		email = '';
 	}
 
 	$: {
