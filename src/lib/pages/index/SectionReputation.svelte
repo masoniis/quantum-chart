@@ -3,9 +3,11 @@
 	import { scrollTo, scrollRef } from 'svelte-scrolling';
 	import { fly } from 'svelte/transition';
 	import Blockquote from '$components/Blockquote.svelte';
+	import IndexDividers from './IndexDividers.svelte'
 </script>
 
-<!-- REPUTATION SECTION (Section 7) -->
+<IndexDividers type="reputation.top" />
+
 <section use:scrollRef={'reputable'} class="py-16 bg-lightbg">
 	<flex class="container p-4 md:p-2 mx-auto gap-10 max-w-4xl flex flex-row pb-8">
 		<h1
@@ -317,6 +319,8 @@
 		</div>
 	</div>
 </section>
+
+<IndexDividers type="reputation.bot" />
 
 <style>
 	.rep-wave {
