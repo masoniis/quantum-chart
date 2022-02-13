@@ -29,6 +29,8 @@
 		} else {
 			squiggle = false;
 		}
+
+		console.log(width)
 	}
 </script>
 

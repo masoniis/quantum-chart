@@ -16,20 +16,6 @@
 		easing: cubicInOut
 	});
 
-	let intro;
-
-	// Squiggle Animaition Variables
-	let width;
-	let squiggle;
-
-	$: {
-		if (width < 640) {
-			squiggle = true;
-		} else {
-			squiggle = false;
-		}
-	}
-
 	const words = [
 		'simple',
 		'amazing',
@@ -75,16 +61,6 @@
 			clearInterval(interval);
 		};
 	});
-
-	let email = '';
-
-	//Create a component to bind Modal
-	let modalComponent;
-
-	function handleReqDemo(e) {
-		modalComponent.toggleModal();
-		modalComponent.storeY();
-	}
 </script>
 
 <SectionHeader />
