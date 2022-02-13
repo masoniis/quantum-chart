@@ -1,6 +1,9 @@
 <script>
 	import { companyName } from '$stores';
+	import AboutDividers from './AboutDividers.svelte';
 </script>
+
+<AboutDividers type="story.top" />
 
 <section class="bg-gray-200 py-16">
 	<flex class="flex flex-col lg:flex-row justify-center mx-auto container gap-6">
@@ -28,3 +31,5 @@
 		</p>
 	</flex>
 </section>
+
+<AboutDividers type="story.bot" />

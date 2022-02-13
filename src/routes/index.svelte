@@ -2,7 +2,6 @@
 	import { setGlobalOptions } from 'svelte-scrolling';
 	import { cubicInOut } from 'svelte/easing';
 	import SectionHeader from '$pages/index/SectionHeader.svelte';
-	import IndexDividers from '$pages/index/IndexDividers.svelte';
 	import SectionIntro from '$pages/index/SectionIntro.svelte';
 	import SectionNavigation from '$pages/index/SectionNavigation.svelte';
 	import SectionEasy from '$pages/index/SectionEasy.svelte';
