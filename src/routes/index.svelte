@@ -12,6 +12,7 @@
 	import SectionEasy from '$pages/index/SectionEasy.svelte';
 	import SectionReputation from '$pages/index/SectionReputation.svelte';
 	import SectionLowCost from '$pages/index/SectionLowCost.svelte';
+	import SectionResponsive from '$pages/index/SectionResponsive.svelte';
 
 	setGlobalOptions({
 		duration: 400,
@@ -33,11 +34,7 @@
 
 	<SectionLowCost />
 
-
-	<!-- RESPONISVE (Section 7) -->
-	<section use:scrollRef={'responsive'} class="hidden">
-		<p class="text-center">RESPONSVIE SECITON</p>
-	</section>
+	<SectionResponsive />
 
 	<!-- TOP DIVIDER (for reputation section) -->
 	<div class="rep-wave fill-lightbg">
