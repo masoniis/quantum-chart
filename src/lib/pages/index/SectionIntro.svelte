@@ -2,12 +2,9 @@
 	import { slide, fade, fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import Modal from '$components/Modal.svelte';
+	import IndexDividers from '$pages/index/SectionIntro.svelte';
 
 	let intro;
-
-	onMount(() => {
-		intro = true;
-	});
 
 	// Squiggle Animaition Variables
 	let width;
@@ -17,6 +14,10 @@
 
 	//Create a component to bind Modal
 	let modalComponent;
+
+	onMount(() => {
+		intro = true;
+	});
 
 	function handleReqDemo(e) {
 		modalComponent.toggleModal();
@@ -29,8 +30,6 @@
 		} else {
 			squiggle = false;
 		}
-
-		console.log(width)
 	}
 </script>
 
@@ -141,6 +140,7 @@
 		</div>
 	{/if}
 </section>
+
 
 <style>
 	#swirl {

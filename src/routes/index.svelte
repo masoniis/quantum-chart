@@ -8,6 +8,7 @@
 	import Modal from '$components/Modal.svelte';
 	import Blockquote from '$components/Blockquote.svelte';
 	import SectionHeader from '$pages/index/SectionHeader.svelte';
+	import IndexDividers from '$pages/index/IndexDividers.svelte';
 	import SectionIntro from '$pages/index/SectionIntro.svelte';
 
 	setGlobalOptions({
@@ -49,7 +50,6 @@
 
 	onMount(() => {
 		const interval = setInterval(() => {
-			// Set `randIndex` to a new value each interval.
 			index = index + 1;
 			randColor = randomColor();
 			if (index > words.length - 1) {
@@ -69,15 +69,7 @@
 
 	<SectionIntro />
 
-	<!-- Wave Divider -->
-	<div class="topsection-wave bg-mainbg fill-topsection z-[-1]">
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-			<path
-				d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-				class="shape-fill"
-			/>
-		</svg>
-	</div>
+	<IndexDividers type="intro.bot" />
 
 	<!-- Section 2 (Navigation Section) -->
 	<section class="container mx-auto my-24">
@@ -361,7 +353,7 @@
 			class="container mx-auto max-w-6xl py-12 flex flex-col-reverse md:flex-row"
 		>
 			<div in:fly={{ duration: 1200, x: -250 }} class="md:w-[60%] flex flex-col gap-6 md:pl-4">
-				<Blockquote src={"people/jane.jpg"} classes="w-[90%]">
+				<Blockquote src={"people/jane.jpg"} classes="w-[93%] self-center mt-8 md:mt-0">
 					<span slot="quote">
 						I love to play around with {$companyName} in my free time, it's just so satisfying!
 					</span>
@@ -374,7 +366,7 @@
 						Coding Enthusiast
 					</span>
 				</Blockquote>
-				<Blockquote src={"people/nicholas.jpg"} classes="w-[90%]">
+				<Blockquote src={"people/nicholas.jpg"} classes="w-[93%] self-center">
 					<span slot="quote">
 						Making charts has been my hobby for a while and {$companyName} is by far the best software
 								I've ever used.
@@ -388,7 +380,7 @@
 						Financial Consultant
 					</span>
 				</Blockquote>
-				<Blockquote src={"people/iris.jpg"} classes="w-[90%]">
+				<Blockquote src={"people/iris.jpg"} classes="w-[93%] self-center">
 					<span slot="quote">
 						{$companyName} has made it so easy to make charts for work presentations!
 					</span>
@@ -401,7 +393,7 @@
 						Chart Enthusiast
 					</span>
 				</Blockquote>
-				<Blockquote src={"people/victor.jpg"} classes="w-[90%]">
+				<Blockquote src={"people/victor.jpg"} classes="w-[93%] self-center">
 					<span slot="quote">
 						When my professors ask how I make such good charts, I just show them to this
 								software. It's also very easy to use!
@@ -523,7 +515,7 @@
 					</div>
 				</flex>
 				<div class="md:w-[60%] ml-0 flex flex-col gap-4 md:pr-4">
-					<Blockquote src={"people/marcus.jpeg"} classes="w-[90%]">
+					<Blockquote src={"people/marcus.jpeg"} classes="w-[93%] md:self-end self-center mt-4 md:mt-0">
 						<span slot="quote">
 							I got the starting loan for my company with a presentation made with this
 									software. Thank you {$companyName}!
@@ -537,7 +529,7 @@
 							CEO Of Piattello
 						</span>
 					</Blockquote>
-					<Blockquote src={"people/avery.jpg"} classes="w-[90%]">
+					<Blockquote src={"people/avery.jpg"} classes="w-[93%] md:self-end self-center">
 						<span slot="quote">
 							All of my employees are required to learn how to use {$companyName} as one of the first
 									parts of their training.
@@ -551,7 +543,7 @@
 							CEO of AmeriGo Finance
 						</span>
 					</Blockquote>
-					<Blockquote src={"people/carter.jpg"} classes="w-[90%]">
+					<Blockquote src={"people/carter.jpg"} classes="w-[93%] md:self-end self-center">
 						<span slot="quote">
 							{$companyName} makes our workplace more fun with its graphics, animations, and immersive
 									AR and VR technology.
@@ -851,22 +843,6 @@
 			translateX(70px);
 
 		left: min(calc(1200px - 100vw) * -1, 0px);
-	}
-
-	.topsection-wave {
-		position: relative;
-		top: 0;
-		left: 0;
-		width: 100%;
-		overflow: hidden;
-		line-height: 0;
-	}
-
-	.topsection-wave svg {
-		position: relative;
-		display: block;
-		width: calc(122% + 1.3px);
-		height: 103px;
 	}
 
 	.rep-wave {
