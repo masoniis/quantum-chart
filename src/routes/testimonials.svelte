@@ -7,7 +7,7 @@
 
 <SectionHeader />
 
-<main class="min-h-screen text-maintext overflow-hidden bg-gray-50">
+<main class="min-h-screen text-maintext overflow-hidden">
 	<SectionIntroduction />
 
 	<TestimonialDividers type="testimonial-top" />

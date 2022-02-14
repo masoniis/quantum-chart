@@ -12,7 +12,7 @@
 		</svg>
 	</div>
 {:else if type === 'testimonial-bottom'}
-	<div class="fill-gray-200 mb-24">
+	<div class="fill-gray-200 bg-white mb-24">
 		<svg
 			data-name="Layer 1"
 			xmlns="http://www.w3.org/2000/svg"
