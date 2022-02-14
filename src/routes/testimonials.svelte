@@ -10,7 +10,9 @@
 <main class="min-h-screen text-maintext overflow-hidden">
 	<SectionIntroduction />
 
-	<TestimonialDividers type="testimonial-top" />
+	<!-- <TestimonialDividers type="testimonial-top" /> 
+	COmmented out to fix later, for some reason having this enabled glitches minimenu transition
+	-->
 
 	<SectionQuotes />
 

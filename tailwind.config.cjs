@@ -33,6 +33,9 @@ module.exports = {
         'dropdown1' : '#f5f5f4',
         'mobilemenu': '#f5f5f4',
       },
+      fontSize: {
+        dynamic7xl: "clamp(1rem, 10vw, 4.5rem)",
+      },
     },
   },
   plugins: [

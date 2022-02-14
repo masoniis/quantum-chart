@@ -46,11 +46,9 @@
 			<grid class="grid grid-cols-1 auto-rows-min w-full sm:px-8">
 				<h1
 					in:slide={{ duration: 500 }}
-					class="col-span-1 max-w-lg font-extrabold text-gray-900 sm:leading-none mx-auto text-center text-3xl
-                xs:text-4xl
-                sm:text-5xl sm:max-w-3xl
-                md:text-6xl md:max-w-4xl
-                lg:text-7xl lg:mx-0 lg:text-left"
+					class="col-span-1 max-w-lg font-extrabold text-gray-900 sm:leading-none mx-auto text-center leading-tight text-dynamic7xl
+				
+                lg:mx-0 lg:text-left"
 				>
 					Not just your ordinary chart software
 				</h1>
