@@ -24,5 +24,7 @@
 		content="{$companyName} home page, make beautiful charts in the blink of an eye."
 	/>
 
-	<meta name="theme-color" content="bg-lightbg">
+	{#if show}
+		<meta name="theme-color" content="#e0cf9b">
+	{/if}
 </svelte:head>
