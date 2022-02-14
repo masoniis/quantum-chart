@@ -1,12 +1,15 @@
 <script>
     import {companyName, statusBar } from '$stores';
 	import { fade } from 'svelte/transition';
+	import { tweened } from 'svelte/motion';
+
+	const opactiy = tweened(0);
 
 	let y;
 	let show = true;
 
 	$: {
-	if (y < 70) {
+	if (y < 60) {
 		show = true;
 		console.log("Show set true")
 	} else {
@@ -26,6 +29,6 @@
 	/>
 
 	{#if show}
-		<meta in:fade={{ duration: 1000 }} name="theme-color" content="#e0cf9b">
+		<meta in:fade={{ duration: 1000 }} out:fade={{duration: 1000}} name="theme-color" content="hsla(45, 53%, 74%, 50%)">
 	{/if}
 </svelte:head>
