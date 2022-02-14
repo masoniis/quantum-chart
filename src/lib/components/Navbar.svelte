@@ -14,7 +14,7 @@
 	const colors = ['rgb(224, 207, 155)', 'rgb(255, 255, 255)'];
 
 	const color = tweened(colors[0], {
-		duration: 300,
+		duration: 125,
 		interpolate: interpolateLab
 	});
 
@@ -22,9 +22,9 @@
 
 	$: {
 		if (y < 60) {
-			color.set('rgb(224, 207, 155)'); //Set color to tanish
+			color.set('rgba(224, 207, 155, 0.0)'); //Set color to tanish
 		} else {
-			color.set('rgb(255, 255, 255)'); //Set color to white
+			color.set('rgba(255, 255, 255, 1)'); //Set color to white
 		}
 	}
 

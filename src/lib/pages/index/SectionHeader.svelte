@@ -6,7 +6,7 @@
 	const colors = ['rgb(224, 207, 155)', 'rgb(255, 255, 255)'];
 
 	const color = tweened(colors[0], {
-		duration: 300,
+		duration: 125,
 		interpolate: interpolateLab
 	});
 	
