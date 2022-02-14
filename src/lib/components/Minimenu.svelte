@@ -24,18 +24,18 @@
 	<main
 		class="md:hidden fixed right-0 left-0 w-full top-[4.5rem] mobile_menu overscroll-y-none"
 		id="mobile-menu"
-		in:fly={{ duration: 350 }}
-		out:fade={{ duration: 150 }}
+		in:fly|local={{ duration: 350 }}
+		out:fade|local={{ duration: 150 }}
 	>
 		<div class="pt-2 space-y-1 bg-mobilemenu min-h-full">
 			<hr
 				class="my-2"
 				style="height:2px;border-width:0;color:red;background-color:gray"
-				transition:scale={{ duration: 100, easing: quadIn, opacity: 1 }}
+				transition:scale|local={{ duration: 100, easing: quadIn, opacity: 1 }}
 			/>
 			<a
 				on:click={() => (open = false)}
-				transition:fly={{ duration: 150, x: 500 }}
+				transition:fly|local={{ duration: 150, x: 500 }}
 				href="/"
 				class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
 			>
@@ -43,7 +43,7 @@
 			>
 			<a
 				on:click={() => (open = false)}
-				transition:fly={{ duration: 300, x: 500 }}
+				transition:fly|local={{ duration: 300, x: 500 }}
 				href="/pricing"
 				class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
 			>
@@ -55,7 +55,7 @@
 				<hr
 					class="my-2"
 					style="height:2px;border-width:0;color:red;background-color:gray"
-					transition:scale={{ duration: 100, easing: quadIn, opacity: 1 }}
+					transition:scale|local={{ duration: 100, easing: quadIn, opacity: 1 }}
 				/>
 				<div
 					class="grid grid-cols-1 grid-rows-3 xs:grid-rows-2 xs:grid-cols-2 container mx-auto min-w-full"
@@ -63,7 +63,7 @@
 					<!-- Grid Item 1 -->
 					<div
 						class="flex justify-start xs:justify-center xs:pl-0 pl-4 space-x-2"
-						transition:fly={{ duration: 750, x: 300 }}
+						transition:fly|local={{ duration: 750, x: 300 }}
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +91,7 @@
 					<!-- Grid Item 2 -->
 					<div
 						class="flex justify-start xs:justify-center xs:pl-0 pl-4 space-x-2"
-						transition:fly={{ duration: 900, x: 300 }}
+						transition:fly|local={{ duration: 900, x: 300 }}
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +119,7 @@
 					<!-- Grid Item 3 -->
 					<div
 						class="flex justify-start xs:col-span-2 xs:justify-center xs:pl-0 pl-4 space-x-2"
-						transition:fly={{ duration: 1050, x: 300 }}
+						transition:fly|local={{ duration: 1050, x: 300 }}
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
