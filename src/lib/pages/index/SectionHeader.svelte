@@ -1,29 +1,9 @@
 <script>
-	import { companyName, statusBar } from '$stores';
-	import { tweened } from 'svelte/motion';
-	import { interpolateLab } from 'd3-interpolate';
 
-	const colors = ['rgb(224, 207, 155)', 'rgb(255, 255, 255)'];
+    import {companyName} from '$stores'
 
-	const color = tweened(colors[0], {
-		duration: 125,
-		interpolate: interpolateLab
-	});
-	
-
-	let y;
-	let show = true;
-
-	$: {
-		if (y < 50) {
-			color.set('rgb(224, 207, 155)'); //Set color to tanish
-		} else {
-			color.set('rgb(255, 255, 255)'); //Set color to white
-		}
-	}
 </script>
 
-<svelte:window bind:scrollY={y} />
 
 <svelte:head>
 	<title>Home - {$companyName}</title>
@@ -31,6 +11,4 @@
 		name="description"
 		content="{$companyName} home page, make beautiful charts in the blink of an eye."
 	/>
-
-	<meta name="theme-color" content={$color} />
 </svelte:head>
