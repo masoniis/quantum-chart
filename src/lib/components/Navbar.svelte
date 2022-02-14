@@ -21,7 +21,7 @@
 	let y;
 
 	$: {
-		if (y < 60) {
+		if (y < 50) {
 			color.set('rgba(224, 207, 155, 0.0)'); //Set color to tanish
 		} else {
 			color.set('rgba(255, 255, 255, 1)'); //Set color to white
@@ -53,10 +53,10 @@
 
 	$: {
 		// Animate the sticky header to change color when scrolled into page
-		if (y >= 60) {
+		if (y >= 50) {
 			shadow = 'shadow-lg';
 			background = 'bg-mainbg';
-		} else if (y < 60) {
+		} else if (y < 50) {
 			shadow = '';
 			background = 'bg-transparent';
 		}

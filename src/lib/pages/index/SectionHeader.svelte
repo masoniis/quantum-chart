@@ -15,7 +15,7 @@
 	let show = true;
 
 	$: {
-		if (y < 60) {
+		if (y < 50) {
 			color.set('rgb(224, 207, 155)'); //Set color to tanish
 		} else {
 			color.set('rgb(255, 255, 255)'); //Set color to white
@@ -34,5 +34,3 @@
 
 	<meta name="theme-color" content={$color} />
 </svelte:head>
-
-<h1 class="bg-black absolute mt-24 container text-center" style="color: {$color}">{$color}</h1>
