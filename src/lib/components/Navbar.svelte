@@ -5,7 +5,7 @@
 	import { menu, yStore, companyName, statusBar } from '../../stores';
 	import Hamburger from 'svelte-hamburgers';
 	import closable from 'svelte-closable';
-	import Menu from '$components/Minimenu.svelte';
+	import MiniMenu from '$components/Minimenu.svelte';
 	import NavLogo from '$components/NavLogo.svelte';
 	import DesktopMenu from './DesktopMenu.svelte';
 
@@ -27,7 +27,6 @@
 			background = 'bg-transparent';
 		}
 		if (open === true) {
-			background = 'bg-mobilemenu';
 			$menu = true;
 		} else {
 			$menu = false;
@@ -69,15 +68,14 @@
 			<NavLogo />
 
 			<!-- Mobile Menu -->
-			<!-- Mobile menu button -->
-			<div class="block md:hidden self-center">
+			<!-- Mobile menu -->
+			<div class="block md:hidden self-center relative">
 				<Hamburger bind:open --color={text} --padding={0} />
 
-				<Menu bind:open />
+				<MiniMenu bind:open />
 			</div>
 			<!-- Desktop Menu -->
 			<DesktopMenu bind:dropdown />
-			
 		</div>
 	</nav>
 </header>
