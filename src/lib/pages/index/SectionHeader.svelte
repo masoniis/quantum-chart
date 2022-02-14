@@ -5,7 +5,7 @@
 	let show = true;
 
 	$: {
-	if (y > 70) {
+	if (y < 70) {
 		show = true;
 		console.log("Show set true")
 	} else {
