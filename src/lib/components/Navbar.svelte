@@ -5,41 +5,23 @@
 	import { menu, yStore, companyName, statusBar } from '../../stores';
 	import Hamburger from 'svelte-hamburgers';
 	import closable from 'svelte-closable';
+	import Logo from '$icons/Logo.svelte';
 	import Menu from '$components/Minimenu.svelte';
-	import DekstopMenu from '$components/DesktopMenu.svelte';
 	import { tweened } from 'svelte/motion';
-
-	import { interpolateLab } from 'd3-interpolate';
-	import NavLogo from '$components/NavLogo.svelte';
-
-	const colors = ['rgb(224, 207, 155)', 'rgb(255, 255, 255)'];
-
-	const color = tweened(colors[0], {
-		duration: 125,
-		interpolate: interpolateLab
+	import { cubicOut } from 'svelte/easing'
+	const alpha = tweened(0, {
+		duration: 400,
+		easing: cubicOut
 	});
-
-	let y;
-
-	$: {
-		if (y < 50) {
-			color.set('rgba(224, 207, 155, 0.0)'); //Set color to tanish
-		} else {
-			color.set('rgba(255, 255, 255, 1)'); //Set color to white
-		}
-	}
-
 	let dropdown = false;
 	let dropButton;
 	let dropIcon;
 	let iconRotate;
-
 	let open;
-
 	let background;
 	let text = '';
 	let shadow;
-
+	let y;
 	onMount(() => {
 		function onResize() {
 			innerWidth = window.outerWidth;
@@ -47,37 +29,30 @@
 				dropdown = false;
 			}
 		}
-
 		window.addEventListener('resize', onResize);
 		return () => window.removeEventListener('resize', onResize);
 	});
-
 	$: {
 		// Animate the sticky header to change color when scrolled into page
-		if (y >= 50) {
+		if (y >= 60) {
 			shadow = 'shadow-lg';
 			background = 'bg-mainbg';
-		} else if (y < 50) {
+		} else if (y < 60) {
 			shadow = '';
 			background = 'bg-transparent';
 		}
-
 		if (open === true) {
 			background = 'bg-mobilemenu';
 			$menu = true;
 		} else {
 			$menu = false;
 		}
-
 		if (dropdown === true) {
-			color.set('rgb(245, 245, 244)');
 			background = 'bg-dropdown1';
 			iconRotate = 'rotate-180 transition-all';
 		} else {
-			if (y < 50) color.set('rgba(224, 207, 155, 0.0)');
 			iconRotate = 'rotate-0 transition-all';
 		}
-
 		// Toggle dropdown when scrolling
 		if ($yStore - y != 0) {
 			dropdown = false;
@@ -98,24 +73,37 @@
 		href="https://cdn.jsdelivr.net/npm/svelte-hamburgers@3/dist/css/types/spin.css"
 	/>
 
-	<meta name="theme-color" content={$statusBar} />
+	<meta name="theme-color" content="{$statusBar}">
 </svelte:head>
 
 <svelte:window bind:scrollY={y} />
 
 <header
-	style="background-color: {$color}"
-	class="{text} {shadow} fixed w-full z-50 mb-10 ease-in-out py-2"
+	class="{background} {text} {shadow} transition-all fixed w-full z-50 mb-10 ease-in-out py-2"
 >
 	<nav class="max-w-screen-2xl mx-auto px-8">
 		<div class="flex justify-between h-16">
-			<!-- Top Left Logo Area -->
-			<NavLogo />
+			<!-- Logo -->
+			<div class="flex items-center">
+				<a on:click={() => ($menu = false)} href="/" aria-label="Home Button" class="block xs:hidden w-auto">
+					<p class="h-12 w-12">
+						<Logo />
+					</p>
+				</a>
 
+				<a href="/" class="hidden xs:flex flex-row" aria-label="Home Button">
+					<div class="h-12 w-12">
+						<Logo />
+					</div>
+					<p class="pl-5 self-center font-extrabold unselectable">{$companyName}</p>
+				</a>
+			</div>
+
+			<!-- Mobile Menu -->
 			<!-- Mobile menu button -->
 			<div class="block md:hidden self-center">
 				<Hamburger bind:open --color={text} --padding={0} />
-
+					
 				<Menu bind:open />
 			</div>
 			<!-- Desktop Menu -->
@@ -313,15 +301,12 @@
 		border-color: rgb(99 102 241 / var(--tw-border-opacity)); */
 		color: rgb(64, 112, 85);
 	}
-
 	.menu {
 		background-color: brown;
 	}
-
 	.menu:hover .menuitem {
 		opacity: 0.25;
 	}
-
 	.menu .menuitem:hover {
 		opacity: 1;
 	}
