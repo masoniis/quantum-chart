@@ -3,7 +3,7 @@
 	import { scrollTo, scrollRef, setGlobalOptions } from 'svelte-scrolling';
 </script>
 
-<section use:scrollRef={'low-cost'} class="container mx-auto hidden">
+<section use:scrollRef={'low-cost'} class="container mx-auto mb-32">
 	<h1 class="text-center text-4xl pb-8">Always at your side</h1>
 
 	<grid class="grid grid-cols-4 grid-rows-1 gap-7">

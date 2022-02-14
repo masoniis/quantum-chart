@@ -7,12 +7,7 @@
 	import closable from 'svelte-closable';
 	import Logo from '$icons/Logo.svelte';
 	import Menu from '$components/Minimenu.svelte';
-	import { tweened } from 'svelte/motion';
-	import { cubicOut } from 'svelte/easing'
-	const alpha = tweened(0, {
-		duration: 400,
-		easing: cubicOut
-	});
+
 	let dropdown = false;
 	let dropButton;
 	let dropIcon;
@@ -22,6 +17,7 @@
 	let text = '';
 	let shadow;
 	let y;
+
 	onMount(() => {
 		function onResize() {
 			innerWidth = window.outerWidth;
@@ -32,7 +28,9 @@
 		window.addEventListener('resize', onResize);
 		return () => window.removeEventListener('resize', onResize);
 	});
+
 	$: {
+		
 		// Animate the sticky header to change color when scrolled into page
 		if (y >= 60) {
 			shadow = 'shadow-lg';
@@ -73,7 +71,7 @@
 		href="https://cdn.jsdelivr.net/npm/svelte-hamburgers@3/dist/css/types/spin.css"
 	/>
 
-	<meta name="theme-color" content="{$statusBar}">
+	<meta name="theme-color" content={$statusBar} />
 </svelte:head>
 
 <svelte:window bind:scrollY={y} />
@@ -85,7 +83,12 @@
 		<div class="flex justify-between h-16">
 			<!-- Logo -->
 			<div class="flex items-center">
-				<a on:click={() => ($menu = false)} href="/" aria-label="Home Button" class="block xs:hidden w-auto">
+				<a
+					on:click={() => ($menu = false)}
+					href="/"
+					aria-label="Home Button"
+					class="block xs:hidden w-auto"
+				>
 					<p class="h-12 w-12">
 						<Logo />
 					</p>
@@ -103,7 +106,7 @@
 			<!-- Mobile menu button -->
 			<div class="block md:hidden self-center">
 				<Hamburger bind:open --color={text} --padding={0} />
-					
+
 				<Menu bind:open />
 			</div>
 			<!-- Desktop Menu -->

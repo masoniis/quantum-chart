@@ -3,7 +3,7 @@
 	import Modal from '$components/Modal.svelte';
 	import AboutDividers from './AboutDividers.svelte';
 
-	let email;
+	export let email;
 
 	//From the Modal component
 	let modalComponent;
@@ -42,7 +42,7 @@
 			We would love to work with you.
 		</p>
 		<form
-			on:submit|preventDefault={handleReqInfo}
+			on:submit|preventDefault
 			class="col-span-1 mx-auto flex flex-col gap-2 self-center items-center sm:space-x-4 py-6 z-[2]
                 xs:flex-row
                 md:max-w-md"

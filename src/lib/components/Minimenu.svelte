@@ -24,8 +24,8 @@
 	<main
 		class="md:hidden fixed right-0 left-0 w-full top-[4.5rem] mobile_menu overscroll-y-none"
 		id="mobile-menu"
-		in:fly|local={{ duration: 350 }}
-		out:fade|local={{ duration: 150 }}
+		in:fade={{ duration: 600 }}
+		out:fade={{ duration: 150 }}
 	>
 		<div class="pt-2 space-y-1 bg-mobilemenu min-h-full">
 			<hr
