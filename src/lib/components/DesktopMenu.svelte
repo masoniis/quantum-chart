@@ -1,5 +1,5 @@
 <script>
-		import { fly, fade } from 'svelte/transition';
+	import { fly, fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 	import { menu, yStore, companyName, statusBar } from '../../stores';
@@ -9,24 +9,7 @@
 	import Menu from '$components/Minimenu.svelte';
 	import { tweened } from 'svelte/motion';
 
-	import { interpolateLab } from 'd3-interpolate';
-
-	const colors = ['rgb(224, 207, 155)', 'rgb(255, 255, 255)'];
-
-	const color = tweened(colors[0], {
-		duration: 125,
-		interpolate: interpolateLab
-	});
-
 	let y;
-
-	$: {
-		if (y < 50) {
-			color.set('rgba(224, 207, 155, 0.0)'); //Set color to tanish
-		} else {
-			color.set('rgba(255, 255, 255, 1)'); //Set color to white
-		}
-	}
 
 	let dropdown = false;
 	let dropButton;
@@ -52,28 +35,11 @@
 	});
 
 	$: {
-		// Animate the sticky header to change color when scrolled into page
-		if (y >= 50) {
-			shadow = 'shadow-lg';
-			background = 'bg-mainbg';
-		} else if (y < 50) {
-			shadow = '';
-			background = 'bg-transparent';
-		}
-
-		if (open === true) {
-			background = 'bg-mobilemenu';
-			$menu = true;
-		} else {
-			$menu = false;
-		}
-
+		//Rotate icon and change background
 		if (dropdown === true) {
-			color.set('rgb(245, 245, 244)')
 			background = 'bg-dropdown1';
 			iconRotate = 'rotate-180 transition-all';
 		} else {
-			if ( y <50 ) color.set('rgba(224, 207, 155, 0.0)')
 			iconRotate = 'rotate-0 transition-all';
 		}
 
@@ -83,6 +49,8 @@
 		}
 	}
 </script>
+
+<svelte:window bind:scrollY={y} />
 
 <div class="hidden md:ml-6 md:flex md:space-x-8 {text}">
 	<a
