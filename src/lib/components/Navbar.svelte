@@ -7,19 +7,39 @@
 	import closable from 'svelte-closable';
 	import Menu from '$components/Minimenu.svelte';
 	import NavLogo from '$components/NavLogo.svelte';
-import DesktopMenu from './DesktopMenu.svelte';
+	import DesktopMenu from './DesktopMenu.svelte';
 
-	let dropdown = false;
-	let dropButton;
-	let dropIcon;
-	let iconRotate;
+	let dropdown;
+
 	let open;
 	let background;
 	let text = '';
 	let shadow;
 	let y;
 
-
+	$: {
+		// Animate the sticky header to change color when scrolled into page
+		if (y >= 60) {
+			shadow = 'shadow-lg';
+			background = 'bg-mainbg';
+		} else if (y < 60) {
+			shadow = '';
+			background = 'bg-transparent';
+		}
+		if (open === true) {
+			background = 'bg-mobilemenu';
+			$menu = true;
+		} else {
+			$menu = false;
+		}
+		if (dropdown === true) {
+			background = 'bg-dropdown1';
+		}
+		// Toggle dropdown when scrolling
+		if ($yStore - y != 0) {
+			dropdown = false;
+		}
+	}
 </script>
 
 <svelte:head>
@@ -56,7 +76,7 @@ import DesktopMenu from './DesktopMenu.svelte';
 				<Menu bind:open />
 			</div>
 			<!-- Desktop Menu -->
-			<DesktopMenu />
+			<DesktopMenu bind:dropdown />
 			
 		</div>
 	</nav>

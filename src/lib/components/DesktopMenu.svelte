@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { fly, fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
@@ -11,16 +11,12 @@
 
 	let y;
 
-	let dropdown = false;
+	export let dropdown = false;
 	let dropButton;
 	let dropIcon;
 	let iconRotate;
 
-	let open;
-
-	let background;
 	let text = '';
-	let shadow;
 
 	onMount(() => {
 		function onResize() {
@@ -37,7 +33,6 @@
 	$: {
 		//Rotate icon and change background
 		if (dropdown === true) {
-			background = 'bg-dropdown1';
 			iconRotate = 'rotate-180 transition-all';
 		} else {
 			iconRotate = 'rotate-0 transition-all';

@@ -20,7 +20,6 @@
         yStore = y;
     }
 }
-
 </script>
 
 <svelte:window bind:scrollY={y} />
