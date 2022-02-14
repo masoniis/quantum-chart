@@ -1,5 +1,6 @@
 <script>
-    import {companyName, statusBar } from '$stores'
+    import {companyName, statusBar } from '$stores';
+	import { fade } from 'svelte/transition';
 
 	let y;
 	let show = true;
@@ -25,6 +26,6 @@
 	/>
 
 	{#if show}
-		<meta name="theme-color" content="#e0cf9b">
+		<meta in:fade={{ duration: 1000 }} name="theme-color" content="#e0cf9b">
 	{/if}
 </svelte:head>
