@@ -1,5 +1,5 @@
 <script>
-    import {companyName} from '$stores'
+    import {companyName, statusBar } from '$stores'
 </script>
 
 <svelte:head>
@@ -8,4 +8,6 @@
 		name="description"
 		content="{$companyName} home page, make beautiful charts in the blink of an eye."
 	/>
+
+	<meta name="theme-color" content="#014473">
 </svelte:head>
