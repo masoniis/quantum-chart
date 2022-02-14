@@ -8,12 +8,25 @@
 	import Logo from '$icons/Logo.svelte';
 	import Menu from '$components/Minimenu.svelte';
 	import { tweened } from 'svelte/motion';
-	import { cubicOut } from 'svelte/easing'
 
-	const alpha = tweened(0, {
-		duration: 400,
-		easing: cubicOut
+	import { interpolateLab } from 'd3-interpolate';
+
+	const colors = ['rgb(224, 207, 155)', 'rgb(255, 255, 255)'];
+
+	const color = tweened(colors[0], {
+		duration: 300,
+		interpolate: interpolateLab
 	});
+
+	let y;
+
+	$: {
+		if (y < 60) {
+			color.set('rgb(224, 207, 155)'); //Set color to tanish
+		} else {
+			color.set('rgb(255, 255, 255)'); //Set color to white
+		}
+	}
 
 	let dropdown = false;
 	let dropButton;
@@ -25,8 +38,6 @@
 	let background;
 	let text = '';
 	let shadow;
-
-	let y;
 
 	onMount(() => {
 		function onResize() {
@@ -84,19 +95,25 @@
 		href="https://cdn.jsdelivr.net/npm/svelte-hamburgers@3/dist/css/types/spin.css"
 	/>
 
-	<meta name="theme-color" content="{$statusBar}">
+	<meta name="theme-color" content={$statusBar} />
 </svelte:head>
 
 <svelte:window bind:scrollY={y} />
 
 <header
-	class="{background} {text} {shadow} transition-all duration-300 fixed w-full z-50 mb-10 ease-in-out py-2"
+	style="background-color: {$color}"
+	class="{text} {shadow} fixed w-full z-50 mb-10 ease-in-out py-2"
 >
 	<nav class="max-w-screen-2xl mx-auto px-8">
 		<div class="flex justify-between h-16">
 			<!-- Logo -->
 			<div class="flex items-center">
-				<a on:click={() => ($menu = false)} href="/" aria-label="Home Button" class="block xs:hidden w-auto">
+				<a
+					on:click={() => ($menu = false)}
+					href="/"
+					aria-label="Home Button"
+					class="block xs:hidden w-auto"
+				>
 					<p class="h-12 w-12">
 						<Logo />
 					</p>
@@ -114,7 +131,7 @@
 			<!-- Mobile menu button -->
 			<div class="block md:hidden self-center">
 				<Hamburger bind:open --color={text} --padding={0} />
-					
+
 				<Menu bind:open />
 			</div>
 			<!-- Desktop Menu -->
