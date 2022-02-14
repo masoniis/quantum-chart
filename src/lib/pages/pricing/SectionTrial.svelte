@@ -1,5 +1,6 @@
 <script>
     import { companyName } from '$stores';
+    import  PricingDividers from '$pages/pricing/PricingDividers.svelte';
 </script>
 
 <section class="bg-lightbg py-24">
@@ -32,3 +33,5 @@
         </form>
     </flex>
 </section>
+
+<PricingDividers type="trial.bot" />
