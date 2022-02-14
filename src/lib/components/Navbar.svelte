@@ -5,11 +5,12 @@
 	import { menu, yStore, companyName, statusBar } from '../../stores';
 	import Hamburger from 'svelte-hamburgers';
 	import closable from 'svelte-closable';
-	import Logo from '$icons/Logo.svelte';
 	import Menu from '$components/Minimenu.svelte';
+	import DekstopMenu from '$components/DesktopMenu.svelte';
 	import { tweened } from 'svelte/motion';
 
 	import { interpolateLab } from 'd3-interpolate';
+	import NavLogo from '$components/NavLogo.svelte';
 
 	const colors = ['rgb(224, 207, 155)', 'rgb(255, 255, 255)'];
 
@@ -69,9 +70,11 @@
 		}
 
 		if (dropdown === true) {
+			color.set('rgb(245, 245, 244)');
 			background = 'bg-dropdown1';
 			iconRotate = 'rotate-180 transition-all';
 		} else {
+			if (y < 50) color.set('rgba(224, 207, 155, 0.0)');
 			iconRotate = 'rotate-0 transition-all';
 		}
 
@@ -106,28 +109,9 @@
 >
 	<nav class="max-w-screen-2xl mx-auto px-8">
 		<div class="flex justify-between h-16">
-			<!-- Logo -->
-			<div class="flex items-center">
-				<a
-					on:click={() => ($menu = false)}
-					href="/"
-					aria-label="Home Button"
-					class="block xs:hidden w-auto"
-				>
-					<p class="h-12 w-12">
-						<Logo />
-					</p>
-				</a>
+			<!-- Top Left Logo Area -->
+			<NavLogo />
 
-				<a href="/" class="hidden xs:flex flex-row" aria-label="Home Button">
-					<div class="h-12 w-12">
-						<Logo />
-					</div>
-					<p class="pl-5 self-center font-extrabold unselectable">{$companyName}</p>
-				</a>
-			</div>
-
-			<!-- Mobile Menu -->
 			<!-- Mobile menu button -->
 			<div class="block md:hidden self-center">
 				<Hamburger bind:open --color={text} --padding={0} />
