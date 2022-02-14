@@ -34,14 +34,4 @@
 	<meta name="theme-color" content={$color} />
 </svelte:head>
 
-<br /><br /><br /><br /><br /><br />
-
-{#each colors as c}
-	<button style="background-color: {c}; color: white; border: none;" on:click={(e) => color.set(c)}
-		>{c}</button
-	>
-{/each}
-
-<h1>Hey i am</h1>
-
-<h1 style="color: {$color}">{$color}</h1>
+<h1 class="bg-black absolute mt-24 container text-center" style="color: {$color}">{$color}</h1>

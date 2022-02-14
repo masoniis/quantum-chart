@@ -90,7 +90,7 @@
 <svelte:window bind:scrollY={y} />
 
 <header
-	class="{background} {text} {shadow} transition-all fixed w-full z-50 mb-10 ease-in-out py-2"
+	class="{background} {text} {shadow} transition-all duration-300 fixed w-full z-50 mb-10 ease-in-out py-2"
 >
 	<nav class="max-w-screen-2xl mx-auto px-8">
 		<div class="flex justify-between h-16">
