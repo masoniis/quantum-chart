@@ -36,7 +36,6 @@ const quotes = [
         reference: 'CEO of TED',
         src: 'people/carter.jpg'
     },
-    
 ];
 
 export default quotes;
