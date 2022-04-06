@@ -27,9 +27,9 @@
 
 	<SectionEasy />
 
-	<SectionLowCost />
+	<!-- <SectionLowCost /> -->
 
-	<SectionResponsive />
+	<!-- <SectionResponsive /> -->
 
 	<SectionReputation />
 
