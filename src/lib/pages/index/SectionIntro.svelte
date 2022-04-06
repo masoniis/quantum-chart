@@ -46,7 +46,7 @@
 			<grid class="grid grid-cols-1 auto-rows-min w-full sm:px-8">
 				<h1
 					in:slide={{ duration: 500 }}
-					class="col-span-1 max-w-lg font-extrabold text-gray-900 sm:leading-none mx-auto text-center leading-tight text-dynamic7xl
+					class="col-span-1 max-w-4xl font-extrabold text-gray-900 sm:leading-none mx-auto text-center leading-tight text-dynamic7xl
 				
                 lg:mx-0 lg:text-left"
 				>
