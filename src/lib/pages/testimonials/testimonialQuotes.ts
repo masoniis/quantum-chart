@@ -33,11 +33,10 @@ const quotes = [
     {
         text: '{$companyName} makes our workplace much more fun with its graphics, animations, and immersive AR and VR technology.',
         person: 'Carter Wilson',
-        reference: 'bro',
+        reference: 'CEO of TED',
         src: 'people/carter.jpg'
     },
-
-    { text: '', person: 'joe mama', reference: '', src: '' }
+    
 ];
 
 export default quotes;
