@@ -119,7 +119,7 @@
                 <img
                     class="rounded-2xl h-[122px]"
                     style="background-color: #666766"
-                    src="panel/satisfaction-guaranteed.jpg"
+                    src="panel/satisfaction-guarenteed.jpg"
                     alt="Satisfaction Guaranteed"
                 />
             </button>
