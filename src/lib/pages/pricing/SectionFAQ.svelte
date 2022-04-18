@@ -1,9 +1,10 @@
 <script>
     import { companyName } from '$stores';
+	import  PricingDividers from '$pages/pricing/PricingDividers.svelte';
 </script>
 
 
-	<section class="bg-gray-200 py-24">
+	<section class="bg-gray-200">
 		<h1 class="font-extrabold text-5xl text-center pb-12">Frequently Asked Questions</h1>
 
 		<!-- Question Grid -->
@@ -52,4 +53,6 @@
 				</p>
 			</div>
 		</grid>
+
+		<PricingDividers type="FAQ.bot" />
 	</section>
