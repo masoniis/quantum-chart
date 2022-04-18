@@ -11,7 +11,7 @@
     </h1>
     <div class="flex flex-col lg:flex-row lg:gap-6">
         <div class="flex-col text-center justify-center mx-auto xl:px-10 w-50">
-            <img src="John.png" alt="John" width="500" height="1000" class="mx-auto" />
+            <img src="John.png" alt="John" width="500" height="1000" class="mx-auto bg-gray-300" style="border-radius:50%" />
             <h3 class="text-2xl my-2 mb-1 text-center font-bold text-gray-700">John</h3>
             <p class="text-center mb-4 sm:mb-0">
                 "I never saw myself where I am today--a young entrepreneur, partnering with a college
@@ -20,7 +20,7 @@
             </p>
         </div>
         <div class="flex-col justify-center mx-auto xl:px-10 w-50">
-            <img src="Paul.png" alt="Paul" width="500" height="1000" class="mx-auto" />
+            <img src="Paul.png" alt="Paul" width="500" height="1000" class="mx-auto bg-gray-300" rounded="full" style="border-radius:50%" />
             <h3 class="text-2xl mt-2 mb-1 text-center font-bold text-gray-700">Paul</h3>
             <p class="text-center">
                 "I've dreamt of creating my own app since middle school. Now, with {$companyName}, that

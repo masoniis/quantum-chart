@@ -43,7 +43,7 @@
 
 				<span slot="reference"> Coding Enthusiast </span>
 			</Blockquote>
-			<Blockquote src={'people/nicholas.jpg'} class="bg-black" classes="self-center md:self-start">
+			<Blockquote src={'people/nicholas.jpg'} class="bg-black" classes="w-[92%] self-center md:self-start">
 				<span slot="quote">
 					Making charts has been my hobby for a while and {$companyName} is by far the best software
 					I've ever used.
@@ -53,8 +53,7 @@
 
 				<span slot="reference"> Financial Consultant </span>
 			</Blockquote>
-			<div class="w-[90%]">
-				<Blockquote src={'people/iris.jpg'}>
+				<Blockquote src={'people/iris.jpg'} classes="w-[92%]">
 					<span slot="quote">
 						{$companyName} has made it so easy to make charts for work presentations!
 					</span>
@@ -63,7 +62,6 @@
 
 					<span slot="reference"> Chart Enthusiast </span>
 				</Blockquote>
-			</div>
 			<Blockquote src={'people/victor.jpg'} classes="w-[92%] self-center md:self-start">
 				<span slot="quote">
 					When my professors ask how I make such good charts, I just show them to this software.
@@ -176,6 +174,11 @@
 						It's really no secret, {$companyName} brings many benefits to CEOs and the companies they
 						run.
 					</p>
+					<button
+					class="p-2 mx-auto min-w-[144px] border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-700 hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400"
+					>
+					<a href="/testimonials"> See more testimonials </a>
+					</button>
 				</div>
 			</flex>
 			<div class="md:w-[60%] ml-0 flex flex-col gap-4 md:pr-4">
@@ -314,6 +317,11 @@
 						for developers to implement and deploy simple and immersive charts into their working
 						environment.
 					</p>
+					<button
+					class="p-2 mx-auto min-w-[144px] border border-transparent shadow-lg text-sm font-medium rounded-full text-white bg-emerald-700 hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400"
+					>
+					<a href="/testimonials"> See more testimonials </a>
+					</button>
 				</div>
 			</flex>
 		</div>

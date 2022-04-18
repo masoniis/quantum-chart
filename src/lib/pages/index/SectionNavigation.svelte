@@ -115,12 +115,12 @@
                 use:scrollTo={'risk-free'}
                 class="row-span-2 bg-gray-200 border rounded-2xl hover:shadow-xl transition-all flex-col hover:scale-[1.05]"
             >
-                <!-- Satisfaction Guarenteed Image -->
+                <!-- Satisfaction Guaranteed Image -->
                 <img
                     class="rounded-2xl h-[122px]"
                     style="background-color: #666766"
-                    src="panel/satisfaction-guarenteed.jpg"
-                    alt="Satisfaction Guarenteed"
+                    src="panel/satisfaction-guaranteed.jpg"
+                    alt="Satisfaction Guaranteed"
                 />
             </button>
             <button
