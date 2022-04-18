@@ -36,6 +36,6 @@ const quotes = [
         reference: 'CEO of Ungrateful Law',
         src: 'people/carter.jpg'
     }
-];
+]
 
 export default quotes;
